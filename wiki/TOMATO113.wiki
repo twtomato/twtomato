@@ -4,7 +4,7 @@
 
 
 增加/修改 項目
-Translated to Spanish language and version in English. (已經中文化)
+Translated to Spanish language and version in English. (已經中文化----100%自行翻譯 有錯請指正)
 
 Two additional windows for scripts in Administration/Buttons LED (LED 指示燈開啟功能)
 
