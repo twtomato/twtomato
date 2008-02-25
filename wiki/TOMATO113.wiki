@@ -19,8 +19,11 @@ Visualization of previous IP WAN in Overview menu (顯示 上一次 WAN 的 IP--
 
 
 修改者 : Victek 
+
 中文化 : BV2LK (大部分已經中文化)
+
 編譯   : BX2AA
+
 
 
 
