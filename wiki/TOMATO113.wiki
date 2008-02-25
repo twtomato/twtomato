@@ -1,4 +1,3 @@
-#labels Phase-Implementation
 = TOMATO victek MOD 1.13.8500 正體中文化韌體---非官方 =
 
 來源 : http://victek.is-a-geek.com/tomato.html
@@ -28,4 +27,3 @@ Visualization of previous IP WAN in Overview menu (顯示 上一次 WAN 的 IP--
 = 備註 =
 
 未修改 *關於* 的內容
-
