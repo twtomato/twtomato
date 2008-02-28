@@ -10,7 +10,7 @@
 
 * *恢復原廠預設值(reset 按鈕)  非常重要.*
 
-* [ttp://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Fbuffalo+factory+revert+/ 韌體 由 DD-WRT 官方網站 獲得] (WHR-HP-G54 和 WHR-G54S)
+* [http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Fbuffalo+factory+revert+/ 韌體 由 DD-WRT 官方網站 獲得] (WHR-HP-G54 和 WHR-G54S)
 
 
 = 圖解 =
