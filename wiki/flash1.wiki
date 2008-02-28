@@ -26,5 +26,11 @@ full reset = 斷電 ,按著 RESET 不放 ,開啟電源.
 
      reset = 恢復原廠值
 
+1.原廠韌體 執行 reset .
+2.電腦上的網卡只開啟一片.
+3.固定電腦 IP 
 
-http://lh5.google.com/bv22lk/R8ZVDDl-H2I/AAAAAAAAAhU/SCtavw6kmVo/s400/buff2toma1.jpg
+
+
+<a href="http://picasaweb.google.com/ddwrt.taiwan/Tomato/photo#5171933403666424434"><img src="http://lh5.google.com/ddwrt.taiwan/R8ZmB0-DonI/AAAAAAAAAC4/swX2SvToWco/s144/buff2toma.jpg" /></a>
+開啟 TFTP 程式
