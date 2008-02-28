@@ -1,4 +1,4 @@
-#summary 超簡單--- WHR-HP-G54 更新 至 [http://www.polarcloud.com Tomato].
+#summary 超簡單--- WHR-HP-G54 更新 至  Tomato.
 
 = 刷機很簡單 =
 
