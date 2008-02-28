@@ -8,9 +8,8 @@
 注意: 
 恢復原廠預設值(reset 按鈕)  非常重要.
 這個IP分享器 更新非常簡單且失敗率非常低 (幫朋友更新 & 自己亂刷 從未失敗)
-tomato.trx 需更名為 tomato.bin
-   
-[IMG]http://lh5.google.com/bv22lk/R8ZVDDl-H2I/AAAAAAAAAhU/SCtavw6kmVo/s400/buff2toma1.jpg[/IMG]
+tomato.trx 需更名為 tomato.bin   
+
 
 
 = Details =
@@ -19,3 +18,5 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+http://lh5.google.com/bv22lk/R8ZVDDl-H2I/AAAAAAAAAhU/SCtavw6kmVo/s400/buff2toma1.jpg
