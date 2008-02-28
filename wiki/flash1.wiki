@@ -19,7 +19,7 @@
 = 圖解 =
 
 `
-full reset = 斷電 ,按著 RESET 不放 ,開啟電源.
+full reset = 斷電 ,按著 RESET 不放 ,開啟電源 30秒後放開 RESET.
 
      reset = 恢復原廠值
 `
