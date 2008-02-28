@@ -1,9 +1,9 @@
-#summary 超簡單--- WHR-HP-G54 更新 至 Tomato.
+#summary 超簡單--- WHR-HP-G54 更新 至 [http://www.polarcloud.com Tomato].
 
 = 刷機很簡單 =
 
 隨著 非官方韌體的流行,許多人想躍躍欲試,問題是 更新方法 大多是 command 介面,不夠親切.
-非官方韌體中 Open-WRT ,DD-WRT ,Tomato 為大多數人使用. 今天以 Tomato 為範本 圖解刷新過程.
+非官方韌體中 [http://www.openwrt.org Open-WRT] ,[http://www.dd-wrt.com DD-WRT] ,[http://www.polarcloud.com Tomato] 為大多數人使用. 今天以 Tomato 為範本 圖解刷新過程.
 
 ==*注意:*== 
 * *刷機有風險,機器保固可能會喪失*
@@ -14,7 +14,7 @@
 
 * *tomato.trx 需更名為 tomato.bin*  
 
-* tftp 程式 由 DD-WRT 官方網站 獲得http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Ftornado%2FWindows-TFTP/
+* [http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Ftornado%2FWindows-TFTP/ tftp 程式 由 DD-WRT 官方網站 獲得]
 
 
 = 圖解 =
