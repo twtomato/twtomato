@@ -19,6 +19,13 @@ Visualization of the frequency of clock of the CPU in the Overview menu (顯示 
 Visualization of previous IP WAN in Overview menu (顯示 上一次 WAN 的 IP--PPPOE可判斷是否斷線)
 
 
+= 備註 =
+特別感謝 PUWEN
+
+個人確認過 可刷的機器有 BUFFALO WHR-HP-G54 WHR-G54S WZR-HP-G54 WZR-RS-G54 , ASUS WL-500GP
+如何刷
+http://code.google.com/p/twtomato/wiki/flash1
+
 
 修改者 : Victek 
 
@@ -26,9 +33,4 @@ Visualization of previous IP WAN in Overview menu (顯示 上一次 WAN 的 IP--
 
 編譯   : BX2AA
 
-
-
-
-= 備註 =
-
-未修改 *關於* 的內容
+未修改 *關於* 的內容 (保持 VICTEK MOD 原貌)
