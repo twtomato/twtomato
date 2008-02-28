@@ -3,16 +3,14 @@
 = WHR-HP-G54 恢復至 BUFFALO 原廠韌體 =
 
 隨著 非官方韌體的流行,許多人想躍躍欲試,問題是 用不慣 如何 恢復至 BUFFALO 官方韌體 ? 
-今天以 Tomato 為範本 圖解恢復過程.
+今天以 [http://www.polarcloud.com/ Tomato] 為範本 圖解恢復過程.
 
 
 ==*注意:*== 
 
 * *恢復原廠預設值(reset 按鈕)  非常重要.*
 
-* 韌體 由 DD-WRT 官方網站 獲得 (WHR-HP-G54 和 WHR-G54S) 
-
-http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Fbuffalo+factory+revert+/
+* [ttp://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Fbuffalo+factory+revert+/ 韌體 由 DD-WRT 官方網站 獲得 (WHR-HP-G54 和 WHR-G54S)]
 
 
 = 圖解 =
