@@ -29,7 +29,9 @@ full reset = 斷電 ,按著 RESET 不放 ,開啟電源 30秒後放開 RESET.
 
 3 固定電腦 IP (192.168.1.2)
 
-4 開啟 GUI介面 (192.168.1.1) 點選 *Restar Now*
+4 開啟 GUI介面 選擇 韌體 (192.168.1.1) 
+
+http://lh4.google.com/ddwrt.taiwan/R8ZmGk-DopI/AAAAAAAAADI/O66jMQmlSm0/s800/ctoo.jpg
 
 5 靜待數分鐘 (約3~5 分鐘 觀察 DIAG燈的變化)
 
