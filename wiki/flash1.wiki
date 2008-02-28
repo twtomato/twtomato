@@ -14,6 +14,7 @@
 
 * *tomato.trx 需更名為 tomato.bin*  
 
+* tftp 程式 由 DD-WRT 官方網站 獲得http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Ftornado%2FWindows-TFTP/
 
 
 = 圖解 =
