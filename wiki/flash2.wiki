@@ -1,13 +1,44 @@
-#summary 超簡單的恢復至 BUFFALO 原廠韌體.
+#summary 超簡單--- WHR-HP-G54 恢復至 BUFFALO 原廠韌體.
 
-= WHR-HP-G54 =
+= WHR-HP-G54 恢復至 BUFFALO 原廠韌體 =
 
-Add your content here.
+隨著 非官方韌體的流行,許多人想躍躍欲試,問題是 用不慣 如何 恢復至 BUFFALO 官方韌體 ? 
+今天以 Tomato 為範本 圖解恢復過程.
 
 
-= Details =
+==*注意:*== 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+* *恢復原廠預設值(reset 按鈕)  非常重要.*
+
+* 韌體 由 DD-WRT 官方網站 獲得 (WHR-HP-G54 和 WHR-G54S) 
+
+http://www.dd-wrt.com/dd-wrtv2/down.php?path=downloads%2Fothers%2Fbuffalo+factory+revert+/
+
+
+= 圖解 =
+
+`
+full reset = 斷電 ,按著 RESET 不放 ,開啟電源 30秒後放開 RESET.
+
+     reset = 恢復原廠值
+`
+
+1 執行 full reset
+
+2 電腦上的網卡只開啟一片
+
+3 固定電腦 IP (192.168.1.2)
+
+4 開啟 GUI介面 (192.168.1.1) 點選 *Restar Now*
+
+5 靜待數分鐘 (約3~5 分鐘 觀察 DIAG燈的變化)
+
+6 改回 DHCP發放電腦IP
+
+7 此時 WEBGUI 已經更換至 192.168.11.1 ,使用者名稱 root 密碼 
+
+8 做一次 full reset.
+
+9 從 原廠 GUI 更新至您想要的 BUFALLO 版本即可.
+
+10 完成
