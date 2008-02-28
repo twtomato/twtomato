@@ -26,11 +26,34 @@ full reset = 斷電 ,按著 RESET 不放 ,開啟電源.
 
      reset = 恢復原廠值
 
-1.原廠韌體 執行 reset .
-2.電腦上的網卡只開啟一片.
-3.固定電腦 IP 
+1 原廠韌體 執行 reset
 
+2 電腦上的網卡只開啟一片
 
+3 固定電腦 IP (192.168.11.2)
 
-<a href="http://picasaweb.google.com/ddwrt.taiwan/Tomato/photo#5171933403666424434"><img src="http://lh5.google.com/ddwrt.taiwan/R8ZmB0-DonI/AAAAAAAAAC4/swX2SvToWco/s144/buff2toma.jpg" /></a>
-開啟 TFTP 程式
+http://lh5.google.com/ddwrt.taiwan/R8ZmB0-DonI/AAAAAAAAAC4/swX2SvToWco/s400/buff2toma.jpg 
+
+4 開啟 TFTP 程式 選擇韌體並點選 *Upgrade*
+
+http://lh3.google.com/ddwrt.taiwan/R8ZmBU-DokI/AAAAAAAAACg/awsyJ7HrTyM/s400/buff2toma2.jpg 
+
+5 開啟 原廠GUI介面 (192.168.11.1) 點選 *Restar Now*
+
+http://lh6.google.com/ddwrt.taiwan/R8ZmBE-DojI/AAAAAAAAACY/xR9l2JIWbVg/s400/buff2toma1.jpg"
+
+6.TFTP上傳成功的畫面
+
+http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DolI/AAAAAAAAACo/NgZsu-E7XsM/s400/buff2toma3.jpg
+
+7 靜待數分鐘 (約3~5 分鐘 觀察 DIAG燈的變化)
+
+8 改回 DHCP發放電腦IP
+
+http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DomI/AAAAAAAAACw/U0tTKgpfDE4/s400/buff2toma4.jpg
+
+9 此時 WEBGUI 已經更換至 192.168.1.1 ,使用者名稱 root 密碼 admin
+
+10 做一次 full reset.
+
+11 完成
