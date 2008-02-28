@@ -23,6 +23,7 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 *full reset* = 斷電 ,按著 RESET 不放 ,開啟電源.
+
      *reset* = 恢復原廠值
 
 
