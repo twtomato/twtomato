@@ -24,7 +24,7 @@ Visualization of previous IP WAN in Overview menu (顯示 上一次 WAN 的 IP--
 
 個人確認過 可刷的機器有 BUFFALO WHR-HP-G54 WHR-G54S WZR-HP-G54 WZR-RS-G54 , ASUS WL-500GP
 
-[如何刷 http://code.google.com/p/twtomato/wiki/flash1]
+[http://code.google.com/p/twtomato/wiki/flash1 如何刷]
 
 
 修改者 : Victek 
