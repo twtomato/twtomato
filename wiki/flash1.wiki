@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary 超簡單--- WHR-HP-G54 更新 至 Tomato.
 
 = Introduction =
 
@@ -6,6 +6,7 @@
 非官方韌體中 Open-WRT ,DD-WRT ,Tomato 為大多數人使用. 今天以 Tomato 為範本 圖解刷新過程.
 
 注意: 
+刷機有風險,機器保固可能會喪失.
 恢復原廠預設值(reset 按鈕)  非常重要.
 這個IP分享器 更新非常簡單且失敗率非常低 (幫朋友更新 & 自己亂刷 從未失敗)
 tomato.trx 需更名為 tomato.bin   
