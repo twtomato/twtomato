@@ -1,0 +1,43 @@
+#summary 刷 TOMATO 最高 效能/金錢 比的機器 WL-500GP v1.
+= 刷 TOMATO 最高 效能/金錢 比的機器 =
+
+由 [http://oleg.wl500g.info/devices.html ASUS 機器規格表] 以及手邊機器實測.
+WL-500GP V1 推薦使用 . 
+
+MINI PCI 內建 方便替換 WIFI 卡
+
+RAM 32 MBytes DDR
+
+CPU 264MHz 可 OC 300MHz
+
+USB 2.0 兩個 方便擴充
+
+便宜
+
+----
+
+簡易 傳輸率測試 比 WHR-HP-G54 好太多了. 
+
+在 DD-WRT 的測試下 WL-500GP (用oleg 韌體超過70M)超越 WHR-HP-G54 非常多.
+
+用 TOMATO 之後應該會更好.
+ 
+= 測試圖-SERVER 和 CLIENT沒變 只更換IP分享器和韌體  =
+http://lh5.google.com/bv22lk/RhjNExXlg-I/AAAAAAAAAEc/SbEOPlZmJv0/wl-500gp_oleg.jpg WL-500GP FW:OLEG 1.9.2.7
+
+
+
+http://lh3.google.com/bv22lk/RhjNERXlg9I/AAAAAAAAAEU/wmW-kWkIF8M/wl-500gp_thr.jpg WL-500GP FW:DD-WRT 2007-04-06
+
+
+http://lh6.google.com/bv22lk/RhjQqBXlhBI/AAAAAAAAAFg/LU7h75PkAMA/whr-hp-g54_thr.jpg WHR-HP-G54 FW:DD-WRT 2007_04_06
+
+未完 .....
+
+
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
