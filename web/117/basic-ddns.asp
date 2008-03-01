@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Basic: DDNS</title>
+<title>[<% ident(); %>] 基本設定：DDNS</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -59,7 +59,7 @@ var services = [
 	['ieserver', 'ieServer.net', 'http://www.ieserver.net/', 'uhz', 'Username / Hostname', null, 'Domain'],
 	['namecheap', 'namecheap', 'http://www.namecheap.com/', 'ut', 'Domain'],
 	['noip', 'No-IP.com', 'http://www.no-ip.com/', 'uh', 'Email Address', null, 'Hostname / Group'],
-	['opendns', 'OpenDNS', 'http://www.opendns.com/', 'uhoz', null, null, 'Network <small>(optional)</small>'],
+	['opendns', 'OpenDNS', 'http://www.opendns.com/', 'uhoz', null, null, 'Network <small>(非必填)</small>'],
 	['tzo', 'TZO', 'http://www.tzo.com/', 'uh', 'Email Address', 'Password'],
 	['zoneedit', 'ZoneEdit', 'http://www.zoneedit.com/', 'uh'],
 	['custom', 'Custom URL', '', 'c']];
@@ -135,9 +135,9 @@ function verifyFields(focused, quiet)
 		elem.display('last-update' + i, enabled && !op.z);
 
 		if (enabled) {
-			PR('_f_user' + i).cells[0].innerHTML = data[4] || 'Username';
-			PR('_f_pass' + i).cells[0].innerHTML = data[5] || 'Password';
-			PR('_f_host' + i).cells[0].innerHTML = data[6] || 'Hostname';
+			PR('_f_user' + i).cells[0].innerHTML = data[4] || '帳號';
+			PR('_f_pass' + i).cells[0].innerHTML = data[5] || '密碼';
+			PR('_f_host' + i).cells[0].innerHTML = data[6] || '主機名稱';
 
 			e = E('url' + i);
 			e.href = data[2];
@@ -308,7 +308,7 @@ function init()
 {
 	if ('<% psup("ddns-update"); %>' != 0) {
 		var e = E('footer-msg');
-		e.innerHTML = 'DDNS update is running. Please refresh after a few seconds.';
+		e.innerHTML = '稍待幾秒鐘後請重新整理!      DDNS 更新中.......';
 		e.style.visibility = 'visible';
 	}
 }
@@ -319,8 +319,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -340,23 +340,23 @@ function init()
 <input type='hidden' name='ddnsx_ip' value=''>
 
 
-<div class='section-title'>Dynamic DNS</div>
+<div class='section-title'>動態名稱伺服器</div>
 <div class='section'>
 <script type='text/javascript'>
 s = nvram.ddnsx_ip;
 a = (s != '') && (s.indexOf('@') != 0) && (s != '0.0.0.0') && (s != '1.1.1.1') && (s != '10.1.1.1');
 createFieldTable('', [
-	{ title: 'IP Address', name: 'f_ddnsx_ip', type: 'select',
+	{ title: 'IP 位址', name: 'f_ddnsx_ip', type: 'select',
 		options: [
-			['', 'Use WAN IP Address ' + ddnsx_ip + ' (recommended)'],
-			['@', 'Use External IP Address Checker (every 10 minutes)'],
+			['', '使用 WAN IP 位址 ' + ddnsx_ip + ' (推薦)'],
+			['@', '使用外部IP 位址(每十分鐘檢查)'],
 			['0.0.0.0', 'Offline (0.0.0.0)'],
 			['1.1.1.1', 'Offline (1.1.1.1)'],
 			['10.1.1.1', 'Offline (10.1.1.1)'],
-			['custom', 'Custom IP Address...']
+			['custom', '自訂 IP 位址...']
 			],
 		value: a ? 'custom' : nvram.ddnsx_ip },
-	{ title: 'Custom IP Address', indent: 2, name: 'f_custom_ip', type: 'text', maxlen: 15, size: 20,
+	{ title: '自訂 IP 位址', indent: 2, name: 'f_custom_ip', type: 'text', maxlen: 15, size: 20,
 		value: a ? nvram.ddnsx_ip : '', hidden: !a },
 ]);
 </script>
@@ -399,15 +399,15 @@ for (i = 0; i < 2; ++i) {
 	if (u.length != 2) u = ['', ''];
 	h = (v[0] == '');
 
-	W('<div class="section-title">Dynamic DNS ' + (i + 1) + '</div><div class="section">');
+	W('<div class="section-title">動態名稱伺服器 ' + (i + 1) + '</div><div class="section">');
 	createFieldTable('', [
-		{ title: 'Service', name: 'f_service' + i, type: 'select', options: services, value: v[0] },
+		{ title: '伺服器', name: 'f_service' + i, type: 'select', options: services, value: v[0] },
 		{ title: 'URL', indent: 2, text: '<a href="" id="url' + i + '" target="tomato-ext-ddns"></a>', hidden: 1 },
 		{ title: '&nbsp;', text: '<small>* This service determines the IP address using its own method.</small>', hidden: 1, rid: 'row_z' + i },
-		{ title: 'Hostname', name: 'f_hosttop' + i, type: 'text', maxlen: 96, size: 35, value: v[2], hidden: 1 },
-		{ title: 'Username', name: 'f_user' + i, type: 'text', maxlen: 64, size: 35, value: u[0], hidden: 1 },
-		{ title: 'Password', name: 'f_pass' + i, type: 'password', maxlen: 64, size: 35, value: u[1], hidden: 1 },
-		{ title: 'Hostname', name: 'f_host' + i, type: 'text', maxlen: 255, size: 80, value: v[2], hidden: 1 },
+		{ title: '主機名稱', name: 'f_hosttop' + i, type: 'text', maxlen: 96, size: 35, value: v[2], hidden: 1 },
+		{ title: '使用者名稱', name: 'f_user' + i, type: 'text', maxlen: 64, size: 35, value: u[0], hidden: 1 },
+		{ title: '密碼', name: 'f_pass' + i, type: 'password', maxlen: 64, size: 35, value: u[1], hidden: 1 },
+		{ title: '主機名稱', name: 'f_host' + i, type: 'text', maxlen: 255, size: 80, value: v[2], hidden: 1 },
 		{ title: 'URL', name: 'f_cust' + i, type: 'text', maxlen: 255, size: 80, value: v[6], hidden: 1 },
 		{ title: ' ', text: '(Use @IP for the current IP address)', rid: ('custmsg' + i), hidden: 1 },
 		{ title: 'Wildcard', indent: 2, name: 'f_wild' + i, type: 'checkbox', value: v[3] != '0', hidden: 1 },
@@ -418,8 +418,8 @@ for (i = 0; i < 2; ++i) {
 		{ title: 'Token / URL', name: 'f_afraid' + i, type: 'text', maxlen: 255, size: 80, value: v[6], hidden: 1 },
 		{ title: 'Force Next Update', name: 'f_force' + i, type: 'checkbox', value: 0, hidden: 1 },
 		null,
-		{ title: 'Last IP Address', custom: msgLoc(ddnsx_last[i]), rid: 'last-update' + i, hidden: 1 },
-		{ title: 'Last Result', custom: msgLoc(ddnsx_msg[i]), rid: 'last-response' + i, hidden: h }
+		{ title: '前一個IP地址', custom: msgLoc(ddnsx_last[i]), rid: 'last-update' + i, hidden: 1 },
+		{ title: '目前更新狀況', custom: msgLoc(ddnsx_msg[i]), rid: 'last-response' + i, hidden: h }
 	]);
 	W('</div>');
 }
@@ -431,8 +431,8 @@ for (i = 0; i < 2; ++i) {
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 <script type='text/javascript'>verifyFields(null, 1);</script>

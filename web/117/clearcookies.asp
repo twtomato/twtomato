@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -19,8 +19,8 @@
 <body>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -28,7 +28,7 @@
 
 <!-- / / / -->
 
-<b>Cookies Cleared</b>
+<b>Cookies 完全清除</b>
 
 <script type='text/javascript'>
 b = [];
@@ -39,7 +39,7 @@ for (i = 0; i < c.length; ++i) {
 		cookie.unset(RegExp.$1);
 	}
 }
-if (b.length == 0) b.push('<li>no cookie found');
+if (b.length == 0) b.push('<li>無 cookie');
 W('<ul>' + b.join('') + '</ul>');
 </script>
 

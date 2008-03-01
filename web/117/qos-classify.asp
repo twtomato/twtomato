@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] QoS: Classification</title>
+<title>[<% ident(); %>] QoS: 分類機制</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -273,7 +273,7 @@ qosg.setup = function() {
 		{ type: 'text', maxlen: 32, vtop: 1 }
 	]);
 
-	this.headerSet(['Match Rule', 'Class', 'Description']);
+	this.headerSet(['規則', '等級', '註解']);
 
 // addr_type < addr < proto < port_type < port < ipp2p < L7 < bcount < class < desc
 	
@@ -335,8 +335,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -348,14 +348,14 @@ function init()
 <input type='hidden' name='_service' value='qos-restart'>
 <input type='hidden' name='qos_orules'>
 
-<div class='section-title'>Outbound Direction</div>
+<div class='section-title'>上傳管理（對外）</div>
 <div class='section'>
 	<table class='tomato-grid' cellspacing=1 id='qg'></table>
 </div>
 
 <script type='text/javascript'>
 if (nvram.qos_enable != '1') {
-	W('<div class="note-disabled"><b>QoS disabled.</b> &nbsp; <a href="qos-settings.asp">Enable &raquo;</a></div>');
+	W('<div class="note-disabled"><b>頻寬管理QoS 未開啟.</b> &nbsp; <a href="qos-settings.asp">開啟 &raquo;</a></div>');
 }
 </script>
 
@@ -364,8 +364,8 @@ if (nvram.qos_enable != '1') {
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

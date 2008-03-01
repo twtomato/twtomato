@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Basic: Network</title>
+<title>[<% ident(); %>] 基本設定：網路</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -652,8 +652,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -686,53 +686,53 @@ function save()
 <input type='hidden' name='wl_lazywds'>
 
 
-<div class='section-title'>WAN / Internet</div>
+<div class='section-title'>WAN 設定</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ text: '<span id="_wan_na"><i>Wireless Ethernet Bridge Mode</i></span>' },
-	{ title: 'Type', name: 'wan_proto', type: 'select', options: [['dhcp','DHCP'],['pppoe','PPPoE'],['static','Static'],['pptp','PPTP'],['l2tp','L2TP'],['disabled','Disabled']],
+	{ text: '<span id="_wan_na"><i>無線網路橋接模式</i></span>' },
+	{ title: '連線類型', name: 'wan_proto', type: 'select', options: [['dhcp','DHCP獲得IP'],['pppoe','PPPoE 撥接'],['static','固定IP制'],['pptp','PPTP'],['l2tp','L2TP'],['disabled','關閉']],
 		value: nvram.wan_proto },
-	{ title: 'Username', name: 'ppp_username', type: 'text', maxlen: 50, size: 54, value: nvram.ppp_username },
-	{ title: 'Password', name: 'ppp_passwd', type: 'password', maxlen: 50, size: 54, value: nvram.ppp_passwd },
-	{ title: 'Service Name', name: 'ppp_service', type: 'text', maxlen: 50, size: 54, value: nvram.ppp_service },
-	{ title: 'L2TP Server', name: 'l2tp_server_ip', type: 'text', maxlen: 15, size: 17, value: nvram.l2tp_server_ip },
-	{ title: 'IP Address', name: 'wan_ipaddr', type: 'text', maxlen: 15, size: 17, value: nvram.wan_ipaddr },
-	{ title: 'Subnet Mask', name: 'wan_netmask', type: 'text', maxlen: 15, size: 17, value: nvram.wan_netmask },
-	{ title: 'Gateway', name: 'wan_gateway', type: 'text', maxlen: 15, size: 17, value: nvram.wan_gateway },
-	{ title: 'Gateway', name: 'pptp_server_ip', type: 'text', maxlen: 15, size: 17, value: nvram.pptp_server_ip },
-	{ title: 'Connect Mode', name: 'ppp_demand', type: 'select', options: [['1', 'Connect On Demand'],['0', 'Keep Alive']],
+	{ title: '使用者名稱', name: 'ppp_username', type: 'text', maxlen: 50, size: 54, value: nvram.ppp_username },
+	{ title: '密碼', name: 'ppp_passwd', type: 'password', maxlen: 50, size: 54, value: nvram.ppp_passwd },
+	{ title: '連線名稱', name: 'ppp_service', type: 'text', maxlen: 50, size: 54, value: nvram.ppp_service },
+	{ title: '連接 L2TP 伺服器', name: 'l2tp_server_ip', type: 'text', maxlen: 15, size: 17, value: nvram.l2tp_server_ip },
+	{ title: 'IP 位址', name: 'wan_ipaddr', type: 'text', maxlen: 15, size: 17, value: nvram.wan_ipaddr },
+	{ title: '子網路遮罩', name: 'wan_netmask', type: 'text', maxlen: 15, size: 17, value: nvram.wan_netmask },
+	{ title: '閘道', name: 'wan_gateway', type: 'text', maxlen: 15, size: 17, value: nvram.wan_gateway },
+	{ title: '閘道', name: 'pptp_server_ip', type: 'text', maxlen: 15, size: 17, value: nvram.pptp_server_ip },
+	{ title: 'Connect Mode', name: 'ppp_demand', type: 'select', options: [['1', '需要時連線'],['0', '持續連線']],
 		value: nvram.ppp_demand },
-	{ title: 'Max Idle Time', indent: 2, name: 'ppp_idletime', type: 'text', maxlen: 5, size: 7, suffix: ' <i>(minutes)</i>',
+	{ title: '逾時時間', indent: 2, name: 'ppp_idletime', type: 'text', maxlen: 5, size: 7, suffix: ' <i>(分)</i>',
 		value: nvram.ppp_idletime },
-	{ title: 'Check Interval', indent: 2, name: 'ppp_redialperiod', type: 'text', maxlen: 5, size: 7, suffix: ' <i>(seconds)</i>',
+	{ title: '重連時間', indent: 2, name: 'ppp_redialperiod', type: 'text', maxlen: 5, size: 7, suffix: ' <i>(秒)</i>',
 		value: nvram.ppp_redialperiod },
-	{ title: 'MTU', multi: [
-		{ name: 'mtu_enable', type: 'select', options: [['0', 'Default'],['1','Manual']], value: nvram.mtu_enable },
+	{ title: '最大傳輸單位 MTU', multi: [
+		{ name: 'mtu_enable', type: 'select', options: [['0', '預設'],['1','手動']], value: nvram.mtu_enable },
 		{ name: 'f_wan_mtu', type: 'text', maxlen: 4, size: 6, value: nvram.wan_mtu } ] }
 ]);
 </script>
 </div>
 
-<div class='section-title'>LAN</div>
+<div class='section-title'>區域網路設定</div>
 <div class='section'>
 <script type='text/javascript'>
 dns = nvram.wan_dns.split(/\s+/);
 ipp = nvram.lan_ipaddr.split('.').splice(0, 3).join('.');
 
 createFieldTable('', [
-	{ title: 'Router IP Address', name: 'lan_ipaddr', type: 'text', maxlen: 15, size: 17, value: nvram.lan_ipaddr },
-	{ title: 'Subnet Mask', name: 'lan_netmask', type: 'text', maxlen: 15, size: 17, value: nvram.lan_netmask },
-	{ title: 'Default Gateway', name: 'lan_gateway', type: 'text', maxlen: 15, size: 17, value: nvram.lan_gateway },
-	{ title: 'Static DNS', name: 'f_dns_1', type: 'text', maxlen: 15, size: 17, value: dns[0] || '0.0.0.0' },
+	{ title: '路由器 IP 位址', name: 'lan_ipaddr', type: 'text', maxlen: 15, size: 17, value: nvram.lan_ipaddr },
+	{ title: '子網路遮罩', name: 'lan_netmask', type: 'text', maxlen: 15, size: 17, value: nvram.lan_netmask },
+	{ title: '預設閘道', name: 'lan_gateway', type: 'text', maxlen: 15, size: 17, value: nvram.lan_gateway },
+	{ title: 'DNS 伺服器', name: 'f_dns_1', type: 'text', maxlen: 15, size: 17, value: dns[0] || '0.0.0.0' },
 	{ title: '', name: 'f_dns_2', type: 'text', maxlen: 15, size: 17, value: dns[1] || '0.0.0.0' },
 	{ title: '', name: 'f_dns_3', type: 'text', maxlen: 15, size: 17, value: dns[2] || '0.0.0.0' },
-	{ title: 'DHCP Server', name: 'f_dhcpd_enable', type: 'checkbox', value: (nvram.lan_proto == 'dhcp') },
-	{ title: 'Start', indent: 2, name: 'dhcp_start', type: 'text', maxlen: 3, size: 5,
+	{ title: 'DHCP 伺服器', name: 'f_dhcpd_enable', type: 'checkbox', value: (nvram.lan_proto == 'dhcp') },
+	{ title: '啟始位址', indent: 2, name: 'dhcp_start', type: 'text', maxlen: 3, size: 5,
 		prefix: '<span id="dhcpd_prefix_start">' + ipp + '</span>.',  value: nvram.dhcp_start },
-	{ title: 'End', indent: 2, name: 'f_dhcpd_end', type: 'text', maxlen: 3, size: 5,
+	{ title: '結束位址', indent: 2, name: 'f_dhcpd_end', type: 'text', maxlen: 3, size: 5,
 		prefix: '<span id="dhcpd_prefix_end">' + ipp + '</span>.', value: (nvram.dhcp_start * 1) + (nvram.dhcp_num * 1) - 1 },
-	{ title: 'Lease Time', indent: 2, name: 'dhcp_lease', type: 'text', maxlen: 6, size: 8, suffix: ' <i>(minutes)</i>',
+	{ title: '租約時間', indent: 2, name: 'dhcp_lease', type: 'text', maxlen: 6, size: 8, suffix: ' <i>(分)</i>',
 		value: (nvram.dhcp_lease > 0) ? nvram.dhcp_lease : 1440 },
 	{ title: 'WINS', indent: 2, name: 'wan_wins', type: 'text', maxlen: 15, size: 17, value: nvram.wan_wins }
 ]);
@@ -740,42 +740,42 @@ createFieldTable('', [
 </div>
 
 
-<div class='section-title'>Wireless</div>
+<div class='section-title'>Wireless 設定</div>
 <div class='section'>
 <script type='text/javascript'>
 f = [
-	{ title: 'Enable Wireless', name: 'f_wl_radio', type: 'checkbox',
+	{ title: '啟用無線上網', name: 'f_wl_radio', type: 'checkbox',
 		value: (nvram.wl_radio == '1') && (nvram.wl_net_mode != 'disabled') },
-	{ title: 'MAC Address', text: '<a href="advanced-mac.asp">' + nvram.wl0_hwaddr + '</a>' },
-	{ title: 'Wireless Mode', name: 'f_wmode', type: 'select',
+	{ title: 'MAC 位址', text: '<a href="advanced-mac.asp">' + nvram.wl0_hwaddr + '</a>' },
+	{ title: '無線模式', name: 'f_wmode', type: 'select',
 		options: [['ap', 'Access Point'],['apwds', 'Access Point + WDS'],['sta', 'Wireless Client'],['wet', 'Wireless Ethernet Bridge'],['wds', 'WDS']],
 		value: ((nvram.wl_mode == 'ap') && (nvram.wds_enable == '1')) ? 'apwds' : nvram.wl_mode },
-	{ title: 'B/G Mode', name: 'wl_net_mode', type: 'select', value: (nvram.wl_net_mode == 'disabled') ? 'mixed' : nvram.wl_net_mode, options:[['mixed','Mixed'],['b-only','B Only'],['g-only','G Only']] },
+	{ title: '無線模式', name: 'wl_net_mode', type: 'select', value: (nvram.wl_net_mode == 'disabled') ? 'mixed' : nvram.wl_net_mode, options:[['mixed','混合'],['b-only','僅802.11b'],['g-only','僅802.11g']] },
 	{ title: 'SSID', name: 'wl_ssid', type: 'text', maxlen: 32, size: 34, value: nvram.wl_ssid },
-	{ title: 'Broadcast', indent: 2, name: 'f_bcast', type: 'checkbox', value: (nvram.wl_closed == '0') },
-	{ title: 'Channel', name: 'wl_channel', type: 'select', options: ghz, suffix: ' <input type="button" id="_f_scan" value="Scan" onclick="scanButton()"> <img src="spin.gif" id="spin">',
+	{ title: 'SSID 廣播', indent: 2, name: 'f_bcast', type: 'checkbox', value: (nvram.wl_closed == '0') },
+	{ title: '頻道', name: 'wl_channel', type: 'select', options: ghz, suffix: ' <input type="button" id="_f_scan" value="Scan" onclick="scanButton()"> <img src="spin.gif" id="spin">',
 		 value: nvram.wl_channel },
 	null,
-	{ title: 'Security', name: 'security_mode2', type: 'select',
-		options: [['disabled','Disabled'],['wep','WEP'],['wpa_personal','WPA Personal'],['wpa_enterprise','WPA Enterprise'],['wpa2_personal','WPA2 Personal'],['wpa2_enterprise','WPA2 Enterprise'],['wpaX_personal','WPA / WPA2 Personal'],['wpaX_enterprise','WPA / WPA2 Enterprise'],['radius','Radius']],
+	{ title: '加密方式', name: 'security_mode2', type: 'select',
+		options: [['disabled','關閉'],['wep','WEP'],['wpa_personal','WPA Personal'],['wpa_enterprise','WPA Enterprise'],['wpa2_personal','WPA2 Personal'],['wpa2_enterprise','WPA2 Enterprise'],['wpaX_personal','WPA / WPA2 Personal'],['wpaX_enterprise','WPA / WPA2 Enterprise'],['radius','Radius']],
 		value: nvram.security_mode2 },
-	{ title: 'Encryption', indent: 2, name: 'wl_crypto', type: 'select',
+	{ title: '編碼方式', indent: 2, name: 'wl_crypto', type: 'select',
 		options: [['tkip','TKIP'],['aes','AES'],['tkip+aes','TKIP / AES']], value: nvram.wl_crypto },
-	{ title: 'Shared Key', indent: 2, name: 'wl_wpa_psk', type: 'text', maxlen: 64, size: 66,
-		suffix: ' <input type="button" id="_f_psk_random1" value="Random" onclick="random_psk(\'_wl_wpa_psk\')">',
+	{ title: '公用金鑰', indent: 2, name: 'wl_wpa_psk', type: 'text', maxlen: 64, size: 66,
+		suffix: ' <input type="button" id="_f_psk_random1" value="亂數" onclick="random_psk(\'_wl_wpa_psk\')">',
 		value: nvram.wl_wpa_psk },
-	{ title: 'Shared Key', indent: 2, name: 'wl_radius_key', type: 'text', maxlen: 80, size: 32,
-		suffix: ' <input type="button" id="_f_psk_random2" value="Random" onclick="random_psk(\'_wl_radius_key\')">',
+	{ title: '公用金鑰', indent: 2, name: 'wl_radius_key', type: 'text', maxlen: 80, size: 32,
+		suffix: ' <input type="button" id="_f_psk_random2" value="亂數" onclick="random_psk(\'_wl_radius_key\')">',
 		value: nvram.wl_radius_key },
-	{ title: 'Group Key Renewal', indent: 2, name: 'wl_wpa_gtk_rekey', type: 'text', maxlen: 4, size: 6, suffix: ' <i>(seconds)</i>',
+	{ title: '金鑰轉動間隔', indent: 2, name: 'wl_wpa_gtk_rekey', type: 'text', maxlen: 4, size: 6, suffix: ' <i>(秒)</i>',
 		value: nvram.wl_wpa_gtk_rekey },
 	{ title: 'Radius Server', indent: 2, multi: [
 		{ name: 'wl_radius_ipaddr', type: 'text', maxlen: 15, size: 17, value: nvram.wl_radius_ipaddr },
 		{ name: 'wl_radius_port', type: 'text', maxlen: 5, size: 7, prefix: ' : ', value: nvram.wl_radius_port } ] },
-	{ title: 'Encryption', indent: 2, name: 'wl_wep_bit', type: 'select', options: [['128','128-bits'],['64','64-bits']],
+	{ title: '編碼方式', indent: 2, name: 'wl_wep_bit', type: 'select', options: [['128','128-bits'],['64','64-bits']],
 		value: nvram.wl_wep_bit },
-	{ title: 'Passphrase', indent: 2, name: 'wl_passphrase', type: 'text', maxlen: 16, size: 20,
-		suffix: ' <input type="button" id="_f_wep_gen" value="Generate" onclick="generate_wep()"> <input type="button" id="_f_wep_random" value="Random" onclick="random_wep()">',
+	{ title: '通行碼', indent: 2, name: 'wl_passphrase', type: 'text', maxlen: 16, size: 20,
+		suffix: ' <input type="button" id="_f_wep_gen" value="產生" onclick="generate_wep()"> <input type="button" id="_f_wep_random" value="亂數" onclick="random_wep()">',
 		value: nvram.wl_passphrase }
 ];
 
@@ -788,10 +788,10 @@ for (i = 1; i <= 4; ++i)	{
 
 f.push(null,
 	{ title: 'WDS', name: 'f_wl_lazywds', type: 'select',
-		 options: [['0','Link With...'],['1','Automatic / Lazy']], value: nvram.wl_lazywds } );
+		 options: [['0','使用遠端MAC清單'],['1','允許匿名連接']], value: nvram.wl_lazywds } );
 wds = ((nvram.wl_wds == '') ? nvram.wds_save : nvram.wl_wds).split(/\s+/);
 for (i = 0; i < 10; i += 2)	{
-	f.push({ title: (i ? '' : 'MAC Address'), indent: 2, multi: [
+	f.push({ title: (i ? '' : '遠端MAC清單'), indent: 2, multi: [
 		{ name: 'f_wds_' + i, type: 'text', maxlen: 17, size: 20, value: wds[i] || '00:00:00:00:00:00' },
 		{ name: 'f_wds_' + (i + 1), type: 'text', maxlen: 17, size: 20, value: wds[i + 1] || '00:00:00:00:00:00' } ] } );
 }
@@ -805,8 +805,8 @@ createFieldTable('', f);
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

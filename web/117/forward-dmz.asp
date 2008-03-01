@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Forwarding: DMZ</title>
+<title>[<% ident(); %>] 虛擬伺服器:DMZ虛擬非軍事區</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -76,8 +76,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -91,15 +91,15 @@ function save()
 <input type='hidden' name='dmz_enable'>
 <input type='hidden' name='dmz_ipaddr'>
 
-<div class='section-title'>DMZ</div>
+<div class='section-title'>DMZ 虛擬非軍事區</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Enable DMZ', name: 'f_dmz_enable', type: 'checkbox', value: (nvram.dmz_enable == '1') },
-	{ title: 'Destination Address', indent: 2, name: 'f_dmz_ipaddr', type: 'text', maxlen: 15, size: 17,
+	{ title: '開啟 DMZ', name: 'f_dmz_enable', type: 'checkbox', value: (nvram.dmz_enable == '1') },
+	{ title: '本地IP', indent: 2, name: 'f_dmz_ipaddr', type: 'text', maxlen: 15, size: 17,
 		value: (nvram.dmz_ipaddr.indexOf('.') != -1) ? nvram.dmz_ipaddr : (lipp + nvram.dmz_ipaddr) },
-	{ title: 'Source Address<br>Restriction', indent: 2, name: 'dmz_sip', type: 'text', maxlen: 32, size: 32,
-		value: nvram.dmz_sip, suffix: '&nbsp;<small>(optional; ex: "1.1.1.1", "1.1.1.0/24" or "1.1.1.1 - 2.2.2.2")</small>' }
+	{ title: '來源位址<br>指定範圍', indent: 2, name: 'dmz_sip', type: 'text', maxlen: 32, size: 32,
+		value: nvram.dmz_sip, suffix: '&nbsp;<small>("空白" 不限制,可單一IP或範圍;例: "1.1.1.1", "1.1.1.0/24" 或 "1.1.1.1 - 2.2.2.2")</small>' }
 ]);
 </script>
 </div>
@@ -110,8 +110,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

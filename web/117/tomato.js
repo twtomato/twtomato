@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
 	http://www.polarcloud.com/tomato/
@@ -259,7 +259,7 @@ var form = {
 		}
 
 		if ((msg = E('footer-msg')) != null) {
-			msg.innerHTML = 'Saving...';
+			msg.innerHTML = '正在儲存...';
 			msg.style.visibility = 'visible';
 		}
 
@@ -267,7 +267,7 @@ var form = {
 		this.xhttp.onCompleted = function(text, xml) {
 			if (msg) {
 				if (text.match(/@msg:(.+)/)) msg.innerHTML = escapeHTML(RegExp.$1);
-					else msg.innerHTML = 'Saved';
+					else msg.innerHTML = '已儲存';
 			}
 			setTimeout(
 				function() {
@@ -1145,13 +1145,13 @@ TomatoGrid.prototype = {
 		c.colSpan = this.header.cells.length;
 		if (which == 'edit') {
 			c.innerHTML =
-				'<input type=button value="Delete" onclick="TGO(this).onDelete()"> &nbsp; ' +
-				'<input type=button value="OK" onclick="TGO(this).onOK()"> ' +
-				'<input type=button value="Cancel" onclick="TGO(this).onCancel()">';
+				'<input type=button value="刪除" onclick="TGO(this).onDelete()"> &nbsp; ' +
+				'<input type=button value="確認" onclick="TGO(this).onOK()"> ' +
+				'<input type=button value="取消" onclick="TGO(this).onCancel()">';
 		}
 		else {
 			c.innerHTML =
-				'<input type=button value="Add" onclick="TGO(this).onAdd()">';
+				'<input type=button value="新增" onclick="TGO(this).onAdd()">';
 		}
 		return r;
 	},
@@ -1620,7 +1620,7 @@ TomatoRefresh.prototype = {
 
 		b = (mode != 'stop') && (this.refreshTime > 0);
 		if ((e = E('refresh-button')) != null) {
-			e.value = b ? 'Stop' : 'Refresh';
+			e.value = b ? '停止' : '更新';
 			e.disabled = ((mode == 'start') && (!b));
 		}
 		if ((e = E('refresh-time')) != null) e.disabled = b;
@@ -1668,9 +1668,9 @@ function genStdTimeList(id, zero, min)
 			v = t[i];
 			if (v < min) continue;
 			b.push('<option value=' + v + '>');
-			if (v == 60) b.push('1 minute');
-				else if (v > 60) b.push((v / 60) + ' minutes');
-				else b.push(v + ' seconds');
+			if (v == 60) b.push('1 分鐘');
+				else if (v > 60) b.push((v / 60) + ' 分鐘');
+				else b.push(v + ' 秒');
 		}
 		b.push('</select> ');
 	}
@@ -1681,8 +1681,8 @@ function genStdRefresh(spin, min, exec)
 {
 	W('<div style="text-align:right">');
 	if (spin) W('<img src="spin.gif" id="refresh-spinner"> ');
-	genStdTimeList('refresh-time', 'Auto Refresh', min);
-	W('<input type="button" value="Refresh" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
+	genStdTimeList('refresh-time', '自動更新', min);
+	W('<input type="button" value="更新" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
 }
 
 
@@ -1881,68 +1881,68 @@ function myName()
 function navi()
 {
 	var menu = [
-		['Status', 				'status', 1, [
-			['Overview',		'overview.asp'],
-			['Device List',		'devices.asp'],
-			['Logs',			'log.asp'] ] ],
-		['Bandwidth', 			'bwm', 1, [
-			['Real-Time',		'realtime.asp'],
-			['Last 24 Hours',	'24.asp'],
-			['Daily',			'daily.asp'],
-			['Weekly',			'weekly.asp'],
-			['Monthly',			'monthly.asp'] ] ],
-		['Tools', 				'tools', 1, [
+		['系統狀態', 				'status', 1, [
+			['系統狀態',		'overview.asp'],
+			['已連線設備列表',		'devices.asp'],
+			['日誌紀錄檔',			'log.asp'] ] ],
+		['頻寬監控', 			'bwm', 1, [
+			['即時流量',		'realtime.asp'],
+			['24小時內流量',	'24.asp'],
+			['每日流量',			'daily.asp'],
+			['每週流量',			'weekly.asp'],
+			['每月流量',			'monthly.asp'] ] ],
+		['診斷工具', 				'tools', 1, [
 			['Ping',			'ping.asp'],
-			['Trace',			'trace.asp'],
-			['Wireless Survey',	'survey.asp'],
-			['WOL',				'wol.asp'] ] ],
+			['追蹤路由',			'trace.asp'],
+			['搜尋AP',	'survey.asp'],
+			['網絡喚醒 WOL',				'wol.asp'] ] ],
 		null,
-		['Basic', 				'basic', 0, [
-			['Network',			'network.asp'],
-			['Identification',	'ident.asp'],
-			['Time',			'time.asp'],
+		['基本設定', 				'basic', 0, [
+			['網路',			'network.asp'],
+			['基本資料',	'ident.asp'],
+			['時間',			'time.asp'],
 			['DDNS',			'ddns.asp'],
-			['Static DHCP',		'static.asp'],
-			['Wireless Filter',	'wfilter.asp'] ] ],
-		['Advanced', 			'advanced', 0, [
-			['Conntrack / Netfilter',	'ctnf.asp'],
+			['靜態 DHCP',		'static.asp'],
+			['無線 - 存取控制',	'wfilter.asp'] ] ],
+		['進階設定', 			'advanced', 0, [
+			['連線追蹤/過濾模組',	'ctnf.asp'],
 			['DHCP / DNS',		'dhcpdns.asp'],
-			['Firewall',		'firewall.asp'],
-			['MAC Address',		'mac.asp'],
-			['Miscellaneous',	'misc.asp'],
-			['Routing',			'routing.asp'],
+			['防火牆',		'firewall.asp'],
+			['MAC 位址',		'mac.asp'],
+			['其他設定',	'misc.asp'],
+			['路由表',			'routing.asp'],
 //			['Watchdog',		'watchdog.asp'],
-			['Wireless',		'wireless.asp'] ] ],
-		['Port Forwarding', 	'forward', 0, [
-			['Basic',			'basic.asp'],
-			['DMZ',				'dmz.asp'],
-			['Triggered',		'triggered.asp'],
+			['無線網路參數',		'wireless.asp'] ] ],
+		['虛擬伺服器', 	'forward', 0, [
+			['基本設定',			'basic.asp'],
+			['虛擬非軍事區DMZ',				'dmz.asp'],
+			['通訊埠轉發',		'triggered.asp'],
 			['UPnP',			'upnp.asp'] ] ],
-		['QoS',					'qos', 0, [
-			['Basic Settings',	'settings.asp'],
-			['Classification',	'classify.asp'],
-			['View Graphs',		'graphs.asp'],
-			['View Details',	'detailed.asp']
+		['頻寬管理 QoS',					'qos', 0, [
+			['基本設定',	'settings.asp'],
+			['分類機制',	'classify.asp'],
+			['圖形分析',		'graphs.asp'],
+			['連線列表',	'detailed.asp']
 			] ],
-		['Access Restriction',	'restrict.asp'],
+		['網路瀏覽限制',	'restrict.asp'],
 		null,
-		['Administration',		'admin', 0, [
-			['Admin Access',	'access.asp'],
-			['Bandwidth Monitoring','bwm.asp'],
-			['Buttons / LED',	'buttons.asp'],
-			['CIFS Client',		'cifs.asp'],
-			['Configuration',	'config.asp'],
-			['Debugging',		'debug.asp'],
+		['路由器管理設定',		'admin', 0, [
+			['密碼/遠端連線',	'access.asp'],
+			['頻寬監控設定','bwm.asp'],
+			['功能按鈕 / LED',	'buttons.asp'],
+			['連接網路芳鄰',		'cifs.asp'],
+			['出廠設定值',	'config.asp'],
+			['除錯',		'debug.asp'],
 			['JFFS2',			'jffs2.asp'],
-			['Logging',			'log.asp'],
-			['Scheduler',		'sched.asp'],
-			['Scripts',			'scripts.asp'],
-			['Upgrade',			'upgrade.asp'] ] ],
+			['日誌紀錄檔管理',			'log.asp'],
+			['定時重開機/連線',		'sched.asp'],
+			['批次檔Scripts',			'scripts.asp'],
+			['韌體更新',			'upgrade.asp'] ] ],
 		null,
-		['About',				'about.asp'],
-		['Reboot...',			'javascript:reboot()'],
-		['Shutdown...',			'javascript:shutdown()'],
-		['Logout',				'javascript:logout()']
+		['關於 Tomato',				'about.asp'],
+		['重開機...',			'javascript:reboot()'],
+		['關機...',			'javascript:shutdown()'],
+		['登出',				'javascript:logout()']
 	];
 	var name, base;
 	var i, j;
@@ -2116,12 +2116,12 @@ function reloadPage()
 
 function reboot()
 {
-	if (confirm("Reboot?")) form.submitHidden('tomato.cgi', { _reboot: 1, _commit: 0, _nvset: 0 });
+	if (confirm("是否重新開機?")) form.submitHidden('tomato.cgi', { _reboot: 1, _commit: 0, _nvset: 0 });
 }
 
 function shutdown()
 {
-	if (confirm("Shutdown?")) form.submitHidden('shutdown.cgi', { });
+	if (confirm("是否關機?")) form.submitHidden('shutdown.cgi', { });
 }
 
 function logout()

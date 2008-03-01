@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -76,8 +76,8 @@ function init()
 <body onload='init()'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -89,7 +89,7 @@ function init()
 <img src='tux.png' alt='Linux &amp; Tomato' id='tux'>
 </div>
 <div style='margin:20px 20px;font-size:14px;color:#555;'>
-Tomato Firmware v<% version(1); %><br>
+蕃茄(Tomato)韌體版本<% version(1); %><br>
 Copyright (C) 2006-2008 Jonathan Zarate<br>
 <a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br>
 <br>
@@ -112,8 +112,8 @@ Built on <% build_time(); %><br>
 </form>
 
 <div style='border-top:1px solid #e7e7e7;margin:4em 0;padding:2em 0;font-size:12px'>
-<b>Thanks to everyone who risked their routers, tested, reported bugs, made
-suggestions and contributed to this project. ^ _ ^</b><br>
+非常感謝您冒險測試您的路由器，回報問題、建議和促成這個企劃 ^ _ ^</b><br>
+
 </div>
 
 </div>

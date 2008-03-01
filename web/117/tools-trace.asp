@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Tools: Trace</title>
+<title>[<% ident(); %>] 診斷工具：路由追蹤</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -46,7 +46,7 @@ var tracedata = '';
 var tg = new TomatoGrid();
 tg.setup = function() {
 	this.init('ttr-grid');
-	this.headerSet(['Hop', 'Address', 'Min (ms)', 'Max (ms)', 'Avg (ms)', '+/- (ms)']);
+	this.headerSet(['躍點', '位址', '最小 (ms)', '最大 (ms)', '平均 (ms)', '＋/－ (ms)']);
 }
 tg.populate = function() {
 	var seq = 1;
@@ -189,8 +189,8 @@ function init()
 <form action='javascript:{}'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -198,20 +198,20 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>Traceroute</div>
+<div class='section-title'>路由追蹤</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Address', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" value="Trace" onclick="trace()" id="traceb">' },
-	{ title: 'Maximum Hops', name: 'f_hops', type: 'text', maxlen: 2, size: 4, value: '20' },
-	{ title: 'Maximum Wait Time', name: 'f_wait', type: 'text', maxlen: 2, size: 4, value: '3', suffix: ' <small>(seconds per hop)</small>' }
+	{ title: '位址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" value="Trace" onclick="trace()" id="traceb">' },
+	{ title: '最大躍點數Hops', name: 'f_hops', type: 'text', maxlen: 2, size: 4, value: '20' },
+	{ title: '最大等待時間', name: 'f_wait', type: 'text', maxlen: 2, size: 4, value: '3', suffix: ' <small>(每跳秒數)</small>' }
 ]);
 </script>
 </div>
 
 <div style='visibility:hidden' id='trace-error'></div>
 
-<div style='visibility:hidden;text-align:right' id='wait'>Please wait... <img src='spin.gif' style='vertical-align:top'></div>
+<div style='visibility:hidden;text-align:right' id='wait'>請稍後... <img src='spin.gif' style='vertical-align:top'></div>
 
 <table id='ttr-grid' class='tomato-grid' cellspacing=1></table>
 

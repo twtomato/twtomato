@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Basic: Wireless Filter</title>
+<title>[<% ident(); %>] 基本設定：無線 - 存取控制</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -50,7 +50,7 @@ smg.setup = function() {
 		{ type: 'text', maxlen: 17 },
 		{ type: 'text', maxlen: 48 }
 	]);
-	this.headerSet(['MAC Address', 'Description']);
+	this.headerSet(['MAC 位址', '註解']);
 	macs = nvram.wl_maclist.split(/\s+/);
 	names = nvram.macnames.split('>');
 	for (i = 0; i < macs.length; ++i) {
@@ -118,8 +118,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -136,11 +136,11 @@ function init()
 <input type='hidden' name='macnames'>
 
 
-<div class='section-title'>Wireless Client Filter</div>
+<div class='section-title'>無線 - 存取控制</div>
 <div class='section'>
-	<input type='radio' name='f_type' id='_f_disable' value='disabled'> Disable Filter<br>
-	<input type='radio' name='f_type' id='_f_allow' value='allow'> Permit Only The Following Clients<br>
-	<input type='radio' name='f_type' id='_f_deny' value='deny'> Block The Following Clients<br>
+	<input type='radio' name='f_type' id='_f_disable' value='disabled'> 關閉<br>
+	<input type='radio' name='f_type' id='_f_allow' value='allow'> 允許下列的 MAC 連線<br>
+	<input type='radio' name='f_type' id='_f_deny' value='deny'> 拒絕下列的 MAC 連線<br>
 	<br>
 	<table id='sm-grid' class='tomato-grid'></table>
 </div>
@@ -151,8 +151,8 @@ function init()
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

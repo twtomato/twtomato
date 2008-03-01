@@ -1,5 +1,5 @@
-
-var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+﻿
+var months = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
 var snames = [' KB', ' MB', ' GB'];
 var scale = 2;
 
@@ -38,10 +38,10 @@ function cmpHist(a, b)
 function checkRstats()
 {
 	if (nvram.rstats_enable != '1') {
-		W('<div class="note-disabled">Bandwidth monitoring disabled.</b><br><br><a href="admin-bwm.asp">Enable &raquo;</a></div>');
+		W('<div class="note-disabled">頻寬監控已關閉.</b><br><br><a href="admin-bwm.asp">開啟 >Enable &raquo;<raquo;</a></div>');
 		E('rstats').style.display = 'none';
 	}
 	else if (rstats_busy) {
-		W('<div class="note-warning">The rstats program is not responding or is busy. Try reloading after a few seconds.</div>');
+		W('<div class="note-warning">程式繁忙或沒有回應. 請稍候再試.</div>');
 	}
 }

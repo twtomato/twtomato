@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Advanced: MAC Address</title>
+<title>[<% ident(); %>] 進階設定： MAC 位址</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -92,8 +92,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -108,22 +108,22 @@ function save()
 <input type='hidden' name='mac_wan'>
 <input type='hidden' name='mac_wl'>
 
-<div class='section-title'>MAC Address</div>
+<div class='section-title'>實體位址 MAC Address</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'WAN Port', indent: 1, name: 'f_mac_wan', type: 'text', maxlen: 17, size: 20,
-		suffix: ' <input type="button" value="Default" onclick="bdefault(\'wan\')"> <input type="button" value="Random" onclick="brand(\'wan\')"> <input type="button" value="Clone PC" onclick="bclone(\'wan\')">',
+	{ title: 'WAN 的 MAC', indent: 1, name: 'f_mac_wan', type: 'text', maxlen: 17, size: 20,
+		suffix: ' <input type="button" value="預設值" onclick="bdefault(\'wan\')"> <input type="button" value="亂數" onclick="brand(\'wan\')"> <input type="button" value="複製 PC 的MAC" onclick="bclone(\'wan\')">',
 		value: nvram.mac_wan || defmac.wan },
-	{ title: 'Wireless Interface', indent: 1, name: 'f_mac_wl', type: 'text', maxlen: 17, size: 20,
-		suffix:' <input type="button" value="Default" onclick="bdefault(\'wl\')"> <input type="button" value="Random" onclick="brand(\'wl\')"> <input type="button" value="Clone PC" onclick="bclone(\'wl\')">',
+	{ title: 'Wireless 的 MAC', indent: 1, name: 'f_mac_wl', type: 'text', maxlen: 17, size: 20,
+		suffix:' <input type="button" value="預設值" onclick="bdefault(\'wl\')"> <input type="button" value="亂數" onclick="brand(\'wl\')"> <input type="button" value="複製 PC 的MAC" onclick="bclone(\'wl\')">',
 		value: nvram.mac_wl || defmac.wl }
 ]);
 </script>
 <br>
 <table border=0 cellpadding=1>
-	<tr><td>Router's MAC Address:</td><td><b><% nv('et0macaddr'); %></b></td></tr>
-	<tr><td>Computer's MAC Address:</td><td><b><% compmac(); %></b></td></tr>
+	<tr><td>路由器 MAC:</td><td><b><% nv('et0macaddr'); %></b></td></tr>
+	<tr><td>PC網卡 MAC:</td><td><b><% compmac(); %></b></td></tr>
 </table>
 </div>
 
@@ -134,8 +134,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

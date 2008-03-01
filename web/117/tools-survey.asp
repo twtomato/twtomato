@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Tools: Wireless Survey</title>
+<title>[<% ident(); %>] 無線網路勘查</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -221,10 +221,10 @@ sg.populate = function()
 	}
 
 	s = '';
-	if (useAjax()) s = added + ' added, ' + removed + ' removed, ';
-	s += entries.length + ' total.';
+	if (useAjax()) s = added + ' 個新增, ' + removed + ' 個移除, ';
+	s += entries.length + ' 個AP可用.';
 
-	s += '<br><br><small>Last updated: ' + (new Date()).toWHMS() + '</small>';
+	s += '<br><br><small>更新於: ' + (new Date()).toWHMS() + '</small>';
 	setMsg(s);
 
 	wlscandata = [];
@@ -232,7 +232,7 @@ sg.populate = function()
 
 sg.setup = function() {
 	this.init('survey-grid', 'sort');
-	this.headerSet(['Last Seen', 'SSID', 'BSSID', 'RSSI &nbsp; &nbsp; ', 'Noise &nbsp; &nbsp; ', 'Quality', 'Ch', 'Capabilities', 'Rates']);
+	this.headerSet(['發現時間', '無線名稱 SSID', '無線 MAC 位址', 'RSSI &nbsp; &nbsp; ', '雜訊 &nbsp; &nbsp; ', '品質', 'Ch', 'Capabilities', '速率']);
 	this.populate();
 	this.sort(0);
 }
@@ -276,8 +276,8 @@ function init()
 <form action='javascript:{}'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -285,23 +285,23 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>Wireless Site Survey</div>
+<div class='section-title'>無線網路勘查</div>
 <div class='section'>
 	<table id='survey-grid' class='tomato-grid' cellspacing=0></table>
 	<div id='survey-msg'></div>
 	<div id='survey-controls'>
 		<img src="spin.gif" id="refresh-spinner">
 		<script type='text/javascript'>
-		genStdTimeList('expire-time', 'Auto Expire', 0);
-		genStdTimeList('refresh-time', 'Auto Refresh', 0);
+		genStdTimeList('expire-time', '自動停止', 0);
+		genStdTimeList('refresh-time', '自動更新', 0);
 		</script>
-		<input type="button" value="Refresh" onclick="ref.toggle()" id="refresh-button">
+		<input type="button" value="重新整理" onclick="ref.toggle()" id="refresh-button">
 	</div>
 
 	<br><br><br><br>
 	<script type='text/javascript'>
 	if ('<% wlclient(); %>' == '0') {
-		document.write('<small>Warning: Wireless connections to this router may be disrupted while using this tool.</small>');
+		document.write('<small>請注意：使用此工具,無線用戶端連接到此路由器可能會中斷.</small>');
 	}
 	</script>
 </div>

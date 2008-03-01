@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Advanced: Conntrack / Netfilter</title>
+<title>[<% ident(); %>] 進階設定: 連接跟蹤 / 過濾</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -140,8 +140,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -160,29 +160,29 @@ function save()
 <input type='hidden' name='nf_h323'>
 <input type='hidden' name='nf_ftp'>
 
-<div class='section-title'>Connections</div>
+<div class='section-title'>連線數</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Maximum Connections', name: 'ct_max', type: 'text', maxlen: 5, size: 7,
+	{ title: '最大連線數量', name: 'ct_max', type: 'text', maxlen: 5, size: 7,
 		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ count current... ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
 		value: fixInt(nvram.ct_max || 2048, 128, 10240, 2048) }
 ]);
 </script>
 <br>
-<input type='button' value='Drop Idle' onclick='expireClicked()' id='expire'>
+<input type='button' value='清除逾時' onclick='expireClicked()' id='expire'>
 <br><br>
 </div>
 
 
-<div class='section-title'>TCP Timeout</div>
+<div class='section-title'>TCP 逾時</div>
 <div class='section'>
 <script type='text/javascript'>
 if ((v = nvram.ct_tcp_timeout.match(/^(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)$/)) == null) {
 	v = [0,1800,14400,120,60,120,120,10,60,30,120];
 }
 titles = ['-', 'None', 'Established', 'SYN Sent', 'SYN Received', 'FIN Wait', 'Time Wait', 'Close', 'Close Wait', 'Last ACK', 'Listen'];
-f = [{ title: ' ', text: '<small>(seconds)</small>' }];
+f = [{ title: ' ', text: '<small>(秒)</small>' }];
 for (i = 1; i < 11; ++i) {
 	f.push({ title: titles[i], name: ('f_tcp_' + (i - 1)),
 		type: 'text', maxlen: 6, size: 8, value: v[i],
@@ -192,21 +192,21 @@ createFieldTable('', f);
 </script>
 </div>
 
-<div class='section-title'>UDP Timeout</div>
+<div class='section-title'>UDP 逾時</div>
 <div class='section'>
 <script type='text/javascript'>
 if ((v = nvram.ct_udp_timeout.match(/^(\d+)\s+(\d+)$/)) == null) {
 	v = [0,30,180];
 }
 createFieldTable('', [
-	{ title: ' ', text: '<small>(seconds)</small>' },
+	{ title: ' ', text: '<small>(秒)</small>' },
 	{ title: 'Unreplied', name: 'f_udp_0', type: 'text', maxlen: 6, size: 8, value: v[1], suffix: '<span id="count11"></span>' },
 	{ title: 'Assured', name: 'f_udp_1', type: 'text', maxlen: 6, size: 8, value: v[2], suffix: '<span id="count12"></span>' }
 ]);
 </script>
 </div>
 
-<div class='section-title'>Tracking / NAT Helpers</div>
+<div class='section-title'>Tracking / NAT 增強模組</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -218,7 +218,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>Miscellaneous</div>
+<div class='section-title'>其他</div>
 <div class='section'>
 <script type='text/javascript'>
 v = [];
@@ -226,8 +226,8 @@ for (i = -5; i <= 5; ++i) {
 	v.push([i, i ? ((i > 0) ? '+' : '') + i : 'None']);
 }
 createFieldTable('', [
-	{ title: 'TTL Adjust', name: 'nf_ttl', type: 'select', options: v, value: nvram.nf_ttl },
-	{ title: 'Inbound Layer 7', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
+	{ title: 'TTL 調整', name: 'nf_ttl', type: 'select', options: v, value: nvram.nf_ttl },
+	{ title: '進入應用層', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
 ]);
 </script>
 </div>
@@ -237,8 +237,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

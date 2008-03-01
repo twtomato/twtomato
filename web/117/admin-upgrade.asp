@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -74,8 +74,8 @@ function upgrade()
 <body>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -84,21 +84,21 @@ function upgrade()
 <!-- / / / -->
 
 <div id='afu-input'>
-	<div class='section-title'>Upgrade Firmware</div>
+	<div class='section-title'>韌體更新</div>
 	<div class='section'>
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
-			Select the file to use:<br>
-			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='Upgrade' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
+			選擇韌體:<br>
+			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='昇級' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
 		</div>
 		</form>
 
 		<br>
 		<table border=0>
-		<tr><td>Current Version:</td><td>&nbsp; <% version(1); %></td></tr>
+		<tr><td目前版本:/td><td>&nbsp; <% version(1); %></td></tr>
 		<script type='text/javascript'>
 		//	<% sysinfo(); %>
-		W('<tr><td>Free Memory:</td><td>&nbsp; ' + scaleSize(sysinfo.totalfreeram) + ' &nbsp; <small>(aprox. size that can be buffered completely in RAM)</small></td></tr>');
+		W('<tr><td>剩餘記憶體:</td><td>&nbsp; ' + scaleSize(sysinfo.totalfreeram) + ' &nbsp; <small>(剩餘記憶體空間必須大於韌體檔案)</small></td></tr>');
 		</script>
 		</table>
 
@@ -106,16 +106,16 @@ function upgrade()
 </div>
 
 <div class='note-disabledw' style='display:none' id='jwarn'>
-<b>Cannot upgrade if JFFS2 is enabled.</b><br><br>
-An upgrade may overwrite the JFFS2 partition currently in use. Before upgrading,
-please backup the contents of the JFFS2 partition, disable it, then reboot the router.<br><br><br>
-<a href='admin-jffs2.asp'>Disable &raquo;</a>
+<b> JFFS2 開啟時無法更新.</b><br><br>
+更新和覆蓋目前 JFFS2 使用中的分區, 更新前請先備份 JFFS2 的資料. 關閉 JFFS2 並重開 ROUTER.
+br><br><br>
+<a href='admin-jffs2.asp'>關閉 &raquo;</a>
 </div>
 
 <div id='afu-progress' style='display:none;margin:auto'>
 	<img src='spin.gif' style='vertical-align:baseline'> <span id='afu-time'>0:00</span><br>
-	Please wait while the firmware is uploaded &amp; flashed.<br>
-	<b>Warning:</b> Do not interrupt this browser or the router!<br>
+	請稍候...直到軔體更新完成.<br>
+	<b>請注意:</b> 請勿關閉瀏覽器或中斷電源!<br>
 </div>
 
 <!-- / / / -->

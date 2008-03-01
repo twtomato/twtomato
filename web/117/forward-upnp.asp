@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Forwarding: UPnP</title>
+<title>[<% ident(); %>\] 虛擬伺服器：UPnP</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -67,7 +67,7 @@ ug.rpDel = function(e) {
 	
 ug.setup = function() {
 	this.init('upnp-grid', 'sort delete');
-	this.headerSet(['External', 'Internal', 'Internal Address', 'Protocol', 'Description']);
+	this.headerSet(['外部通訊埠', '本地埠', '本地IP', '協定', '註解']);
 	ug.populate();
 }
 
@@ -127,8 +127,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -142,18 +142,18 @@ function init()
 <input type='hidden' name='upnp_enable'>
 <input type='hidden' name='upnp_mnp'>
 
-<div class='section-title'>UPnP Forwarded Ports</div>
+<div class='section-title'>UPnP 清單</div>
 <div class='section'>
 	<table id='upnp-grid' class='tomato-grid'></table>
-	<div style='width: 100%; text-align: right'><input type='button' value='Delete All' onclick='deleteAll()' id='upnp-delete-all'> <input type='button' value='Refresh' onclick='javascript:reloadPage();'></div>
+	<div style='width: 100%; text-align: right'><input type='button' value='全部刪除' onclick='deleteAll()' id='upnp-delete-all'> <input type='button' value='重新整理' onclick='javascript:reloadPage();'></div>
 </div>
 
-<div class='section-title'>Settings</div>
+<div class='section-title'>設定</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Enable UPnP', name: 'f_upnp_enable', type: 'checkbox', value: (nvram.upnp_enable == '1') },
-	{ title: 'Show In My Network Places',  name: 'f_upnp_mnp',  type: 'checkbox',  value: (nvram.upnp_mnp == '1') }
+	{ title: '開啟 UPnP', name: 'f_upnp_enable', type: 'checkbox', value: (nvram.upnp_enable == '1') },
+	{ title: '顯示於 控制台 的 網路連線',  name: 'f_upnp_mnp',  type: 'checkbox',  value: (nvram.upnp_mnp == '1') }
 ]);
 </script>
 </div>
@@ -164,8 +164,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

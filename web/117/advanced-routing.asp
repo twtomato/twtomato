@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Advanced: Routing</title>
+<title>[<% ident(); %>] 進階設定：路由表</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -54,7 +54,7 @@ ara.setup = function() {
 	var i, a;
 
 	this.init('ara-grid', 'sort');
-	this.headerSet(['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface']);
+	this.headerSet(['目的地', '閘道', '子網路遮罩', '開銷', '介面']);
 	for (i = 0; i < activeroutes.length; ++i) {
 		a = activeroutes[i];
 		if (a[0] == nvram.lan_ifname) a[0] += ' (LAN)';
@@ -76,7 +76,7 @@ ars.setup = function() {
 	this.init('ars-grid', '', 20, [
 		{ type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 },
 		{ type: 'text', maxlen: 3 }, { type: 'select', options: [['LAN','LAN'],['WAN','WAN']] }, { type: 'text', maxlen: 32 }]);
-	this.headerSet(['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface', 'Description']);
+	this.headerSet(['目的地', '閘道', '子網路遮罩', '開銷', '介面', '描述']);
 	var routes = nvram.routes_static.split('>');
 	for (var i = 0; i < routes.length; ++i) {
 		var r;
@@ -143,8 +143,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -162,22 +162,22 @@ function init()
 <input type='hidden' name='dr_wan_tx'>
 <input type='hidden' name='dr_wan_rx'>
 
-<div class='section-title'>Current Routing Table</div>
+<div class='section-title'>路由表</div>
 <div class='section'>
 	<table class='tomato-grid' id='ara-grid'></table>
 </div>
 
-<div class='section-title'>Static Routing Table</div>
+<div class='section-title'>固定路由表</div>
 <div class='section'>
 	<table class='tomato-grid' id='ars-grid'></table>
 </div>
 
-<div class='section-title'>Miscellaneous</div>
+<div class='section-title'>其他</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Mode', name: 'wk_mode', type: 'select', options: [['gateway','Gateway'],['router','Router']], value: nvram.wk_mode },
-	{ title: 'RIPv1 &amp; v2', name: 'dr_setting', type: 'select',	options: [[0,'Disabled'],[1,'LAN'],[2,'WAN'],[3,'Both']], value:	nvram.dr_setting },
+	{ title: '模式', name: 'wk_mode', type: 'select', options: [['gateway','閘道'],['router','路由']], value: nvram.wk_mode },
+	{ title: 'RIPv1 &amp; v2', name: 'dr_setting', type: 'select',	options: [[0,'取消'],[1,'區域網路'],[2,'廣域網路'],[3,'兩者']], value:	nvram.dr_setting },
 	{ title: 'Spanning-Tree Protocol', name: 'f_stp', type: 'checkbox', value: nvram.lan_stp != '0' },
 ]);
 </script>
@@ -189,8 +189,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>
