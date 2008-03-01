@@ -8,6 +8,8 @@ MINI PCI 內建 方便替換 WIFI 卡
 
 RAM 32 MBytes DDR
 
+FLASH 8 MBytes
+
 CPU 264MHz 可 OC 300MHz
 
 USB 2.0 兩個 方便擴充
@@ -15,6 +17,20 @@ USB 2.0 兩個 方便擴充
 便宜
 
 ----
+
+WHR-HP-G54 
+
+ALL IN ONE  WIFI 卡 無法替換
+
+RAM 16 MBytes SDRAM
+
+FLASH 4 MBytes
+
+CPU 200MHz 可 OC 250MHz
+
+USB 無
+
+
 
 簡易 傳輸率測試 比 WHR-HP-G54 好太多了. 
 
