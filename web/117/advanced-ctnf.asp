@@ -45,9 +45,9 @@ function check()
 			conntrack = [];
 		}
 		for (i = 1; i < 13; ++i) {
-			E('count' + i).innerHTML = '&nbsp; <small>('+ ((conntrack[i] || 0) * 1) + ' in this state)</small>';
+			E('count' + i).innerHTML = '&nbsp; <small>('+ ((conntrack[i] || 0) * 1) + ' 個在這種狀態)</small>';
 		}
-		E('count0').innerHTML = '(' + ((conntrack[0] || 0) * 1) + ' connections currently tracked)';
+		E('count0').innerHTML = '(' + ((conntrack[0] || 0) * 1) + ' 個連線數目前使用中)';
 		checker = null;
 		timer.start(3000);
 	}
@@ -165,7 +165,7 @@ function save()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '最大連線數量', name: 'ct_max', type: 'text', maxlen: 5, size: 7,
-		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ count current... ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
+		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ 顯示目前的連線數 ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
 		value: fixInt(nvram.ct_max || 2048, 128, 10240, 2048) }
 ]);
 </script>

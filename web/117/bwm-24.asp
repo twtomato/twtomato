@@ -170,26 +170,26 @@ function init()
 	<div id='bwm-controls'>
 		<small>(每 2 分鐘取樣)</small><br>
 		<br>
-		單位(小時):Hours:&nbsp;nbsp;
+		單位(小時):&nbsp;
 			<a href='javascript:switchHours(4);' id='hr4'>4</a>,
 			<a href='javascript:switchHours(6);' id='hr6'>6</a>,
 			<a href='javascript:switchHours(12);' id='hr12'>12</a>,
 			<a href='javascript:switchHours(18);' id='hr18'>18</a>,
 			<a href='javascript:switchHours(24);' id='hr24'>24</a><br>
-		平均:Avg:&nbsp;nbsp;
+		平均:&nbsp;
 			<a href='javascript:switchAvg(1)' id='avg1'>Off</a>,
 			<a href='javascript:switchAvg(2)' id='avg2'>2x</a>,
 			<a href='javascript:switchAvg(4)' id='avg4'>4x</a>,
 			<a href='javascript:switchAvg(6)' id='avg6'>6x</a>,
 			<a href='javascript:switchAvg(8)' id='avg8'>8x</a><br>
-		Max:Max:&nbsp;nbsp;
+		Max:&nbsp;
 			<a href='javascript:switchScale(0)' id='scale0'>Uniform</a>,
 			<a href='javascript:switchScale(1)' id='scale1'>Per IF</a><br>
-		繪圖:Display:&nbsp;nbsp;
+		繪圖:&nbsp;
 			<a href='javascript:switchDraw(0)' id='draw0'>填滿</a>,
 			<a href='javascript:switchDraw(1)' id='draw1'>實線</a><br>
-		顏色:Color:&nbsp;nbsp; <a href='javascript:switchColor()' id='drawcolor'>-</a><br>
-		<small><a href='javascript:switchColor(1)' id='drawrev'>[reverse]</a></small><br>
+		顏色:&nbsp; <a href='javascript:switchColor()' id='drawcolor'>-</a><br>
+		<small><a href='javascript:switchColor(1)' id='drawrev'>[顏色反向]</a></small><br>
 		<br><br>
 		&nbsp; &raquo; <a href="admin-bwm.asp">設定</a>
 	</div>

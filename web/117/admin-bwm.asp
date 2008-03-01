@@ -227,7 +227,7 @@ createFieldTable('', [
 	{ title: '關機時儲存', indent: 2, name: 'f_sshut', type: 'checkbox', value: nvram.rstats_sshut == '1' },
 	{ title: 'Create New File /<br>Reset Data', indent: 2, name: 'f_new', type: 'checkbox', value: 0,
 		suffix: ' &nbsp; <b id="newmsg" style="visibility:hidden"><small>(note: enable if this is a new file)</small></b>' },
-	{ title: 'First Day Of The Month', name: 'rstats_offset', type: 'text', value: nvram.rstats_offset, maxlen: 2, size: 4 },
+	{ title: '每月第一天為', name: 'rstats_offset', type: 'text', value: nvram.rstats_offset, maxlen: 2, size: 4 },
 	{ title: '排除的介面', name: 'rstats_exclude', type: 'text', value: nvram.rstats_exclude, maxlen: 64, size: 50, suffix: '&nbsp;<small>(comma separated list)</small>' }
 ]);
 </script>
