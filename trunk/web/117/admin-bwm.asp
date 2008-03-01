@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: Bandwidth Monitoring</title>
+<title>[<% ident(); %>] 路由器管理設定：頻寬監控設定</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -183,8 +183,8 @@ function save()
 <body>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -192,7 +192,7 @@ function save()
 
 <!-- / / / -->
 
-<div class='section-title'>Bandwidth Monitoring</div>
+<div class='section-title'>頻寬監控設定</div>
 <div class='section' id='config-section'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <input type='hidden' name='_nextpage' value='admin-bwm.asp'>
@@ -215,20 +215,20 @@ default:
 	break;
 }
 createFieldTable('', [
-	{ title: 'Enable', name: 'f_rstats_enable', type: 'checkbox', value: nvram.rstats_enable == '1' },
-	{ title: 'Save History Location', multi: [
+	{ title: '啟用', name: 'f_rstats_enable', type: 'checkbox', value: nvram.rstats_enable == '1' },
+	{ title: '選擇儲存空間', multi: [
 		{ name: 'f_loc', type: 'select', options: [['','RAM (Temporary)'],['*nvram','NVRAM'],['/jffs/','JFFS2'],['/cifs1/','CIFS 1'],['/cifs2/','CIFS 2'],['*user','Custom Path']], value: loc },
 		{ name: 'f_user', type: 'text', maxlen: 48, size: 50, value: nvram.rstats_path }
 	] },
-	{ title: 'Save Frequency', indent: 2, name: 'rstats_stime', type: 'select', value: nvram.rstats_stime, options: [
-		[1,'Every Hour'],[2,'Every 2 Hours'],[3,'Every 3 Hours'],[4,'Every 4 Hours'],[5,'Every 5 Hours'],[6,'Every 6 Hours'],
-		[9,'Every 9 Hours'],[12,'Every 12 Hours'],[24,'Every 24 Hours'],[48,'Every 2 Days'],[72,'Every 3 Days'],[96,'Every 4 Days'],
+	{ title: '儲存的頻率', indent: 2, name: 'rstats_stime', type: 'select', value: nvram.rstats_stime, options: [
+		[1,'每小時'],[2,'每2小時'],[3,'每3小時'],[4,'每4小時'],[5,'每5小時'],[6,'每6小時'],
+		[9,'每9小時'],[12,'每12小時'],[24,'每天'],[48,'每兩天'],[72,'每三天'],[96,'每四天'],
 		[120,'Every 5 Days'],[144,'Every 6 Days'],[168,'Every Week']] },
-	{ title: 'Save On Shutdown', indent: 2, name: 'f_sshut', type: 'checkbox', value: nvram.rstats_sshut == '1' },
+	{ title: '關機時儲存', indent: 2, name: 'f_sshut', type: 'checkbox', value: nvram.rstats_sshut == '1' },
 	{ title: 'Create New File /<br>Reset Data', indent: 2, name: 'f_new', type: 'checkbox', value: 0,
 		suffix: ' &nbsp; <b id="newmsg" style="visibility:hidden"><small>(note: enable if this is a new file)</small></b>' },
 	{ title: 'First Day Of The Month', name: 'rstats_offset', type: 'text', value: nvram.rstats_offset, maxlen: 2, size: 4 },
-	{ title: 'Excluded Interfaces', name: 'rstats_exclude', type: 'text', value: nvram.rstats_exclude, maxlen: 64, size: 50, suffix: '&nbsp;<small>(comma separated list)</small>' }
+	{ title: '排除的介面', name: 'rstats_exclude', type: 'text', value: nvram.rstats_exclude, maxlen: 64, size: 50, suffix: '&nbsp;<small>(comma separated list)</small>' }
 ]);
 </script>
 </form>
@@ -236,23 +236,23 @@ createFieldTable('', [
 
 <br>
 
-<div class='section-title'>Backup</div>
+<div class='section-title'>備份</div>
 <div class='section' id='backup-section'>
 	<form>
 	<script type='text/javascript'>
 	W("<input type='text' size='40' maxlength='64' id='backup-name' name='backup_name' value='tomato_rstats_" + nvram.et0macaddr.replace(/:/g, '').toLowerCase() + "'>");
 	</script>
 	.gz &nbsp;
-	<input type='button' name='f_backup_button' id='backup-button' onclick='backupButton()' value='Backup'>
+	<input type='button' name='f_backup_button' id='backup-button' onclick='backupButton()' value='備份'>
 	</form>
 </div>
 <br>
 
-<div class='section-title'>Restore</div>
+<div class='section-title'>恢復</div>
 <div class='section' id='restore-section'>
 	<form id='restore-form' method='post' action='bwm/restore.cgi?_http_id=<% nv(http_id); %>' encType='multipart/form-data'>
 		<input type='file' size='40' id='restore-name' name='restore_name'>
-		<input type='button' name='f_restore_button' id='restore-button' value='Restore' onclick='restoreButton()'>
+		<input type='button' name='f_restore_button' id='restore-button' value='恢復' onclick='restoreButton()'>
 		<br>
 	</form>
 </div>
@@ -263,8 +263,8 @@ createFieldTable('', [
 <tr><td id='footer' colspan=2>
 	<form>
 	<span id='footer-msg'></span>	
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='javascript:reloadPage();'>
 	</form>
 </div>
 </td></tr>

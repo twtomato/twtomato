@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Scheduler</title>
+<title>[<% ident(); %>] 定時重開機/連線</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -51,18 +51,18 @@ function makeSched(key)
 	
 	key = key + '_';
 	createFieldTable('', [
-		{ title: 'Enabled', name: key + 'enabled', type: 'checkbox', value: v[1] == '1' },
-		{ title: 'Time', multi: [
+		{ title: '開啟', name: key + 'enabled', type: 'checkbox', value: v[1] == '1' },
+		{ title: '時間', multi: [
 			{ name: key + 'time', type: 'select', options: tm, value: v[2] } ] },
-		{ title: 'Days', multi: [
-			{ name: key + 'sun', type: 'checkbox', suffix: ' Sun &nbsp; ', value: w & 1 },
-			{ name: key + 'mon', type: 'checkbox', suffix: ' Mon &nbsp; ', value: w & 2 },
-			{ name: key + 'tue', type: 'checkbox', suffix: ' Tue &nbsp; ', value: w & 4 },
-			{ name: key + 'wed', type: 'checkbox', suffix: ' Wed &nbsp; ', value: w & 8 },
-			{ name: key + 'thu', type: 'checkbox', suffix: ' Thu &nbsp; ', value: w & 16 },
-			{ name: key + 'fri', type: 'checkbox', suffix: ' Fri &nbsp; ', value: w & 32 },
-			{ name: key + 'sat', type: 'checkbox', suffix: ' Sat &nbsp; &nbsp;', value: w & 64 },
-			{ name: key + 'everyday', type: 'checkbox', suffix: ' Everyday', value: (w & 0x7F) == 0x7F } ] }
+		{ title: '週幾', multi: [
+			{ name: key + 'sun', type: 'checkbox', suffix: ' 星期日 &nbsp; ', value: w & 1 },
+			{ name: key + 'mon', type: 'checkbox', suffix: ' 星期一 &nbsp; ', value: w & 2 },
+			{ name: key + 'tue', type: 'checkbox', suffix: ' 星期二 &nbsp; ', value: w & 4 },
+			{ name: key + 'wed', type: 'checkbox', suffix: ' 星期三 &nbsp; ', value: w & 8 },
+			{ name: key + 'thu', type: 'checkbox', suffix: ' 星期四 &nbsp; ', value: w & 16 },
+			{ name: key + 'fri', type: 'checkbox', suffix: ' 星期五 &nbsp; ', value: w & 32 },
+			{ name: key + 'sat', type: 'checkbox', suffix: ' 星期六 &nbsp; ', value: w & 64 },
+			{ name: key + 'everyday', type: 'checkbox', suffix: ' 每日 &nbsp; ', value: (w & 0x7F) == 0x7F } ] }
 	]);
 }
 
@@ -156,8 +156,8 @@ function init()
 <form name='_fom' id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version() %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version() %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -170,14 +170,14 @@ function init()
 <input type='hidden' name='sch_rboot' value=''>
 <input type='hidden' name='sch_rcon' value=''>
 
-<div class='section-title'>Scheduled Reboot</div>
+<div class='section-title'>定時重新啟動</div>
 <div class='section'>
 <script type='text/javascript'>
 makeSched('rboot');
 </script>
 </div>
 
-<div class='section-title'>Scheduled Reconnect</div>
+<div class='section-title'>定時重新連線</div>
 <div class='section'>
 <script type='text/javascript'>
 makeSched('rcon');
@@ -189,8 +189,8 @@ makeSched('rcon');
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 <br><br>

@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -19,6 +19,6 @@ function init()
 </head>
 <body style='background-color:#fff;font:13px sans-serif;color:#000' onload='setTimeout("init()", 500)'>
 <div style='width:350px;padding:10em 1em;background:#eee;text-align:center'>
-<b>Logout</b><br>Select cancel when prompted for a username/password.
+<b>登出</b><br>清除此連線 帳號/密碼.
 </div>
 </body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: CIFS Client</title>
+<title>[<% ident(); %>] 路由器管理設定：網路芳鄰設定</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -92,8 +92,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -108,7 +108,7 @@ function save()
 <input type='hidden' name='cifs1' id='cifs1'>
 <input type='hidden' name='cifs2' id='cifs2'>
 
-<div class='section-title'>CIFS Client</div>
+<div class='section-title'>網路芳鄰</div>
 <div class='section'>
 <script type='text/javascript'>
 a = b = [0, '\\\\192.168.1.5\\shared_example', '', '', '', ''];
@@ -121,22 +121,22 @@ if (r = nvram.cifs2.match(/^(0|1)<(\\\\.+)<(.*)<(.*)<(.*)<(.*)$/)) b = r.splice(
 
 createFieldTable('', [
 	{ title: '/cifs1' },
-	{ title: 'Enable', indent: 2, name: 'f_cifs1_enable', type: 'checkbox', value: a[0]*1 },
+	{ title: '啟用', indent: 2, name: 'f_cifs1_enable', type: 'checkbox', value: a[0]*1 },
 	{ title: 'UNC', indent: 2, name: 'f_cifs1_unc', type: 'text', maxlen: 128, size: 64, value: a[1] },
-	{ title: 'Username', indent: 2, name: 'f_cifs1_user', type: 'text', maxlen: 32, size: 34, value: a[2] },
-	{ title: 'Password', indent: 2, name: 'f_cifs1_pass', type: 'password', maxlen: 16, size: 34, value: a[3] },
-	{ title: 'Domain', indent: 2, name: 'f_cifs1_dom', type: 'text', maxlen: 32, size: 34, value: a[4] },
-	{ title: 'Execute When Mounted', indent: 2, name: 'f_cifs1_exec', type: 'text', maxlen: 64, size: 34, value: a[5] },
-	{ title: 'Total / Free Size', indent: 2, text: cifs1.size ? (scaleSize(cifs1.size) + ' / ' + scaleSize(cifs1.free)) : '(not mounted)' },
+	{ title: '使用者名稱', indent: 2, name: 'f_cifs1_user', type: 'text', maxlen: 32, size: 34, value: a[2] },
+	{ title: '密碼', indent: 2, name: 'f_cifs1_pass', type: 'password', maxlen: 16, size: 34, value: a[3] },
+	{ title: '網域', indent: 2, name: 'f_cifs1_dom', type: 'text', maxlen: 32, size: 34, value: a[4] },
+	{ title: '掛載', indent: 2, name: 'f_cifs1_exec', type: 'text', maxlen: 64, size: 34, value: a[5] },
+	{ title: '總容量/可用空間', indent: 2, text: cifs1.size ? (scaleSize(cifs1.size) + ' / ' + scaleSize(cifs1.free)) : '(未掛載)' },
 	null,
 	{ title: '/cifs2' },
-	{ title: 'Enable', indent: 2, name: 'f_cifs2_enable', type: 'checkbox', value: b[0]*1 },
+	{ title: '啟用', indent: 2, name: 'f_cifs2_enable', type: 'checkbox', value: b[0]*1 },
 	{ title: 'UNC', indent: 2, name: 'f_cifs2_unc', type: 'text', maxlen: 128, size: 64, value: b[1] },
-	{ title: 'Username', indent: 2, name: 'f_cifs2_user', type: 'text', maxlen: 64, size: 34, value: b[2] },
-	{ title: 'Password', indent: 2, name: 'f_cifs2_pass', type: 'password', maxlen: 16, size: 34, value: b[3] },
-	{ title: 'Domain', indent: 2, name: 'f_cifs2_dom', type: 'text', maxlen: 32, size: 34, value: b[4] },
-	{ title: 'Execute When Mounted', indent: 2, name: 'f_cifs2_exec', type: 'text', maxlen: 64, size: 34, value: b[5] },
-	{ title: 'Total / Free Size', indent: 2, text: cifs2.size ? (scaleSize(cifs2.size) + ' / ' + scaleSize(cifs2.free)) : '(not mounted)' }
+	{ title: '使用者名稱', indent: 2, name: 'f_cifs2_user', type: 'text', maxlen: 64, size: 34, value: b[2] },
+	{ title: '密碼', indent: 2, name: 'f_cifs2_pass', type: 'password', maxlen: 16, size: 34, value: b[3] },
+	{ title: '網域', indent: 2, name: 'f_cifs2_dom', type: 'text', maxlen: 32, size: 34, value: b[4] },
+	{ title: '掛載', indent: 2, name: 'f_cifs2_exec', type: 'text', maxlen: 64, size: 34, value: b[5] },
+	{ title: '總容量/可用空間', indent: 2, text: cifs2.size ? (scaleSize(cifs2.size) + ' / ' + scaleSize(cifs2.free)) : '(未掛載)' }
 ]);
 </script>
 </div>
@@ -149,8 +149,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

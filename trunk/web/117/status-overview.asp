@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Status: Overview</title>
+<title>[<% ident(); %>] 系統狀態：系統狀態</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -108,7 +108,7 @@ function show()
 		E('b_disconnect').disabled = !stats.wanup;
 	}
 
-	c('radio', wlradio ? 'Enabled' : '<b>Disabled</b>');
+	c('radio', wlradio ? 'Enabled' : '<b>關閉</b>');
 	if (show_radio) {
 		E('b_wl_enable').disabled = wlradio;
 		E('b_wl_disable').disabled = !wlradio;
@@ -142,8 +142,8 @@ function init()
 <form>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -151,17 +151,17 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>System</div>
+<div class='section-title'>系統</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Name', text: nvram.router_name },
-	{ title: 'Model', text: nvram.t_model_name },
+	{ title: '名稱', text: nvram.router_name },
+	{ title: '機型', text: nvram.t_model_name },
 	null,
-	{ title: 'Time', rid: 'time', text: stats.time },
-	{ title: 'Uptime', rid: 'uptime', text: stats.uptime },
-	{ title: 'CPU Load <small>(1 / 5 / 15 mins)</small>', rid: 'cpu', text: stats.cpuload },
-	{ title: 'Total / Free Memory', rid: 'memory', text: stats.memory }
+	{ title: '時間', rid: 'time', text: stats.time },
+	{ title: '開機時間', rid: 'uptime', text: stats.uptime },
+	{ title: 'CPU 負載 <small>(1 / 5 / 15 mins)</small>', rid: 'cpu', text: stats.cpuload },
+	{ title: '總和/剩餘 記憶體', rid: 'memory', text: stats.memory }
 ]);
 </script>
 </div>
@@ -170,29 +170,29 @@ createFieldTable('', [
 <div class='section' id='wan-section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'MAC Address', text: nvram.wan_hwaddr },
-	{ title: 'Connection Type', text: { 'dhcp':'DHCP', 'static':'Static IP', 'pppoe':'PPPoE', 'pptp':'PPTP', 'l2tp':'L2TP' }[nvram.wan_proto] || '-' },
-	{ title: 'IP Address', rid: 'wanip', text: stats.wanip },
-	{ title: 'Subnet Mask', rid: 'wannetmask', text: stats.wannetmask },
-	{ title: 'Gateway', rid: 'wangateway', text: stats.wangateway },
-	{ title: 'DNS', rid: 'dns', text: stats.dns },
-	{ title: 'MTU', text: nvram.wan_run_mtu },
+	{ title: 'MAC 位址', text: nvram.wan_hwaddr },
+	{ title: 'WAN連線類型', text: { 'dhcp':'DHCP', 'static':'Static IP', 'pppoe':'PPPoE', 'pptp':'PPTP', 'l2tp':'L2TP' }[nvram.wan_proto] || '-' },
+	{ title: 'IP 位址', rid: 'wanip', text: stats.wanip },
+	{ title: '子網路遮罩', rid: 'wannetmask', text: stats.wannetmask },
+	{ title: '閘道', rid: 'wangateway', text: stats.wangateway },
+	{ title: 'DNS 伺服器', rid: 'dns', text: stats.dns },
+	{ title: '最大傳輸單位 MTU', text: nvram.wan_run_mtu },
 	null,
-	{ title: 'Status', rid: 'wanstatus', text: stats.wanstatus },
-	{ title: 'Connection Uptime', rid: 'wanuptime', text: stats.wanuptime },
-	{ title: 'Remaining Lease Time', rid: 'wanlease', text: stats.wanlease, ignore: !show_dhcpc }
+	{ title: '連線狀態', rid: 'wanstatus', text: stats.wanstatus },
+	{ title: '已連線時間', rid: 'wanuptime', text: stats.wanuptime },
+	{ title: '剩餘租用時間', rid: 'wanlease', text: stats.wanlease, ignore: !show_dhcpc }
 ]);
 </script>
 <span id='b_dhcpc' style='display:none'>
 	<input type='button' class='controls' onclick='dhcpc("renew")' value='Renew'>
-	<input type='button' class='controls' onclick='dhcpc("release")' value='Release'> &nbsp;
+	<input type='button' class='controls' onclick='dhcpc("release")' value='釋放'> &nbsp;
 </span>
-<input type='button' class='controls' onclick='wan_connect()' value='Connect' id='b_connect' style='display:none'>
-<input type='button' class='controls' onclick='wan_disconnect()' value='Disconnect' id='b_disconnect' style='display:none'>
+<input type='button' class='controls' onclick='wan_connect()' value='連線' id='b_connect' style='display:none'>
+<input type='button' class='controls' onclick='wan_disconnect()' value='斷線' id='b_disconnect' style='display:none'>
 </div>
 
 
-<div class='section-title'>LAN</div>
+<div class='section-title'>區域網路設定</div>
 <div class='section'>
 <script type='text/javascript'>
 if (nvram.lan_proto == 'dhcp') {
@@ -203,17 +203,17 @@ else {
 	s = 'Disabled';
 }
 createFieldTable('', [
-	{ title: 'Router MAC Address', text: nvram.et0macaddr },
-	{ title: 'Router IP Address', text: nvram.lan_ipaddr },
-	{ title: 'Subnet Mask', text: nvram.lan_netmask },
-	{ title: 'Gateway', text: nvram.lan_gateway, ignore: nvram.wan_proto != 'disabled' },
-	{ title: 'DNS', rid: 'dns', text: stats.dns, ignore: nvram.wan_proto != 'disabled' },
-	{ title: 'DHCP', text: s }
+	{ title: '路由器 MAC 位址', text: nvram.et0macaddr },
+	{ title: '路由器 IP 位址', text: nvram.lan_ipaddr },
+	{ title: '子網路遮罩', text: nvram.lan_netmask },
+	{ title: '閘道', text: nvram.lan_gateway, ignore: nvram.wan_proto != 'disabled' },
+	{ title: 'DNS 伺服器', rid: 'dns', text: stats.dns, ignore: nvram.wan_proto != 'disabled' },
+	{ title: 'DHCP 伺服器', text: s }
 ]);
 </script>
 </div>
 
-<div class='section-title' id='wl-title'>Wireless</div>
+<div class='section-title' id='wl-title'>Wireless 設定</div>
 <div class='section' id='wl-section'>
 <script type='text/javascript'>
 sec = auth[nvram.security_mode2];
@@ -223,13 +223,13 @@ wmode = wmo[nvram.wl_mode];
 if ((nvram.wl_mode == 'ap') && (nvram.wds_enable * 1)) wmode += ' + WDS';
 
 createFieldTable('', [
-	{ title: 'MAC Address', text: nvram.wl0_hwaddr },
-	{ title: 'Wireless Mode', text: wmode },
-	{ title: 'B/G Mode', text: bgmo[nvram.wl_net_mode] },
-	{ title: 'Radio', rid: 'radio', text: (wlradio == 0) ? '<b>Disabled</b>' : 'Enabled' },
+	{ title: 'MAC 位址', text: nvram.wl0_hwaddr },
+	{ title: '無線模式', text: wmode },
+	{ title: '無線模式', text: bgmo[nvram.wl_net_mode] },
+	{ title: '無線電波', rid: 'radio', text: (wlradio == 0) ? '<b>關閉</b>' : 'Enabled' },
 	{ title: 'SSID', text: nvram.wl_ssid },
-	{ title: 'Security', text: sec },
-	{ title: 'Channel', rid: 'channel', text: stats.channel },
+	{ title: '加密方式', text: sec },
+	{ title: '頻道', rid: 'channel', text: stats.channel },
 	{ title: 'RSSI', rid: 'rssi', text: wlcrssi, ignore: !isClient },
 	{ title: 'Noise', rid: 'noise', text: wlnoise, ignore: !isClient },
 	{ title: 'Signal Quality', rid: 'qual', text: stats.qual, ignore: !isClient }

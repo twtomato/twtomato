@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Edit Access Restrictions</title>
+<title>[<% ident(); %>] 網路瀏覽限制列表</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -461,8 +461,8 @@ function earlyInit()
 <form name='_fom' id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version() %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version() %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -474,7 +474,7 @@ function earlyInit()
 <input type='hidden' name='_service' value='restrict-restart'>
 <input type='hidden' name='rruleNN' id='_rrule' value=''>
 
-<div class='section-title'>Access Restriction</div>
+<div class='section-title'>網路瀏覽限制</div>
 <div class='section'>
 <script type='text/javascript'>
 W('<div style="float:right"><small>'+ 'ID: ' + rruleN.pad(2) + '</small>&nbsp;</div><br>');
@@ -482,29 +482,29 @@ tm = [];
 for (i = 0; i < 1440; i += 15) tm.push([i, timeString(i)]);
 
 createFieldTable('', [
-	{ title: 'Enabled', name: 'f_enabled', type: 'checkbox', value: rule[1] == '1' },
-	{ title: 'Description', name: 'f_desc', type: 'text', maxlen: 32, size: 35, value: rule[9] },
-	{ title: 'Schedule', multi: [
-		{ name: 'f_sched_allday', type: 'checkbox', suffix: ' All Day &nbsp; ', value: (rule[2] < 0) || (rule[3] < 0) },
-		{ name: 'f_sched_everyday', type: 'checkbox', suffix: ' Everyday', value: (rule[4] & 0x7F) == 0x7F } ] },
-	{ title: 'Time', indent: 2, multi: [
+	{ title: '開啟', name: 'f_enabled', type: 'checkbox', value: rule[1] == '1' },
+	{ title: '註解', name: 'f_desc', type: 'text', maxlen: 32, size: 35, value: rule[9] },
+	{ title: '排程', multi: [
+		{ name: 'f_sched_allday', type: 'checkbox', suffix: ' 全天 &nbsp; ', value: (rule[2] < 0) || (rule[3] < 0) },
+		{ name: 'f_sched_everyday', type: 'checkbox', suffix: ' 每日 &nbsp; ', value: (rule[4] & 0x7F) == 0x7F } ] },
+	{ title: '時間', indent: 2, multi: [
 		{ name: 'f_sched_begin', type: 'select', options: tm, value: (rule[2] < 0) ? 0 : rule[2], suffix: ' - ' },
 		{ name: 'f_sched_end', type: 'select', options: tm, value: (rule[3] < 0) ? 0 : rule[3] } ] },
-	{ title: 'Days', indent: 2, multi: [
-		{ name: 'f_sched_sun', type: 'checkbox', suffix: ' Sun &nbsp; ', value: (rule[4] & 1) },
-		{ name: 'f_sched_mon', type: 'checkbox', suffix: ' Mon &nbsp; ', value: (rule[4] & (1 << 1)) },
-		{ name: 'f_sched_tue', type: 'checkbox', suffix: ' Tue &nbsp; ', value: (rule[4] & (1 << 2)) },
-		{ name: 'f_sched_wed', type: 'checkbox', suffix: ' Wed &nbsp; ', value: (rule[4] & (1 << 3)) },
-		{ name: 'f_sched_thu', type: 'checkbox', suffix: ' Thu &nbsp; ', value: (rule[4] & (1 << 4)) },
-		{ name: 'f_sched_fri', type: 'checkbox', suffix: ' Fri &nbsp; ', value: (rule[4] & (1 << 5)) },
-		{ name: 'f_sched_sat', type: 'checkbox', suffix: ' Sat', value: (rule[4] & (1 << 6)) } ] },
-	{ title: 'Type', name: 'f_type', type: 'select', options: [[0,'Normal Restriction'],[1,'Disable Wireless']], value: (rule[5] == '~') ? 1 : 0 },
-	{ title: 'Applies To', name: 'f_comp_all', type: 'select', options: [[0,'All Computers / Devices'],[1,'The Following...'],[2,'All Except...']], value: 0 },
+	{ title: '週幾', indent: 2, multi: [
+		{ name: 'f_sched_sun', type: 'checkbox', suffix: ' 星期日 &nbsp; ', value: (rule[4] & 1) },
+		{ name: 'f_sched_mon', type: 'checkbox', suffix: ' 星期一 &nbsp; ', value: (rule[4] & (1 << 1)) },
+		{ name: 'f_sched_tue', type: 'checkbox', suffix: ' 星期二 &nbsp; ', value: (rule[4] & (1 << 2)) },
+		{ name: 'f_sched_wed', type: 'checkbox', suffix: ' 星期三 &nbsp; ', value: (rule[4] & (1 << 3)) },
+		{ name: 'f_sched_thu', type: 'checkbox', suffix: ' 星期四 &nbsp; ', value: (rule[4] & (1 << 4)) },
+		{ name: 'f_sched_fri', type: 'checkbox', suffix: ' 星期五 &nbsp; ', value: (rule[4] & (1 << 5)) },
+		{ name: 'f_sched_sat', type: 'checkbox', suffix: ' 星期六', value: (rule[4] & (1 << 6)) } ] },
+	{ title: '連線類型', name: 'f_type', type: 'select', options: [[0,'一般限制'],[1,'關閉無線']], value: (rule[5] == '~') ? 1 : 0 },
+	{ title: '適用於', name: 'f_comp_all', type: 'select', options: [[0,'所有的電腦 / 裝置'],[1,'以下列表...'],[2,'排除以下列表...']], value: 0 },
 	{ title: '&nbsp;', text: '<table class="tomato-grid" cellspacing=1 id="res-comp-grid"></table>' },
-	{ title: 'Blocked Resources', name: 'f_block_all', type: 'checkbox', suffix: ' Block All Internet Access', value: 0 },
-	{ title: 'IP<br>Port<br>Application', indent: 2, text: '<table class="tomato-grid" cellspacing=1 id="res-bp-grid"></table>' },
+	{ title: 'Blocked Resources', name: 'f_block_all', type: 'checkbox', suffix: ' 限制所有的網際網路連線', value: 0 },
+	{ title: '連接埠 /<br>應用程式', indent: 2, text: '<table class="tomato-grid" cellspacing=1 id="res-bp-grid"></table>' },
 	{ title: 'HTTP Request', indent: 2, name: 'f_block_http', type: 'textarea', value: rule[7] },
-	{ title: 'HTTP Requested Files', indent: 2, multi: [
+	{ title: '限制 HTTP 要求的檔案', indent: 2, multi: [
 		{ name: 'f_activex', type: 'checkbox', suffix: ' ActiveX (ocx, cab) &nbsp;&nbsp;', value: (rule[8] & 1) },
 		{ name: 'f_flash', type: 'checkbox', suffix: ' Flash (swf) &nbsp;&nbsp;', value: (rule[8] & 2) },
 		{ name: 'f_java', type: 'checkbox', suffix: ' Java (class, jar) &nbsp;&nbsp;', value: (rule[8] & 4) } ] }
@@ -517,10 +517,10 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Delete...' id='delete-button' onclick='remove()'>
+	<input type='button' value='刪除...' id='delete-button' onclick='remove()'>
 	&nbsp;
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='cancel()'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='cancel()'>
 </td></tr>
 </table>
 <br><br>

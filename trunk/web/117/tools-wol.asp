@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Tools: WOL</title>
+<title>[<% ident(); %>] 診斷工具：網絡喚醒 WOL</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -50,7 +50,7 @@ textarea {
 var wg = new TomatoGrid();
 wg.setup = function() {
 	this.init('wol-grid', 'sort');
-	this.headerSet(['MAC Address', 'IP Address', 'Status', 'Name']);
+	this.headerSet(['MAC 位址', 'IP 位址', '狀態', '名稱']);
 	this.sort(3);
 }
 wg.populate = function()
@@ -74,7 +74,7 @@ wg.populate = function()
 		if (t.length == 3) {
 			r = this.insertData(-1, [t[0], (t[1].indexOf('.') != -1) ? t[1] : ('<% lipp(); %>.' + t[1]), active, t[2]]);
 			for (j = 0; j < 4; ++j)
-				r.cells[j].title = 'Click to wake up';
+				r.cells[j].title = '點擊左鍵喚醒這台電腦';
 		}
 	}
 
@@ -83,7 +83,7 @@ wg.populate = function()
 		if ((arplist[i][2] != nvram.lan_ifname) || (arplist[i][1].length != 17)) continue;
 		r = this.insertData(-1, [arplist[i][1], arplist[i][0], 'Active (In ARP)', '']);
 		for (j = 0; j < 4; ++j)
-			r.cells[j].title = 'Click to wake up';
+			r.cells[j].title = '點擊左鍵喚醒這台電腦';
 	}
 
 	this.resort(2);
@@ -163,8 +163,8 @@ function init()
 <form id='_fom' action='wakeup.cgi' method='post'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -176,20 +176,20 @@ function init()
 <input type='hidden' name='_nextwait' value='1'>
 <input type='hidden' name='mac' value='' id='_mac'>
 
-<div class='section-title'>Wake On LAN</div>
+<div class='section-title'>網絡喚醒</div>
 <div class='section'>
 	<table id='wol-grid' class='tomato-grid' cellspacing=1></table>
-	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' value='Refresh' onclick='refreshClick()' id='refreshb'></div>
+	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' value='重新整理' onclick='refreshClick()' id='refreshb'></div>
 </div>
 <div id='msg' style='visibility:hidden;background:#ffffa0;margin:auto;width:50%;text-align:center;padding:2px;border:1px solid #fee'></div>
 <div class='section-title'></div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'MAC Address List', name: 'f_mac', type: 'textarea', value: cookie.get('wakemac') || '' },
+	{ title: '列表--MAC 位址', name: 'f_mac', type: 'textarea', value: cookie.get('wakemac') || '' },
 ]);
 </script>
-<div style='float:right'><input type='button' value='Wake Up' onclick='wake(null)' id='save-button'></div>
+<div style='float:right'><input type='button' value='喚醒' onclick='wake(null)' id='save-button'></div>
 </div>
 
 <!-- / / / -->

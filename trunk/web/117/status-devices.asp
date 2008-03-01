@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Status: Device List</title>
+<title>[<% ident(); %>] 系統狀態：已連線設備列表</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -268,7 +268,7 @@ dg.populate = function()
 dg.setup = function()
 {
 	this.init('dev-grid', 'sort');
-	this.headerSet(['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Quality', 'Lease &nbsp; &nbsp; ']);
+	this.headerSet(['介面', 'MAC 位址', 'IP 位址', '名稱', 'RSSI &nbsp; &nbsp; ', '品質', '剩餘租約 &nbsp; &nbsp; ']);
 	this.populate();
 	this.sort(2);
 }
@@ -288,8 +288,8 @@ function init()
 <body onload='init()'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -297,14 +297,14 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>Device List</div>
+<div class='section-title'>已連線設備列表</div>
 <div class='section'>
 	<table id='dev-grid' class='tomato-grid' cellspacing=0></table>
 <script type='text/javascript'>
 if (nvram.wl_radio == '1') {
-	W('<div style="float:left"><b>Noise Floor:</b> <span id="noise">' + wlnoise + '</span> <small>dBm</small>');
+	W('<div style="float:left"><b>背景雜訊:</b> <span id="noise">' + wlnoise + '</span> <small>dBm</small>');
 	if ((nvram.wl_mode == 'ap') || (nvram.wl_mode == 'wds')) {
-		W(' &nbsp; <input type="button" value="Measure" onclick="javascript:window.location=\'wlmnoise.cgi?_http_id=' + nvram.http_id + '\'">');
+		W(' &nbsp; <input type="button" value="測量" onclick="javascript:window.location=\'wlmnoise.cgi?_http_id=' + nvram.http_id + '\'">');
 	}
 	W('</div>');
 }

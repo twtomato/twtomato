@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: Logging</title>
+<title>[<% ident(); %>] 路由器管理設定：日誌紀錄</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -79,8 +79,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -98,24 +98,24 @@ function save()
 <script type='text/javascript'>
 </script>
 
-<div class='section-title'>Syslog</div>
+<div class='section-title'>系統日誌</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Log Internally', name: 'f_log_file', type: 'checkbox', value: nvram.log_file == 1 },
-	{ title: 'Log to Remote System', name: 'f_log_remote', type: 'checkbox', value: nvram.log_remote == 1 },
-	{ title: 'IP Address / Port', indent: 2, multi: [
+	{ title: '日誌記錄檔', name: 'f_log_file', type: 'checkbox', value: nvram.log_file == 1 },
+	{ title: '至遠端系統的日誌紀錄', name: 'f_log_remote', type: 'checkbox', value: nvram.log_remote == 1 },
+	{ title: 'IP 地址 / 連接埠', indent: 2, multi: [
 		{ name: 'log_remoteip', type: 'text', maxlen: 15, size: 17, value: nvram.log_remoteip, suffix: ':' },
 		{ name: 'log_remoteport', type: 'text', maxlen: 5, size: 7, value: nvram.log_remoteport } ]},
-	{ title: 'Mark Interval', name: 'log_mark', type: 'text', maxlen: 4, size: 5, value: nvram.log_mark, suffix: ' <small>(minutes / 0 to disable)</small>' },
-	{ title: 'Events Logged' },
+	{ title: '間隔標籤', name: 'log_mark', type: 'text', maxlen: 4, size: 5, value: nvram.log_mark, suffix: ' <small>(分鐘 / 0 關閉)</small>' },
+	{ title: '事件日誌紀錄' },
 		{ title: 'Access Restriction De/Activiation', indent: 2, name: 'f_log_acre', type: 'checkbox', value: (nvram.log_events.indexOf('acre') != -1) },
 		{ title: 'Cron', indent: 2, name: 'f_log_crond', type: 'checkbox', value: (nvram.log_events.indexOf('crond') != -1) },
 		{ title: 'NTP', indent: 2, name: 'f_log_ntp', type: 'checkbox', value: (nvram.log_events.indexOf('ntp') != -1) },
-	{ title: 'Connection Logging' },
-		{ title: 'Inbound Connection', indent: 2, name: 'log_in', type: 'select', options: [[0,'Disabled (recommended)'],[1,'If Blocked By Firewall'],[2,'If Allowed By Firewall'],[3,'Both']], value: nvram.log_in },
-		{ title: 'Outbound Connection', indent: 2, name: 'log_out', type: 'select', options: [[0,'Disabled (recommended)'],[1,'If Blocked By Firewall'],[2,'If Allowed By Firewall'],[3,'Both']], value: nvram.log_out },
-		{ title: 'Limit Logging', indent: 2, name: 'log_limit', type: 'text', maxlen: 4, size: 5, value: nvram.log_limit, suffix: ' <small>(messages per minute / 0 for unlimited)</small>' }
+	{ title: '連接日誌紀錄' },
+		{ title: '對內連線', indent: 2, name: 'log_in', type: 'select', options: [[0,'關閉 (recommended)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_in },
+		{ title: '對外連線', indent: 2, name: 'log_out', type: 'select', options: [[0,'關閉 (recommended)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_out },
+		{ title: '限制日誌紀錄', indent: 2, name: 'log_limit', type: 'text', maxlen: 4, size: 5, value: nvram.log_limit, suffix: ' <small>(每分鐘 ? 則 / 0 取消限制)</small>' }
 ]);
 </script>
 </div>
@@ -125,8 +125,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

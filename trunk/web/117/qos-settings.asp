@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] QoS: Basic Settings</title>
+<title>[<% ident(); %>] 頻寬管理 QoS:基本設定</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -23,7 +23,7 @@
 
 //	<% nvram("qos_enable,qos_method,qos_ack,qos_icmp,qos_default,qos_obw,qos_ibw,qos_orates,qos_irates,qos_reset"); %>
 
-classNames = ['Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A', 'Class B', 'Class C', 'Class D', 'Class E'];
+classNames = ['最高', '高', '中', '低', '最低', 'Ａ類', 'Ｂ類', 'Ｃ類', 'Ｄ類', 'Ｅ類'];
 
 pctList = [[0, 'None']];
 for (i = 1; i <= 100; ++i) pctList.push([i, i + '%']);
@@ -98,8 +98,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -118,7 +118,7 @@ function save()
 <input type='hidden' name='qos_method'>
 <input type='hidden' name='qos_reset'>
 
-<div class='section-title'>Basic Settings</div>
+<div class='section-title'>QoS 基本設定</div>
 <div class='section'>
 <script type='text/javascript'>
 classList = [];
@@ -126,22 +126,22 @@ for (i = 0; i < 10; ++i) {
 	classList.push([i, classNames[i]]);
 }
 createFieldTable('', [
-	{ title: 'Enable QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
-	{ title: 'Prioritize ACK', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
-	{ title: 'Prioritize ICMP', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
-	{ title: 'Strict Rule Ordering', name: 'f_qos_method', type: 'checkbox', value: nvram.qos_method == '0' },
-	{ title: 'Reset Classification When Making Changes', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
-	{ title: 'Default Class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
+	{ title: '開啟頻寬管理QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
+	{ title: 'ACK 給予優先權', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
+	{ title: 'ICMP 給予優先權', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
+	{ title: '遵循 分類機制 ', name: 'f_qos_method', type: 'checkbox', value: nvram.qos_method == '0' },
+	{ title: '設定值改變時 自動更新 分類機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
+	{ title: '優先權預設為 Class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
 ]);
 </script>
 </div>
 
-<div class='section-title'>Outbound Rate / Limit</div>
+<div class='section-title'>上傳速率 / 限制</div>
 <div class='section'>
 <script type='text/javascript'>
 cc = nvram.qos_orates.split(/[,-]/);
 f = [];
-f.push({ title: 'Max Bandwidth', name: 'qos_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_obw });
+f.push({ title: '最大上傳速率', name: 'qos_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_obw });
 f.push(null);
 j = 0;
 for (i = 0; i < 10; ++i) {
@@ -158,12 +158,12 @@ createFieldTable('', f);
 </div>
 
 
-<div class='section-title'>Inbound Limit</div>
+<div class='section-title'>下載限制</div>
 <div class='section'>
 <script type='text/javascript'>
 rates = nvram.qos_irates.split(',');
 f = [];
-f.push({ title: 'Max Bandwidth', name: 'qos_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_ibw });
+f.push({ title: '最大上傳速率', name: 'qos_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_ibw });
 f.push(null);
 for (i = 0; i < 10; ++i) {
 	f.push({ title: classNames[i], multi: [
@@ -181,8 +181,8 @@ createFieldTable('', f);
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

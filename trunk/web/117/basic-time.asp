@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Basic: Time</title>
+<title>[<% ident(); %>] 基本設定：時間設定</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -26,15 +26,15 @@
 
 
 var ntpList = [
-	['custom', 'Custom...'],
-	['', 'Default'],
-	['africa', 'Africa'],
-	['asia', 'Asia'],
-	['europe', 'Europe'],
-	['oceania', 'Oceania'],
-	['north-america', 'North America'],
-	['south-america', 'South America'],
-	['us', 'US']
+	['custom', '自定'],
+	['', '預設'],
+	['africa', '非洲'],
+	['asia', '亞洲'],
+	['europe', '歐洲'],
+	['oceania', '大洋洲'],
+	['north-america', '北美洲'],
+	['south-america', '南美洲'],
+	['us', '美國']
 ];
 
 /* REMOVE-BEGIN
@@ -157,8 +157,8 @@ function earlyInit()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -178,7 +178,7 @@ function earlyInit()
 <input type='hidden' name='ntp_kiss' value='' disabled>
 
 
-<div class='section-title'>Time</div>
+<div class='section-title'>系統時間</div>
 <div class='section'>
 <script type='text/javascript'>
 
@@ -212,9 +212,9 @@ http://www.dia.govt.nz/diawebsite.nsf/wpg_URL/Services-Daylight-Saving-Index
 REMOVE-END */
 
 createFieldTable('', [
-	{ title: 'Router Time', text: '<span id="clock"><% time(); %></span>' },
+	{ title: '現在時間', text: '<span id="clock"><% time(); %></span>' },
 	null,
-	{ title: 'Time Zone', name: 'tm_sel', type: 'select', options: [
+	{ title: '時區', name: 'tm_sel', type: 'select', options: [
 		['custom','Custom...'],
 		['UTC12','UTC-12:00 Kwajalein'],
 		['UTC11','UTC-11:00 Midway Island, Samoa'],
@@ -258,13 +258,13 @@ createFieldTable('', [
 		['UTC-12','UTC+12:00 Fiji'],
 		['NZST-12NZDT,M9.5.0/2,M4.1.0/3','UTC+12:00 New Zealand']
 	], value: nvram.tm_sel },
-	{ title: 'Auto Daylight Savings Time', indent: 2, name: 'f_tm_dst', type: 'checkbox', value: nvram.tm_dst != '0' },
+	{ title: '日光節約時間', indent: 2, name: 'f_tm_dst', type: 'checkbox', value: nvram.tm_dst != '0' },
 	{ title: 'Custom TZ String', indent: 2, name: 'f_tm_tz', type: 'text', maxlen: 32, size: 34, value: nvram.tm_tz || '' },
 	null,
-	{ title: 'Auto Update Time', name: 'ntp_updates', type: 'select', options: [[-1,'Never'],[0,'Only at startup'],[1,'Every hour'],[2,'Every 2 hours'],[4,'Every 4 hours'],[6,'Every 6 hours'],[8,'Every 8 hours'],[12,'Every 12 hours'],[24,'Every 24 hours']],
+	{ title: '時間同步', name: 'ntp_updates', type: 'select', options: [[-1,'不同步'],[0,'啟動時更新'],[1,'每小時'],[2,'每兩小時'],[4,'每四小時'],[6,'每六小時'],[8,'每八小時'],[12,'半天一次'],[24,'每天一次']],
 		value: nvram.ntp_updates },
-	{ title: 'Trigger Connect On Demand', indent: 2, name: 'f_ntp_tdod', type: 'checkbox', value: nvram.ntp_tdod != '0' },
-	{ title: 'NTP Time Server', name: 'f_ntp_server', type: 'select', options: ntpList, value: ntpSel },
+	{ title: '需要時同步', indent: 2, name: 'f_ntp_tdod', type: 'checkbox', value: nvram.ntp_tdod != '0' },
+	{ title: 'NTP 伺服器', name: 'f_ntp_server', type: 'select', options: ntpList, value: ntpSel },
 	{ title: '&nbsp;', text: '<small><span id="ntp-preset">xx</span></small>', hidden: 1 },
 	{ title: '', name: 'f_ntp_1', type: 'text', maxlen: 48, size: 50, value: ntp[0] || 'pool.ntp.org', hidden: 1 },
 	{ title: '', name: 'f_ntp_2', type: 'text', maxlen: 48, size: 50, value: ntp[1] || '', hidden: 1 },
@@ -287,8 +287,8 @@ The following NTP servers have been automatically blocked by request from the se
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save(0)'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save(0)'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

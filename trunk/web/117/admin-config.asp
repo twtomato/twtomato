@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: Configuration</title>
+<title>[<% ident(); %>] 路由器管理設定：出廠設定值</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -80,8 +80,8 @@ function resetButton()
 <body>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -89,39 +89,39 @@ function resetButton()
 
 <!-- / / / -->
 
-<div class='section-title'>Backup Configuration</div>
+<div class='section-title'>備份設定檔</div>
 <div class='section'>
 	<form>
 		<script type='text/javascript'>
 		W("<input type='text' size='40' maxlength='64' id='backup-name' value='tomato_v" + ('<% version(); %>'.replace(/\./g, '')) + "_m" + nvram.et0macaddr.replace(/:/g, '').substring(6, 12) + "'>");
 		</script>
 		.cfg &nbsp;
-		<input type='button' name='f_backup_button' onclick='backupButton()' value='Backup'>
+		<input type='button' name='f_backup_button' onclick='backupButton()' value='備份'>
 	</form>
 </div>
 
 <br><br>
 
-<div class='section-title'>Restore Configuration</div>
+<div class='section-title'>恢復設定檔</div>
 <div class='section'>
 	<form id='restore-form' method='post' action='cfg/restore.cgi' encType='multipart/form-data'>
-		Select the configuration file to restore:<br>
-		<input type='file' size='40' id='restore-name' name='filename'> <input type='button' name='f_restore_button' id='restore-button' value='Restore' onclick='restoreButton()'>
+		選擇所要恢復的設定檔:<br>
+		<input type='file' size='40' id='restore-name' name='filename'> <input type='button' name='f_restore_button' id='restore-button' value='恢復' onclick='restoreButton()'>
 		<br>
 	</form>
 </div>
 
 <br><br>
 
-<div class='section-title'>Restore Default Configuration</div>
+<div class='section-title'>恢復出廠預設值</div>
 <div class='section'>
 	<form id='aco-reset-form' method='post' action='cfg/defaults.cgi'>
 	<select name='mode' id='restore-mode'>
-		<option value=0>Select...</option>
-		<option value=1>Restore default router settings (normal)</option>
-		<option value=2>Erase all data in NVRAM memory (thorough)</option>
+		<option value=0>請選擇...</option>
+		<option value=1>恢復TOMATO預設值 (normal)</option>
+		<option value=2>清除NVRAM全部資料 (thorough)</option>
 	</select>
-	<input type='button' value='OK' onclick='resetButton()' id='reset-button'>
+	<input type='button' value='確定' onclick='resetButton()' id='reset-button'>
 	</form>
 </div>
 

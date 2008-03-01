@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
 	http://www.polarcloud.com/tomato/
@@ -123,7 +123,7 @@ input[type='button']:hover {
 }
 
 #navi {
-	width: 130px;
+	width: 150px;
 	font-size: 12px;
 	border-right: 1px solid #f0f0f0;
 	padding: 20px 0;

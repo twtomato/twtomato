@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: Debugging</title>
+<title>[<% ident(); %>] 路由器管理設定：除錯</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -54,8 +54,8 @@ function save()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -73,41 +73,41 @@ function save()
 <input type='hidden' name='t_cafree'>
 <input type='hidden' name='t_hidelr'>
 
-<div class='section-title'>Debugging</div>
+<div class='section-title'>除錯</div>
 <div class='section'>
 <script type='text/javascript'>
 a = [];
 for (i = 1; i <= 8; ++i) a.push([i, i]);
 createFieldTable('', [
-	{ title: 'Avoid performing an NVRAM commit', name: 'f_debug_nocommit', type: 'checkbox', value: nvram.debug_nocommit != '0' },
+	{ title: '避免寫入NVRAM', name: 'f_debug_nocommit', type: 'checkbox', value: nvram.debug_nocommit != '0' },
 	{ title: 'Do not erase some intermediate files', name: 'f_debug_keepfiles', type: 'checkbox', value: nvram.debug_keepfiles != '0' },
 	{ title: 'Enable cprintf output to console', name: 'f_debug_cprintf', type: 'checkbox', value: nvram.debug_cprintf != '0' },
 	{ title: 'Enable cprintf output to /tmp/cprintf', name: 'f_debug_cprintf_file', type: 'checkbox', value: nvram.debug_cprintf_file != '0' },
 	{ title: 'Enable DDNS output to /tmp/mdu-*', name: 'f_debug_ddns', type: 'checkbox', value: nvram.debug_ddns != '0' },
 	{ title: 'Count cache memory as free memory', name: 'f_cafree', type: 'checkbox', value: nvram.t_cafree == '1' },
-	{ title: 'Avoid displaying LAN to router connections', name: 'f_hidelr', type: 'checkbox', value: nvram.t_hidelr == '1' },
+	{ title: '不顯示本地連線', name: 'f_hidelr', type: 'checkbox', value: nvram.t_hidelr == '1' },
 	{ title: 'Console log level', name: 'console_loglevel', type: 'select', options: a, value: fixInt(nvram.console_loglevel, 1, 8, 1) }
 ]);
 </script>
 <br><br>
 
-&raquo; <a href='clearcookies.asp?_http_id=<% nv(http_id); %>'>Clear Cookies</a><br>
-&raquo; <a href='javascript:nvramCommit()'>NVRAM Commit</a><br>
-&raquo; <a href='javascript:reboot()'>Reboot</a><br>
-&raquo; <a href='javascript:shutdown()'>Shutdown</a><br>
+&raquo; <a href='clearcookies.asp?_http_id=<% nv(http_id); %>'>清除 Cookies</a><br>
+&raquo; <a href='javascript:nvramCommit()'>寫入NVRAM</a><br>
+&raquo; <a href='javascript:reboot()'>重開機</a><br>
+&raquo; <a href='javascript:shutdown()'>關機</a><br>
 <br><br>
 
-&raquo; <a href='/cfe/cfe.bin?_http_id=<% nv(http_id); %>'>Download CFE</a><br>
-&raquo; <a href='/ipt/iptables.txt?_http_id=<% nv(http_id); %>'>Download Iptables Dump</a><br>
-&raquo; <a href='/logs/syslog.txt?_http_id=<% nv(http_id); %>'>Download Logs</a><br>
-&raquo; <a href='/nvram/nvram.txt?_http_id=<% nv(http_id); %>'>Download NVRAM Dump</a><br>
+&raquo; <a href='/cfe/cfe.bin?_http_id=<% nv(http_id); %>'>下載 CFE</a><br>
+&raquo; <a href='/ipt/iptables.txt?_http_id=<% nv(http_id); %>'>下載 Iptables 傾印檔</a><br>
+&raquo; <a href='/logs/syslog.txt?_http_id=<% nv(http_id); %>'>下載日誌記錄檔</a><br>
+&raquo; <a href='/nvram/nvram.txt?_http_id=<% nv(http_id); %>'>下載 NVRAM 傾印檔</a><br>
 <br>
 
 <div style='width:80%'>
-<b>Warning</b>: The NVRAM Dump text file may contain information like wireless
-encryption keys and usernames/passwords for the router, ISP and DDNS. Please
-review &amp; edit this file before sharing it with
-anyone.<br>
+<b>請注意</b>: NVRAM 傾印所得到的檔案,包含私人資料.如 帳號 密碼 等, 若要交予他人, 請檢視和編輯清除重要資訊後, 再進行傳送.<br>
+
+
+
 </div>
 
 </div>
@@ -117,8 +117,8 @@ anyone.<br>
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

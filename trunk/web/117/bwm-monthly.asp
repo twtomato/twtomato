@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Bandwidth: Monthly</title>
+<title>[<% ident(); %>] 頻寬監控：每月流量</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -53,7 +53,7 @@ function redraw()
 	gn = 0;
 
 	grid = '<table class="bwmg" cellspacing="1">';
-	grid += makeRow('header', 'Date', 'Download', 'Upload', 'Total');
+	grid += makeRow('標題', '日期', '下載', '上傳', '合計');
 	
 	for (i = 0; i < monthly_history.length; ++i) {
 		h = monthly_history[i];
@@ -89,8 +89,8 @@ function init()
 <form>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -98,12 +98,12 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>WAN Bandwidth - Monthly</div>
+<div class='section-title'>WAN 每月使用流量</div>
 <div id='bwm-monthly-grid' style='float:left'></div>
 <div style="float:right;text-align:right">
-<b>Scale</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
+<b>單位切換</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
 <br>
-&raquo; <a href="admin-bwm.asp">Configure</a>
+&raquo; <a href="admin-bwm.asp">設定</a>
 <br><br><br>
 </div>
 <br>
@@ -114,7 +114,7 @@ function init()
 
 </td></tr>
 <tr><td id='footer' colspan=2>
-<input type='button' value='Refresh' onclick='reloadPage()'>
+<input type='button' value='重新整理' onclick='reloadPage()'>
 </td></tr>
 </table>
 </form>

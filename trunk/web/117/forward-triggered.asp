@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Forwarding: Triggered</title>
+<title>[<% ident(); %>] 虛擬伺服器：通訊埠觸發程式</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -98,7 +98,7 @@ tg.setup = function() {
 		{ type: 'text', maxlen: 16 },
 		{ type: 'text', maxlen: 16 },
 		{ type: 'text', maxlen: 32 }]);
-	this.headerSet(['On', 'Protocol', 'Trigger Ports', 'Forwarded Ports', 'Description']);
+	this.headerSet(['開啟', '協定', '通訊埠觸發', '通訊埠轉發', '註解']);
 	var nv = nvram.trigforward.split('>');
 	for (var i = 0; i < nv.length; ++i) {
 		var r;
@@ -142,8 +142,8 @@ function init()
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='title'>蕃茄(Tomato)</div>
+	<div class='version'>繁體中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -156,7 +156,7 @@ function init()
 
 <input type='hidden' name='trigforward'>
 
-<div class='section-title'>Triggered Port Forwarding</div>
+<div class='section-title'>通訊埠轉發</div>
 <div class='section'>
 	<table class='tomato-grid' cellspacing=1 id='tg-grid'></table>
 	<script type='text/javascript'>tg.setup();</script>
@@ -164,10 +164,10 @@ function init()
 
 <div>
 <ul>
-<li>Use "-" to specify a range of ports (200-300).
-<li>Trigger Ports are the initial LAN to WAN "trigger".
-<li>Forwarded Ports are the WAN to LAN ports that are opened if the "trigger" is activated.
-<li>These ports are automatically closed after a few minutes of inactivity.
+<li>使用 "-" 指定通訊埠範圍 (200-300).
+<li>一旦偵測到.
+<li>觸發程式通訊埠，送往指定內傳通訊埠號的上傳封包便會轉向您的電腦.
+<li>開啟的通訊埠若未使用,幾分鐘之後會自動關閉.
 </ul>
 </div>
 
@@ -176,8 +176,8 @@ function init()
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>
