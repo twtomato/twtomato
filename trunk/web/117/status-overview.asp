@@ -184,7 +184,7 @@ createFieldTable('', [
 ]);
 </script>
 <span id='b_dhcpc' style='display:none'>
-	<input type='button' class='controls' onclick='dhcpc("renew")' value='Renew'>
+	<input type='button' class='controls' onclick='dhcpc("renew")' value='重新取得'>
 	<input type='button' class='controls' onclick='dhcpc("release")' value='釋放'> &nbsp;
 </span>
 <input type='button' class='controls' onclick='wan_connect()' value='連線' id='b_connect' style='display:none'>
@@ -235,8 +235,8 @@ createFieldTable('', [
 	{ title: 'Signal Quality', rid: 'qual', text: stats.qual, ignore: !isClient }
 ]);
 </script>
-<input type='button' class='controls' onclick='wlenable(1)' id='b_wl_enable' value='Enable' style='display:none'>
-<input type='button' class='controls' onclick='wlenable(0)' id='b_wl_disable' value='Disable' style='display:none'>
+<input type='button' class='controls' onclick='wlenable(1)' id='b_wl_enable' value='開啟' style='display:none'>
+<input type='button' class='controls' onclick='wlenable(0)' id='b_wl_disable' value='關閉' style='display:none'>
 </div>
 
 <!-- / / / -->

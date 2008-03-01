@@ -681,7 +681,7 @@ function v_mac(e, quiet)
 	if ((e = E(e)) == null) return 0;
 	mac = fixMAC(e.value);
 	if ((!mac) || (isMAC0(mac))) {
-		ferror.set(e, 'Invalid MAC address', quiet);
+		ferror.set(e, '無效的 MAC 位址', quiet);
 		return 0;
 	}
 	e.value = mac;
@@ -696,7 +696,7 @@ function v_macz(e, quiet)
 	if ((e = E(e)) == null) return 0;
 	mac = fixMAC(e.value);
 	if (!mac) {
-		ferror.set(e, 'Invalid MAC address', quiet);
+		ferror.set(e, '無效的 MAC 位址', quiet);
 		return false;
 	}
 	e.value = mac;
@@ -1883,7 +1883,7 @@ function navi()
 	var menu = [
 		['系統狀態', 				'status', 1, [
 			['系統狀態',		'overview.asp'],
-			['已連線設備列表',		'devices.asp'],
+			['連線設備列表',		'devices.asp'],
 			['日誌紀錄檔',			'log.asp'] ] ],
 		['頻寬監控', 			'bwm', 1, [
 			['即時流量',		'realtime.asp'],
