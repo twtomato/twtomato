@@ -4,6 +4,8 @@
 
 隨著 非官方韌體的流行,許多人想躍躍欲試,問題是 更新方法 大多是 command 介面,不夠親切.
 非官方韌體中 [http://www.openwrt.org Open-WRT] ,[http://www.dd-wrt.com DD-WRT] ,[http://www.polarcloud.com Tomato] 為大多數人使用. 今天以 Tomato 為範本 圖解刷新過程.
+tftp 為視窗版 retry 次數可自由設定.
+
 
 ==*注意:*== 
 * *刷機有風險,機器保固可能會喪失*
@@ -56,3 +58,6 @@ http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DomI/AAAAAAAAACw/U0tTKgpfDE4/s400/buff
 10 做一次 full reset.
 
 11 完成
+
+
+如何恢復至 BUFFALO 原廠韌體[http://code.google.com/p/twtomato/w/edit/flash2 點擊這裡] 
