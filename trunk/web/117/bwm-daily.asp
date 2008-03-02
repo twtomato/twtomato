@@ -53,7 +53,7 @@ function redraw()
 	gn = 0;
 
 	grid = '<table class="bwmg" cellspacing="1">';
-	grid += makeRow('標題', '日期', '下載', '上傳', '合計');
+	grid += makeRow('header', '日期', '下載', '上傳', '合計');
 	
 	for (i = 0; i < daily_history.length; ++i) {
 		h = daily_history[i];
@@ -61,7 +61,7 @@ function redraw()
 		mo = ((h[0] >>> 8) & 0xFF);
 		da = (h[0] & 0xFF);
 
-		grid += makeRow(((rows & 1) ? 'odd' : 'even'), months[mo] + ' ' + da + ' 日, ' + yr, rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2]));
+		grid += makeRow(((rows & 1) ? 'odd' : 'even'), yr + ' 年 ' + months[mo] + ' ' + da + ' 日', rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2]));
 		++rows;
 	}
 
