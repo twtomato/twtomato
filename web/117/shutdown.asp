@@ -20,7 +20,7 @@ function tick()
 		setTimeout(tick, 1000);
 	}
 	else {
-		document.getElementById('msg').innerHTML = 'You can now unplug the router.';
+		document.getElementById('msg').innerHTML = '您現在可以拔除路由器.';
 	}
 }
 </script></head>

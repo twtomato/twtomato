@@ -6,7 +6,7 @@
 <body style='margin:10px;background-color:#eee'><table style='background:#fff;width:100%;height:100%'>
 <tr><td style='text-align:center;vertical-align:middle;font:14px sans-serif'><form><b>
 <script type='text/javascript'>
-//<% resmsg('Unknown error'); %>
+//<% resmsg('未知的錯誤'); %>
 document.write(resmsg);
 </script>
 <input type='button' value='返回' onclick='history.go(-1)' style='font:12px sans-serif;width:80px;margin-left:10px'>
