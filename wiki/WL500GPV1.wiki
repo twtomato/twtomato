@@ -16,13 +16,17 @@ USB 2.0 兩個 方便擴充
 
 便宜
 
-Applicant: ASUSTeK Computer Inc.
-FCC ID: MSQWL500GP
-LAN: Broadcom BCM5325
-WAN: Broadcom AC101L
-Wireless LAN(Mini PCI): Broadcom BCM4318
-Network Processor: Broadcom BCM4704
-USB Controller: VIA VT6212L
+
+|| *Applicant* || ASUSTeK Computer Inc. ||
+|| *FCC ID* || MSQWL500GP ||
+
+
+|| *Device* || *Vendor* || *Serial* || *Comment* ||
+|| Network Processor || Broadcom || BCM4704 || ||
+|| WAN || Broadcom || AC101L || ||
+|| LAN || Broadcom || BCM5325 || ||
+|| Wireless LAN || Broadcom || BCM4318 || Mini-PCI ||
+|| USB Controller || VIA || VT6212L || ||
 
 ----
 
