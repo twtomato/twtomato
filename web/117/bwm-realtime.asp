@@ -213,7 +213,7 @@ function init()
 
 </td></tr>
 <tr><td id='footer' colspan=2>
-	<span id='warnwd' style='display:none'>警告: 逾時 10 秒鐘, 重新繪圖中...>Warning: 10 second timeout, restarting...&nbsp;<nbsp;</span>
+	<span id='warnwd' style='display:none'>警告: 逾時 10 秒鐘, 重新繪圖中...&nbsp;</span>
 	<span id='dtime'></span>
 	<img src='spin.gif' id='refresh-spinner' onclick='javascript:debugTime=1'>
 </td></tr>
