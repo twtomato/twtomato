@@ -102,7 +102,7 @@ function redraw()
 
 	if (summary) {
 		grid = '<table class="bwmg" cellspacing="1">';
-		grid += makeRow('標題', '日期', '下載', '上傳', '合計');
+		grid += makeRow('header', '日期', '下載', '上傳', '合計');
 	}
 	else {
 		grid = '';
@@ -114,7 +114,7 @@ function redraw()
 				'<table class="bwmg" cellspacing="1">' +
 				makeRow('header', 'Date', 'Download', 'Upload', 'Total') +
 				block.join('') +
-				makeRow('footer', 'Total', rescale(dl), rescale(ul), rescale(dl + ul)) +
+				makeRow('footer', '合計', rescale(dl), rescale(ul), rescale(dl + ul)) +
 				'</table><br>';
 	}
 
@@ -129,7 +129,7 @@ function redraw()
 		tick = d.getTime();
 		diff = lastSplit - tick;
 
-		ds = months[mo] + ' ' + da + ' 日, ' + yr + ' <small>(' + weeksShort[wk] + ')</small>';
+		ds = yr + ' 年 ' + months[mo] + ' ' + da + ' 日 <small>(' + weeksShort[wk] + ')</small>';
 
 /*	REMOVE-BEGIN
 
@@ -184,7 +184,7 @@ function redraw()
 		dl += h[1];
 		ul += h[2];
 		if (!summary) {
-			block.unshift(makeRow(((rows & 1) ? 'odd' : 'even'), weeks[wk] + ' <small>' + (mo + 1) + '-' + da + '</small>', rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2])))
+			block.unshift(makeRow(((rows & 1) ? 'odd' : 'even'), (mo + 1) + ' 月 ' + da + ' 日 <small>' + weeks[wk] + '</small>', rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2])))
 			++rows;
 		}
 			
@@ -243,7 +243,7 @@ function init()
 <div id='bwm-weekly-grid' style='float:left'></div>
 <div style="float:right;text-align:right">
 <b>顯示方式</b> <select onchange='changeMode(this)' id='shmode'><option value=1 selected>總和<option value=0>列表</select><br>
-<b>每週第一天</b> <select onchange='changeStart(this)' id='startwk'><option value=0 selected>日<option value=1>一<option value=2>二<option value=3>三<option value=4>四<option value=5>五<option value=6>六</select><br>
+<b>每週的第一天</b> <select onchange='changeStart(this)' id='startwk'><option value=0 selected>日<option value=1>一<option value=2>二<option value=3>三<option value=4>四<option value=5>五<option value=6>六</select><br>
 <b>單位切換</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
 <br>
 &raquo; <a href="admin-bwm.asp">設定</a>
