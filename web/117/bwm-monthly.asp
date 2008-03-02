@@ -53,14 +53,14 @@ function redraw()
 	gn = 0;
 
 	grid = '<table class="bwmg" cellspacing="1">';
-	grid += makeRow('標題', '日期', '下載', '上傳', '合計');
+	grid += makeRow('header', '日期', '下載', '上傳', '合計');
 	
 	for (i = 0; i < monthly_history.length; ++i) {
 		h = monthly_history[i];
 		yr = (((h[0] >> 16) & 0xFF) + 1900);
 		mo = ((h[0] >>> 8) & 0xFF);
 
-		grid += makeRow(((rows & 1) ? 'odd' : 'even'), months[mo] + ' ' + yr, rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2]));
+		grid += makeRow(((rows & 1) ? 'odd' : 'even'), yr + ' 年 ' + months[mo], rescale(h[1]), rescale(h[2]), rescale(h[1] + h[2]));
 		++rows;
 	}
 
