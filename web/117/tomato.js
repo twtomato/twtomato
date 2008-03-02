@@ -359,7 +359,7 @@ function _v_range(e, quiet, min, max, name)
 	if ((e = E(e)) == null) return 0;
 	v = e.value * 1;
 	if ((isNaN(v)) || (v < min) || (v > max)) {
-		ferror.set(e, 'Invalid ' + name + '. Valid range: ' + min + '-' + max, quiet);
+		ferror.set(e, '不正確的 ' + name + '. 有效範圍為: ' + min + '-' + max, quiet);
 		return 0;
 	}
 	e.value = v;
@@ -395,7 +395,7 @@ function v_macip(e, quiet, bok, ipp)
 				e.value = '';
 			}
 			else {
-				ferror.set(e, 'Invalid MAC or IP address');
+				ferror.set(e, '不正確的 MAC 或 IP 位址');
 				return false;
 			}
 		}
@@ -406,7 +406,7 @@ function v_macip(e, quiet, bok, ipp)
 
 	a = s.split('-');
 	if (a.length > 2) {
-		ferror.set(e, 'Invalid IP address range', quiet);
+		ferror.set(e, '不正確的 IP 範圍', quiet);
 		return false;
 	}
 	c = 0;
@@ -416,18 +416,18 @@ function v_macip(e, quiet, bok, ipp)
 
 		b = fixIP(b);
 		if (!b) {
-			ferror.set(e, 'Invalid IP address', quiet);
+			ferror.set(e, '不正確的 IP 位址', quiet);
 			return false;
 		}
 
 		if (b.indexOf(ipp) != 0) {
-			ferror.set(e, 'IP address outside of LAN', quiet);
+			ferror.set(e, 'IP 位址 超出 LAN', quiet);
 			return false;
 		}
 
 		d = (b.split('.'))[3];
 		if (d <= c) {
-			ferror.set(e, 'Invalid IP address range', quiet);
+			ferror.set(e, '不正確的 IP 範圍', quiet);
 			return false;
 		}
 
@@ -459,7 +459,7 @@ function v_ip(e, quiet, x)
 	if ((e = E(e)) == null) return 0;
 	ip = fixIP(e.value, x);
 	if (!ip) {
-		ferror.set(e, 'Invalid IP address', quiet);
+		ferror.set(e, '不正確的 IP 位址', quiet);
 		return false;
 	}
 	e.value = ip;
@@ -499,7 +499,7 @@ function v_iptip(e, quiet)
 		ip = fixIP(RegExp.$1);
 		x = fixIP(RegExp.$2);
 		if ((ip == null) || (x == null)) {
-			ferror.set(e, 'Invalid IP address range', quiet);
+			ferror.set(e, '不正確的 IP 範圍', quiet);
 			return 0;
 		}
 		ferror.clear(e);
@@ -522,7 +522,7 @@ function v_iptip(e, quiet)
 		x = ma * 1;
 		if (!isNaN(x)) {
 			if ((x < 0) || (x > 32)) {
-				ferror.set(e, 'Invalid netmask', quiet);
+				ferror.set(e, '子網路遮罩 不正確', quiet);
 				return 0;
 			}
 			ma = x;
@@ -530,14 +530,14 @@ function v_iptip(e, quiet)
 		else {
 			ma = fixIP(ma);
 			if ((ma == null) || (!_v_netmask(ma))) {
-				ferror.set(e, 'Invalid netmask', quiet);
+				ferror.set(e, '子網路遮罩 不正確', quiet);
 				return 0;
 			}
 		}
 	}
 	ip = fixIP(ip);
 	if (!ip) {
-		ferror.set(e, 'Invalid IP address', quiet);
+		ferror.set(e, '不正確的 IP 位址', quiet);
 		return 0;
 	}
 	e.value = ip + ((ma != '') ? ('/' + ma) : '');
@@ -562,7 +562,7 @@ function _v_portrange(e, quiet, v)
 		x = fixPort(RegExp.$1, -1);
 		y = fixPort(RegExp.$2, -1);
 		if ((x == -1) || (y == -1)) {
-			ferror.set(e, 'Invalid port range: ' + v, quiet);
+			ferror.set(e, '不正確的 port range: ' + v, quiet);
 			return null;
 		}
 		if (x > y) {
@@ -577,7 +577,7 @@ function _v_portrange(e, quiet, v)
 
 	v = fixPort(v, -1);
 	if (v == -1) {
-		ferror.set(e, 'Invalid port', quiet);
+		ferror.set(e, '不正確的 port', quiet);
 		return null;
 	}
 
@@ -646,7 +646,7 @@ function v_netmask(e, quiet)
 			return 1;
 		}
 	}
-	ferror.set(e, 'Invalid netmask', quiet);
+	ferror.set(e, '子網路遮罩 不正確', quiet);
 	return 0;
 }
 
@@ -681,7 +681,7 @@ function v_mac(e, quiet)
 	if ((e = E(e)) == null) return 0;
 	mac = fixMAC(e.value);
 	if ((!mac) || (isMAC0(mac))) {
-		ferror.set(e, '無效的 MAC 位址', quiet);
+		ferror.set(e, '不正確的 MAC 位址', quiet);
 		return 0;
 	}
 	e.value = mac;
@@ -696,7 +696,7 @@ function v_macz(e, quiet)
 	if ((e = E(e)) == null) return 0;
 	mac = fixMAC(e.value);
 	if (!mac) {
-		ferror.set(e, '無效的 MAC 位址', quiet);
+		ferror.set(e, '不正確的 MAC 位址', quiet);
 		return false;
 	}
 	e.value = mac;
@@ -713,12 +713,12 @@ function v_length(e, quiet, min, max)
 	n = s.length;
 	if (min == undefined) min = 1;
 	if (n < min) {
-		ferror.set(e, 'Invalid length. Please enter at least ' + min + ' character' + (min == 1 ? '.' : 's.'), quiet);
+		ferror.set(e, '不正確的長度. 請至少輸入  ' + min + ' 個字元' + (min == 1 ? '.' : 's.'), quiet);
 		return 0;
 	}
 	max = max || e.maxlength;
     if (n > max) {
-		ferror.set(e, 'Invalid length. Please reduce the length to ' + max + ' characters or less.', quiet);
+		ferror.set(e, '不正確的長度. 請縮短長度少於 ' + max + ' 個字元', quiet);
 		return 0;
 	}
 	e.value = s;
@@ -733,7 +733,7 @@ function v_domain(e, quiet)
 	if ((e = E(e)) == null) return 0;
 	s = e.value.trim().replace(/\s+/g, ' ');
 	if ((s.length > 32) || ((s.length > 0) && (s.search(/^[.a-zA-Z0-9_\- ]+$/) == -1))) {
-		ferror.set(e, "Invalid name. Only characters \"A-Z 0-9 . - _\" are allowed.", quiet);
+		ferror.set(e, "不正確的字元. 只有 \"A-Z 0-9 . - _\" 會被接受.", quiet);
 		return 0;
 	}
 	e.value = s;

@@ -51,7 +51,7 @@ function init()
 <tr><td style='text-align:center;vertical-align:middle;font:16px sans-serif;width:100%;height:100%'>
 <form>
 <script type='text/javascript'>
-if (wait <= 0) s = '<b>已儲存...</b> &nbsp; <input type="button" value="Continue" onclick="go()" style="font:10px sans-serif;vertical-align:top">';
+if (wait <= 0) s = '<b>已儲存...</b> &nbsp; <input type="button" value="繼續" onclick="go()" style="font:10px sans-serif;vertical-align:top">';
 	else s = '<b>請稍後...</b><span id="xclock" style="font-size:9px;background:#f7f7f7;padding:1px;visibility:hidden">&nbsp;</span> <img src="spin.gif" id="spin" onload="setSpin(1)">';
 document.write(s);
 </script>

@@ -9,6 +9,6 @@
 //<% resmsg('Unknown error'); %>
 document.write(resmsg);
 </script>
-<input type='button' value='Back' onclick='history.go(-1)' style='font:12px sans-serif;width:80px;margin-left:10px'>
+<input type='button' value='返回' onclick='history.go(-1)' style='font:12px sans-serif;width:80px;margin-left:10px'>
 </b></form></td></tr>
 </table></body></html>
