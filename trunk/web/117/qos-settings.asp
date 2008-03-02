@@ -23,7 +23,7 @@
 
 //	<% nvram("qos_enable,qos_method,qos_ack,qos_icmp,qos_default,qos_obw,qos_ibw,qos_orates,qos_irates,qos_reset"); %>
 
-classNames = ['最高', '高', '中', '低', '最低', 'Ａ類', 'Ｂ類', 'Ｃ類', 'Ｄ類', 'Ｅ類'];
+classNames = ['最高等', '高等', '中等', '低等', '最低等', 'Ａ等', 'Ｂ等', 'Ｃ等', 'Ｄ等', 'Ｅ等'];
 
 pctList = [[0, 'None']];
 for (i = 1; i <= 100; ++i) pctList.push([i, i + '%']);
@@ -129,8 +129,8 @@ createFieldTable('', [
 	{ title: '開啟頻寬管理QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
 	{ title: 'ACK 給予優先權', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
 	{ title: 'ICMP 給予優先權', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
-	{ title: '遵循 分類機制 ', name: 'f_qos_method', type: 'checkbox', value: nvram.qos_method == '0' },
-	{ title: '設定值改變時 自動更新 分類機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
+	{ title: '遵循 分等機制 ', name: 'f_qos_method', type: 'checkbox', value: nvram.qos_method == '0' },
+	{ title: '設定值改變時 自動更新 分等機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
 	{ title: '優先權預設為 Class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
 ]);
 </script>
