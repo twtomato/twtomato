@@ -275,7 +275,7 @@ createFieldTable('', [
 <br><br>
 
 <div id='ntpkiss' style='display:none'>
-The following NTP servers have been automatically blocked by request from the server:
+下列的 NTP 伺服器已被伺服端自動封鎖:
 <b id='ntpkiss-ip'></b>
 <div>
 	<input type='button' value='Clear' onclick='save(1)'>
