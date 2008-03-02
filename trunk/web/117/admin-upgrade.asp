@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Admin: Upgrade</title>
+<title>[<% ident(); %>] 路由器管理設定:韌體更新</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -52,7 +52,7 @@ function upgrade()
 		alert('Expecting a ".bin" or ".trx" file.');
 		return;
 	}
-	if (!confirm('Are you sure you want to upgrade using ' + name + '?')) return;
+	if (!confirm('確定要使用這個檔案更新 ' + name + '?')) return;
 
 	E('afu-upgrade-button').disabled = true;
 

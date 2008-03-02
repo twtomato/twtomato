@@ -39,7 +39,7 @@
 //	<% nvram(''); %>	// http_id
 //	<% nvramseq("rrules", "rrule%d", 0, 49); %>
 
-var dowNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var dowNames = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
 
 var og = new TomatoGrid();
 og.setup = function() {
@@ -75,7 +75,7 @@ og.populate = function() {
 		}
 
 		if ((v[1] >= 0) && (v[2] >= 0)) {
-			s += '<br>' + timeString(v[1]) + ' to ' + timeString(v[2]);
+			s += '<br>' + timeString(v[1]) + ' 至 ' + timeString(v[2]);
 			if (v[2] <= v[1]) s += ' <small>(the following day)</small>';
 		}
 		if (v[0] != '1') s += '<br><i><b>關閉</b></i>';

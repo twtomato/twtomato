@@ -109,7 +109,7 @@ createFieldTable('', [
 		{ name: 'log_remoteport', type: 'text', maxlen: 5, size: 7, value: nvram.log_remoteport } ]},
 	{ title: '間隔標籤', name: 'log_mark', type: 'text', maxlen: 4, size: 5, value: nvram.log_mark, suffix: ' <small>(分鐘 / 0 關閉)</small>' },
 	{ title: '事件日誌紀錄' },
-		{ title: 'Access Restriction De/Activiation', indent: 2, name: 'f_log_acre', type: 'checkbox', value: (nvram.log_events.indexOf('acre') != -1) },
+		{ title: '網路瀏覽限制所 限制/允許', indent: 2, name: 'f_log_acre', type: 'checkbox', value: (nvram.log_events.indexOf('acre') != -1) },
 		{ title: 'Cron', indent: 2, name: 'f_log_crond', type: 'checkbox', value: (nvram.log_events.indexOf('crond') != -1) },
 		{ title: 'NTP', indent: 2, name: 'f_log_ntp', type: 'checkbox', value: (nvram.log_events.indexOf('ntp') != -1) },
 	{ title: '連接日誌紀錄' },

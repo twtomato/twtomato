@@ -44,7 +44,7 @@ function backupButton()
 
 	name = fix(E('backup-name').value);
 	if (name.length <= 1) {
-		alert('Invalid filename');
+		alert('不正確的檔名');
 		return;
 	}
 	location.href = 'bwm/' + name + '.gz?_http_id=' + nvram.http_id;
@@ -59,10 +59,10 @@ function restoreButton()
 	name = fix(E('restore-name').value);
 	name = name.toLowerCase();
 	if ((name.length <= 3) || (name.substring(name.length - 3, name.length).toLowerCase() != '.gz')) {
-		alert('Incorrect filename. Expecting a ".gz" file.');
+		alert('不正確的檔名. 正確的副檔名 為 ".gz" .');
 		return;
 	}
-	if (!confirm('Restore data from ' + name + '?')) return;
+	if (!confirm('從 ' + name + '恢復?')) return;
 
 	E('restore-button').disabled = 1;
 	fields.disableAll(E('config-section'), 1);
@@ -148,11 +148,11 @@ function save()
 		path = getPath();
 		if (((E('_rstats_stime').value * 1) <= 48) &&
 			((path == '*nvram') || (path == '/jffs/'))) {
-			if (!confirm('Frequent saving to NVRAM or JFFS2 is not recommended. Continue anyway?')) return;
+			if (!confirm('不建議對 NVRAM 或 JFFS2 頻繁的存取 是否繼續?')) return;
 		}
 		if ((nvram.rstats_path != path) && (fom.rstats_path.value != path) && (path != '') && (path != '*nvram') &&
 			(path.substr(path.length - 1, 1) != '/')) {
-			if (!confirm('Note: ' + path + ' will be treated as a file. If this is a directory, please use a trailing /. Continue anyway?')) return;
+			if (!confirm('注意: ' + path + ' 將會被視為一個檔案. 如果這是一個目錄，請使用 /. 是否繼續?')) return;
 		}
 		fom.rstats_path.value = path;
 
@@ -225,10 +225,10 @@ createFieldTable('', [
 		[9,'每9小時'],[12,'每12小時'],[24,'每天'],[48,'每兩天'],[72,'每三天'],[96,'每四天'],
 		[120,'Every 5 Days'],[144,'Every 6 Days'],[168,'Every Week']] },
 	{ title: '關機時儲存', indent: 2, name: 'f_sshut', type: 'checkbox', value: nvram.rstats_sshut == '1' },
-	{ title: 'Create New File /<br>Reset Data', indent: 2, name: 'f_new', type: 'checkbox', value: 0,
+	{ title: '建立新檔案 /<br>清除資料', indent: 2, name: 'f_new', type: 'checkbox', value: 0,
 		suffix: ' &nbsp; <b id="newmsg" style="visibility:hidden"><small>(note: enable if this is a new file)</small></b>' },
 	{ title: '每月第一天為', name: 'rstats_offset', type: 'text', value: nvram.rstats_offset, maxlen: 2, size: 4 },
-	{ title: '排除的介面', name: 'rstats_exclude', type: 'text', value: nvram.rstats_exclude, maxlen: 64, size: 50, suffix: '&nbsp;<small>(comma separated list)</small>' }
+	{ title: '排除的介面', name: 'rstats_exclude', type: 'text', value: nvram.rstats_exclude, maxlen: 64, size: 50, suffix: '&nbsp;<small>(用逗號分隔介面)</small>' }
 ]);
 </script>
 </form>

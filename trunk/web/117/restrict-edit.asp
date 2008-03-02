@@ -83,7 +83,7 @@ cg.verifyFields = function(row, quiet) {
 	var f = fields.getAll(row)[0];
 	if (v_mac(f, true)) return true;
 	if (v_iptip(f, true)) return true;
-	ferror.set(f, 'Invalid MAC address or IP address/range', quiet);
+	ferror.set(f, '不正確的 MAC 或 IP 位址/範圍', quiet);
 	return false;
 }
 
@@ -91,7 +91,7 @@ cg.setup = function() {
 	var a, i, count, ex;
 
 	this.init('res-comp-grid', 'sort', 50, [ { type: 'text', maxlen: 32 } ] );
-	this.headerSet(['MAC / IP Address']);
+	this.headerSet(['MAC / IP 位址']);
 	this.showNewEditor();
 	this.resetNewEditor();
 
@@ -294,7 +294,7 @@ function save()
 		if (e.value != 0) {
 			a = cg.getAllData();
 			if (a.length == 0) {
-				ferror.set(e, 'No MAC or IP address was specified', 0);
+				ferror.set(e, 'MAC 錯誤 或 IP 位址 已被指定', 0);
 				return;
 			}
 			if (e.value == 2) a.unshift('!');
