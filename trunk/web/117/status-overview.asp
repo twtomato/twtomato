@@ -108,7 +108,7 @@ function show()
 		E('b_disconnect').disabled = !stats.wanup;
 	}
 
-	c('radio', wlradio ? 'Enabled' : '<b>關閉</b>');
+	c('radio', wlradio ? '開啟' : '<b>關閉</b>');
 	if (show_radio) {
 		E('b_wl_enable').disabled = wlradio;
 		E('b_wl_disable').disabled = !wlradio;
@@ -226,7 +226,7 @@ createFieldTable('', [
 	{ title: 'MAC 位址', text: nvram.wl0_hwaddr },
 	{ title: '無線模式', text: wmode },
 	{ title: '無線模式', text: bgmo[nvram.wl_net_mode] },
-	{ title: '無線電波', rid: 'radio', text: (wlradio == 0) ? '<b>關閉</b>' : 'Enabled' },
+	{ title: '無線電波', rid: 'radio', text: (wlradio == 0) ? '<b>關閉</b>' : '開啟' },
 	{ title: 'SSID', text: nvram.wl_ssid },
 	{ title: '加密方式', text: sec },
 	{ title: '頻道', rid: 'channel', text: stats.channel },
