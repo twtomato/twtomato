@@ -10,7 +10,7 @@ function tick()
 	var e = document.getElementById('continue');
 	e.value = n--;
 	if (n < 0) {
-		e.value = 'Continue';
+		e.value = '繼續';
 		return;
 	}
 	if (n == 19) e.disabled = false;
@@ -36,7 +36,7 @@ function init()
 <tr><td style='text-align:center;vertical-align:middle;font:12px sans-serif'><form>
 <div style='width:600px;border-bottom:1px solid #aaa;margin:5px auto;padding:5px 0;font-size:14px;display:none;font-weight:bold' id='msg'></div>
 重新啟動中！  請稍候... &nbsp;
-<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='繼續' onclick='go()' disabled>
+<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='continue' onclick='go()' disabled>
 </form></td></tr>
 </table></body></html>
 

@@ -112,7 +112,7 @@ function redraw()
 	{
 		grid += '<b>' + dbeg + ' to ' + dend + '</b>' +
 				'<table class="bwmg" cellspacing="1">' +
-				makeRow('header', 'Date', 'Download', 'Upload', 'Total') +
+				makeRow('header', '日期', '下載', '上傳', '合計') +
 				block.join('') +
 				makeRow('footer', '合計', rescale(dl), rescale(ul), rescale(dl + ul)) +
 				'</table><br>';
