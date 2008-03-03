@@ -71,6 +71,10 @@ createFieldTable('', [
 	{ title: '允許群體廣播', name: 'f_multicast', type: 'checkbox', value: nvram.multicast_pass == '1' },
 	{ title: 'NAT Loopback', name: 'nf_loopback', type: 'select', options: [[0,'全部'],[1,'只有被轉送的封包'],[2,'關閉']], value: fixInt(nvram.nf_loopback, 0, 2, 1) }
 ]);
+
+
+</script>
+</div>
 <!--//
 http://www.linksysinfo.org/forums/showthread.php?t=55702&page=3
 This new version of Tomato adds a third option for NAT Loopback: "Forwarded Only." 
@@ -83,10 +87,6 @@ The one exception I could see is if you have a server in the DMZ that you want t
 I am not sure the "Forwarded Only" setting currently accounts for such a scenario such that NAT Loopback would work for the DMZ server. 
 This could be changed I guess, but it is of little concern because rarely should a server be in the DMZ anyway.
 //-->
-
-</script>
-</div>
-
 <!-- / / / -->
 
 </td></tr>
