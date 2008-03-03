@@ -184,7 +184,7 @@ createFieldTable('', [
 ]);
 </script>
 <span id='b_dhcpc' style='display:none'>
-	<input type='button' class='controls' onclick='dhcpc("renew")' value='重新取得'>
+	<input type='button' class='controls' onclick='dhcpc("renew")' value='更新'>
 	<input type='button' class='controls' onclick='dhcpc("release")' value='釋放'> &nbsp;
 </span>
 <input type='button' class='controls' onclick='wan_connect()' value='連線' id='b_connect' style='display:none'>

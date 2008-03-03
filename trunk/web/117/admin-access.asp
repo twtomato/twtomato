@@ -66,7 +66,7 @@ function verifyFields(focused, quiet)
 	a = E('_f_http_local');
 	b = E('_f_http_remote').value;
 	if ((a.value != 3) && (b != 0) && (a.value != b)) {
-		ferror.set(a, 'The local http/https must also be enabled when using remote access.', quiet);
+		ferror.set(a, '開啟時遠端登入,區域端登入模式 http/https 必須開啟.', quiet);
 		ok = 0;
 	}
 	else {
@@ -104,7 +104,7 @@ function verifyFields(focused, quiet)
 	}
 	else if (a.value != '') {
         if (a.value.search(/^\s*ssh-(dss|rsa)/) == -1) {
-			ferror.set(a, 'Invalid SSH key.', quiet);
+			ferror.set(a, '不正確的 SSH 金鑰 .', quiet);
 			ok = 0;
 		}
 	}
@@ -117,11 +117,11 @@ function verifyFields(focused, quiet)
 	a.value = a.value.trim();
 	b.value = b.value.trim();
 	if (a.value != b.value) {
-		ferror.set(b, 'Both passwords must match.', quiet);
+		ferror.set(b, '兩次輸入的密碼不相同.', quiet);
 		ok = 0;
 	}
 	else if (a.value == '') {
-		ferror.set(a, 'Password must not be empty.', quiet);
+		ferror.set(a, '請輸入密碼.', quiet);
 		ok = 0;
 	}
 	else {
@@ -142,7 +142,7 @@ function save()
 	fom = E('_fom');
 	a = E('_f_http_local').value * 1;
 	if (a == 0) {
-		if (!confirm('Warning: Web Admin is about to be disabled. If you decide to re-enable Web Admin at a later time, it must be done manually via Telnet, SSH or by performing a hardware reset. Are you sure you want to do this?')) return;
+		if (!confirm('請注意: 手動關閉 WebGUI 介面, 若關閉只能使用 telnet 和 ssh 登入 或從硬體 Reset 機器, 您確定要這樣做嗎?')) return;
 		fom._nextpage.value = 'about:blank';
 	}
 	fom.http_enable.value = (a & 1) ? 1 : 0;
