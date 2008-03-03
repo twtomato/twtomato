@@ -89,7 +89,7 @@ function upgrade()
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
 			選擇韌體:<br>
-			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='昇級' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
+			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='升級' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
 		</div>
 		</form>
 
