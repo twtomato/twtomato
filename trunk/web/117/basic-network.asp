@@ -753,7 +753,7 @@ f = [
 	{ title: '無線模式', name: 'wl_net_mode', type: 'select', value: (nvram.wl_net_mode == 'disabled') ? 'mixed' : nvram.wl_net_mode, options:[['mixed','混合'],['b-only','僅802.11b'],['g-only','僅802.11g']] },
 	{ title: 'SSID', name: 'wl_ssid', type: 'text', maxlen: 32, size: 34, value: nvram.wl_ssid },
 	{ title: 'SSID 廣播', indent: 2, name: 'f_bcast', type: 'checkbox', value: (nvram.wl_closed == '0') },
-	{ title: '頻道', name: 'wl_channel', type: 'select', options: ghz, suffix: ' <input type="button" id="_f_scan" value="Scan" onclick="scanButton()"> <img src="spin.gif" id="spin">',
+	{ title: '頻道', name: 'wl_channel', type: 'select', options: ghz, suffix: ' <input type="button" id="_f_scan" value="掃描" onclick="scanButton()"> <img src="spin.gif" id="spin">',
 		 value: nvram.wl_channel },
 	null,
 	{ title: '加密方式', name: 'security_mode2', type: 'select',

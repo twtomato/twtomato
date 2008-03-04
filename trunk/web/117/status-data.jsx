@@ -82,7 +82,7 @@ do {
 	if (i < 0) i = -i;
 	if ((i >= 1) && (i <= 14)) {
 		stats.channel = '<a href="tools-survey.asp">' + i + ' - ' + ghz[i - 1] + ' <small>GHz</small></a>'
-		if (a < 0) stats.channel += ' <small>(scanning...)</small>';
+		if (a < 0) stats.channel += ' <small>(正在搜尋...)</small>';
 	}
 	else if (i == 0) {
 		stats.channel = 'Auto';
