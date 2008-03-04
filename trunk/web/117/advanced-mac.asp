@@ -71,7 +71,7 @@ function verifyFields(focused, quiet)
 {
 	if (v_mac('_f_mac_wan', quiet) && v_mac('_f_mac_wl', quiet)) {
 		if (E('_f_mac_wan').value != E('_f_mac_wl').value) return 1;
-		ferror.set('_f_mac_wan', 'Addresses must be unique', quiet);
+		ferror.set('_f_mac_wan', '位址不能重覆', quiet);
 	}
 	return 0;
 }
@@ -79,7 +79,7 @@ function verifyFields(focused, quiet)
 function save()
 {
 	if (!verifyFields(null, false)) return;
-	if (!confirm("Warning: Changing the MAC address may require that you reboot all devices, computers or modem connected to this router. Continue anyway?")) return
+	if (!confirm("警告: 改變 MAC Address 有可能需要把連線到這台路由器的設備, 電腦或數據機重新開機. 不論如何繼續執行?")) return
 
 	var fom = E('_fom');
 	fom.mac_wan.value = (fom._f_mac_wan.value == defmac.wan) ? '' : fom._f_mac_wan.value;
@@ -108,7 +108,7 @@ function save()
 <input type='hidden' name='mac_wan'>
 <input type='hidden' name='mac_wl'>
 
-<div class='section-title'>實體位址 MAC Address</div>
+<div class='section-title'>實體位址 (MAC Address)</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -123,7 +123,7 @@ createFieldTable('', [
 <br>
 <table border=0 cellpadding=1>
 	<tr><td>路由器 MAC:</td><td><b><% nv('et0macaddr'); %></b></td></tr>
-	<tr><td>PC網卡 MAC:</td><td><b><% compmac(); %></b></td></tr>
+	<tr><td>PC 網卡 MAC:</td><td><b><% compmac(); %></b></td></tr>
 </table>
 </div>
 
