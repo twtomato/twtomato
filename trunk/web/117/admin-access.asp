@@ -38,13 +38,13 @@ sdup = parseInt('<% psup("dropbear"); %>');
 function toggle(service, isup)
 {
 	if (changed) {
-		if (!confirm("Unsaved changes will be lost. Continue anyway?")) return;
+		if (!confirm("未儲存的設定將會遺失. 不論如何繼續執行?")) return;
 	}
 	E('_' + service + '_button').disabled = true;
 	form.submitHidden('service.cgi', {
 		_redirect: 'admin-access.asp',
 		_sleep: ((service == 'sshd') && (!isup)) ? '7' : '3',
-		_service: service + (isup ? '-stop' : '-start')
+		_service: service + (isup ? '-停止' : '-啟動')
 	});
 }
 
@@ -66,7 +66,7 @@ function verifyFields(focused, quiet)
 	a = E('_f_http_local');
 	b = E('_f_http_remote').value;
 	if ((a.value != 3) && (b != 0) && (a.value != b)) {
-		ferror.set(a, '開啟時遠端登入,區域端登入模式 http/https 必須開啟.', quiet);
+		ferror.set(a, '開啟時遠端登入, 區域端登入模式 http/https 必須開啟.', quiet);
 		ok = 0;
 	}
 	else {
@@ -208,7 +208,7 @@ function init()
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: '區域端登入模式', name: 'f_http_local', type: 'select', options: [[0,'Disabled'],[1,'HTTP'],[2,'HTTPS'],[3,'HTTP &amp; HTTPS']],
+	{ title: '區域端登入模式', name: 'f_http_local', type: 'select', options: [[0,'關閉'],[1,'HTTP'],[2,'HTTPS'],[3,'HTTP &amp; HTTPS']],
 		value: ((nvram.https_enable != 0) ? 2 : 0) | ((nvram.http_enable != 0) ? 1 : 0) },
 	{ title: 'HTTP Port', indent: 2, name: 'http_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.http_lanport, 80) },
 	{ title: 'HTTPS Port', indent: 2, name: 'https_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.https_lanport, 443) },
@@ -223,8 +223,8 @@ createFieldTable('', [
 	{ title: '允許無線網路-登入管理', name: 'f_http_wireless', type: 'checkbox', value:  nvram.web_wl_filter == 0 },
 	null,
 	{ title: '風格', name: 'web_css', type: 'select',
-		options: [['red','Tomato'],['black','Black'],['blue','Blue'],['bluegreen','Blue &amp; Green (Lighter)'],['bluegreen2','Blue &amp; Green (Darker)'],['cyan','Cyan'],['olive','Olive'],['pumpkin','Pumpkin'],['ext/custom','Custom (ext/custom.css)']], value: nvram.web_css },
-	{ title: 'Show Browser Icon', name: 'f_favicon', type: 'checkbox', value:  nvram.web_favicon == 1 }
+		options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍色 &amp; 綠色 (較淺)'],['bluegreen2','藍色 &amp; 綠色 (較深)'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色'],['ext/custom','Custom (ext/custom.css)']], value: nvram.web_css },
+	{ title: '顯示 Browser Icon', name: 'f_favicon', type: 'checkbox', value:  nvram.web_favicon == 1 }
 ]);
 </script>
 </div>
@@ -240,7 +240,7 @@ createFieldTable('', [
 	{ title: '登入密碼', name: 'f_sshd_pass', type: 'checkbox', value: nvram.sshd_pass == 1 },
 	{ title: '授權金鑰', name: 'sshd_authkeys', type: 'textarea', value: nvram.sshd_authkeys }
 ]);
-W('<input type="button" value="' + (sdup ? 'Stop' : 'Start') + ' Now" onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
+W('<input type="button" value="' + (sdup ? '停止' : '啟動') + ' Now" onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
 </script>
 </div>
 
@@ -261,7 +261,7 @@ createFieldTable('', [
 	{ title: '開機時啟用', name: 'f_telnetd_eas', type: 'checkbox', value: nvram.telnetd_eas == 1 },
 	{ title: 'Port', name: 'telnetd_port', type: 'text', maxlen: 5, size: 7, value: nvram.telnetd_port }
 ]);
-W('<input type="button" value="' + (tdup ? 'Stop' : 'Start') + ' Now" onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
+W('<input type="button" value="' + (tdup ? '停止' : '啟動') + ' Now" onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
 </script>
 </div>
 
