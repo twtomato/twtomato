@@ -1913,10 +1913,10 @@ function navi()
 			['路由表',			'routing.asp'],
 //			['Watchdog',		'watchdog.asp'],
 			['無線網路參數',		'wireless.asp'] ] ],
-		['虛擬伺服器', 	'forward', 0, [
-			['基本設定',			'basic.asp'],
-			['虛擬非軍事區DMZ',				'dmz.asp'],
-			['通訊埠轉發',		'triggered.asp'],
+		['通訊埠轉送', 	'forward', 0, [
+			['一般設定',			'basic.asp'],
+			['虛擬非軍事區 DMZ',				'dmz.asp'],
+			['觸發式轉送',		'triggered.asp'],
 			['UPnP',			'upnp.asp'] ] ],
 		['頻寬管理 QoS',					'qos', 0, [
 			['基本設定',	'settings.asp'],
