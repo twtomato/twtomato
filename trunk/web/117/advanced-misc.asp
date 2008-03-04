@@ -67,7 +67,7 @@ a = [];
 for (i = 3; i <= 20; ++i) a.push([i, i + ' seconds']);
 createFieldTable('', [
 	{ title: 'Boot_Wait 時間 *', name: 'wait_time', type: 'select', options: a, value: fixInt(nvram.wait_time, 3, 20, 3) },
-	{ title: 'WAN連線速度 *', name: 'wan_speed', type: 'select', options: [[0,'10Mb 全雙工'],[1,'10Mb 半雙工'],[2,'100Mb 全雙工'],[3,'100Mb 半雙工'],[4,'自動選擇']], value: nvram.wan_speed }
+	{ title: 'WAN 連線速度 *', name: 'wan_speed', type: 'select', options: [[0,'10Mb 全雙工'],[1,'10Mb 半雙工'],[2,'100Mb 全雙工'],[3,'100Mb 半雙工'],[4,'自動選擇']], value: nvram.wan_speed }
 ]);
 </script>
 <br>
