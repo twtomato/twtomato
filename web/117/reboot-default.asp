@@ -18,7 +18,7 @@ function tick()
 	var e = document.getElementById('continue');
 	e.value = n--;
 	if (n < 0) {
-		e.value = 'Continue';
+		e.value = '繼續';
 		return;
 	}
 	if (n == 19) e.disabled = false;
@@ -36,7 +36,7 @@ function init()
 <body style='background:#fff' onload='init()'><table style='width:100%;height:100%'>
 <tr><td style='text-align:center;vertical-align:middle;font:12px sans-serif'><form>
 重開機中！   請稍後... &nbsp;
-<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='繼續' onclick='go()' disabled>
+<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='continue' onclick='go()' disabled>
 <div style='width:600px;border-top:1px dashed #888;margin:5px auto;padding:5px 0;font-size:14px;' id='msg'>路由器IP為 192.168.1.1. 請更新電腦的IP或是重開機 .</div>
 </form></td></tr>
 </table></body></html>

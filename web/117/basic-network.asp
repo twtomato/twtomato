@@ -38,8 +38,8 @@ function spin(x)
 {
 	var e = E('_f_scan');
 	e.disabled = x;
-	if (x) e.value = 'Scan ' + (wscan.tries + 1);
-		else e.value = 'Scan';
+	if (x) e.value = '掃描 ' + (wscan.tries + 1);
+		else e.value = '掃描';
 	E('spin').style.visibility = x ? 'visible' : 'hidden';
 }
 
@@ -620,8 +620,8 @@ function save()
 		fom.wl_akm.value = c;
 		break;
 	}
-	fom.wl_auth_mode.value = (sm2 == 'radius') ? 'radius' : 'none';
-	fom.wl_wep.value = ((sm2 == 'radius') || (sm2 == 'wep')) ? 'enabled': 'disabled';
+	fom.wl_auth_mode.value = (sm2 == 'radius') ? 'radius' : '無';
+	fom.wl_wep.value = ((sm2 == 'radius') || (sm2 == 'wep')) ? '啟用': '關閉';
 	fom.wl_auth_mode.disabled = fom.wl_wep.disabled = fom.security_mode.disabled = fom.wl_akm.disabled = fom.security_mode2.disabled;
 
 	if (sm2.indexOf('wpa') != -1) fom.wl_auth.value = 0;
@@ -691,7 +691,7 @@ function save()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ text: '<span id="_wan_na"><i>無線網路橋接模式</i></span>' },
-	{ title: '連線類型', name: 'wan_proto', type: 'select', options: [['dhcp','DHCP獲得IP'],['pppoe','PPPoE 撥接'],['static','固定IP制'],['pptp','PPTP'],['l2tp','L2TP'],['disabled','關閉']],
+	{ title: '連線類型', name: 'wan_proto', type: 'select', options: [['dhcp','DHCP 發配 IP'],['pppoe','PPPoE 撥接'],['static','固定 IP'],['pptp','PPTP'],['l2tp','L2TP'],['disabled','關閉']],
 		value: nvram.wan_proto },
 	{ title: '使用者名稱', name: 'ppp_username', type: 'text', maxlen: 50, size: 54, value: nvram.ppp_username },
 	{ title: '密碼', name: 'ppp_passwd', type: 'password', maxlen: 50, size: 54, value: nvram.ppp_passwd },

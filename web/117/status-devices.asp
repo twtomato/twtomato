@@ -112,7 +112,7 @@ function deleteLease(a, ip)
 	}
 
 	a = E(a);
-	a.innerHTML = 'deleting...';
+	a.innerHTML = '刪除中...';
 
 	xob.onCompleted = function(text, xml) {
 		a.innerHTML = '...';

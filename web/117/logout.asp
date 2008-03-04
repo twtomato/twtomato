@@ -19,6 +19,6 @@ function init()
 </head>
 <body style='background-color:#fff;font:13px sans-serif;color:#000' onload='setTimeout("init()", 500)'>
 <div style='width:350px;padding:10em 1em;background:#eee;text-align:center'>
-<b>登出</b><br>清除此連線 帳號/密碼.
+<b>登出</b><br>當要您輸入 [帳號 / 密碼] 時, 請按 [取消].
 </div>
 </body></html>

@@ -249,7 +249,7 @@ createFieldTable('', [
 		['UTC-5:30','UTC+05:30 孟買,加爾各答,千奈,新德里'],
 		['UTC-6','UTC+06:00 孟加拉,俄國'],
 		['UTC-7','UTC+07:00 泰國, 俄羅斯'],
-		['UTC-8','UTC+08:00 中國, 香港, 澳洲西部, 新加坡, 台灣, 俄羅斯'],
+		['UTC-8','UTC+08:00 台灣, 中國, 香港, 澳洲西部, 新加坡, 俄羅斯'],
 		['UTC-9','UTC+09:00 日本, 韓國'],
 		['CST-9:30CST,M10.5.0/2,M4.1.0/3', 'UTC+09:30 南澳洲'],
 		['UTC-10','UTC+10:00 關島, 俄羅斯'],
@@ -278,7 +278,7 @@ createFieldTable('', [
 下列的 NTP 伺服器已被伺服端自動封鎖:
 <b id='ntpkiss-ip'></b>
 <div>
-	<input type='button' value='Clear' onclick='save(1)'>
+	<input type='button' value='清除' onclick='save(1)'>
 </div>
 </div>
 
