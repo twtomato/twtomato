@@ -107,7 +107,7 @@ function upgrade()
 
 <div class='note-disabledw' style='display:none' id='jwarn'>
 <b> JFFS2 開啟時無法更新.</b><br><br>
-更新和覆蓋目前 JFFS2 使用中的分區, 更新前請先備份 JFFS2 的資料. 關閉 JFFS2 並重開 ROUTER.
+升級時會覆蓋目前 JFFS2 使用中的分區, 更新前請先備份 JFFS2 的資料. 關閉 JFFS2 並重開 ROUTER.
 br><br><br>
 <a href='admin-jffs2.asp'>關閉 &raquo;</a>
 </div>
