@@ -191,7 +191,7 @@ dg.populate = function()
 	for (i = dhcpd_lease.length - 1; i >= 0; --i) {
 		a = dhcpd_lease[i];
 		e = get(a[2], a[1]);
-		e.lease = '<small><a href="javascript:deleteLease(\'L' + i + '\',\'' + a[1] + '\')" title="Delete Lease" id="L' + i + '">' + a[3] + '</a></small>';
+		e.lease = '<small><a href="javascript:deleteLease(\'L' + i + '\',\'' + a[1] + '\')" title="刪除固定 DHCP" id="L' + i + '">' + a[3] + '</a></small>';
 		e.name = a[0];
 		e.ifname = nvram.lan_ifname;
 	}
@@ -240,11 +240,11 @@ dg.populate = function()
 			a = '';
 		}
 		else {
-			a = '<a href="javascript:addStatic(' + i + ')" title="Add Static Lease">' + e.ip + '</a>';
+			a = '<a href="javascript:addStatic(' + i + ')" title="加入到固定 DHCP">' + e.ip + '</a>';
 		}
 
 		if (e.mac.match(/^(..):(..):(..)/)) {
-			b = "<a href='http://standards.ieee.org/cgi-bin/ouisearch?" + RegExp.$1 + "-" + RegExp.$2 + "-" + RegExp.$3 + "' target='_new' title='OUI Search'>" + e.mac + "</a>";
+			b = "<a href='http://standards.ieee.org/cgi-bin/ouisearch?" + RegExp.$1 + "-" + RegExp.$2 + "-" + RegExp.$3 + "' target='_new' title='搜尋 OUI 碼'>" + e.mac + "</a>";
 		}
 		else {
 			b = '';
