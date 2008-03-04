@@ -88,7 +88,7 @@ function earlyInit()
 <div class='section-title'>SES/AOSS 按鈕</div>
 <div class='section'>
 <script type='text/javascript'>
-a = [[0,'Do Nothing'],[1,'Toggle Wireless'],[2,'Reboot'],[3,'Shutdown'],[4,'Run Custom Script']];
+a = [[0,'不做任何事'],[1,'開/關 無線網路'],[2,'重開機'],[3,'關機'],[4,'執行自訂 Script']];
 createFieldTable('', [
 	{ title: "按AOSS鈕的時間啟動..." },
 	{ title: '0-2 秒', indent: 2, name: 'sesx_b0', type: 'select', options: a, value: nvram.sesx_b0 || 0 },
