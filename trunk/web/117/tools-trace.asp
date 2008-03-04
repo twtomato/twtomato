@@ -122,7 +122,7 @@ function verifyFields(focused, quiet)
 	e = E('_f_addr');
 	s = e.value.trim();
 	if (!s.match(/^[\w\.-]+$/)) {
-		ferror.set(e, 'Invalid address', quiet);
+		ferror.set(e, '不正確的位址', quiet);
 		return 0;
 	}
 	ferror.clear(e);
@@ -202,7 +202,7 @@ function init()
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: '位址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" value="Trace" onclick="trace()" id="traceb">' },
+	{ title: '位址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" value="開始追蹤" onclick="trace()" id="traceb">' },
 	{ title: '最大躍點數Hops', name: 'f_hops', type: 'text', maxlen: 2, size: 4, value: '20' },
 	{ title: '最大等待時間', name: 'f_wait', type: 'text', maxlen: 2, size: 4, value: '3', suffix: ' <small>(每跳秒數)</small>' }
 ]);
