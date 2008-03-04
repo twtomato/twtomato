@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 	Tomato GUI
 	Copyright (C) 2006-2008 Jonathan Zarate
 	http://www.polarcloud.com/tomato/
@@ -71,11 +71,11 @@ do {
 
 	stats.wanstatus = '<% wanstatus(); %>';
 	if (stats.wanstatus != 'Connected') {
-		stats.wanstatus = '<br>¥¼³s½u</br>';
+		stats.wanstatus = '<br>æœªé€£ç·š</br>';
 	}
 	else
 	{
-		stats.wanstatus = '<br>¤w³s½u</br>';
+		stats.wanstatus = 'å·²é€£ç·š';
 	}
 	
 	a = i = '<% wlchannel(); %>' * 1;
