@@ -171,7 +171,7 @@ createFieldTable('', [
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: 'MAC 位址', text: nvram.wan_hwaddr },
-	{ title: 'WAN連線類型', text: { 'dhcp':'DHCP', 'static':'Static IP', 'pppoe':'PPPoE', 'pptp':'PPTP', 'l2tp':'L2TP' }[nvram.wan_proto] || '-' },
+	{ title: 'WAN 連線類型', text: { 'dhcp':'DHCP', 'static':'固定 IP', 'pppoe':'PPPoE', 'pptp':'PPTP', 'l2tp':'L2TP' }[nvram.wan_proto] || '-' },
 	{ title: 'IP 位址', rid: 'wanip', text: stats.wanip },
 	{ title: '子網路遮罩', rid: 'wannetmask', text: stats.wannetmask },
 	{ title: '閘道', rid: 'wangateway', text: stats.wangateway },

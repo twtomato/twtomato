@@ -70,7 +70,13 @@ do {
 	}
 
 	stats.wanstatus = '<% wanstatus(); %>';
-	if (stats.wanstatus != 'Connected') stats.wanstatus = '<b>' + stats.wanstatus + '</b>';
+	if (stats.wanstatus != 'Connected') {
+		stats.wanstatus = '<br>未連線</br>';
+	}
+	else
+	{
+		stats.wanstatus = '<br>已連線</br>';
+	}
 	
 	a = i = '<% wlchannel(); %>' * 1;
 	if (i < 0) i = -i;
