@@ -115,7 +115,7 @@ Built on <% build_time(); %><br>
 非常感謝您冒險測試您的路由器，回報問題、建議和促成這個企劃 ^ _ ^</b><br>
 
 版本發佈地點:<br>
-<a href="http://code.google.com/p/twtomato/downloads/list" target="_blank">http://code.google.com/p/twtomato/downloads/list<br>
+<a href="http://code.google.com/p/twtomato/downloads/list" target="_blank">http://code.google.com/p/twtomato/downloads/list</a><br>
 
 相關討論主題:<br>
 <a href="http://www.pczone.com.tw/vbb3/thread/16/139180/" target="_blank">【討論】Tomato Firmware 中文化for Buffalo&Linksys</a>@PCZONE<br>
