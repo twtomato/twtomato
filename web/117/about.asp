@@ -113,9 +113,13 @@ Built on <% build_time(); %><br>
 
 <div style='border-top:1px solid #e7e7e7;margin:4em 0;padding:2em 0;font-size:12px'>
 非常感謝您冒險測試您的路由器，回報問題、建議和促成這個企劃 ^ _ ^</b><br>
+
+版本發佈地點:<br>
+<a href="http://code.google.com/p/twtomato/downloads/list" target="_blank">http://code.google.com/p/twtomato/downloads/list<br>
+
 相關討論主題:<br>
 <a href="http://www.pczone.com.tw/vbb3/thread/16/139180/" target="_blank">【討論】Tomato Firmware 中文化for Buffalo&Linksys</a>@PCZONE<br>
-<a href="http://www.mobile01.com/topicdetail.php?f=110&t=511542&last=5065482" target="_blank">[中文化] 繁體/正體 Tomato v1.15 (Beta v0.02) 韌體載點</a>@Mobile01<br>
+<a href="http://www.mobile01.com/topicdetail.php?f=110&t=511542&last=5065482" target="_blank">[中文化] 繁體/正體 Tomato Firmware 韌體載點</a>@Mobile01<br>
 
 註: 在此聲明<b>本中文化版本, 獨立由<br>
 bv2lk@PCZONE<br>
