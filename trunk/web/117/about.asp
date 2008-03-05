@@ -123,10 +123,10 @@ Built on <% build_time(); %><br>
 
 註: 在此聲明<b>本中文化版本, 獨立由<br>
 bv2lk@PCZONE<br>
-bx2aa@PCZONE<br>
+bx2aa@PCZONE 加快中文化 Tomato WebGUI Script 作者<br>
 tomato.taiwan@Mobile01<br>
 </b>
-協助完成,和 [明誠版] 沒有任何關係.
+協助完成.
 
 
 
