@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 虛擬伺服器：通訊埠觸發程式</title>
+<title>[<% ident(); %>] 通訊埠轉送: 觸發式轉送</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -98,7 +98,7 @@ tg.setup = function() {
 		{ type: 'text', maxlen: 16 },
 		{ type: 'text', maxlen: 16 },
 		{ type: 'text', maxlen: 32 }]);
-	this.headerSet(['開啟', '協定', '通訊埠觸發', '通訊埠轉發', '註解']);
+	this.headerSet(['開啟', '協定', '觸發通訊埠', '轉送到通訊埠', '敘述']);
 	var nv = nvram.trigforward.split('>');
 	for (var i = 0; i < nv.length; ++i) {
 		var r;
@@ -156,7 +156,7 @@ function init()
 
 <input type='hidden' name='trigforward'>
 
-<div class='section-title'>通訊埠轉發</div>
+<div class='section-title'>觸發式通訊埠轉送</div>
 <div class='section'>
 	<table class='tomato-grid' cellspacing=1 id='tg-grid'></table>
 	<script type='text/javascript'>tg.setup();</script>
@@ -167,6 +167,12 @@ function init()
 <li>使用 "-" 指定通訊埠範圍 (200-300).
 <li>一旦偵測到.
 <li>觸發程式通訊埠，送往指定內傳通訊埠號的上傳封包便會轉向您的電腦.
+<li>例: 巴哈姆特的 BBS 會使用 Port 113 做驗證.<br>
+在本例中, 連往 BBS 所用的 Port 為 23, 做驗證的 Port 為 113, 所使用的通訊協定為 TCP.<br>
+所以我們要加一條規則, 在 [協定] 中選則 [TCP]<br>
+[觸發通訊埠] 填入 [23]<br>
+[轉送到通訊埠] 填入 [113]<br>
+最後記得要按 [新增] 與 [儲存] 鈕<br>
 <li>開啟的通訊埠若未使用,幾分鐘之後會自動關閉.
 </ul>
 </div>
