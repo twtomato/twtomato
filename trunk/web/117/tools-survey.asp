@@ -54,7 +54,7 @@
 
 var wlscandata = [];
 var entries = [];
-var dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var dayOfWeek = ['日','一','二','三','四','五','六'];
 
 Date.prototype.toWHMS = function() {
 	return dayOfWeek[this.getDay()] + ' ' + this.getHours() + ':' + this.getMinutes().pad(2)+ ':' + this.getSeconds().pad(2);
