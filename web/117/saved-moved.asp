@@ -21,7 +21,7 @@ function tick()
 		e.disabled = false;
 	}
 	if (n == 0) {
-		e.value = 'Continue';
+		e.value = '繼續';
 	}
 	else {
 		--n;
@@ -41,6 +41,6 @@ function go()
 路由器位址已變更至 <% nv("lan_ipaddr"); %>. 需釋放電腦IP,並重新取得IP.
 </div>
 請稍後！重開機中..... &nbsp;
-<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='繼續' onclick='go()' disabled>
+<input type='button' value='' style='font:12px sans-serif;width:80px;height:24px' id='continue' onclick='go()' disabled>
 </form>
 </td></tr></table></body></html>
