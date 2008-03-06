@@ -1,0 +1,11 @@
+#summary Tomato 簡介
+
+= Tomato 簡介 =
+
+tomato 是免費開放原始碼的 Linux 平台韌體, 支援數個 Broadcom-基礎 的 無線路由器，包括 ASUS WL-500GP BUFFALO WHR-HP-G54 LINKSYS WRT54G.
+
+ 
+Tomato 的主要重點是在穩定性、 速度和效率. 它是由 Jonathan Zarate 維護，他也開發 HyperWRT tofu  .
+
+[http://en.wikibooks.org/wiki/Tomato_Firmware Tomato Firmware Wiki]
+
