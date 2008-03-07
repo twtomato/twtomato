@@ -159,7 +159,7 @@ function init()
 	</script>
 
 	<div id='bwm-controls'>
-		<small>(繪圖視窗 (10 分鐘), 每 2 秒鐘取樣)</small><br>
+		<small>[繪圖視窗 (每格二分鐘), 每二秒鐘取樣一次]</small><br>
 		<br>
 		平均:&nbsp;
 			<a href='javascript:switchAvg(1)' id='avg1'>Off</a>,
