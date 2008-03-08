@@ -54,7 +54,7 @@
 
 var wlscandata = [];
 var entries = [];
-var dayOfWeek = ['日','一','二','三','四','五','六'];
+var dayOfWeek = ['週日','週一','週二','週三','週四','週五','週六'];
 
 Date.prototype.toWHMS = function() {
 	return dayOfWeek[this.getDay()] + ' ' + this.getHours() + ':' + this.getMinutes().pad(2)+ ':' + this.getSeconds().pad(2);
@@ -201,7 +201,7 @@ sg.populate = function()
 		seen = e.lastSeen.toWHMS();
 		if (useAjax()) {
 			m = Math.floor(((new Date()).getTime() - e.firstSeen.getTime()) / 60000);
-			if (m <= 10) seen += '<br> <b><small>NEW (' + -m + 'm)</small></b>';
+			if (m <= 10) seen += '<br> <b><small>新 (' + -m + 'm)</small></b>';
 		}
 
 		mac = e.bssid;
