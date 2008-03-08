@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" standalone="no" encoding='utf-8'?>
+<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!--
 	Tomato GUI
@@ -51,7 +51,7 @@ text {
 
 */
 
-var week = ['日','一','二','三','四','五','六'];
+var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 var pointLoc = 0;
 var vWidth = 760;
 var vHeight = 300;
