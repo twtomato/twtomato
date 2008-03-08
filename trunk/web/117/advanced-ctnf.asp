@@ -45,7 +45,7 @@ function check()
 			conntrack = [];
 		}
 		for (i = 1; i < 13; ++i) {
-			E('count' + i).innerHTML = '&nbsp; <small>('+ ((conntrack[i] || 0) * 1) + ' 個在這種狀態)</small>';
+			E('count' + i).innerHTML = '&nbsp; <small>('+ ((conntrack[i] || 0) * 1) + ' 個連線數在這種狀態)</small>';
 		}
 		E('count0').innerHTML = '(' + ((conntrack[0] || 0) * 1) + ' 個連線數目前使用中)';
 		checker = null;

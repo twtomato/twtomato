@@ -66,7 +66,7 @@ wg.populate = function()
 		var active = '-';
 		for (j = 0; j < arplist.length; ++j) {
 			if ((arplist[j][2] == nvram.lan_ifname) && (arplist[j][1] == t[0])) {
-				active = 'Active (In ARP)';
+				active = '使用中 (In ARP)';
 				arplist[j][1] = '';
 				break;
 			}
