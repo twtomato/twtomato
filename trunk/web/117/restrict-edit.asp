@@ -255,7 +255,7 @@ function cancel()
 
 function remove()
 {
-	if (!confirm('Delete this rule?')) return;
+	if (!confirm('刪除規則 ?')) return;
 
 	E('delete-button').disabled = 1;
 	
@@ -333,7 +333,7 @@ function save()
 	data = data.join('|');
 	
 	if (data.length > 2048) {
-		alert('This rule is too big. Please reduce by ' + (data.length - 2048) + ' characters.');
+		alert('規則太大. 請減少 ' + (data.length - 2048) + ' 字元.');
 		return;
 	}
 	
