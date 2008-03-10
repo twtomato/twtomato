@@ -81,7 +81,7 @@ wg.populate = function()
 	// show anything else in ARP that is awake
 	for (i = 0; i < arplist.length; ++i) {
 		if ((arplist[i][2] != nvram.lan_ifname) || (arplist[i][1].length != 17)) continue;
-		r = this.insertData(-1, [arplist[i][1], arplist[i][0], 'Active (In ARP)', '']);
+		r = this.insertData(-1, [arplist[i][1], arplist[i][0], '使用中 (In ARP)', '']);
 		for (j = 0; j < 4; ++j)
 			r.cells[j].title = '點擊左鍵喚醒這台電腦';
 	}
@@ -147,7 +147,7 @@ function refresh()
 function refreshClick()
 {
 	running ^= 1;
-	E('refreshb').value = running ? 'Stop' : 'Refresh';
+	E('refreshb').value = running ? '停止' : '重新整理';
 	E('spin').style.visibility = running ? 'visible' : 'hidden';
 	if (running) refresh();
 }
