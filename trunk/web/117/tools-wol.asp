@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 診斷工具：網絡喚醒 WOL</title>
+<title>[<% ident(); %>] 診斷工具：網路喚醒 WOL</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>

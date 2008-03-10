@@ -1895,7 +1895,7 @@ function navi()
 			['Ping',			'ping.asp'],
 			['追蹤路由',			'trace.asp'],
 			['搜尋AP',	'survey.asp'],
-			['網絡喚醒 WOL',				'wol.asp'] ] ],
+			['網路喚醒 WOL',				'wol.asp'] ] ],
 		null,
 		['基本設定', 				'basic', 0, [
 			['網路',			'network.asp'],
