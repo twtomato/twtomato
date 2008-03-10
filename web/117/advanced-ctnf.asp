@@ -227,7 +227,7 @@ for (i = -5; i <= 5; ++i) {
 }
 createFieldTable('', [
 	{ title: 'TTL 調整', name: 'nf_ttl', type: 'select', options: v, value: nvram.nf_ttl },
-	{ title: '下載時啟用應用層過濾', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
+	{ title: '下載時 啟用應用層過濾', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
 ]);
 </script>
 </div>

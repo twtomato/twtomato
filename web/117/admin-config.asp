@@ -51,10 +51,10 @@ function restoreButton()
 	name = fix(E('restore-name').value);
 	name = name.toLowerCase();
 	if ((name.indexOf('.cfg') != (name.length - 4)) && (name.indexOf('.cfg.gz') != (name.length - 7))) {
-		alert('Incorrect filename. Expecting a ".cfg" file.');
+		alert('不正確的檔案. 必須是".cfg"的檔案.');
 		return;
 	}
-	if (!confirm('Are you sure?')) return;
+	if (!confirm('確定嗎 ?')) return;
 	E('restore-button').disabled = 1;
 	
 	f = E('restore-form');
@@ -69,9 +69,9 @@ function resetButton()
 	i = E('restore-mode').value;
 	if (i == 0) return;
 	if ((i == 2) && (features('!nve'))) {
-		if (!confirm('WARNING: Erasing the NVRAM on a ' + nvram.t_model_name + ' router may be harmful. It may not be able to re-setup the NVRAM correctly after a complete erase. Proceeed anyway?')) return;
+		if (!confirm('請注意: Erasing the NVRAM on a ' + nvram.t_model_name + ' 路由器可能會損毀.完全清除之後 可能無法正確設定 NVRAM. 繼續執行 ?')) return;
 	}
-	if (!confirm('Are you sure?')) return;
+	if (!confirm('確定嗎 ?')) return;
 	E('reset-button').disabled = 1;
 	form.submit('aco-reset-form');
 }

@@ -35,7 +35,7 @@ function verifyFields(focused, quiet)
 function formatClicked()
 {
 	if (!verifyFields(null, 0)) return;
-	if (!confirm("Format the JFFS2 partition?")) return;
+	if (!confirm("格式化 JFFS2 partition?")) return;
 	save(1);
 }
 
