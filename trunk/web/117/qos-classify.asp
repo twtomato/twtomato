@@ -97,7 +97,7 @@
 
 //	<% nvram("qos_enable,qos_orules"); %>
 
-var abc = ['Highest', 'High', 'Medium', 'Low', 'Lowest', 'A','B','C','D','E'];
+var abc = ['最高等', '高等', '中等', '低等', '最低等', 'A等','B等','C等','D等','E等'];
 
 var ipp2p = [
 	[0,'IPP2P (disabled)'],[0xFFF,'All IPP2P filters'],[1,'AppleJuice'],[2,'Ares'],[4,'BitTorrent'],[8,'Direct Connect'],
@@ -109,7 +109,7 @@ for (i = 0; i < layer7.length; ++i)
 	layer7[i] = [layer7[i],layer7[i]];
 layer7.unshift(['', 'Layer 7 (disabled)']);
 
-var class1 = [[-1,'Disabled']];
+var class1 = [[-1,'關閉']];
 for (i = 0; i < 10; ++i) class1.push([i, abc[i]]);
 var class2 = class1.slice(1);
 

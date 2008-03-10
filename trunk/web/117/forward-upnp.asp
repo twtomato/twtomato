@@ -50,7 +50,7 @@ function submitDelete(proto, port)
 
 function deleteData(data)
 {
-	if (!confirm('Delete ' + data[4] + '? [' + data[0] + '->' + data[1] + ' ' + data[2] + ']')) return;
+	if (!confirm('刪除 ' + data[4] + '? [' + data[0] + '->' + data[1] + ' ' + data[2] + ']')) return;
 	submitDelete((data[3] == 'TCP') ? 6 : 17, data[0]);
 }
 
@@ -86,7 +86,7 @@ ug.populate = function() {
 				}
 			}
 			for (j = 0; j < 5; ++j) {
-				row.cells[j].title = 'Click to delete';
+				row.cells[j].title = '點選刪除';
 			}
 		}
 	}
@@ -95,7 +95,7 @@ ug.populate = function() {
 
 function deleteAll()
 {
-	if (!confirm('Delete all entries?')) return;
+	if (!confirm('全部刪除 ?')) return;
 	submitDelete('0', '0');
 }
 

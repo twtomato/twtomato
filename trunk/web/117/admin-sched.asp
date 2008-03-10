@@ -24,7 +24,7 @@
 
 //	<% nvram("sch_rboot,sch_rcon"); %>
 
-var dowNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var dowNames = [''週日', '週一', '週二', '週三', '週四', '週五', '週六'];
 var dowLow = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
 tm = [];
