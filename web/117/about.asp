@@ -118,7 +118,7 @@ Built on <% build_time(); %><br>
 <a href="http://code.google.com/p/twtomato/downloads/list" target="_blank">http://code.google.com/p/twtomato/downloads/list</a><br>
 
 相關討論主題:<br>
-<a href="http://www.pczone.com.tw/vbb3/thread/16/139180/" target="_blank">【討論】Tomato Firmware 中文化for Buffalo&Linksys</a>@PCZONE<br>
+<a href="http://www.pczone.com.tw/vbb3/thread/16/139180/" target="_blank">【討論】Tomato Firmware 中文化for Buffalo&amp;Linksys</a>@PCZONE<br>
 <a href="http://www.mobile01.com/topicdetail.php?f=110&t=511542&last=5065482" target="_blank">[中文化] 繁體/正體 Tomato Firmware 韌體載點</a>@Mobile01<br>
 
 註: 在此聲明<b>本中文化版本, 獨立由<br>
