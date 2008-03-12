@@ -230,7 +230,7 @@ function init()
 		E('resolve').checked = resolveCB = 1;
 	}
 	
-	if (viewClass != -1) E('stitle').innerHTML = 'View Details: ' + abc[viewClass];
+	if (viewClass != -1) E('stitle').innerHTML = '分等連線內容 : ' + abc[viewClass];
 	grid.setup();
 	ref.postData = 'exec=ctdump&arg0=' + viewClass;
 	ref.initPage(-250);
