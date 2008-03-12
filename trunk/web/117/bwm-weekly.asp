@@ -110,7 +110,7 @@ function redraw()
 
 	function flush_block()
 	{
-		grid += '<b>' + dbeg + ' to ' + dend + '</b>' +
+		grid += '<b>' + dbeg + ' 至 ' + dend + '</b>' +
 				'<table class="bwmg" cellspacing="1">' +
 				makeRow('header', '日期', '下載', '上傳', '合計') +
 				block.join('') +
