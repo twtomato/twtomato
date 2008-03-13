@@ -158,7 +158,7 @@ function v_wep(e, quiet)
 {
 	var s = e.value.toUpperCase().replace(/[^0-9A-F]/g, '');
 	if (s.length != e.maxLength) {
-		ferror.set(e, 'Invalid WEP key, ', quiet);
+		ferror.set(e, '不正確的 WEP key, ', quiet);
 		return 0;
 	}
 	e.value = s;
@@ -445,14 +445,14 @@ function verifyFields(focused, quiet)
 
 	if (wmode == 'sta') {
 		if (wan == 'disabled') {
-			ferror.set('_wan_proto', 'Wireless Client mode requires a valid WAN setting (usually DHCP).', quiet);
+			ferror.set('_wan_proto', 'Wireless Client mode 需要正確的設定 WAN (通常是選 DHCP).', quiet);
 			return 0;
 		}
 	}
 	ferror.clear('_wan_proto');
 
 	if ((vis._f_wmode == 1) && (wmode != 'ap') && (sm2.substr(0, 4) == 'wpa2')) {
-		ferror.set('_security_mode2', 'WPA2 is supported only in AP mode.', quiet);
+		ferror.set('_security_mode2', 'WPA2 只能使用在 AP mode.', quiet);
 		return 0;
 	}
 	ferror.clear('_security_mode2');
@@ -461,7 +461,7 @@ function verifyFields(focused, quiet)
 	ferror.clear(a);
 	if (vis._wl_wpa_psk == 1) {
 		if ((a.value.length < 8) || ((a.value.length == 64) && (a.value.search(/[^0-9A-Fa-f]/) != -1))) {
-			ferror.set('_wl_wpa_psk', 'Invalid pre-shared key. Please enter at least 8 characters or 64 hexadecimal digits.', quiet);
+			ferror.set('_wl_wpa_psk', '不正確的 公用金鑰. 請輸入至少 8 個字元或64個十六進制數字.', quiet);
 			ok = 0;
 		}
 	}
@@ -517,7 +517,7 @@ function verifyFields(focused, quiet)
 				else if (!isMAC0(a.value)) b = 1;
 		}
 		if (!b) {
-			ferror.set('_f_wds_0', 'WDS MAC address required.', quiet);
+			ferror.set('_f_wds_0', 'WDS 需要 MAC 位址.', quiet);
 			ok = 0;
 		}
 	}
@@ -620,8 +620,8 @@ function save()
 		fom.wl_akm.value = c;
 		break;
 	}
-	fom.wl_auth_mode.value = (sm2 == 'radius') ? 'radius' : '無';
-	fom.wl_wep.value = ((sm2 == 'radius') || (sm2 == 'wep')) ? '啟用': '關閉';
+	fom.wl_auth_mode.value = (sm2 == 'radius') ? 'radius' : 'none';
+	fom.wl_wep.value = ((sm2 == 'radius') || (sm2 == 'wep')) ? 'enabled': 'disabled';
 	fom.wl_auth_mode.disabled = fom.wl_wep.disabled = fom.security_mode.disabled = fom.wl_akm.disabled = fom.security_mode2.disabled;
 
 	if (sm2.indexOf('wpa') != -1) fom.wl_auth.value = 0;
