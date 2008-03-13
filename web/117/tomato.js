@@ -1010,7 +1010,7 @@ TomatoGrid.prototype = {
 		if ((this.canMove) || (this.canEdit) || (this.canDelete)) {
 			e.onmouseover = this.rpMouIn;
 //			e.onmouseout = this.rpMouOut;
-			if (this.canEdit) e.title = 'Click to edit';
+			if (this.canEdit) e.title = '點選編輯';
 		}
 
 		return e;
@@ -1840,7 +1840,7 @@ function timeString(mins)
 	var h = Math.floor(mins / 60);
 	if ((new Date(2000, 0, 1, 23, 0, 0, 0)).toLocaleString().indexOf('23') != -1)
 		return h + ':' + (mins % 60).pad(2);
-	return ((h == 0) ? 12 : ((h > 12) ? h - 12 : h)) + ':' + (mins % 60).pad(2) + ((h >= 12) ? ' PM' : ' AM');
+	return ((h == 0) ? 12 : ((h > 12) ? h - 12 : h)) + ':' + (mins % 60).pad(2) + ((h >= 12) ? ' 下午' : ' 上午');
 }
 
 function features(s)
@@ -1897,7 +1897,7 @@ function navi()
 			['搜尋AP',	'survey.asp'],
 			['網路喚醒 WOL',				'wol.asp'] ] ],
 		null,
-		['基本設定', 				'basic', 0, [
+		['一般設定', 				'basic', 0, [
 			['網路',			'network.asp'],
 			['基本資料',	'ident.asp'],
 			['時間',			'time.asp'],
