@@ -1919,7 +1919,7 @@ function navi()
 			['觸發式轉送',		'triggered.asp'],
 			['UPnP',			'upnp.asp'] ] ],
 		['頻寬管理 QoS',					'qos', 0, [
-			['基本設定',	'settings.asp'],
+			['一般設定',	'settings.asp'],
 			['分類機制',	'classify.asp'],
 			['圖形分析',		'graphs.asp'],
 			['連線列表',	'detailed.asp']
@@ -1936,7 +1936,7 @@ function navi()
 			['JFFS2',			'jffs2.asp'],
 			['日誌紀錄檔管理',			'log.asp'],
 			['定時重開機/連線',		'sched.asp'],
-			['批次檔Scripts',			'scripts.asp'],
+			['批次檔 Scripts',			'scripts.asp'],
 			['韌體更新',			'upgrade.asp'] ] ],
 		null,
 		['關於 Tomato',				'about.asp'],
