@@ -118,7 +118,7 @@ function save()
 <input type='hidden' name='qos_method'>
 <input type='hidden' name='qos_reset'>
 
-<div class='section-title'>QoS 基本設定</div>
+<div class='section-title'>QoS 一般設定</div>
 <div class='section'>
 <script type='text/javascript'>
 classList = [];
@@ -163,7 +163,7 @@ createFieldTable('', f);
 <script type='text/javascript'>
 rates = nvram.qos_irates.split(',');
 f = [];
-f.push({ title: '最大上傳速率', name: 'qos_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_ibw });
+f.push({ title: '最大下載速率', name: 'qos_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.qos_ibw });
 f.push(null);
 for (i = 0; i < 10; ++i) {
 	f.push({ title: classNames[i], multi: [
