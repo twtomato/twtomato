@@ -23,7 +23,7 @@
 <script type='text/javascript'>
 //	<% nvram(''); %>	// http_id
 
-var abc = ['未分類', '最高', '高', '中', '低', '最低', 'Ａ類','Ｂ類','Ｃ類','Ｄ類','Ｅ類'];
+var abc = ['未分類', '最高等', '高等', '中等', '低等', '最低等', 'Ａ等', 'Ｂ等', 'Ｃ等', 'Ｄ等', 'Ｅ等'];
 var colors = ['F08080','E6E6FA','0066CC','8FBC8F','FAFAD2','ADD8E6','9ACD32','E0FFFF','90EE90','FF9933','FFF0F5'];
 
 if ((viewClass = '<% cgi_get("class"); %>') == '') {
