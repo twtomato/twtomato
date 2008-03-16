@@ -67,7 +67,7 @@ ug.rpDel = function(e) {
 	
 ug.setup = function() {
 	this.init('upnp-grid', 'sort delete');
-	this.headerSet(['外部通訊埠', '本地埠', '本地IP', '協定', '註解']);
+	this.headerSet(['外部通訊埠', '本地通訊埠', '本地 IP', '協定', '說明']);
 	ug.populate();
 }
 
@@ -153,7 +153,7 @@ function init()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '開啟 UPnP', name: 'f_upnp_enable', type: 'checkbox', value: (nvram.upnp_enable == '1') },
-	{ title: '顯示於 控制台 的 網路連線',  name: 'f_upnp_mnp',  type: 'checkbox',  value: (nvram.upnp_mnp == '1') }
+	{ title: '在 [網路上的芳鄰] 中顯示',  name: 'f_upnp_mnp',  type: 'checkbox',  value: (nvram.upnp_mnp == '1') }
 ]);
 </script>
 </div>

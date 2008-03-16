@@ -949,11 +949,11 @@ TomatoGrid.prototype = {
 		n = 0;
 		s = '';
 		if (me.canMove) {
-			s = '<img src="rpu.gif" onclick="this.parentNode.tgo.rpUp(this.parentNode.ref)" title="Move Up"><img src="rpd.gif" onclick="this.parentNode.tgo.rpDn(this.parentNode.ref)" title="Move Down"><img src="rpm.gif" onclick="this.parentNode.tgo.rpMo(this,this.parentNode.ref)" title="Move">';
+		s = '<img src="rpu.gif" onclick="this.parentNode.tgo.rpUp(this.parentNode.ref)" title="向上移動"><img src="rpd.gif" onclick="this.parentNode.tgo.rpDn(this.parentNode.ref)" title="向下移動"><img src="rpm.gif" onclick="this.parentNode.tgo.rpMo(this,this.parentNode.ref)" title="移動">';
 			n += 3;
 		}
 		if (me.canDelete) {
-			s += '<img src="rpx.gif" onclick="this.parentNode.tgo.rpDel(this.parentNode.ref)" title="Delete">';
+			s += '<img src="rpx.gif" onclick="this.parentNode.tgo.rpDel(this.parentNode.ref)" title="刪除">';
 			++n;
 		}
 		x = PR(evt.target);
@@ -1917,8 +1917,7 @@ function navi()
 			['一般設定',			'basic.asp'],
 			['虛擬非軍事區 DMZ',				'dmz.asp'],
 			['觸發式轉送',		'triggered.asp'],
-			['UPnP',			'upnp.asp'],
-			['原始 UPnP',			'upnp_e.asp'] ] ],
+			['UPnP 管理',			'upnp.asp'] ] ],
 		['頻寬管理 QoS',					'qos', 0, [
 			['一般設定',	'settings.asp'],
 			['分類機制',	'classify.asp'],
