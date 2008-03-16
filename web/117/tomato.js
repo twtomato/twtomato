@@ -1917,7 +1917,8 @@ function navi()
 			['一般設定',			'basic.asp'],
 			['虛擬非軍事區 DMZ',				'dmz.asp'],
 			['觸發式轉送',		'triggered.asp'],
-			['UPnP',			'upnp.asp'] ] ],
+			['UPnP',			'upnp.asp'],
+			['原始 UPnP',			'upnp_e.asp'] ] ],
 		['頻寬管理 QoS',					'qos', 0, [
 			['一般設定',	'settings.asp'],
 			['分類機制',	'classify.asp'],
