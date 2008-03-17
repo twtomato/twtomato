@@ -135,7 +135,7 @@ fog.setup = function() {
 		{ type: 'text', maxlen: 5 },
 		{ type: 'text', maxlen: 15 },
 		{ type: 'text', maxlen: 32 }]);
-	this.headerSet(['開啟', '協定', '來源位址', '通訊埠範圍', '本地埠', '本地IP', '註解']);
+	this.headerSet(['開啟', '協定', '來源位址', '通訊埠範圍', '本地通訊埠', '本地IP', '說明']);
 	var nv = nvram.portforward.split('>');
 	for (var i = 0; i < nv.length; ++i) {
 		var r;
