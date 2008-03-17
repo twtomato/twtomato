@@ -208,7 +208,7 @@ function init()
 
 <input type='hidden' name='portforward'>
 
-<div class='section-title'>虛擬伺服器清單</div>
+<div class='section-title'>通訊埠轉送清單</div>
 <div class='section'>
 	<table class='tomato-grid' cellspacing=1 id='fo-grid'></table>
 	<script type='text/javascript'>fog.setup();</script>
