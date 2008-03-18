@@ -104,7 +104,7 @@ function verifyFields(focused, quiet)
 	for (i = 0; i < 2; ++i) {
 		if (!v_range('_f_udp_' + i, quiet, 1, 432000)) return 0;
 	}
-	return v_range('_ct_max', quiet, 128, 10240);
+	return v_range('_ct_max', quiet, 128, 65535);
 }
 
 function save()
@@ -166,7 +166,7 @@ function save()
 createFieldTable('', [
 	{ title: '最大連線數量', name: 'ct_max', type: 'text', maxlen: 5, size: 7,
 		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ 顯示目前的連線數 ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
-		value: fixInt(nvram.ct_max || 2048, 128, 10240, 2048) }
+		value: fixInt(nvram.ct_max || 2048, 128, 65535, 2048) }
 ]);
 </script>
 <br>
