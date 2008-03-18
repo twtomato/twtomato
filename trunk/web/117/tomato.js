@@ -1840,7 +1840,7 @@ function timeString(mins)
 	var h = Math.floor(mins / 60);
 	if ((new Date(2000, 0, 1, 23, 0, 0, 0)).toLocaleString().indexOf('23') != -1)
 		return h + ':' + (mins % 60).pad(2);
-	return ((h == 0) ? 12 : ((h > 12) ? h - 12 : h)) + ':' + (mins % 60).pad(2) + ((h >= 12) ? ' 下午' : ' 上午');
+	return ((h == 0) ? 12 : ((h > 12) ? h - 12 : h)) + ':' + (mins % 60).pad(2) + ((h >= 12) ? ' PM' : ' AM');
 }
 
 function features(s)
@@ -1902,7 +1902,7 @@ function navi()
 			['基本資料',	'ident.asp'],
 			['時間',			'time.asp'],
 			['DDNS',			'ddns.asp'],
-			['靜態 DHCP',		'static.asp'],
+			['DHCP 固定租約',		'static.asp'],
 			['無線 - 存取控制',	'wfilter.asp'] ] ],
 		['進階設定', 			'advanced', 0, [
 			['連線追蹤/過濾模組',	'ctnf.asp'],
