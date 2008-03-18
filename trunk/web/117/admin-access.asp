@@ -38,13 +38,13 @@ sdup = parseInt('<% psup("dropbear"); %>');
 function toggle(service, isup)
 {
 	if (changed) {
-		if (!confirm("未儲存的設定將會遺失. 不論如何繼續執行?")) return;
+		if (!confirm("未儲存的設定將會遺失. 是否繼續?")) return;
 	}
 	E('_' + service + '_button').disabled = true;
 	form.submitHidden('service.cgi', {
 		_redirect: 'admin-access.asp',
 		_sleep: ((service == 'sshd') && (!isup)) ? '7' : '3',
-		_service: service + (isup ? '-停止' : '-啟動')
+		_service: service + (isup ? '-stop' : '-start')
 	});
 }
 
@@ -210,16 +210,16 @@ function init()
 createFieldTable('', [
 	{ title: '區域端登入模式', name: 'f_http_local', type: 'select', options: [[0,'關閉'],[1,'HTTP'],[2,'HTTPS'],[3,'HTTP &amp; HTTPS']],
 		value: ((nvram.https_enable != 0) ? 2 : 0) | ((nvram.http_enable != 0) ? 1 : 0) },
-	{ title: 'HTTP Port', indent: 2, name: 'http_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.http_lanport, 80) },
-	{ title: 'HTTPS Port', indent: 2, name: 'https_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.https_lanport, 443) },
-	{ title: 'SSL Certificate', rid: 'row_sslcert' },
-	{ title: 'Common Name (CN)', indent: 2, name: 'https_crt_cn', type: 'text', maxlen: 64, size: 64, value: nvram.https_crt_cn,
-		suffix: '&nbsp;<small>(optional; space separated)</small>' },
-	{ title: 'Regenerate', indent: 2, name: 'f_https_crt_gen', type: 'checkbox', value: 0 },
+	{ title: 'HTTP 通訊埠', indent: 2, name: 'http_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.http_lanport, 80) },
+	{ title: 'HTTPS 通訊埠', indent: 2, name: 'https_lanport', type: 'text', maxlen: 5, size: 7, value: fixPort(nvram.https_lanport, 443) },
+	{ title: 'SSL 憑證', rid: 'row_sslcert' },
+	{ title: '一般名稱 (CN)', indent: 2, name: 'https_crt_cn', type: 'text', maxlen: 64, size: 64, value: nvram.https_crt_cn,
+		suffix: '&nbsp;<small>(非必填; 以空隔區分)</small>' },
+	{ title: '重新產生', indent: 2, name: 'f_https_crt_gen', type: 'checkbox', value: 0 },
 	{ title: '儲存至 NVRAM', indent: 2, name: 'f_https_crt_save', type: 'checkbox', value: nvram.https_crt_save == 1 },
 	{ title: '遠端登入', name: 'f_http_remote', type: 'select', options: [[0,'關閉'],[1,'HTTP'],[2,'HTTPS']],
 		value:  (nvram.remote_management == 1) ? ((nvram.remote_mgt_https == 1) ? 2 : 1) : 0 },
-	{ title: 'Port', indent: 2, name: 'http_wanport', type: 'text', maxlen: 5, size: 7, value:  fixPort(nvram.http_wanport, 8080) },
+	{ title: '通訊埠', indent: 2, name: 'http_wanport', type: 'text', maxlen: 5, size: 7, value:  fixPort(nvram.http_wanport, 8080) },
 	{ title: '允許無線網路-登入管理', name: 'f_http_wireless', type: 'checkbox', value:  nvram.web_wl_filter == 0 },
 	null,
 	{ title: '風格', name: 'web_css', type: 'select',
@@ -229,14 +229,14 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>SSH守護程式</div>
+<div class='section-title'>SSH 常駐程式</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '開機時啟用', name: 'f_sshd_eas', type: 'checkbox', value: nvram.sshd_eas == 1 },
 	{ title: '遠端登入', name: 'f_sshd_remote', type: 'checkbox', value: nvram.sshd_remote == 1 },
-	{ title: '遠端登入Port', indent: 2, name: 'sshd_rport', type: 'text', maxlen: 5, size: 7, value: nvram.sshd_rport },
-	{ title: 'Port', name: 'sshd_port', type: 'text', maxlen: 5, size: 7, value: nvram.sshd_port },
+	{ title: '遠端登入的通訊埠', indent: 2, name: 'sshd_rport', type: 'text', maxlen: 5, size: 7, value: nvram.sshd_rport },
+	{ title: '通訊埠', name: 'sshd_port', type: 'text', maxlen: 5, size: 7, value: nvram.sshd_port },
 	{ title: '登入密碼', name: 'f_sshd_pass', type: 'checkbox', value: nvram.sshd_pass == 1 },
 	{ title: '授權金鑰', name: 'sshd_authkeys', type: 'textarea', value: nvram.sshd_authkeys }
 ]);
@@ -254,12 +254,12 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>Telnet守護程式</div>
+<div class='section-title'>Telnet 常駐程式</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '開機時啟用', name: 'f_telnetd_eas', type: 'checkbox', value: nvram.telnetd_eas == 1 },
-	{ title: 'Port', name: 'telnetd_port', type: 'text', maxlen: 5, size: 7, value: nvram.telnetd_port }
+	{ title: '通訊埠', name: 'telnetd_port', type: 'text', maxlen: 5, size: 7, value: nvram.telnetd_port }
 ]);
 W('<input type="button" value="' + (tdup ? '停止' : '啟動') + ' Now" onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
 </script>

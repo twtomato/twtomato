@@ -75,7 +75,7 @@ function msgLoc(s)
 	if (r = s.match(/^(.*?): (.*)/)) {
 		r[2] = r[2].replace(/#RETRY (\d+) (\d+)/,
 			function(s, min, num) {
-				return '<br><small>(' + ((num >= 1) ? (num + '/3: ') : '') + 'Automatically retrying in ' + min + ' minutes)</small>';
+				return '<br><small>(' + ((num >= 1) ? (num + '/3: ') : '') + '自動重試於 ' + min + ' 分鐘內)</small>';
 			}
 		);
 		return '<small>' + (new Date(r[1])).toLocaleString() + ':</small><br>' + r[2];
@@ -410,7 +410,7 @@ for (i = 0; i < 2; ++i) {
 		{ title: '主機名稱', name: 'f_host' + i, type: 'text', maxlen: 255, size: 80, value: v[2], hidden: 1 },
 		{ title: 'URL', name: 'f_cust' + i, type: 'text', maxlen: 255, size: 80, value: v[6], hidden: 1 },
 		{ title: ' ', text: '(Use @IP for the current IP address)', rid: ('custmsg' + i), hidden: 1 },
-		{ title: 'Wildcard', indent: 2, name: 'f_wild' + i, type: 'checkbox', value: v[3] != '0', hidden: 1 },
+		{ title: '通用字元', indent: 2, name: 'f_wild' + i, type: 'checkbox', value: v[3] != '0', hidden: 1 },
 		{ title: 'MX', name: 'f_mx' + i, type: 'text', maxlen: 32, size: 35, value: v[4], hidden: 1 },
 		{ title: 'Backup MX', indent: 2, name: 'f_bmx' + i, type: 'checkbox', value: v[5] != '0', hidden: 1 },
 		{ title: 'Use as DNS', name: 'f_opendns' + i, type: 'checkbox', value: (opendnsInUse == opendns.length),
