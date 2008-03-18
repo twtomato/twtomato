@@ -240,7 +240,7 @@ createFieldTable('', [
 	{ title: '登入密碼', name: 'f_sshd_pass', type: 'checkbox', value: nvram.sshd_pass == 1 },
 	{ title: '授權金鑰', name: 'sshd_authkeys', type: 'textarea', value: nvram.sshd_authkeys }
 ]);
-W('<input type="button" value="' + (sdup ? '停止' : '啟動') + ' Now" onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
+W('<input type="button" value="' + (sdup ? '停止' : '啟用') + ' Now" onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
 </script>
 </div>
 
@@ -261,7 +261,7 @@ createFieldTable('', [
 	{ title: '開機時啟用', name: 'f_telnetd_eas', type: 'checkbox', value: nvram.telnetd_eas == 1 },
 	{ title: '通訊埠', name: 'telnetd_port', type: 'text', maxlen: 5, size: 7, value: nvram.telnetd_port }
 ]);
-W('<input type="button" value="' + (tdup ? '停止' : '啟動') + ' Now" onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
+W('<input type="button" value="' + (tdup ? '停止' : '啟用') + ' Now" onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
 </script>
 </div>
 

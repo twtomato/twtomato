@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] Error</title></head>
+<title>[<% ident(); %>] 錯誤</title></head>
 <body style='margin:10px;background-color:#eee'><table style='background:#fff;width:100%;height:100%'>
 <tr><td style='text-align:center;vertical-align:middle;font:14px sans-serif'><form><b>
 <script type='text/javascript'>

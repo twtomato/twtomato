@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 系統狀態：已連線設備列表</title>
+<title>[<% ident(); %>] 系統狀態：連線設備列表</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -191,7 +191,7 @@ dg.populate = function()
 	for (i = dhcpd_lease.length - 1; i >= 0; --i) {
 		a = dhcpd_lease[i];
 		e = get(a[2], a[1]);
-		e.lease = '<small><a href="javascript:deleteLease(\'L' + i + '\',\'' + a[1] + '\')" title="刪除固定 DHCP" id="L' + i + '">' + a[3] + '</a></small>';
+		e.lease = '<small><a href="javascript:deleteLease(\'L' + i + '\',\'' + a[1] + '\')" title="刪除租約" id="L' + i + '">' + a[3] + '</a></small>';
 		e.name = a[0];
 		e.ifname = nvram.lan_ifname;
 	}
@@ -240,7 +240,7 @@ dg.populate = function()
 			a = '';
 		}
 		else {
-			a = '<a href="javascript:addStatic(' + i + ')" title="加入到固定 DHCP">' + e.ip + '</a>';
+			a = '<a href="javascript:addStatic(' + i + ')" title="加入至 DHCP 固定租約">' + e.ip + '</a>';
 		}
 
 		if (e.mac.match(/^(..):(..):(..)/)) {
