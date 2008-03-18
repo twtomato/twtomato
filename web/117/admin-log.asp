@@ -113,8 +113,8 @@ createFieldTable('', [
 		{ title: 'Cron', indent: 2, name: 'f_log_crond', type: 'checkbox', value: (nvram.log_events.indexOf('crond') != -1) },
 		{ title: 'NTP', indent: 2, name: 'f_log_ntp', type: 'checkbox', value: (nvram.log_events.indexOf('ntp') != -1) },
 	{ title: '連接日誌紀錄' },
-		{ title: '對內連線', indent: 2, name: 'log_in', type: 'select', options: [[0,'關閉 (recommended)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_in },
-		{ title: '對外連線', indent: 2, name: 'log_out', type: 'select', options: [[0,'關閉 (recommended)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_out },
+		{ title: '對內連線', indent: 2, name: 'log_in', type: 'select', options: [[0,'關閉 (推薦)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_in },
+		{ title: '對外連線', indent: 2, name: 'log_out', type: 'select', options: [[0,'關閉 (推薦)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_out },
 		{ title: '限制日誌紀錄', indent: 2, name: 'log_limit', type: 'text', maxlen: 4, size: 5, value: nvram.log_limit, suffix: ' <small>(每分鐘 ? 則 / 0 取消限制)</small>' }
 ]);
 </script>
