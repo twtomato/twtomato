@@ -115,7 +115,7 @@ for (i = 0; i < tabs.length; ++i) {
 	W('<textarea class="as-script" name="script_' + t.replace('as-', '') + '" id="' + t + '-text" wrap=' + (wrap ? 'virtual' : 'off') + ' style="' + s + '"></textarea>');
 }
 W('<br><input type="checkbox" id="as-wordwrap" onclick="wordWrap()" onchange="wordWrap()" ' +
-  (wrap ? 'checked' : '') + '> 隱藏文字');
+  (wrap ? 'checked' : '') + '> 自動換行');
 </script>
 
 <!-- / / / -->
