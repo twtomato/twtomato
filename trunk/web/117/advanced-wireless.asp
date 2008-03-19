@@ -123,7 +123,7 @@ createFieldTable('', [
 			value: nvram.wlx_hperx != '0', hidden: !hp },
 	{ title: '無線用戶端數量', name: 'wl_maxassoc', type: 'text', maxlen: 3, size: 5,
 		suffix: ' <small>(範圍: 1 - 255; 預設值: 128)</small>', value: nvram.wl_maxassoc },
-	{ title: 'Multicast 速率', name: 'wl_mrate', type: 'select',
+	{ title: '群體廣播速率', name: 'wl_mrate', type: 'select',
 		options: [['0','自動 *'],['1000000','1 Mbps'],['2000000','2 Mbps'],['5500000','5.5 Mbps'],['6000000','6 Mbps'],['9000000','9 Mbps'],['11000000','11 Mbps'],['12000000','12 Mbps'],['18000000','18 Mbps'],['24000000','24 Mbps'],['36000000','36 Mbps'],['48000000','48 Mbps'],['54000000','54 Mbps']],
 		value: nvram.wl_mrate },
 	{ title: 'Preamble', name: 'wl_plcphdr', type: 'select', options: [['long','Long *'],['short','Short']],

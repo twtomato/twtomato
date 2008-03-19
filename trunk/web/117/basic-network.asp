@@ -701,7 +701,7 @@ createFieldTable('', [
 	{ title: '子網路遮罩', name: 'wan_netmask', type: 'text', maxlen: 15, size: 17, value: nvram.wan_netmask },
 	{ title: '閘道', name: 'wan_gateway', type: 'text', maxlen: 15, size: 17, value: nvram.wan_gateway },
 	{ title: '閘道', name: 'pptp_server_ip', type: 'text', maxlen: 15, size: 17, value: nvram.pptp_server_ip },
-	{ title: 'Connect Mode', name: 'ppp_demand', type: 'select', options: [['1', '需要時連線'],['0', '持續連線']],
+	{ title: '連線模式', name: 'ppp_demand', type: 'select', options: [['1', '需要時連線'],['0', '持續連線']],
 		value: nvram.ppp_demand },
 	{ title: '逾時時間', indent: 2, name: 'ppp_idletime', type: 'text', maxlen: 5, size: 7, suffix: ' <i>(分)</i>',
 		value: nvram.ppp_idletime },
