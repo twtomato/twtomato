@@ -136,7 +136,7 @@ createFieldTable('', [
 		value: nvram.wl_txant },
 	{ title: '發射功率', name: 'wl_txpwr', type: 'text', maxlen: 3, size: 5,
 		suffix: hp ?
-			' <small>mW (before amplification)</small>&nbsp;&nbsp;<small>(範圍: 1 - 251; 預設值: 10)</small>' :
+			' <small>mW (功率放大前)</small>&nbsp;&nbsp;<small>(範圍: 1 - 251; 預設值: 10)</small>' :
 			' <small>mW</small>&nbsp;&nbsp;<small>(範圍: 1 - 251; 預設值: 42)</small>',
 			value: nvram.wl_txpwr },
 	{ title: '傳輸速率', name: 'wl_rate', type: 'select',
