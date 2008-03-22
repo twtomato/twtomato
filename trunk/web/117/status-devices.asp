@@ -240,7 +240,7 @@ dg.populate = function()
 			a = '';
 		}
 		else {
-			a = '<a href="javascript:addStatic(' + i + ')" title="加入至 DHCP 固定租約">' + e.ip + '</a>';
+			a = '<a href="javascript:addStatic(' + i + ')" title="加入至 MAC 綑綁 IP">' + e.ip + '</a>';
 		}
 
 		if (e.mac.match(/^(..):(..):(..)/)) {
