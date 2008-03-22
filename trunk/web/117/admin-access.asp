@@ -223,7 +223,7 @@ createFieldTable('', [
 	{ title: '允許無線網路-登入管理', name: 'f_http_wireless', type: 'checkbox', value:  nvram.web_wl_filter == 0 },
 	null,
 	{ title: '風格', name: 'web_css', type: 'select',
-		options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍色 &amp; 綠色 (較淺)'],['bluegreen2','藍色 &amp; 綠色 (較深)'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色'],['ext/custom','Custom (ext/custom.css)']], value: nvram.web_css },
+		options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍色 &amp; 綠色 (較淺)'],['bluegreen2','藍色 &amp; 綠色 (較深)'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色'],['ext/custom','自定 (ext/custom.css)']], value: nvram.web_css },
 	{ title: '顯示 Browser Icon', name: 'f_favicon', type: 'checkbox', value:  nvram.web_favicon == 1 }
 ]);
 </script>
