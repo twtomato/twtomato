@@ -229,7 +229,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>SSH 常駐程式</div>
+<div class='section-title'>SSH 守護程式</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -254,7 +254,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>Telnet 常駐程式</div>
+<div class='section-title'>Telnet 守護程式</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
