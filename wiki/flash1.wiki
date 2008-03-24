@@ -60,4 +60,4 @@ http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DomI/AAAAAAAAACw/U0tTKgpfDE4/s400/buff
 11 完成
 
 
-如何恢復至 BUFFALO 原廠韌體[http://code.google.com/p/twtomato/w/edit/flash2 點擊這裡] 
+如何恢復至 BUFFALO 原廠韌體[http://code.google.com/p/twtomato/wiki/flash2 點擊這裡] 
