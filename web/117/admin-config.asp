@@ -38,7 +38,7 @@ function backupButton()
 	
 	name = fix(E('backup-name').value);	
 	if (name.length <= 1) {
-		alert('Invalid filename');
+		alert('不合法的檔案名稱');
 		return;
 	}
 	location.href = 'cfg/' + name + '.cfg?_http_id=' + nvram.http_id;
@@ -51,10 +51,10 @@ function restoreButton()
 	name = fix(E('restore-name').value);
 	name = name.toLowerCase();
 	if ((name.indexOf('.cfg') != (name.length - 4)) && (name.indexOf('.cfg.gz') != (name.length - 7))) {
-		alert('不正確的檔案. 必須是".cfg"的檔案.');
+		alert('不正確的檔案名稱. 必須是".cfg"的檔案.');
 		return;
 	}
-	if (!confirm('確定嗎 ?')) return;
+	if (!confirm('確定嗎?')) return;
 	E('restore-button').disabled = 1;
 	
 	f = E('restore-form');
@@ -69,9 +69,9 @@ function resetButton()
 	i = E('restore-mode').value;
 	if (i == 0) return;
 	if ((i == 2) && (features('!nve'))) {
-		if (!confirm('請注意: Erasing the NVRAM on a ' + nvram.t_model_name + ' 路由器可能會損毀.完全清除之後 可能無法正確設定 NVRAM. 繼續執行 ?')) return;
+	if (!confirm('請注意: 清除路由器上的 NVRAM(' + nvram.t_model_name + ') 可能會造成損毀. 完全清除之後可能無法正確地設定 NVRAM. 繼續執行?')) return;
 	}
-	if (!confirm('確定嗎 ?')) return;
+	if (!confirm('確定嗎?')) return;
 	E('reset-button').disabled = 1;
 	form.submit('aco-reset-form');
 }
@@ -102,7 +102,7 @@ function resetButton()
 
 <br><br>
 
-<div class='section-title'>恢復設定檔</div>
+<div class='section-title'>恢復設定值</div>
 <div class='section'>
 	<form id='restore-form' method='post' action='cfg/restore.cgi' encType='multipart/form-data'>
 		選擇所要恢復的設定檔:<br>
@@ -118,8 +118,8 @@ function resetButton()
 	<form id='aco-reset-form' method='post' action='cfg/defaults.cgi'>
 	<select name='mode' id='restore-mode'>
 		<option value=0>請選擇...</option>
-		<option value=1>恢復TOMATO預設值 (normal)</option>
-		<option value=2>清除NVRAM全部資料 (thorough)</option>
+		<option value=1>恢復 TOMATO 預設值 (一般)</option>
+		<option value=2>清除 NVRAM 全部資料 (徹底的)</option>
 	</select>
 	<input type='button' value='確定' onclick='resetButton()' id='reset-button'>
 	</form>
