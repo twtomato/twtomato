@@ -104,7 +104,7 @@ function verifyFields(focused, quiet)
 	for (i = 0; i < 2; ++i) {
 		if (!v_range('_f_udp_' + i, quiet, 1, 432000)) return 0;
 	}
-	return v_range('_ct_max', quiet, 128, 65535);
+	return v_range('_ct_max', quiet, 128, 10240);
 }
 
 function save()
