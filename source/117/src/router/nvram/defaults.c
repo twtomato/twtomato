@@ -236,8 +236,8 @@ const defaults_t defaults[] = {
 	{ "wan_domain",			""				},
 
 // basic-time
-	{ "tm_sel",				"PST8PDT,M3.2.0/2,M11.1.0/2"	},
-	{ "tm_tz",				"PST8PDT,M3.2.0/2,M11.1.0/2"	},
+	{ "tm_sel",				"UTC-8"	},
+	{ "tm_tz",				"UTC-8"	},
 	{ "tm_dst",				"1",							},
 	{ "ntp_updates",		"4"								},
 	{ "ntp_tdod",			"0"								},
