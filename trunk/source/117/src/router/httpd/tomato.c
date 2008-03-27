@@ -680,7 +680,7 @@ static int save_variables(int write)
 	int ok;
 	char s[256];
 	int dirty;
-	static const char *msgf = "The field \"%s\" is invalid. Please report this problem.";
+	static const char *msgf = "欄位 \"%s\" 不正確. 請回報這個問題.";
 
 	dirty = 0;
 	for (v = nvset_list; v->name; ++v) {
@@ -793,7 +793,7 @@ static void wo_tomato(char *url)
 		}
 		commit = save_variables(1) && commit;
 
-		resmsg_set("Settings saved.");
+		resmsg_set("已儲存.");
 	}
 
 	rboot = atoi(webcgi_safeget("_reboot", "0"));
@@ -821,7 +821,7 @@ static void wo_tomato(char *url)
 
 	if ((v = webcgi_get("_service")) != NULL) {
 		if (!*red) {
-			if (ajax) web_printf(" Some services are being restarted...");
+			if (ajax) web_printf(" 某些服務重新啟動...");
 			web_close();
 		}
 		sleep(1);
