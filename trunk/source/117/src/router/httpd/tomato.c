@@ -1,4 +1,4 @@
-/*
+﻿/*
 
 	Tomato Firmware
 	Copyright (C) 2006-2008 Jonathan Zarate
@@ -793,7 +793,7 @@ static void wo_tomato(char *url)
 		}
 		commit = save_variables(1) && commit;
 
-		resmsg_set("已儲存.");
+		resmsg_set("設定已儲存.");
 	}
 
 	rboot = atoi(webcgi_safeget("_reboot", "0"));
@@ -821,7 +821,7 @@ static void wo_tomato(char *url)
 
 	if ((v = webcgi_get("_service")) != NULL) {
 		if (!*red) {
-			if (ajax) web_printf(" 某些服務重新啟動...");
+			if (ajax) web_printf("某些服務已重新啟動...");
 			web_close();
 		}
 		sleep(1);
