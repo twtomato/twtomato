@@ -125,7 +125,7 @@ const defaults_t defaults[] = {
 	{ "wl_radioids",		""				},	// List of radio IDs
 	{ "wl_ssid",			"wireless"		},	// Service set ID (network name)
 	{ "wl_country",			"Worldwide"		},	// Country (default obtained from driver)
-	{ "wl_radio",			"1"				},	// Enable (1) or disable (0) radio
+	{ "wl_radio",			"0"				},	// Enable (1) or disable (0) radio
 	{ "wl_closed",			"0"				},	// Closed (hidden) network
     { "wl_ap_isolate",		"0"				},	// AP isolate mode
 	{ "wl_mode",			"ap"			},	// AP mode (ap|sta|wds)
