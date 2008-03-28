@@ -349,7 +349,7 @@ void asp_time(int argc, char **argv)
 	else
 	{
 		web_printf("%d 年 ", 1900+p->tm_year);
-		web_printf("%d 月 ", p->tm_mon);
+		web_printf("%d 月 ", (p->tm_mon)+1);
 		web_printf("%d 日 ", p->tm_mday);
 		web_printf("%s ", wday[p->tm_wday]);
 		web_printf("%d:%d:%d", p->tm_hour, p->tm_min, p->tm_sec);
