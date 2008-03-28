@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 	Tomato Firmware
 	Copyright (C) 2006-2008 Jonathan Zarate
