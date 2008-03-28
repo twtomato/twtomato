@@ -94,6 +94,7 @@ function show()
 	c('cpu', stats.cpuload);
 	c('uptime', stats.uptime);
 	c('time', stats.time);
+	c('freqcpu', stats.freqcpu);
 	c('wanip', stats.wanip);
 	c('wannetmask', stats.wannetmask);
 	c('wangateway', stats.wangateway);
@@ -161,7 +162,8 @@ createFieldTable('', [
 	{ title: '時間', rid: 'time', text: stats.time },
 	{ title: '開機時間', rid: 'uptime', text: stats.uptime },
 	{ title: 'CPU 負載 <small>(1 / 5 / 15 mins)</small>', rid: 'cpu', text: stats.cpuload },
-	{ title: '總和/剩餘 記憶體', rid: 'memory', text: stats.memory }
+	{ title: '總和/剩餘 記憶體', rid: 'memory', text: stats.memory },
+	{ title: 'CPU 頻率', rid: 'freqcpu', text: stats.freqcpu }
 ]);
 </script>
 </div>

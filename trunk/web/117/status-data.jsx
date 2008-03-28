@@ -7,7 +7,7 @@
 	No part of this file may be used without permission.
 */
 
-//<% nvram("l2tp_get_ip,pptp_get_ip,pptp_server_ip,router_name,wan_domain,wan_gateway,wan_get_domain,wan_hostname,wan_hwaddr,wan_ipaddr,wan_netmask,wan_proto,wan_run_mtu,et0macaddr,lan_proto,lan_ipaddr,dhcp_start,dhcp_num,lan_netmask,security_mode2,wl_crypto,wl_mode,wds_enable,wl0_hwaddr,wl_net_mode,wl_radio,wl_channel,lan_gateway,wl_ssid,t_model_name"); %>
+//<% nvram("l2tp_get_ip,pptp_get_ip,clkfreq,pptp_server_ip,router_name,wan_domain,wan_gateway,wan_get_domain,wan_hostname,wan_hwaddr,wan_ipaddr,wan_netmask,wan_proto,wan_run_mtu,et0macaddr,lan_proto,lan_ipaddr,dhcp_start,dhcp_num,lan_netmask,security_mode2,wl_crypto,wl_mode,wds_enable,wl0_hwaddr,wl_net_mode,wl_radio,wl_channel,lan_gateway,wl_ssid,t_model_name"); %>
 //<% uptime(); %>
 //<% sysinfo(); %>
 //<% wlradio(); %>
@@ -32,7 +32,7 @@ do {
 	a = sysinfo.totalram + sysinfo.totalswap;
 	b = sysinfo.totalfreeram + sysinfo.freeswap;
 	stats.memory = scaleSize(a) + ' / ' + scaleSize(b) + ' <small>(' + (b / a * 100.0).toFixed(2) + '%)</small>';
-
+	stats.freqcpu = nvram.clkfreq;
 	stats.time = '<% time(); %>';
 	stats.wanup = '<% wanup(); %>' == '1';
 	stats.wanuptime = '<% link_uptime(); %>';
