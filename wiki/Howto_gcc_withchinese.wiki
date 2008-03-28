@@ -1,4 +1,4 @@
-#如何用GCC編譯UTF8檔能正確顯示中文
+# 如何用GCC編譯UTF8檔能正確顯示中文
 
 = Introduction =
 
