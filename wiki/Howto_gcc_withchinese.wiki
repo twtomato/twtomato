@@ -1,4 +1,4 @@
-# How to use GCC to compile source code with UTF-8 format
+#summary How to use GCC to compile source code with UTF-8 format
 
 = Introduction =
 
