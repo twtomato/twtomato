@@ -238,7 +238,7 @@ qosg.verifyFields = function(row, quiet) {
 	}
 	
 	if ((b != '') && (a >= b)) {
-		ferror.set(f[7], 'Invalid range', quiet);
+		ferror.set(f[7], '不正確的範圍', quiet);
 		return 0;
 	}
 	

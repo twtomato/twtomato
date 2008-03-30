@@ -150,7 +150,7 @@ function verifyFields(focused, quiet)
 					e.value = 'http://';
 				}
 				if (e.value.search(/http(s?):\/\/./) != 0)  {
-					ferror.set(e, 'Expecting a URL -- http://... or https://...', quiet)
+					ferror.set(e, '必須是 URL -- http://... 或 https://...', quiet)
 					r = 0;
 				}
 				else {
@@ -164,7 +164,7 @@ function verifyFields(focused, quiet)
 					e.value = RegExp.$1;
 				}
 				if (e.value.search(/^[A-Za-z0-9]+/) == -1) {
-					ferror.set(e, 'Invalid hash or URL', quiet)
+					ferror.set(e, '字元 或 URL 錯誤', quiet)
 					r = 0;
 				}
 				else {

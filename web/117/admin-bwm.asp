@@ -120,13 +120,13 @@ function verifyFields(focused, quiet)
 	}
 	else if (v == '/jffs/') {
 		if (nvram.jffs2_on != '1') {
-			ferror.set(eLoc, 'JFFS2 is not enabled.', quiet);
+			ferror.set(eLoc, 'JFFS2 未開啟.', quiet);
 			return 0;
 		}
 	}
 	else if (v.match(/^\/cifs(1|2)\/$/)) {
 		if (nvram['cifs' + RegExp.$1].substr(0, 1) != '1') {
-			ferror.set(eLoc, 'CIFS #' + RegExp.$1 + ' is not enabled.', quiet);
+			ferror.set(eLoc, 'CIFS #' + RegExp.$1 + ' 未開啟.', quiet);
 			return 0;
 		}
 	}

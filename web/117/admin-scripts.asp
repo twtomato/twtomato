@@ -71,7 +71,7 @@ function save()
 		x = (t[0] == 'as-fire') ? 8192 : 4096;
 		if (n > x) {
 			tabSelect(t[0]);
-			alert(t[1] + ' script is too long. Maximum allowed is ' + x + ' bytes.');
+			alert(t[1] + ' script 太大. 請勿超過 ' + x + ' bytes.');
 			return;
 		}
 	}

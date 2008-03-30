@@ -123,12 +123,12 @@ function verifyFields(focused, quiet)
 	e = E('_f_addr');
 	s = e.value.trim();
 	if (!s.match(/^[\w\.-]+$/)) {
-		ferror.set(e, 'Invalid address', quiet);
+		ferror.set(e, '不正確的位址', quiet);
 		return 0;
 	}
 	ferror.clear(e);
 
-	return v_range('_f_count', quiet, 1, 50) && v_range('_f_size', quiet, 1, 10240);
+	return v_range('_f_count', quiet, 1, 50) && v_range('_f_size', quiet, 1, 65535);
 }
 
 
