@@ -76,7 +76,7 @@ ars.setup = function() {
 	this.init('ars-grid', '', 20, [
 		{ type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 },
 		{ type: 'text', maxlen: 3 }, { type: 'select', options: [['LAN','LAN'],['WAN','WAN']] }, { type: 'text', maxlen: 32 }]);
-	this.headerSet(['目的地', '閘道', '子網路遮罩', '開銷', '介面', '描述']);
+	this.headerSet(['目的地', '閘道', '子網路遮罩', 'Metric', '介面', '描述']);
 	var routes = nvram.routes_static.split('>');
 	for (var i = 0; i < routes.length; ++i) {
 		var r;

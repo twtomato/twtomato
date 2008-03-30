@@ -104,7 +104,7 @@ function save()
 createFieldTable('', [
 	{ title: '日誌記錄檔', name: 'f_log_file', type: 'checkbox', value: nvram.log_file == 1 },
 	{ title: '至遠端系統的日誌紀錄', name: 'f_log_remote', type: 'checkbox', value: nvram.log_remote == 1 },
-	{ title: 'IP 地址 / 連接埠', indent: 2, multi: [
+	{ title: 'IP 位址 / 通訊埠', indent: 2, multi: [
 		{ name: 'log_remoteip', type: 'text', maxlen: 15, size: 17, value: nvram.log_remoteip, suffix: ':' },
 		{ name: 'log_remoteport', type: 'text', maxlen: 5, size: 7, value: nvram.log_remoteport } ]},
 	{ title: '間隔標籤', name: 'log_mark', type: 'text', maxlen: 4, size: 5, value: nvram.log_mark, suffix: ' <small>(分鐘 / 0 關閉)</small>' },
