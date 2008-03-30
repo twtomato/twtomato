@@ -54,7 +54,7 @@ ara.setup = function() {
 	var i, a;
 
 	this.init('ara-grid', 'sort');
-	this.headerSet(['目的地', '閘道', '子網路遮罩', '開銷', '介面']);
+	this.headerSet(['目的地', '閘道', '子網路遮罩', '路徑值', '介面']);
 	for (i = 0; i < activeroutes.length; ++i) {
 		a = activeroutes[i];
 		if (a[0] == nvram.lan_ifname) a[0] += ' (LAN)';
