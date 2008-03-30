@@ -418,7 +418,7 @@ for (i = 0; i < 2; ++i) {
 		{ title: 'Token / URL', name: 'f_afraid' + i, type: 'text', maxlen: 255, size: 80, value: v[6], hidden: 1 },
 		{ title: 'Force Next Update', name: 'f_force' + i, type: 'checkbox', value: 0, hidden: 1 },
 		null,
-		{ title: '前一個IP地址', custom: msgLoc(ddnsx_last[i]), rid: 'last-update' + i, hidden: 1 },
+		{ title: '前一個IP 位址', custom: msgLoc(ddnsx_last[i]), rid: 'last-update' + i, hidden: 1 },
 		{ title: '目前更新狀況', custom: msgLoc(ddnsx_msg[i]), rid: 'last-response' + i, hidden: h }
 	]);
 	W('</div>');
