@@ -104,7 +104,7 @@ function verifyFields(focused, quiet)
 
 	if (a) {
 		if ((E('_f_ntp_1').value == '') && (E('_f_ntp_2').value == '') && ((E('_f_ntp_3').value == ''))) {
-			ferror.set('_f_ntp_1', 'At least one NTP server is required', quiet);
+			ferror.set('_f_ntp_1', '至少需要一台 NTP 伺服器', quiet);
 			return 0;
 		}
 	}

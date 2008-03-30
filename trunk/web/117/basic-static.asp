@@ -106,7 +106,7 @@ sg.verifyFields = function(row, quiet)
 
 	if (v_macz(f[0], quiet)) {
 		if (this.existMAC(f[0].value)) {
-			ferror.set(f[0], 'Duplicate MAC address', quiet);
+			ferror.set(f[0], ' 重覆的 MAC ', quiet);
 			ok = 0;
 		}
 	}
@@ -125,11 +125,11 @@ sg.verifyFields = function(row, quiet)
 	if (!fip) {
 		s = parseInt(f[1].value, 10)
 		if (isNaN(s) || (s <= 0) || (s >= 255)) {
-			ferror.set(f[1], 'Invalid IP address', quiet);
+			ferror.set(f[1], '不正確的 IP 位址', quiet);
 			ok = 0;
 		}
 		if (this.inStatic(s)) {
-			ferror.set(f[1], 'Duplicate IP address', quiet);
+			ferror.set(f[1], '重覆的 IP 位址', quiet);
 			ok = 0;
 		}
 		if (ok) f[1].value = s;
@@ -138,11 +138,11 @@ sg.verifyFields = function(row, quiet)
 	s = f[2].value.trim().replace(/\s+/g, ' ');
 	if (s.length > 0) {
 		if (s.search(/^[.a-zA-Z0-9_\- ]+$/) == -1) {
-			ferror.set(f[2], 'Invalid name. Only characters "A-Z 0-9 . - _" are allowed.', quiet);
+			ferror.set(f[2], '不正確的字元. 只有 \"A-Z 0-9 . - _\" 會被接受.', quiet);
 			ok = 0;
 		}
 		if (this.existName(s)) {
-			ferror.set(f[2], 'Duplicate name.', quiet);
+			ferror.set(f[2], '主機名稱重覆.', quiet);
 			ok = 0;
 		}
 		if (ok) f[2].value = s;

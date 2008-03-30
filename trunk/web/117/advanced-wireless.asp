@@ -96,7 +96,7 @@ at = ((nvram.security_mode != "wep") && (nvram.security_mode != "radius") && (nv
 createFieldTable('', [
 	{ title: 'Afterburner', name: 'wl_afterburner', type: 'select', options: [['auto','自動'],['on','開'],['off','關 *']],
 		value: nvram.wl_afterburner },
-	{ title: '禁止客戶端相互連線', name: 'wl_ap_isolate', type: 'select', options: [['0','關 *'],['1','開']],
+	{ title: '禁止用戶端相互連線', name: 'wl_ap_isolate', type: 'select', options: [['0','關 *'],['1','開']],
 		value: nvram.wl_ap_isolate },
 	{ title: '認證方式', name: 'wl_auth', type: 'select',
 		options: [['0','自動 *'],['1','共用金鑰']], attrib: at ? 'disabled' : '',
@@ -126,7 +126,7 @@ createFieldTable('', [
 	{ title: '群體廣播速率', name: 'wl_mrate', type: 'select',
 		options: [['0','自動 *'],['1000000','1 Mbps'],['2000000','2 Mbps'],['5500000','5.5 Mbps'],['6000000','6 Mbps'],['9000000','9 Mbps'],['11000000','11 Mbps'],['12000000','12 Mbps'],['18000000','18 Mbps'],['24000000','24 Mbps'],['36000000','36 Mbps'],['48000000','48 Mbps'],['54000000','54 Mbps']],
 		value: nvram.wl_mrate },
-	{ title: 'Preamble', name: 'wl_plcphdr', type: 'select', options: [['long','Long *'],['short','Short']],
+	{ title: 'Preamble', name: 'wl_plcphdr', type: 'select', options: [['long','長 *'],['short','短']],
 		value: nvram.wl_plcphdr },
 	{ title: 'RTS Threshold', name: 'wl_rts', type: 'text', maxlen: 4, size: 6,
 		suffix: ' <small>(範圍: 0 - 2347; 預設值: 2347)</small>', value: nvram.wl_rts },

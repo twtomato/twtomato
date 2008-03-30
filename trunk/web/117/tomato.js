@@ -609,7 +609,7 @@ function v_iptport(e, quiet)
 		a[i] = v;
 	}
 	if (a.length == 0) {
-		ferror.set(e, 'Expecting a list of ports or port range.', quiet);
+		ferror.set(e, '必須是列表中的 ports 或 port 範圍.', quiet);
 		return 0;
 	}
 	e.value = a.join(',');

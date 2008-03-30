@@ -28,7 +28,7 @@ function v_nodelim(e, quiet, name)
 {
 	e.value = e.value.trim();
 	if (e.value.indexOf('<') != -1) {
-		ferror.set(e, 'Invalid ' + name, quiet);
+		ferror.set(e, '不正確的 ' + name, quiet);
 		return 0;
 	}
 	ferror.clear(e);
@@ -60,7 +60,7 @@ function verifyFields(focused, quiet)
 			if ((!v_length(user, quiet, 1)) || (!v_length(pass, quiet, 1))) return 0;
 			unc.value = unc.value.replace(/\//g, '\\');
 			if (!unc.value.match(/^\\\\.+\\/)) {
-				ferror.set(unc, 'Invalid UNC', quiet);
+				ferror.set(unc, '不正確的 UNC', quiet);
 				return 0;
 			}
 		}

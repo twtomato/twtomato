@@ -49,7 +49,7 @@ function upgrade()
 
 	name = fom.file.value;
 	if (name.search(/\.(bin|trx)$/i) == -1) {
-		alert('Expecting a ".bin" or ".trx" file.');
+		alert('必須是 ".bin" or ".trx" 檔案格式.');
 		return;
 	}
 	if (!confirm('確定要使用這個檔案更新 ' + name + '?')) return;
