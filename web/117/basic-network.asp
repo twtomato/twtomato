@@ -714,7 +714,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>區域網路設定</div>
+<div class='section-title'>LAN 設定</div>
 <div class='section'>
 <script type='text/javascript'>
 dns = nvram.wan_dns.split(/\s+/);

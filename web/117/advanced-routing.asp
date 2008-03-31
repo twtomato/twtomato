@@ -76,7 +76,7 @@ ars.setup = function() {
 	this.init('ars-grid', '', 20, [
 		{ type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 }, { type: 'text', maxlen: 15 },
 		{ type: 'text', maxlen: 3 }, { type: 'select', options: [['LAN','LAN'],['WAN','WAN']] }, { type: 'text', maxlen: 32 }]);
-	this.headerSet(['目的地', '閘道', '子網路遮罩', 'Metric', '介面', '描述']);
+	this.headerSet(['目的地', '閘道', '子網路遮罩', '路徑值', '介面', '描述']);
 	var routes = nvram.routes_static.split('>');
 	for (var i = 0; i < routes.length; ++i) {
 		var r;
@@ -177,8 +177,8 @@ function init()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '模式', name: 'wk_mode', type: 'select', options: [['gateway','閘道'],['router','路由']], value: nvram.wk_mode },
-	{ title: 'RIPv1 &amp; v2', name: 'dr_setting', type: 'select',	options: [[0,'取消'],[1,'區域網路'],[2,'廣域網路'],[3,'兩者']], value:	nvram.dr_setting },
-	{ title: 'Spanning-Tree Protocol', name: 'f_stp', type: 'checkbox', value: nvram.lan_stp != '0' },
+	{ title: 'RIPv1 &amp; v2', name: 'dr_setting', type: 'select',	options: [[0,'取消'],[1,'區域網路 LAN'],[2,'廣域網路 WAN'],[3,'兩者']], value:	nvram.dr_setting },
+	{ title: '擴張樹協定(STP)', name: 'f_stp', type: 'checkbox', value: nvram.lan_stp != '0' },
 ]);
 </script>
 </div>

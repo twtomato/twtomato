@@ -152,7 +152,7 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>系統</div>
+<div class='section-title'>系統資訊</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -168,7 +168,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title' id='wan-title'>WAN</div>
+<div class='section-title' id='wan-title'>廣域網路 WAN</div>
 <div class='section' id='wan-section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -194,7 +194,7 @@ createFieldTable('', [
 </div>
 
 
-<div class='section-title'>區域網路設定</div>
+<div class='section-title'>區域網路 LAN</div>
 <div class='section'>
 <script type='text/javascript'>
 if (nvram.lan_proto == 'dhcp') {
