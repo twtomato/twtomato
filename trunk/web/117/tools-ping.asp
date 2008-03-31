@@ -204,7 +204,7 @@ function init()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '位址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '',
-		suffix: ' <input type="button" value="Ping" onclick="ping()" id="pingb">' },
+		suffix: ' <input type="button" value="開始" onclick="ping()" id="pingb">' },
 	{ title: 'Ping 的次數', name: 'f_count', type: 'text', maxlen: 2, size: 7, value: '5' },
 	{ title: '封包大小', name: 'f_size', type: 'text', maxlen: 5, size: 7, value: '56', suffix: ' <small>(位元組)</small>' }
 ]);

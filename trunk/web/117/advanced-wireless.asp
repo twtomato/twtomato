@@ -148,7 +148,7 @@ createFieldTable('', [
 ]);
 </script>
 </div>
-<small> 選項後有 <b style='font-size: 1.5em'>*</b> 符號 為預設值.</small>
+<small> 選項後有 <b style='font-size: 1.5em'>*</b> 為 預設值.</small>
 
 <!-- / / / -->
 

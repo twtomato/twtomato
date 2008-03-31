@@ -126,7 +126,7 @@ createFieldTable('', [
 	{ title: '使用者名稱', indent: 2, name: 'f_cifs1_user', type: 'text', maxlen: 32, size: 34, value: a[2] },
 	{ title: '密碼', indent: 2, name: 'f_cifs1_pass', type: 'password', maxlen: 16, size: 34, value: a[3] },
 	{ title: '網域', indent: 2, name: 'f_cifs1_dom', type: 'text', maxlen: 32, size: 34, value: a[4] },
-	{ title: '掛載', indent: 2, name: 'f_cifs1_exec', type: 'text', maxlen: 64, size: 34, value: a[5] },
+	{ title: '掛載後執行', indent: 2, name: 'f_cifs1_exec', type: 'text', maxlen: 64, size: 34, value: a[5] },
 	{ title: '總容量/可用空間', indent: 2, text: cifs1.size ? (scaleSize(cifs1.size) + ' / ' + scaleSize(cifs1.free)) : '(未掛載)' },
 	null,
 	{ title: '/cifs2' },
@@ -135,7 +135,7 @@ createFieldTable('', [
 	{ title: '使用者名稱', indent: 2, name: 'f_cifs2_user', type: 'text', maxlen: 64, size: 34, value: b[2] },
 	{ title: '密碼', indent: 2, name: 'f_cifs2_pass', type: 'password', maxlen: 16, size: 34, value: b[3] },
 	{ title: '網域', indent: 2, name: 'f_cifs2_dom', type: 'text', maxlen: 32, size: 34, value: b[4] },
-	{ title: '掛載', indent: 2, name: 'f_cifs2_exec', type: 'text', maxlen: 64, size: 34, value: b[5] },
+	{ title: '掛載後執行', indent: 2, name: 'f_cifs2_exec', type: 'text', maxlen: 64, size: 34, value: b[5] },
 	{ title: '總容量/可用空間', indent: 2, text: cifs2.size ? (scaleSize(cifs2.size) + ' / ' + scaleSize(cifs2.free)) : '(未掛載)' }
 ]);
 </script>
