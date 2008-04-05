@@ -562,7 +562,7 @@ function _v_portrange(e, quiet, v)
 		x = fixPort(RegExp.$1, -1);
 		y = fixPort(RegExp.$2, -1);
 		if ((x == -1) || (y == -1)) {
-			ferror.set(e, '不正確的 port range: ' + v, quiet);
+			ferror.set(e, '不正確的 通訊埠 範圍: ' + v, quiet);
 			return null;
 		}
 		if (x > y) {
@@ -577,7 +577,7 @@ function _v_portrange(e, quiet, v)
 
 	v = fixPort(v, -1);
 	if (v == -1) {
-		ferror.set(e, '不正確的 port', quiet);
+		ferror.set(e, '不正確的 通訊埠', quiet);
 		return null;
 	}
 
@@ -609,7 +609,7 @@ function v_iptport(e, quiet)
 		a[i] = v;
 	}
 	if (a.length == 0) {
-		ferror.set(e, '必須是列表中的 ports 或 port 範圍.', quiet);
+		ferror.set(e, '必須是列表中的 通訊埠 或 通訊埠範圍.', quiet);
 		return 0;
 	}
 	e.value = a.join(',');
@@ -1933,7 +1933,7 @@ function navi()
 			['功能按鈕 / LED',	'buttons.asp'],
 			['連接網路芳鄰',		'cifs.asp'],
 			['SD/MMC',		'mmc.asp'],
-			['出廠設定值',	'config.asp'],
+			['出廠預設值',	'config.asp'],
 			['除錯',		'debug.asp'],
 			['JFFS2',			'jffs2.asp'],
 			['日誌紀錄檔管理',			'log.asp'],

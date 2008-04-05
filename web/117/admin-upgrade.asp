@@ -95,7 +95,7 @@ function upgrade()
 
 		<br>
 		<table border=0>
-		<tr><td目前版本:/td><td>&nbsp; <% version(1); %></td></tr>
+		<tr><td>目前版本:</td><td>&nbsp; <% version(1); %></td></tr>
 		<script type='text/javascript'>
 		//	<% sysinfo(); %>
 		W('<tr><td>剩餘記憶體:</td><td>&nbsp; ' + scaleSize(sysinfo.totalfreeram) + ' &nbsp; <small>(剩餘記憶體空間必須大於韌體檔案)</small></td></tr>');
@@ -107,8 +107,7 @@ function upgrade()
 
 <div class='note-disabledw' style='display:none' id='jwarn'>
 <b> JFFS2 開啟時無法更新.</b><br><br>
-升級時會覆蓋目前 JFFS2 使用中的分區, 更新前請先備份 JFFS2 的資料. 關閉 JFFS2 並重開 ROUTER.
-br><br><br>
+升級時會覆蓋目前 JFFS2 使用中的分區, 更新前請先備份 JFFS2 的資料. 關閉 JFFS2 並重開 ROUTER.<br><br><br>
 <a href='admin-jffs2.asp'>關閉 &raquo;</a>
 </div>
 

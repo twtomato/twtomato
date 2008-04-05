@@ -211,7 +211,7 @@ createFieldTable('', [
 
 <div style='visibility:hidden' id='trace-error'></div>
 
-<div style='visibility:hidden;text-align:right' id='wait'>請稍後... <img src='spin.gif' style='vertical-align:top'></div>
+<div style='visibility:hidden;text-align:right' id='wait'>請稍候... <img src='spin.gif' style='vertical-align:top'></div>
 
 <table id='ttr-grid' class='tomato-grid' cellspacing=1></table>
 

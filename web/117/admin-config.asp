@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 路由器管理設定：出廠設定值</title>
+<title>[<% ident(); %>] 路由器管理設定：出廠預設值</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -102,7 +102,7 @@ function resetButton()
 
 <br><br>
 
-<div class='section-title'>恢復設定值</div>
+<div class='section-title'>恢復預設值</div>
 <div class='section'>
 	<form id='restore-form' method='post' action='cfg/restore.cgi' encType='multipart/form-data'>
 		選擇所要恢復的設定檔:<br>
