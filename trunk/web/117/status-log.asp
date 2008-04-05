@@ -60,10 +60,10 @@ function init()
 		<a href="logs/view.cgi?which=50&_http_id=<% nv(http_id) %>">查看最後  50 行</a><br>
 		<a href="logs/view.cgi?which=100&_http_id=<% nv(http_id) %>">查看最後 100 行</a><br>
 		<a href="logs/view.cgi?which=all&_http_id=<% nv(http_id) %>">全部顯示</a><br><br>
-		<a href="logs/syslog.txt?_http_id=<% nv(http_id) %>">下載日誌記錄檔</a><br><br>
+		<a href="logs/syslog.txt?_http_id=<% nv(http_id) %>">下載日誌紀錄檔</a><br><br>
 		<input type="text" maxsize=32 size=33 id="find-text"> <input type="button" value="搜尋" onclick="find()"><br>
 		<br><br>
-		&raquo; <a href="admin-log.asp">日誌記錄管理</a><br><br>
+		&raquo; <a href="admin-log.asp">日誌紀錄管理</a><br><br>
 	</div>
 </div>
 

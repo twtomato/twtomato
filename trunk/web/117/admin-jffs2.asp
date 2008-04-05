@@ -114,11 +114,11 @@ function submit_complete()
 jfon = (nvram.jffs2_on == 1);
 createFieldTable('', [
 	{ title: '啟用', name: 'f_jffs2_on', type: 'checkbox', value: jfon },
-	{ title: '掛載', name: 'jffs2_exec', type: 'text', maxlen: 64, size: 34, value: nvram.jffs2_exec },
+	{ title: '掛載後執行', name: 'jffs2_exec', type: 'text', maxlen: 64, size: 34, value: nvram.jffs2_exec },
 	null,
 	{ title: '總容量/可用空間', text: ((jfon) && (jffs2.size)) ? (scaleSize(jffs2.size) + ' / ' + scaleSize(jffs2.free)) : '(未掛載)' },
 	null,
-	{ title: '', custom: '<input type="button" " value="格式化 / 清除..." onclick="formatClicked()" id="format"><br>' +
+	{ title: '', custom: '<input type="button" value="格式化 / 清除..." onclick="formatClicked()" id="format"><br>' +
 		'<span style="background:#b55;color:#fff;padding:1px 8px;visibility:hidden" id="fmsg">請稍候 <span id="fclock">約1分鐘</span>...</span>' }
 ]);
 </script>

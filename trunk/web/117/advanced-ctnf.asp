@@ -81,7 +81,7 @@ function expireTimer()
 	}
 	else {
 		setTimeout(expireTimer, 1000);
-		e.value = 'Expire Scheduled... ' + expireTime;
+		e.value = '正在清除... ' + expireTime;
 	}
 }
 
