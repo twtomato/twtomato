@@ -11,7 +11,7 @@ body {
 	padding: 0;
 	margin: 0 0;
 	background: #f0f0f0;
-	font: 12px sans-serif;
+	font: 13px sans-serif;
 	color: #000;
 }
 
@@ -28,7 +28,7 @@ table {
 	empty-cells: show;
 }
 td {
-	font: 12px sans-serif;
+	font: 13px sans-serif;
 }
 
 form {
@@ -38,7 +38,7 @@ form {
 
 input,
 select {
-	font: 12px sans-serif;
+	font: 13px sans-serif;
 }
 input[type='checkbox'][disabled] {
 	opacity: 0.3;
@@ -93,12 +93,12 @@ input[type='button']:hover {
 	border-bottom: 2px dotted #ddd;
 }
 #header .title {
-	font: 25px sans-serif;
+	font: 50px 'Trebuchet MS', Sans-serif;
 	color: #fff;
 	font-weight: bold;
 }
 #header .version {
-	font: 15px sans-serif;
+	font: 16px sans-serif;
 	color: #eee;
 	font-weight: bold;
 }
@@ -124,7 +124,7 @@ input[type='button']:hover {
 
 #navi {
 	width: 150px;
-	font-size: 12px;
+	font-size: 13px;
 	border-right: 1px solid #f0f0f0;
 	padding: 20px 0;
 	vertical-align: top;
@@ -160,7 +160,7 @@ input[type='button']:hover {
 	color: #aaa;
 	text-align: right;
 	padding-right: 5px;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 #tabs {
@@ -200,7 +200,7 @@ input[type='button']:hover {
 }
 
 .section-title {
-	font-size: 14px;
+	font-size: 15px;
 	color: #444;
 	margin: 0 0 10px 0;
 	padding-bottom: 4px;
@@ -248,14 +248,14 @@ table.fields {
 .tomato-grid td {
 	padding: 2px;
 	margin: 0px;
-	font: 12px sans-serif;
+	font: 13px sans-serif;
 }
 .tomato-grid .header {
 	background: #e7e7e7;
 	cursor: pointer;
 }
 .tomato-grid .header td {
-	font: 11px sans-serif;
+	font: 12px sans-serif;
 	font-weight: bold;
 }
 .tomato-grid .footer {
@@ -312,7 +312,7 @@ table.fields {
 	width: 98%;
 }
 .tomato-grid .controls input {
-	font: 11px sans-serif;
+	font: 12px sans-serif;
 	width: 60px;
 }
 
@@ -392,13 +392,13 @@ table.fields {
 .bwmg td {
 	padding: 2px;
 	margin: 0px;
-	font: 12px sans-serif;
+	font: 13px sans-serif;
 }
 .bwmg .header {
 	background: #e7e7e7;
 }
 .bwmg .header td {
-	font: 11px sans-serif;
+	font: 12px sans-serif;
 	font-weight: bold;
 }
 .bwmg .footer {

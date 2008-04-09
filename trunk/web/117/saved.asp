@@ -10,7 +10,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 蕃茄(Tomato)</title>
+<title>[<% ident(); %>] Tomato</title>
 <script language='javascript'>
 wait = parseInt('<% cgi_get("_nextwait"); %>', 10);
 if (isNaN(wait)) wait = 5;
