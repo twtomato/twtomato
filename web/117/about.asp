@@ -76,7 +76,7 @@ function init()
 <body onload='init()'>
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
-	<div class='title'>蕃茄(Tomato)</div>
+	<div class='title'>Tomato</div>
 	<div class='version'>(繁體/正體)中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
@@ -89,7 +89,7 @@ function init()
 <img src='tux.png' alt='Linux &amp; Tomato' id='tux'>
 </div>
 <div style='margin:20px 20px;font-size:14px;color:#555;'>
-蕃茄(Tomato)韌體版本<% version(1); %><br>
+Tomato 韌體版本<% version(1); %><br>
 Copyright (C) 2006-2008 Jonathan Zarate<br>
 <a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br>
 <br>
