@@ -166,7 +166,7 @@ function save()
 createFieldTable('', [
 	{ title: '最大連線數量', name: 'ct_max', type: 'text', maxlen: 5, size: 7,
 		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ 顯示目前的連線數 ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
-		value: fixInt(nvram.ct_max || 4096, 128, 65535, 4096) }
+		value: fixInt(nvram.ct_max || 8192, 128, 65535, 8192) }
 ]);
 </script>
 <br>
