@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] 路由器管理設定：日誌紀錄</title>
+<title>[<% ident(); %>] 路由器管理設定：日誌記錄</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -107,21 +107,21 @@ function save()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '日誌記錄檔', name: 'f_log_file', type: 'checkbox', value: nvram.log_file == 1 },
-	{ title: '至遠端系統的日誌紀錄', name: 'f_log_remote', type: 'checkbox', value: nvram.log_remote == 1 },
+	{ title: '至遠端系統的日誌記錄', name: 'f_log_remote', type: 'checkbox', value: nvram.log_remote == 1 },
 	{ title: 'IP 位址 / 通訊埠', indent: 2, multi: [
 		{ name: 'log_remoteip', type: 'text', maxlen: 15, size: 17, value: nvram.log_remoteip, suffix: ':' },
 		{ name: 'log_remoteport', type: 'text', maxlen: 5, size: 7, value: nvram.log_remoteport } ]},
 	{ title: '間隔標籤', name: 'log_mark', type: 'text', maxlen: 4, size: 5, value: nvram.log_mark, suffix: ' <small>(分鐘 / 0 關閉)</small>' },
-	{ title: '事件日誌紀錄' },
-		{ title: '網路瀏覽限制所 限制/允許', indent: 2, name: 'f_log_acre', type: 'checkbox', value: (nvram.log_events.indexOf('acre') != -1) },
+	{ title: '事件日誌記錄' },
+		{ title: '記錄 網路瀏覽限制<br>所 限制/允許', indent: 2, name: 'f_log_acre', type: 'checkbox', value: (nvram.log_events.indexOf('acre') != -1) },
 		{ title: 'Cron', indent: 2, name: 'f_log_crond', type: 'checkbox', value: (nvram.log_events.indexOf('crond') != -1) },
-		{ title: 'DHCP Client', indent: 2, name: 'f_log_dhcpc', type: 'checkbox', value: (nvram.log_events.indexOf('dhcpc') != -1) },
-		{ title: 'NTP', indent: 2, name: 'f_log_ntp', type: 'checkbox', value: (nvram.log_events.indexOf('ntp') != -1) },
-		{ title: 'Scheduler', indent: 2, name: 'f_log_sched', type: 'checkbox', value: (nvram.log_events.indexOf('sched') != -1) },
-	{ title: '連接日誌紀錄' },
+		{ title: '記錄 連線設備', indent: 2, name: 'f_log_dhcpc', type: 'checkbox', value: (nvram.log_events.indexOf('dhcpc') != -1) },
+		{ title: '記錄 NTP', indent: 2, name: 'f_log_ntp', type: 'checkbox', value: (nvram.log_events.indexOf('ntp') != -1) },
+		{ title: '記錄 定時重開機/連線', indent: 2, name: 'f_log_sched', type: 'checkbox', value: (nvram.log_events.indexOf('sched') != -1) },
+	{ title: '連接日誌記錄' },
 		{ title: '對內連線', indent: 2, name: 'log_in', type: 'select', options: [[0,'關閉 (推薦)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_in },
 		{ title: '對外連線', indent: 2, name: 'log_out', type: 'select', options: [[0,'關閉 (推薦)'],[1,'被防火牆拒絕'],[2,'被防火牆允許'],[3,'拒絕與允許都記錄']], value: nvram.log_out },
-		{ title: '限制日誌紀錄', indent: 2, name: 'log_limit', type: 'text', maxlen: 4, size: 5, value: nvram.log_limit, suffix: ' <small>(每分鐘 ? 則 / 0 取消限制)</small>' }
+		{ title: '限制日誌記錄', indent: 2, name: 'log_limit', type: 'text', maxlen: 4, size: 5, value: nvram.log_limit, suffix: ' <small>(每分鐘 ? 則 / 0 取消限制)</small>' }
 ]);
 </script>
 </div>

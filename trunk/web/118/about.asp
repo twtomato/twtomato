@@ -89,7 +89,7 @@ function init()
 <img src='tux.png' alt='Linux &amp; Tomato' id='tux'>
 </div>
 <div style='margin:20px 20px;font-size:14px;color:#555;'>
-Tomato 韌體版本<% version(1); %><br>
+Tomato Firmware v<% version(1); %><br>
 Copyright (C) 2006-2008 Jonathan Zarate<br>
 <a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br>
 <br>
@@ -112,7 +112,7 @@ Built on <% build_time(); %><br>
 </form>
 
 <div style='border-top:1px solid #e7e7e7;margin:4em 0;padding:2em 0;font-size:12px'>
-非常感謝您冒險測試您的路由器，回報問題、建議和促成這個企劃 ^ _ ^</b><br>
+<b>非常感謝您冒險測試您的路由器，回報問題、建議和促成這個企劃 ^ _ ^</b><br>
 
 版本發佈地點:<br>
 <a href="http://code.google.com/p/twtomato/downloads/list" target="_blank">http://code.google.com/p/twtomato/downloads/list</a><br>
