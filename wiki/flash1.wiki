@@ -35,11 +35,11 @@ full reset = 斷電 ,按著 RESET 不放 ,開啟電源 30秒後放開 RESET.
 
 http://lh5.google.com/ddwrt.taiwan/R8ZmB0-DonI/AAAAAAAAAC4/swX2SvToWco/s400/buff2toma.jpg 
 
-4 開啟 TFTP 程式 選擇韌體並點選 *Upgrade*
+4 開啟 TFTP 程式 選擇韌體並點選 *Upgrade* (*要緊接著執行第 5 個步驟*)
 
 http://lh3.google.com/ddwrt.taiwan/R8ZmBU-DokI/AAAAAAAAACg/awsyJ7HrTyM/s400/buff2toma2.jpg 
 
-5 開啟 原廠GUI介面 (192.168.11.1) 點選 *Restar Now*
+5 開啟 原廠GUI介面 (192.168.11.1) 點選 *Restar Now* 
 
 http://lh6.google.com/ddwrt.taiwan/R8ZmBE-DojI/AAAAAAAAACY/xR9l2JIWbVg/s400/buff2toma1.jpg"
 
