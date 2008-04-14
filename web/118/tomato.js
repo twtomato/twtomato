@@ -1903,7 +1903,7 @@ function navi()
 		['系統狀態', 				'status', 1, [
 			['系統狀態',		'overview.asp'],
 			['連線設備列表',		'devices.asp'],
-			['日誌紀錄檔',			'log.asp'] ] ],
+			['日誌記錄檔',			'log.asp'] ] ],
 		['頻寬監控', 			'bwm', 1, [
 			['即時流量',		'realtime.asp'],
 			['24小時內流量',	'24.asp'],
@@ -1953,7 +1953,7 @@ function navi()
 			['出廠預設值',	'config.asp'],
 			['除錯',		'debug.asp'],
 			['JFFS2',			'jffs2.asp'],
-			['日誌紀錄檔管理',			'log.asp'],
+			['日誌記錄檔管理',			'log.asp'],
 			['定時重開機/連線',		'sched.asp'],
 			['批次檔 Scripts',			'scripts.asp'],
 			['韌體更新',			'upgrade.asp'] ] ],

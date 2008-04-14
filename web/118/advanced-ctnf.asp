@@ -104,7 +104,7 @@ function verifyFields(focused, quiet)
 	for (i = 0; i < 2; ++i) {
 		if (!v_range('_f_udp_' + i, quiet, 1, 432000)) return 0;
 	}
-	return v_range('_ct_max', quiet, 128, 10240);
+	return v_range('_ct_max', quiet, 128, 65535);
 }
 
 function save()
@@ -175,14 +175,14 @@ createFieldTable('', [
 </div>
 
 
-<div class='section-title'>TCP Timeout</div>
+<div class='section-title'>TCP 逾時</div>
 <div class='section'>
 <script type='text/javascript'>
 if ((v = nvram.ct_tcp_timeout.match(/^(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)$/)) == null) {
 	v = [0,1800,14400,120,60,120,120,10,60,30,120];
 }
 titles = ['-', 'None', 'Established', 'SYN Sent', 'SYN Received', 'FIN Wait', 'Time Wait', 'Close', 'Close Wait', 'Last ACK', 'Listen'];
-f = [{ title: ' ', text: '<small>(seconds)</small>' }];
+f = [{ title: ' ', text: '<small>(秒)</small>' }];
 for (i = 1; i < 11; ++i) {
 	f.push({ title: titles[i], name: ('f_tcp_' + (i - 1)),
 		type: 'text', maxlen: 6, size: 8, value: v[i],
@@ -192,21 +192,21 @@ createFieldTable('', f);
 </script>
 </div>
 
-<div class='section-title'>UDP Timeout</div>
+<div class='section-title'>UDP 逾時</div>
 <div class='section'>
 <script type='text/javascript'>
 if ((v = nvram.ct_udp_timeout.match(/^(\d+)\s+(\d+)$/)) == null) {
 	v = [0,30,180];
 }
 createFieldTable('', [
-	{ title: ' ', text: '<small>(seconds)</small>' },
+	{ title: ' ', text: '<small>(秒)</small>' },
 	{ title: 'Unreplied', name: 'f_udp_0', type: 'text', maxlen: 6, size: 8, value: v[1], suffix: '<span id="count11"></span>' },
 	{ title: 'Assured', name: 'f_udp_1', type: 'text', maxlen: 6, size: 8, value: v[2], suffix: '<span id="count12"></span>' }
 ]);
 </script>
 </div>
 
-<div class='section-title'>Tracking / NAT Helpers</div>
+<div class='section-title'>Tracking / NAT 增強模組</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -218,7 +218,7 @@ createFieldTable('', [
 </script>
 </div>
 
-<div class='section-title'>Miscellaneous</div>
+<div class='section-title'>其他</div>
 <div class='section'>
 <script type='text/javascript'>
 v = [];
@@ -226,8 +226,8 @@ for (i = -5; i <= 5; ++i) {
 	v.push([i, i ? ((i > 0) ? '+' : '') + i : 'None']);
 }
 createFieldTable('', [
-	{ title: 'TTL Adjust', name: 'nf_ttl', type: 'select', options: v, value: nvram.nf_ttl },
-	{ title: 'Inbound Layer 7', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
+	{ title: 'TTL 調整', name: 'nf_ttl', type: 'select', options: v, value: nvram.nf_ttl },
+	{ title: '下載時 啟用應用層過濾', name: 'f_l7in', type: 'checkbox', value: nvram.nf_l7in != '0' }
 ]);
 </script>
 </div>
@@ -237,8 +237,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>
