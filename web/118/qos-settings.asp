@@ -130,16 +130,16 @@ for (i = 0; i < 10; ++i) {
 	classList.push([i, classNames[i]]);
 }
 createFieldTable('', [
-	{ title: '開啟頻寬管理QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
-	{ title: 'Prioritize small packets with these control flags', multi: [
+	{ title: '開啟頻寬管理 QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
+	{ title: '給予 點選旗標封包 優先權', multi: [
 		{ suffix: ' ACK &nbsp;', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
 		{ suffix: ' SYN &nbsp;', name: 'f_qos_syn', type: 'checkbox', value: nvram.qos_syn == '1' },
 		{ suffix: ' FIN &nbsp;', name: 'f_qos_fin', type: 'checkbox', value: nvram.qos_fin == '1' },
 		{ suffix: ' RST &nbsp;', name: 'f_qos_rst', type: 'checkbox', value: nvram.qos_rst == '1' }
 	] },
-	{ title: 'Prioritize ICMP', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
-	{ title: 'Re-classify all packets when changing settings', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
-	{ title: 'Default class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
+	{ title: '給予 ICMP 優先權', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
+	{ title: '設定值改變時 自動更新 分等機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
+	{ title: '預設等級為', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
 ]);
 </script>
 </div>
