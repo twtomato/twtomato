@@ -126,12 +126,12 @@ for (i = 0; i < 10; ++i) {
 	classList.push([i, classNames[i]]);
 }
 createFieldTable('', [
-	{ title: '開啟頻寬管理QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
-	{ title: 'ACK 給予優先權', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
+	{ title: '開啟頻寬管理 QoS', name: 'f_qos_enable', type: 'checkbox', value: nvram.qos_enable == '1' },
+	{ title: '給予 ACK 優先權', name: 'f_qos_ack', type: 'checkbox', value: nvram.qos_ack == '1' },
 	{ title: 'ICMP 給予優先權', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
 	{ title: '遵循 分等機制 ', name: 'f_qos_method', type: 'checkbox', value: nvram.qos_method == '0' },
 	{ title: '設定值改變時 自動更新 分等機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
-	{ title: '優先權預設為 Class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
+	{ title: '預設等級為 Class', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
 ]);
 </script>
 </div>
