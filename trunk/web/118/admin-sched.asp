@@ -44,9 +44,9 @@ for (i = 0; i < 1440; i += 15) {
 }
 
 tm.push(
-	[-1, 'Every minute'], [-3, 'Every 3 minutes'], [-5, 'Every 5 minutes'], [-15, 'Every 15 minutes'], [-30, 'Every 30 minutes'],
-	[-60, 'Every hour'], [-(12 * 60), 'Every 12 hours'], [-(24 * 60), 'Every 24 hours'],
-	['e', 'Every...']);
+	[-1, '每分鐘'], [-3, '每隔 3 分鐘'], [-5, '每隔 5 分鐘'], [-15, '每隔 15 分鐘'], [-30, '每隔 30 分鐘'],
+	[-60, '每小時'], [-(12 * 60), '每隔 12 hours'], [-(24 * 60), '每隔 24 小時'],
+	['e', '每隔..(自訂)']);
 
 /* REMOVE-BEGIN
 
@@ -89,24 +89,24 @@ function makeSched(key, custom)
 	}
 	
 	a = [
-		{ title: 'Enabled', name: key + 'enabled', type: 'checkbox', value: v[1] == '1' },
-		{ title: 'Time', multi: [
+		{ title: '啟用', name: key + 'enabled', type: 'checkbox', value: v[1] == '1' },
+		{ title: '時間', multi: [
 			{ name: key + 'time', type: 'select', options: t, value: oe ? 'e' : v[2] },
 			{ name: key + 'every', type: 'text', maxlen: 10, size: 10, value: (v[2] < 0) ? -v[2] : 30,
-				prefix: ' ', suffix: ' <small id="_' + key + 'mins"><i>minutes</i></small>' } ] },
-		{ title: 'Days', multi: [
-			{ name: key + 'sun', type: 'checkbox', suffix: ' Sun &nbsp; ', value: w & 1 },
-			{ name: key + 'mon', type: 'checkbox', suffix: ' Mon &nbsp; ', value: w & 2 },
-			{ name: key + 'tue', type: 'checkbox', suffix: ' Tue &nbsp; ', value: w & 4 },
-			{ name: key + 'wed', type: 'checkbox', suffix: ' Wed &nbsp; ', value: w & 8 },
-			{ name: key + 'thu', type: 'checkbox', suffix: ' Thu &nbsp; ', value: w & 16 },
-			{ name: key + 'fri', type: 'checkbox', suffix: ' Fri &nbsp; ', value: w & 32 },
-			{ name: key + 'sat', type: 'checkbox', suffix: ' Sat &nbsp; &nbsp;', value: w & 64 },
-			{ name: key + 'everyday', type: 'checkbox', suffix: ' Everyday', value: (w & 0x7F) == 0x7F } ] }
+				prefix: ' ', suffix: ' <small id="_' + key + 'mins"><i>分鐘</i></small>' } ] },
+		{ title: '週幾', multi: [
+			{ name: key + 'sun', type: 'checkbox', suffix: ' 日 &nbsp; ', value: w & 1 },
+			{ name: key + 'mon', type: 'checkbox', suffix: ' 一 &nbsp; ', value: w & 2 },
+			{ name: key + 'tue', type: 'checkbox', suffix: ' 二 &nbsp; ', value: w & 4 },
+			{ name: key + 'wed', type: 'checkbox', suffix: ' 三 &nbsp; ', value: w & 8 },
+			{ name: key + 'thu', type: 'checkbox', suffix: ' 四 &nbsp; ', value: w & 16 },
+			{ name: key + 'fri', type: 'checkbox', suffix: ' 五 &nbsp; ', value: w & 32 },
+			{ name: key + 'sat', type: 'checkbox', suffix: ' 六 &nbsp; &nbsp;', value: w & 64 },
+			{ name: key + 'everyday', type: 'checkbox', suffix: ' 每日', value: (w & 0x7F) == 0x7F } ] }
 	];
 	
 	if (custom) {
-		a.push({ title: 'Command', name: 'sch_' + key + 'cmd', type: 'textarea', value: nvram['sch_' + key + 'cmd' ] });
+		a.push({ title: '指令', name: 'sch_' + key + 'cmd', type: 'textarea', value: nvram['sch_' + key + 'cmd' ] });
 	}
 	
 	createFieldTable('', a);
@@ -268,21 +268,21 @@ makeSched('rcon');
 </script>
 </div>
 
-<div class='section-title'>Custom 1</div>
+<div class='section-title'>自訂 1</div>
 <div class='section'>
 <script type='text/javascript'>
 makeSched('c1', 1);
 </script>
 </div>
 
-<div class='section-title'>Custom 2</div>
+<div class='section-title'>自訂 2</div>
 <div class='section'>
 <script type='text/javascript'>
 makeSched('c2', 1);
 </script>
 </div>
 
-<div class='section-title'>Custom 3</div>
+<div class='section-title'>自訂 3</div>
 <div class='section'>
 <script type='text/javascript'>
 makeSched('c3', 1);

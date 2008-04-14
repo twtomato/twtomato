@@ -36,7 +36,7 @@ if (typeof(daily_history) == 'undefined') {
 	rstats_busy = 1;
 }
 
-var weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+var weeks = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
 var weeksShort = ['日', '一', '二', '三', '四', '五', '六'];
 var startwk = 0;
 var summary = 1;
