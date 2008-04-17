@@ -35,11 +35,14 @@ full reset = 斷電 ,按著 RESET 不放 ,開啟電源 30秒後放開 RESET.
 
 http://lh5.google.com/ddwrt.taiwan/R8ZmB0-DonI/AAAAAAAAAC4/swX2SvToWco/s400/buff2toma.jpg 
 
-4 開啟 TFTP 程式 選擇韌體並點選 *Upgrade* (*要緊接著執行第 5 個步驟*)
+
+3.5 請同時開啟 TFTP 程式 和 原廠GUI介面. 
+
+4 TFTP 程式 選擇韌體並點選 *Upgrade* (*要緊接著執行第 5 個步驟*)
 
 http://lh3.google.com/ddwrt.taiwan/R8ZmBU-DokI/AAAAAAAAACg/awsyJ7HrTyM/s400/buff2toma2.jpg 
 
-5 開啟 原廠GUI介面 (192.168.11.1) 點選 *Restar Now* 
+5 原廠GUI介面 (192.168.11.1) 點選 *Restar Now* 
 
 http://lh6.google.com/ddwrt.taiwan/R8ZmBE-DojI/AAAAAAAAACY/xR9l2JIWbVg/s400/buff2toma1.jpg"
 
@@ -47,7 +50,7 @@ http://lh6.google.com/ddwrt.taiwan/R8ZmBE-DojI/AAAAAAAAACY/xR9l2JIWbVg/s400/buff
 
 http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DolI/AAAAAAAAACo/NgZsu-E7XsM/s400/buff2toma3.jpg
 
-7 靜待數分鐘 (約3~5 分鐘 觀察 DIAG燈的變化)
+7 *靜待數分鐘 (約3~5 分鐘 觀察 DIAG燈的變化)<------ 請注意*
 
 8 改回 DHCP發放電腦IP
 
