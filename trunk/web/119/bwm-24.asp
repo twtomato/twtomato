@@ -182,9 +182,9 @@ function init()
 			<a href='javascript:switchAvg(4)' id='avg4'>4x</a>,
 			<a href='javascript:switchAvg(6)' id='avg6'>6x</a>,
 			<a href='javascript:switchAvg(8)' id='avg8'>8x</a><br>
-		Max:&nbsp;
-			<a href='javascript:switchScale(0)' id='scale0'>Uniform</a>,
-			<a href='javascript:switchScale(1)' id='scale1'>Per IF</a><br>
+		最大值統計:&nbsp;
+			<a href='javascript:switchScale(0)' id='scale0'>不分介面</a>,
+			<a href='javascript:switchScale(1)' id='scale1'>每個介面</a><br>
 		繪圖:&nbsp;
 			<a href='javascript:switchDraw(0)' id='draw0'>填滿</a>,
 			<a href='javascript:switchDraw(1)' id='draw1'>實線</a><br>
