@@ -1,3 +1,27 @@
+R182 (2008/04/28)
+  Added:
+    Tomato 1.15.8500 Victek_MOD 中文化 (by 中文化 Tomato WebGUI Script)  
+  Fixed:
+    none
+  Updated:
+    none
+  Notes:
+    None.
+  Author:
+    bv2lk
+
+R181 (2008/04/28)
+  Added:
+    none
+  Fixed:
+    錯別字
+  Updated:
+    none
+  Notes:
+    None.
+  Author:
+    bv2lk
+
 R180 (2008/04/28)
   Added:
     uversion.pl - for 版本訊息中文化
