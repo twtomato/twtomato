@@ -1921,7 +1921,7 @@ function navi()
 			['基本資料',	'ident.asp'],
 			['時間',			'time.asp'],
 			['DDNS',			'ddns.asp'],
-			['MAC 綑綁 IP',		'static.asp'],
+			['DHCP MAC 綑綁 IP',		'static.asp'],
 			['無線 - 存取控制',	'wfilter.asp'] ] ],
 		['進階設定', 			'advanced', 0, [
 			['連線追蹤/過濾模組',	'ctnf.asp'],
