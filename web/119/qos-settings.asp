@@ -139,7 +139,7 @@ createFieldTable('', [
 	] },
 	{ title: '給予 ICMP 優先權', name: 'f_qos_icmp', type: 'checkbox', value: nvram.qos_icmp == '1' },
 	{ title: '設定值改變時 自動更新 分等機制', name: 'f_qos_reset', type: 'checkbox', value: nvram.qos_reset == '1' },
-	{ title: '預設等級為', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
+	{ title: '優先權預設為 (等級)', name: 'qos_default', type: 'select', options: classList, value: nvram.qos_default }
 ]);
 </script>
 </div>

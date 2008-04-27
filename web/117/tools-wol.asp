@@ -176,7 +176,7 @@ function init()
 <input type='hidden' name='_nextwait' value='1'>
 <input type='hidden' name='mac' value='' id='_mac'>
 
-<div class='section-title'>網絡喚醒</div>
+<div class='section-title'>網路喚醒</div>
 <div class='section'>
 	<table id='wol-grid' class='tomato-grid' cellspacing=1></table>
 	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' value='重新整理' onclick='refreshClick()' id='refreshb'></div>

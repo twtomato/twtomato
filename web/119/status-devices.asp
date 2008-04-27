@@ -240,7 +240,7 @@ dg.populate = function()
 			a = '';
 		}
 		else {
-			a = '<a href="javascript:addStatic(' + i + ')" title="加入至 MAC 綑綁 IP">' + e.ip + '</a>';
+			a = '<a href="javascript:addStatic(' + i + ')" title="加入至 DHCP MAC 綑綁 IP">' + e.ip + '</a>';
 		}
 
 		if (e.mac.match(/^(..):(..):(..)/)) {
@@ -297,7 +297,7 @@ function init()
 
 <!-- / / / -->
 
-<div class='section-title'>已連線設備列表</div>
+<div class='section-title'>連線設備列表</div>
 <div class='section'>
 	<table id='dev-grid' class='tomato-grid' cellspacing=0></table>
 <script type='text/javascript'>

@@ -368,7 +368,7 @@ function earlyInit()
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
 	<div class='title'>Tomato</div>
-	<div class='version'>繁體中文版 <% version() %></div>
+	<div class='version'>(繁體/正體)中文版 <% version() %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
