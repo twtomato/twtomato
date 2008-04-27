@@ -93,7 +93,7 @@ Tomato Firmware v<% version(1); %><br>
 Copyright (C) 2006-2008 Jonathan Zarate<br>
 <a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br>
 <br>
-Built on <% build_time(); %><br>
+建立於: <% build_time(); %><br>
 <br><br>
 
 <!--
