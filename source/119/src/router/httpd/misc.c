@@ -105,7 +105,7 @@ char *reltime(char *buf, time_t t)
 	if (t < 0) t = 0;
 	days = t / 86400;
 	m = t / 60;
-	sprintf(buf, "%d day%s, %02d:%02d:%02d", days, ((days==1) ? "" : "s"), ((m / 60) % 24), (m % 60), (int)(t % 60));
+	sprintf(buf, "%d 天 %02d:%02d:%02d", days, ((m / 60) % 24), (m % 60), (int)(t % 60));
 	return buf;
 }
 
@@ -348,11 +348,11 @@ void asp_time(int argc, char **argv)
 	}
 	else
 	{
-		web_printf("%d 年 ", 1900+p->tm_year);
-		web_printf("%d 月 ", (p->tm_mon)+1);
-		web_printf("%d 日 ", p->tm_mday);
+		web_printf("%04d 年 ", 1900+p->tm_year);
+		web_printf("%02d 月 ", (p->tm_mon)+1);
+		web_printf("%02d 日 ", p->tm_mday);
 		web_printf("%s ", wday[p->tm_wday]);
-		web_printf("%d:%d:%d", p->tm_hour, p->tm_min, p->tm_sec);
+		web_printf("%02d:%02d:%02d", p->tm_hour, p->tm_min, p->tm_sec);
 	}
 }
 

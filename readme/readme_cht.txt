@@ -1,5 +1,17 @@
 R182 (2008/04/28)
   Added:
+    none.
+  Fixed:
+    none.
+  Updated:
+    none
+  Notes:
+    misc.c --> 開機時間 from [day/days] to [天]
+  Author:
+    linux.taiwan
+
+R182 (2008/04/28)
+  Added:
     Tomato 1.15.8500 Victek_MOD 中文化 (by 中文化 Tomato WebGUI Script)  
   Fixed:
     none
