@@ -20,7 +20,6 @@ USB 2.0 兩個 方便擴充
 || *Applicant* || ASUSTeK Computer Inc. ||
 || *FCC ID* || MSQWL500GP ||
 
-
 || *Device* || *Vendor* || *Serial* || *Comment* ||
 || Network Processor || Broadcom || BCM4704KPBQ || ||
 || WAN || Broadcom || AC101L || ||
@@ -29,21 +28,15 @@ USB 2.0 兩個 方便擴充
 || USB Controller || VIA || VT6212L || ||
 
 
-Flash ROM
+|| Flash ROM 型號 || S29GL064M90TFIR7 ||
+|| 064M || 64Mbit -> 8MByte ||
+|| 90 || Speed Option ||
+|| T || TSOP ||
+|| F || Pb-Free ||
+|| I || -40度 至 +85度 ||
+|| R7 || Model NO., x16, Vcc=3.0v 至 3.6v||
 
-S29GL064M90TFIR7
 
-064M -> 64Mbit -> 8MByte
-
-90 -> Speed Option
-
-T -> TSOP
-
-F -> Pb-Free
-
-I -> -40度 至 +85度
-
-R7 -> Model NO., x16, Vcc=3.0 至 3.6v
 
 
 ----
