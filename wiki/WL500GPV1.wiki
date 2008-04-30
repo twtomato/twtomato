@@ -14,19 +14,37 @@ CPU 264MHz 可 OC 300MHz
 
 USB 2.0 兩個 方便擴充
 
-便宜
-
+|| 便宜
+|| || 
 
 || *Applicant* || ASUSTeK Computer Inc. ||
 || *FCC ID* || MSQWL500GP ||
 
 
 || *Device* || *Vendor* || *Serial* || *Comment* ||
-|| Network Processor || Broadcom || BCM4704 || ||
+|| Network Processor || Broadcom || BCM4704KPBQ || ||
 || WAN || Broadcom || AC101L || ||
-|| LAN || Broadcom || BCM5325 || ||
+|| LAN || Broadcom || BCM5325EKQMG || ||
 || Wireless LAN || Broadcom || BCM4318 || Mini-PCI ||
 || USB Controller || VIA || VT6212L || ||
+
+
+Flash ROM
+
+S29GL064M90TFIR7
+
+064M -> 64Mbit -> 8MByte
+
+90 -> Speed Option
+
+T -> TSOP
+
+F -> Pb-Free
+
+I -> -40度 至 +85度
+
+R7 -> Model NO., x16, Vcc=3.0 至 3.6v
+
 
 ----
 
