@@ -14,8 +14,8 @@ CPU 264MHz 可 OC 300MHz
 
 USB 2.0 兩個 方便擴充
 
-|| 便宜
-|| || 
+便宜
+
 
 || *Applicant* || ASUSTeK Computer Inc. ||
 || *FCC ID* || MSQWL500GP ||
