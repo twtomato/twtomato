@@ -1,4 +1,4 @@
-#CPU測試 router CPU and memory benchmark
+##summary CPU測試 router CPU and memory benchmark
 
 = 簡易測試 =
 
