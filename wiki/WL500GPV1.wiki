@@ -53,6 +53,7 @@ http://www.hynix.com/datasheet/pdf/dram/HY5DU281622ETP(Rev1.0).pdf
 || ID || HW_* || boardtype || boardnum || boardrev || boardflags || others ||
 || WL-500G Premium || BCM4704_BCM5325F || 0x042f || 45 || 0x10 || 0x0110 || hardware_version=WL500gp-01-02-00-00 regulation_domain=0X10US sdram_init=0x0009 ||
 || WL-500G Premium || BCM4704_BCM5325F || 0x042f || 45 || 0x10 || 0x0110 || hardware_version=WL500gH-01-00-00-00 regulation_domain=0X30DE sdram_init=0x000b ||
+|| WL-500G Premium || BCM4704_BCM5325F || 0x042f || 45 || 0x10 || 0x0110 || hardware_version=WL500gH-01-00-00-00 regulation_domain=0X47TW sdram_init=0x000b ||
 
 
 http://wl500g.dyndns.org/sdram.html
