@@ -1,4 +1,4 @@
-#WL-500GP v1 (4704) OC 300MHz
+#summary WL-500GP v1 (BCM4704 / BCM4780) OC 300MHz
 
 = 溫度問題 =
 
@@ -108,7 +108,5 @@ You can copy/paste the following line in the wiki table at:
 
 http://wiki.openwrt.org/HardwarePerformance
 || 2008-05-01 || ''Author'' || 4.8s || 9.2s || 10.2s || 5.1s || v0.6 || ''OS'' || ''DeviceModel'' || ''CPU model'' || ''CPU Frequency'' || ''LinkToHwPage'' ||
-
-
 
 
