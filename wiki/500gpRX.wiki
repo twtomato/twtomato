@@ -1,0 +1,19 @@
+#summary 關於 WL-500GP V1 無線接收的問題 自己檢查一下吧！
+
+關於 WL-500GP V1 無線接收的問題 自己檢查一下吧！
+
+http://wl500g.info/showthread.php?p=88858
+
+WL-120 卡上 R17 為 62 Ω 電阻
+http://wl500g.info/showthread.php?t=13321&page=2
+
+原廠韌體由這裡進入
+http://192.168.1.1/Main_AdmStatus_Content.asp
+
+輸入 wl noise
+
+
+
+-99 ～ -92 R17 為 620K 歐母 （錯誤的阻值）
+
+-89 以下 R17 為 62 歐母 （正確的阻值）
