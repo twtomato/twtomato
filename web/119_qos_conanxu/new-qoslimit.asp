@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] New: QoS Limit</title>
+<title>[<% ident(); %>] IP 限速: 設定 IP 限速</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -43,7 +43,7 @@
 <script type='text/javascript'>
 // <% nvram("new_qoslimit_enable,new_qoslimit_ibw,new_qoslimit_obw,new_qoslimit_rules"); %>
 
-var class_prio = [['0','Highest'],['1','High'],['2','Normal'],['3','Low'],['4','Lowest']];
+var class_prio = [['0',最高等'],['1','高等'],['2','中等'],['3','低等'],['4','最低等']];
 var class_tcp = [['0','nolimit']];
 var class_udp = [['0','nolimit']];
 for (var i = 1; i <= 100; ++i) {
@@ -63,7 +63,7 @@ qosg.setup = function() {
 		{ type: 'select', options: class_prio },
 		{ type: 'select', options: class_tcp },
 		{ type: 'select', options: class_udp }]);
-	this.headerSet(['TC Tag', 'IP Address', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', 'Priority', 'TCP Limit', 'UDP Limit']);
+	this.headerSet(['封包標籤', 'IP 位址', '下載保證頻寬', '下載最大頻寬', '上傳保證頻寬', '上傳最大頻寬', '優先權', 'TCP 連線限制', 'UDP 連線限制']);
 	var qoslimitrules = nvram.new_qoslimit_rules.split('>');
 	for (var i = 0; i < qoslimitrules.length; ++i) {
 		var t = qoslimitrules[i].split('<');
@@ -157,32 +157,32 @@ qosg.verifyFields = function(row, quiet)
 	}
 
 	if( this.checkRate(f[2].value)) {
-		ferror.set(f[2], 'DLRate must between 1 and 99999', quiet);
+		ferror.set(f[2], '下載保證頻寬必需介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[3].value)) {
-		ferror.set(f[3], 'DLCeil must between 1 and 99999', quiet);
+		ferror.set(f[3], '下載最大頻寬必需介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[2].value, f[3].value)) {
-		ferror.set(f[3], 'DLCeil must be greater than DLRate', quiet);
+		ferror.set(f[3], '下載最大頻寬必需大於下載保證頻寬', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[4].value)) {
-		ferror.set(f[4], 'ULRate must between 1 and 99999', quiet);
+		ferror.set(f[4], '上傳保證頻寬必需介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[5].value)) {
-		ferror.set(f[5], 'ULCeil must between 1 and 99999', quiet);
+		ferror.set(f[5], '上傳最大頻寬必需介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[4].value, f[5].value)) {
-		ferror.set(f[5], 'ULCeil must be greater than ULRate', quiet);
+		ferror.set(f[5], '上傳最大頻寬必需大於上傳保證頻寬', quiet);
 		ok = 0;
 	}
 
@@ -243,9 +243,9 @@ function init()
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: 'Limit Enable', name: 'f_new_qoslimit_enable', type: 'checkbox', value: nvram.new_qoslimit_enable != '0' },
-	{ title: 'Download Bandwidth', name: 'new_qoslimit_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_ibw },
-	{ title: 'Upload Bandwidth', name: 'new_qoslimit_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_obw }
+	{ title: '啟用 IP 限速', name: 'f_new_qoslimit_enable', type: 'checkbox', value: nvram.new_qoslimit_enable != '0' },
+	{ title: '下載頻寬', name: 'new_qoslimit_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_ibw },
+	{ title: '上傳頻寬', name: 'new_qoslimit_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_obw }
 ]);
 </script>
 <br>
@@ -257,8 +257,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

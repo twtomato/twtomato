@@ -1,3 +1,17 @@
+R204 (2008/05/09)
+  Added:
+    IP ­­³tª©
+  Fixed:
+    none.
+  Updated:
+    none
+  Notes:
+    1.19 ip­­³tª©
+    http://www.right.com.cn/forum/viewthread.php?tid=15612&extra=page%3D1&page=1
+    conanxu
+  Author:
+    linux.taiwan
+
 R182 (2008/04/28)
   Added:
     none.
