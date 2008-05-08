@@ -18,7 +18,7 @@
 <script type="text/javascript">document.write('<base href="http://'+nvram.lan_ipaddr+'/">')</script>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] New: NVRAM Show</title>
+<title>[<% ident(); %>] IP 限速: 顯示 NVRAM 內容</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <script type="text/javascript">document.write('<link rel=\'stylesheet\' type=\'text/css\' href="'+nvram.web_css+'.css">')</script>
 <script type='text/javascript' src='tomato.js'></script>

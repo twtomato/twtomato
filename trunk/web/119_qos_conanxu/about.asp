@@ -121,6 +121,15 @@ Copyright (C) 2006-2008 Jonathan Zarate<br>
 <a href="http://www.pczone.com.tw/vbb3/thread/16/139180/" target="_blank">【討論】Tomato Firmware 中文化for Buffalo&amp;Linksys</a>@PCZONE<br>
 <a href="http://www.mobile01.com/topicdetail.php?f=110&t=511542&last=5065482" target="_blank">[中文化] 繁體/正體 Tomato Firmware 韌體載點</a>@Mobile01<br>
 
+您目前所使用的是 IP 限速版<br>
+由 conanxu 所開發<br>
+如發現任何臭蟲<br>
+請盡速回報<br>
+討論串:<br>
+<a href="http://www.right.com.cn/forum/viewthread.php?tid=15612&extra=page%3D1&page=1" target="_blank">1.19 ip限速版</a>@恩山WIFI論壇<br>
+
+
+
 註: 在此聲明<b>本中文化版本, 獨立由<br>
 bv2lk@PCZONE<br>
 bx2aa@PCZONE 加快中文化 Tomato WebGUI Script 作者<br>

@@ -1946,8 +1946,8 @@ function navi()
 		['網路瀏覽限制',	'restrict.asp'],
 		null,
 		['IP 限速',					'new', 0, [
-			['QoS Limit',				'qoslimit.asp'],
-			['Show NVRAM',			'nvramshow.asp']
+			['設定 IP 限速',				'qoslimit.asp'],
+			['顯示 NVRAM 內容',			'nvramshow.asp']
 			] ],
 		null,,
 		['路由器管理設定',		'admin', 0, [
