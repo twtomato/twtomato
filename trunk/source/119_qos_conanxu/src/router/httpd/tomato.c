@@ -430,7 +430,7 @@ static const nvset_t nvset_list[] = {
 	{ "macnames",			V_LENGTH(0, 62*101)	},	// 62 (12+1+48+1) x 50	(112233445566<..>)		todo: re-use -- zzz
 
 // advanced-ctnf
-	{ "ct_max",				V_RANGE(128, 10240)	},
+	{ "ct_max",				V_RANGE(128, 65535)	},
 	{ "ct_tcp_timeout",		V_LENGTH(20, 70)	},
 	{ "ct_udp_timeout",		V_LENGTH(5, 15)		},
 	{ "nf_ttl",				V_RANGE(-10, 10)	},
@@ -694,7 +694,7 @@ static int save_variables(int write)
 	int ok;
 	char s[256];
 	int dirty;
-	static const char *msgf = "The field \"%s\" is invalid. Please report this problem.";
+	static const char *msgf = "欄位 \"%s\" 不正確. 請回報這個問題.";
 
 	dirty = 0;
 	for (v = nvset_list; v->name; ++v) {
@@ -807,7 +807,7 @@ static void wo_tomato(char *url)
 		}
 		commit = save_variables(1) && commit;
 
-		resmsg_set("Settings saved.");
+		resmsg_set("設定已儲存.");
 	}
 
 	rboot = atoi(webcgi_safeget("_reboot", "0"));
@@ -835,7 +835,7 @@ static void wo_tomato(char *url)
 
 	if ((v = webcgi_get("_service")) != NULL) {
 		if (!*red) {
-			if (ajax) web_printf(" Some services are being restarted...");
+			if (ajax) web_printf("某些服務已重新啟動...");
 			web_close();
 		}
 		sleep(1);
