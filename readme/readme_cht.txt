@@ -1,3 +1,17 @@
+R206 (2008/05/09)
+  Added:
+    IP 限速版 + ARP 綁定
+  Fixed:
+    none.
+  Updated:
+    none
+  Notes:
+    1.19 IP 限速版
+    http://www.right.com.cn/forum/viewthread.php?tid=15612&extra=page%3D1&page=1
+    作者: conanxu
+  Author:
+    linux.taiwan
+
 R205 (2008/05/09)
   Added:
     IP 限速版
@@ -6,9 +20,9 @@ R205 (2008/05/09)
   Updated:
     none
   Notes:
-    1.19 ip限速版
+    1.19 IP 限速版
     http://www.right.com.cn/forum/viewthread.php?tid=15612&extra=page%3D1&page=1
-    conanxu
+    作者: conanxu
   Author:
     linux.taiwan
 
