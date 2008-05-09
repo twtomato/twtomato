@@ -1,3 +1,15 @@
+R207 (2008/05/10)
+    Added:
+    Fixed:
+             BIG5------>UTF-8
+    none.
+    Updated:
+    none
+    Notes:
+    Author:
+    BV2LK
+
+
 R206 (2008/05/09)
   Added:
     IP ­­³tª© + ARP ¸j©w

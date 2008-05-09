@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] ·s¥\¯à: ³]©w IP ­­³t</title>
+<title>[<% ident(); %>] æ–°åŠŸèƒ½: è¨­å®š IP é™é€Ÿ</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -43,7 +43,7 @@
 <script type='text/javascript'>
 // <% nvram("new_qoslimit_enable,new_qoslimit_ibw,new_qoslimit_obw,new_qoslimit_rules"); %>
 
-var class_prio = [['0',³Ì°ªµ¥'],['1','°ªµ¥'],['2','¤¤µ¥'],['3','§Cµ¥'],['4','³Ì§Cµ¥']];
+var class_prio = [['0',æœ€é«˜ç­‰'],['1','é«˜ç­‰'],['2','ä¸­ç­‰'],['3','ä½ç­‰'],['4','æœ€ä½ç­‰']];
 var class_tcp = [['0','nolimit']];
 var class_udp = [['0','nolimit']];
 for (var i = 1; i <= 100; ++i) {
@@ -63,7 +63,7 @@ qosg.setup = function() {
 		{ type: 'select', options: class_prio },
 		{ type: 'select', options: class_tcp },
 		{ type: 'select', options: class_udp }]);
-	this.headerSet(['«Ê¥]¼ĞÅÒ', 'IP ¦ì§}', '¤U¸ü«OÃÒÀW¼e', '¤U¸ü³Ì¤jÀW¼e', '¤W¶Ç«OÃÒÀW¼e', '¤W¶Ç³Ì¤jÀW¼e', 'Àu¥ıÅv', 'TCP ³s½u­­¨î', 'UDP ³s½u­­¨î']);
+	this.headerSet(['å°åŒ…æ¨™ç±¤', 'IP ä½å€', 'ä¸‹è¼‰ä¿è­‰é »å¯¬', 'ä¸‹è¼‰æœ€å¤§é »å¯¬', 'ä¸Šå‚³ä¿è­‰é »å¯¬', 'ä¸Šå‚³æœ€å¤§é »å¯¬', 'å„ªå…ˆæ¬Š', 'TCP é€£ç·šé™åˆ¶', 'UDP é€£ç·šé™åˆ¶']);
 	var qoslimitrules = nvram.new_qoslimit_rules.split('>');
 	for (var i = 0; i < qoslimitrules.length; ++i) {
 		var t = qoslimitrules[i].split('<');
@@ -157,32 +157,32 @@ qosg.verifyFields = function(row, quiet)
 	}
 
 	if( this.checkRate(f[2].value)) {
-		ferror.set(f[2], '¤U¸ü«OÃÒÀW¼e¥²»İ¤¶©ó 1 ¦Ü 99999', quiet);
+		ferror.set(f[2], 'ä¸‹è¼‰ä¿è­‰é »å¯¬å¿…éœ€ä»‹æ–¼ 1 è‡³ 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[3].value)) {
-		ferror.set(f[3], '¤U¸ü³Ì¤jÀW¼e¥²»İ¤¶©ó 1 ¦Ü 99999', quiet);
+		ferror.set(f[3], 'ä¸‹è¼‰æœ€å¤§é »å¯¬å¿…éœ€ä»‹æ–¼ 1 è‡³ 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[2].value, f[3].value)) {
-		ferror.set(f[3], '¤U¸ü³Ì¤jÀW¼e¥²»İ¤j©ó¤U¸ü«OÃÒÀW¼e', quiet);
+		ferror.set(f[3], 'ä¸‹è¼‰æœ€å¤§é »å¯¬å¿…éœ€å¤§æ–¼ä¸‹è¼‰ä¿è­‰é »å¯¬', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[4].value)) {
-		ferror.set(f[4], '¤W¶Ç«OÃÒÀW¼e¥²»İ¤¶©ó 1 ¦Ü 99999', quiet);
+		ferror.set(f[4], 'ä¸Šå‚³ä¿è­‰é »å¯¬å¿…éœ€ä»‹æ–¼ 1 è‡³ 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[5].value)) {
-		ferror.set(f[5], '¤W¶Ç³Ì¤jÀW¼e¥²»İ¤¶©ó 1 ¦Ü 99999', quiet);
+		ferror.set(f[5], 'ä¸Šå‚³æœ€å¤§é »å¯¬å¿…éœ€ä»‹æ–¼ 1 è‡³ 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[4].value, f[5].value)) {
-		ferror.set(f[5], '¤W¶Ç³Ì¤jÀW¼e¥²»İ¤j©ó¤W¶Ç«OÃÒÀW¼e', quiet);
+		ferror.set(f[5], 'ä¸Šå‚³æœ€å¤§é »å¯¬å¿…éœ€å¤§æ–¼ä¸Šå‚³ä¿è­‰é »å¯¬', quiet);
 		ok = 0;
 	}
 
@@ -224,7 +224,7 @@ function init()
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
 	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='version'>(ç¹é«”/æ­£é«”)ä¸­æ–‡ç‰ˆ <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -243,9 +243,9 @@ function init()
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: '±Ò¥Î IP ­­³t', name: 'f_new_qoslimit_enable', type: 'checkbox', value: nvram.new_qoslimit_enable != '0' },
-	{ title: '¤U¸üÀW¼e', name: 'new_qoslimit_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_ibw },
-	{ title: '¤W¶ÇÀW¼e', name: 'new_qoslimit_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_obw }
+	{ title: 'å•Ÿç”¨ IP é™é€Ÿ', name: 'f_new_qoslimit_enable', type: 'checkbox', value: nvram.new_qoslimit_enable != '0' },
+	{ title: 'ä¸‹è¼‰é »å¯¬', name: 'new_qoslimit_ibw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_ibw },
+	{ title: 'ä¸Šå‚³é »å¯¬', name: 'new_qoslimit_obw', type: 'text', maxlen: 6, size: 8, suffix: ' <small>kbit/s</small>', value: nvram.new_qoslimit_obw }
 ]);
 </script>
 <br>
@@ -257,8 +257,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Àx¦s' id='save-button' onclick='save()'>
-	<input type='button' value='¨ú®ø' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='å„²å­˜' id='save-button' onclick='save()'>
+	<input type='button' value='å–æ¶ˆ' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>
