@@ -927,12 +927,17 @@ TOP:
 	if (strcmp(service, "qoslimit") == 0) {
 		if (action & A_STOP) {
 			new_qoslimit_stop();
-			stop_firewall();
 		}
+		stop_firewall(); start_firewall();		// always restarted
 		if (action & A_START) {
-			start_firewall();
 			new_qoslimit_start();
 		}
+		goto CLEAR;
+	}
+
+	if (strcmp(service, "arpbind") == 0) {
+		if (action & A_STOP) new_arpbind_stop();
+		if (action & A_START) new_arpbind_start();
 		goto CLEAR;
 	}
 

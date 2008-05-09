@@ -25,7 +25,7 @@ void new_qoslimit_start(void)
 	char *priority;//priority
 	char *tcplimit,*udplimit;//tcp connection limit & udp packets per second
 	int priority_num;
-	char *s = "/tmp/new_qoslimit.sh";
+	char *s = "/tmp/new_qoslimit_start.sh";
 	char *argv[3];
 	int pid;
 	int i;
@@ -143,7 +143,7 @@ void new_qoslimit_start(void)
 void new_qoslimit_stop(void)
 {
 	FILE *f;
-	char *s = "/tmp/new_qoslimit.sh";
+	char *s = "/tmp/new_qoslimit_stop.sh";
 	char *argv[3];
 	int pid;
 

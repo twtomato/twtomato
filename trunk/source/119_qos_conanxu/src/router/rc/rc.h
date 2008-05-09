@@ -214,10 +214,6 @@ extern void ipt_qos(void);
 extern void start_qos(void);
 extern void stop_qos(void);
 
-// new_qoslimit.c
-extern void new_qoslimit_start(void);
-extern void new_qoslimit_stop(void);
-
 // cifs.c
 #ifdef TCONFIG_CIFS
 extern void start_cifs(void);
@@ -315,5 +311,12 @@ extern void start_smbd(void);
 extern void stop_smbd(void);
 #endif
 
+// new_qoslimit.c
+extern void new_qoslimit_start(void);
+extern void new_qoslimit_stop(void);
+
+// new_arpbind.c
+extern void new_arpbind_start(void);
+extern void new_arpbind_stop(void);
 
 #endif

@@ -335,11 +335,7 @@ const defaults_t defaults[] = {
 	{ "qos_default",		"3"				},
 	{ "qos_orates",			"80-100,10-100,5-100,3-100,2-95,1-50,1-40,1-30,1-20,1-10"	},
 
-// new_qoslimit
-	{ "new_qoslimit_enable",			"0"				},
-	{ "new_qoslimit_obw",			""			},
-	{ "new_qoslimit_ibw",			""			},
-	{ "new_qoslimit_rules",			"" },
+
 
 // access restrictions
 	{ "rruleN",				"0"				},
@@ -565,6 +561,17 @@ const defaults_t defaults[] = {
 	{ "wd_aof",				""				},
 	
 #endif	// 0
+
+// new_qoslimit
+	{ "new_qoslimit_enable",			"0"				},
+	{ "new_qoslimit_obw",			""			},
+	{ "new_qoslimit_ibw",			""			},
+	{ "new_qoslimit_rules",			"" },
+
+// new_arpbind
+	{ "new_arpbind_enable",			"0"				},
+	{ "new_arpbind_only",			"0"			},
+	{ "new_arpbind_list",			"" },
 
 	{ NULL, NULL	}
 };

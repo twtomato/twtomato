@@ -1945,8 +1945,9 @@ function navi()
 			] ],
 		['網路瀏覽限制',	'restrict.asp'],
 		null,
-		['IP 限速',					'new', 0, [
+		['新功能',					'new', 0, [
 			['設定 IP 限速',				'qoslimit.asp'],
+			['ARP 綁定',				'arpbind.asp'],
 			['顯示 NVRAM 內容',			'nvramshow.asp']
 			] ],
 		null,,
