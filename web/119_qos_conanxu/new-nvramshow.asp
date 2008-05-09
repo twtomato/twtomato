@@ -18,7 +18,7 @@
 <script type="text/javascript">document.write('<base href="http://'+nvram.lan_ipaddr+'/">')</script>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] ·s¥\―ΰ: Εγ¥ά NVRAM ¤Ί®e</title>
+<title>[<% ident(); %>] ζ–°εθƒ½: ι΅―η¤Ί NVRAM ε…§ε®Ή</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <script type="text/javascript">document.write('<link rel=\'stylesheet\' type=\'text/css\' href="'+nvram.web_css+'.css">')</script>
 <script type='text/javascript' src='tomato.js'></script>
@@ -30,7 +30,7 @@
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
  <div class='title'>Tomato</div>
- <div class='version'>Version <% version(); %></div>
+ <div class='version'>(ηΉι«”/ζ­£ι«”)δΈ­ζ–‡η‰ <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -38,7 +38,7 @@
  
  
  
-<div class='section-title'>NVRam contents</div>
+<div class='section-title'>ι΅―η¤Ί NVRAM ε…§ε®Ή</div>
 <div class='section'>
 <script type='text/javascript'>
  

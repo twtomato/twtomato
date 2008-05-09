@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
-<title>[<% ident(); %>] �s�\��: ARP �j�w</title>
+<title>[<% ident(); %>] 新功能: ARP 綁定</title>
 <link rel='stylesheet' type='text/css' href='tomato.css'>
 <link rel='stylesheet' type='text/css' href='color.css'>
 <script type='text/javascript' src='tomato.js'></script>
@@ -142,7 +142,7 @@ function init()
 <table id='container' cellspacing=0>
 <tr><td colspan=2 id='header'>
 	<div class='title'>Tomato</div>
-	<div class='version'>Version <% version(); %></div>
+	<div class='version'>(繁體/正體)中文版 <% version(); %></div>
 </td></tr>
 <tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
 <td id='content'>
@@ -157,12 +157,12 @@ function init()
 <input type='hidden' name='new_arpbind_only'>
 <input type='hidden' name='new_arpbind_list'>
 
-<div class='section-title'>ARP Binding</div>
+<div class='section-title'>ARP 綁定</div>
 <div class='section'>
 	<script type='text/javascript'>
 	createFieldTable('', [
-		{ title: 'Enable ARP Binding', name: 'f_new_arpbind_enable', type: 'checkbox', value: nvram.new_arpbind_enable != '0' },
-		{ title: 'Limit unlisted machines', name: 'f_new_arpbind_only', type: 'checkbox', value: nvram.new_arpbind_only != '0' }
+		{ title: '啟用 ARP 綁定', name: 'f_new_arpbind_enable', type: 'checkbox', value: nvram.new_arpbind_enable != '0' },
+		{ title: '限制未輸入的機器', name: 'f_new_arpbind_only', type: 'checkbox', value: nvram.new_arpbind_only != '0' }
 	]);
 	</script>
 <br>
@@ -175,8 +175,8 @@ function init()
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='Save' id='save-button' onclick='save()'>
-	<input type='button' value='Cancel' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='儲存' id='save-button' onclick='save()'>
+	<input type='button' value='取消' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>
