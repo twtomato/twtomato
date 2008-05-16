@@ -91,7 +91,11 @@ function init()
 <div style='margin:20px 20px;font-size:14px;color:#555;'>
 Tomato Firmware v<% version(1); %><br>
 Copyright (C) 2006-2008 Jonathan Zarate<br>
-<a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br>
+<a href='http://www.polarcloud.com/tomato/' target='_new'>http://www.polarcloud.com/tomato/</a><br><br>
+Addons by Victek@gmail.com<br>
+- CPU Info | WAN Info | Extended Buttons/LED Script<br>
+- P2P Obfuscation | Additional Skins<br>
+- Bandwidth Limiter per IP/MAC<br>
 <br>
 建立於: <% build_time(); %><br>
 <br><br>
