@@ -21,6 +21,28 @@ TTL 是一種介面, 經常被用於 Integrated Circuits (IC) 之經的溝通.
 
 === 電路示意圖 ===
 
-http://linux.taiwan.googlepages.com/com2ttl.jpg 使用 *Null modem cable* 連接 Serial Port 與 TTL Console Port
+http://linux.taiwan.googlepages.com/com2ttl.jpg 
 
+使用 *Null modem cable* 連接 Serial Port 與 TTL Console Port
+
+
+=== 需要材料 ===
+
+DB-9 公頭 '*' 1
+
+容電 1uF '*' 4
+
+HIN232 '*' 1
+
+Null modem cable '*' 1
+
+洞洞板 '*' 1
+
+杜邦線母端子 '*' 4
+
+杜邦母頭 1 PIN '*' 4
+
+杜邦線 '*' 4
+
+2.0mm 1 PIN 排針 '*' 4
 
