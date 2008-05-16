@@ -1,3 +1,20 @@
+R211 (2008/05/17)
+    Added:
+    中文化 1.19.8800 Victek Mod
+    Fixed:
+    none.
+    Updated:
+                增加 西班牙 時區.
+	額外增加 2 個 自訂 script. 
+	更新 busybox 至 1.10.2 .
+	頻寬限制器每個 IP / Mac 和一些 風格（華碩，Buffalo， Linksys， ... ）多達8個主題。
+                前一次的WAN IP ， CPU的頻率..
+    none
+    Notes:  連線數 擴增至65535. ---- 原本 10240. 
+    Author:
+    BV2LK
+
+
 R207 (2008/05/10)
     Added:
     Fixed:
