@@ -1,4 +1,4 @@
-# Tomato 風格 
+#summary Tomato 風格
 
 = 變更 TOMATO 的 風格（布景主題）.=
 
