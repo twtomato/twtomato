@@ -22,15 +22,17 @@
 	width: 100%;
 }
 #qosg-grid .co1 {
-	width: 10%;
+	width: 6%;
 }
 #qosg-grid .co2 {
-	width: 20%;
+	width: 32%;
 }
 #qosg-grid .co3,
 #qosg-grid .co4,
 #qosg-grid .co5,
-#qosg-grid .co6,
+#qosg-grid .co6 {
+	width: 8%;
+}
 #qosg-grid .co7,
 #qosg-grid .co8,
 #qosg-grid .co9 {
@@ -43,7 +45,7 @@
 <script type='text/javascript'>
 // <% nvram("new_qoslimit_enable,new_qoslimit_ibw,new_qoslimit_obw,new_qoslimit_rules"); %>
 
-var class_prio = [['0',最高等'],['1','高等'],['2','中等'],['3','低等'],['4','最低等']];
+var class_prio = [['0','Highest'],['1','High'],['2','Normal'],['3','Low'],['4','Lowest']];
 var class_tcp = [['0','nolimit']];
 var class_udp = [['0','nolimit']];
 for (var i = 1; i <= 100; ++i) {
@@ -55,7 +57,7 @@ var qosg = new TomatoGrid();
 qosg.setup = function() {
 	this.init('qosg-grid', '', 20, [
 		{ type: 'text', maxlen: 2 },
-		{ type: 'text', maxlen: 15 },
+		{ type: 'text', maxlen: 31 },
 		{ type: 'text', maxlen: 6 },
 		{ type: 'text', maxlen: 6 },
 		{ type: 'text', maxlen: 6 },
@@ -63,7 +65,7 @@ qosg.setup = function() {
 		{ type: 'select', options: class_prio },
 		{ type: 'select', options: class_tcp },
 		{ type: 'select', options: class_udp }]);
-	this.headerSet(['封包標籤', 'IP 位址', '下載保證頻寬', '下載最大頻寬', '上傳保證頻寬', '上傳最大頻寬', '優先權', 'TCP 連線限制', 'UDP 連線限制']);
+	this.headerSet(['TC Tag', 'IP Address', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', 'Priority', 'TCP Limit', 'UDP Limit']);
 	var qoslimitrules = nvram.new_qoslimit_rules.split('>');
 	for (var i = 0; i < qoslimitrules.length; ++i) {
 		var t = qoslimitrules[i].split('<');
@@ -144,45 +146,45 @@ qosg.verifyFields = function(row, quiet)
 
 	if (v_range(f[0], quiet, 10, 99)) {
 		if(this.existID(f[0].value)) {
-			ferror.set(f[0], 'ID must between 10 and 99', quiet);
+			ferror.set(f[0], 'TC Tag 封包標籤 必須介於,10 至 99', quiet);
 			ok = 0;
 		}
 	}
 
 	if (v_ip(f[1], quiet)) {
 		if(this.existIP(f[1].value)) {
-			ferror.set(f[1], 'duplicate IP address', quiet);
+			ferror.set(f[1], 'IP 重覆', quiet);
 			ok = 0;
 		}
 	}
 
 	if( this.checkRate(f[2].value)) {
-		ferror.set(f[2], '下載保證頻寬必需介於 1 至 99999', quiet);
+		ferror.set(f[2], '下載保證頻寬DLRate 必須 介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[3].value)) {
-		ferror.set(f[3], '下載最大頻寬必需介於 1 至 99999', quiet);
+		ferror.set(f[3], '下載最大頻寬DLCeil 必須 介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[2].value, f[3].value)) {
-		ferror.set(f[3], '下載最大頻寬必需大於下載保證頻寬', quiet);
+		ferror.set(f[3], '下載最大頻寬DLCeil 必須 大於 下載保證頻寬DLRate', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[4].value)) {
-		ferror.set(f[4], '上傳保證頻寬必需介於 1 至 99999', quiet);
+		ferror.set(f[4], '上傳保證頻寬ULRate 必須 介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRate(f[5].value)) {
-		ferror.set(f[5], '上傳最大頻寬必需介於 1 至 99999', quiet);
+		ferror.set(f[5], '上傳最大頻寬ULCeil 必須 介於 1 至 99999', quiet);
 		ok = 0;
 	}
 
 	if( this.checkRateCeil(f[4].value, f[5].value)) {
-		ferror.set(f[5], '上傳最大頻寬必需大於上傳保證頻寬', quiet);
+		ferror.set(f[5], '上傳最大頻寬ULCeil 必須 大於 上傳保證頻寬ULRate', quiet);
 		ok = 0;
 	}
 
@@ -239,7 +241,7 @@ function init()
 <input type='hidden' name='new_qoslimit_enable'>
 <input type='hidden' name='new_qoslimit_rules'>
 
-<div class='section-title'>QoS Limit</div>
+<div class='section-title'>啟啟 IP 限速 請關閉 頻寬管理QOS </div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
@@ -252,6 +254,16 @@ createFieldTable('', [
 <table class='tomato-grid' id='qosg-grid'></table>
 </div>
 
+<div>
+<ul>
+<li><b>啟用 IP 限速 時請關閉 頻寬管理QoS</b>
+<li><b>'TC Tag' 封包標籤,</b>
+<li><b>'IP Address' IP 位址</b>
+<li><b>'DLRate' 下載保證頻寬, 'DLCeil' 下載最大頻寬 'ULRate'上傳保證頻寬, 'ULCeil' 上傳最大頻寬,</b>
+<li><b>'Priority' 優先權,</b>
+<li><b>'TCP Limit' TCP 連線限制. 'UDP Limit' UDP 連線限制.</b>
+</ul>
+</div>
 <!-- / / / -->
 
 </td></tr>
