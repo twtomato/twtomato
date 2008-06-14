@@ -1,3 +1,10 @@
+R221 (2008/06/15)
+	Fixed:
+	中文修正
+	Author:
+	BV2LK
+
+
 R219 (2008/06/14)
     Added:
     中文化 1.19.8850 Victek Mod

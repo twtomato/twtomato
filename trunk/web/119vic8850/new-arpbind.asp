@@ -162,7 +162,7 @@ function init()
 	<script type='text/javascript'>
 	createFieldTable('', [
 		{ title: '啟用 ARP 綁定', name: 'f_new_arpbind_enable', type: 'checkbox', value: nvram.new_arpbind_enable != '0' },
-		{ title: '限制未輸入的機器', name: 'f_new_arpbind_only', type: 'checkbox', value: nvram.new_arpbind_only != '0' }
+		{ title: '限制未列表的連線', name: 'f_new_arpbind_only', type: 'checkbox', value: nvram.new_arpbind_only != '0' }
 	]);
 	</script>
 <br>

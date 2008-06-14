@@ -407,9 +407,9 @@ createFieldTable('', [
 	{ title: '連線類型', name: 'f_type', type: 'select', options: [[0,'一般限制'],[1,'關閉無線']], value: (rule[5] == '~') ? 1 : 0 },
 	{ title: '適用於', name: 'f_comp_all', type: 'select', options: [[0,'所有的電腦 / 裝置'],[1,'以下列表...'],[2,'排除以下列表...']], value: 0 },
 	{ title: '&nbsp;', text: '<table class="tomato-grid" cellspacing=1 id="res-comp-grid"></table>' },
-	{ title: 'Blocked Resources', name: 'f_block_all', type: 'checkbox', suffix: ' 限制所有的網際網路連線', value: 0 },
-	{ title: 'Port /<br>Application', indent: 2, text: '<table class="tomato-grid" cellspacing=1 id="res-bp-grid"></table>' },
-	{ title: 'HTTP Request', indent: 2, name: 'f_block_http', type: 'textarea', value: rule[7] },
+	{ title: '封鎖資源', name: 'f_block_all', type: 'checkbox', suffix: ' 限制所有的網際網路連線', value: 0 },
+	{ title: '通訊埠 /<br>應用程式', indent: 2, text: '<table class="tomato-grid" cellspacing=1 id="res-bp-grid"></table>' },
+	{ title: 'HTTP Request/<br>(封鎖網址）', indent: 2, name: 'f_block_http', type: 'textarea', value: rule[7] },
 	{ title: '限制 HTTP 要求的檔案', indent: 2, multi: [
 		{ name: 'f_activex', type: 'checkbox', suffix: ' ActiveX (ocx, cab) &nbsp;&nbsp;', value: (rule[8] & 1) },
 		{ name: 'f_flash', type: 'checkbox', suffix: ' Flash (swf) &nbsp;&nbsp;', value: (rule[8] & 2) },

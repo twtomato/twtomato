@@ -1915,7 +1915,7 @@ function navi()
 			['追蹤路由',			'trace.asp'],
 			['搜尋AP',	'survey.asp'],
 			['網路喚醒 WOL',	'wol.asp'],
-			['NVRam Show',		'nvramshow.asp'] ] ],
+			['瀏覽NVRam內容',		'nvramshow.asp'] ] ],
 		null,
 		['一般設定', 				'basic', 0, [
 			['網路',			'network.asp'],
