@@ -1,3 +1,26 @@
+R219 (2008/06/14)
+    Added:
+    中文化 1.19.8850 Victek Mod
+    Fixed:
+    none.
+    Updated:
+                增加 西班牙 時區.
+	額外增加 2 個 自訂 script. 
+	更新 busybox 至 1.10.3 .
+	IP / Mac限速綁定 和一些 風格（華碩，Buffalo， Linksys， ... ）多達8個主題。
+                顯示前一次的WAN IP  ， CPU的頻率..
+    
+    Notes:  連線數 擴增至65535. 
+	原始碼 100MB
+	http://rapidshare.com/files/12232454...ceCode.7z.html
+	更新之後 機器必須 RESET ,勿使用備份檔恢復設定.
+    Author:
+    BV2LK
+
+
+
+
+
 R213 (2008/05/17)
     Added:
  	tomato119-speedmod-8502
