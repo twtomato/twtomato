@@ -241,7 +241,7 @@ function init()
 <input type='hidden' name='new_qoslimit_enable'>
 <input type='hidden' name='new_qoslimit_rules'>
 
-<div class='section-title'>啟啟 IP 限速 請關閉 頻寬管理QOS </div>
+<div class='section-title'>啟用 IP 限速 請關閉 頻寬管理QOS </div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
