@@ -80,7 +80,7 @@ reboot
 
 = LeonChiou 於PCZONE所發表 =
 
-||因為賣了Vigor2910
+因為賣了Vigor2910
 買了ASUS 520GU
 所以最近一直在試第三方的韌體！
 DD-WRT v2.4、Oleg_WL520gu-1.9.2.7-10
@@ -100,14 +100,17 @@ DD-WRT v2.4、Oleg_WL520gu-1.9.2.7-10
 那請你自己去下載 Tomato_1_19_ND
 
 登入主機後
+{{{
 # nvram set lan_ifnames="vlan0 eth1"
 # nvram set vlan1ports="0 5"
 # nvram commit
 Commit... done.
 # reboot
-就可以使用了....試試吧！ ||
+}}}
 
-http://lh3.ggpht.com/ddwrt.taiwan/SGIlTNQo6ZI/AAAAAAAAAIw/xxQ2HRS9YTg/s144/520gu.png
+就可以使用了....試試吧！ 
+
+http://lh3.ggpht.com/ddwrt.taiwan/SGIlTNQo6ZI/AAAAAAAAAIw/xxQ2HRS9YTg/s800/520gu.png
 
 
 
