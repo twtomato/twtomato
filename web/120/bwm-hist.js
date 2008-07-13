@@ -59,22 +59,22 @@ function ymText(yr, mo)
 {
 	switch (dateFormat) {
 	case 1:
-		return (mo + 1).pad(2) + '-' + yr;
+		return (mo + 1).pad(2) + ' 月- ' + yr + ' 年 ' ;
 	case 2:
-		return months[mo] + ' ' + yr;
+		return months[mo] + ' ' + yr + ' 年 ' ;
 	}
-	return yr + '-' + (mo + 1).pad(2);
+	return yr + ' 年- ' + (mo + 1).pad(2) + ' 月 ' ;
 }
 
 function ymdText(yr, mo, da)
 {
 	switch (dateFormat) {
 	case 1:
-		return (mo + 1) + '-' + da.pad(2) + '-' + yr;
+		return (mo + 1) + ' 月- ' + da.pad(2) + ' 日- ' + yr + ' 年 ' ;
 	case 2:
-		return months[mo] + ' ' + da + ', ' + yr;
+		return months[mo] + ' ' + da + ' 日 ' + yr + ' 年 ' ;
 	}
-	return yr + '-' + (mo + 1).pad(2) + '-' + da.pad(2);
+	return yr + ' 年- ' + (mo + 1).pad(2) + ' 月- ' + da.pad(2) + ' 日 ';
 }
 
 function changeDate(e, c)

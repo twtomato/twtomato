@@ -103,7 +103,7 @@ function init()
 <div class='section-title'>WAN 每日流量</div>
 <div id='bwm-daily-grid' style='float:left'></div>
 <div style="float:right;text-align:right">
-<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>yyyy-mm-dd</option><option value=1>mm-dd-yyyy</option><option value=2>mmm dd, yyyy</option></select><br>
+<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>年-月-日</option><option value=1>月-日-年</option><option value=2>月 日, 年</option></select><br>
 <b>單位切換</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
 <br>
 &raquo; <a href="admin-bwm.asp">設定</a>

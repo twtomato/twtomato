@@ -243,7 +243,7 @@ function init()
 <div class='section-title'>WAN 每週使用流量</div>
 <div id='bwm-weekly-grid' style='float:left'></div>
 <div style="float:right;text-align:right">
-<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>yyyy-mm-dd</option><option value=1>mm-dd-yyyy</option><option value=2>mmm dd, yyyy</option></select><br>
+<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>年-月-日</option><option value=1>月-日-年</option><option value=2>月 日, 年</option></select><br>
 <b>顯示方式</b> <select onchange='changeMode(this)' id='shmode'><option value=1 selected>總和<option value=0>列表</select><br>
 <b>每週的第一天</b> <select onchange='changeStart(this)' id='startwk'><option value=0 selected>日<option value=1>一<option value=2>二<option value=3>三<option value=4>四<option value=5>五<option value=6>六</select><br>
 <b>單位切換</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
