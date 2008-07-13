@@ -1,3 +1,11 @@
+R226 (2008/07/13)
+	Tomato 1.20 漢字化
+	Fixed:
+	WL-500gE ---> WL-550gE 
+	WX-6615GT  boardflags ---> 0x2388
+	解除 ip_conntrack_max 限制
+
+
 R221 (2008/06/15)
 	Fixed:
 	中文修正
