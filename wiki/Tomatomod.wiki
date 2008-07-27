@@ -1,0 +1,17 @@
+#summary Tomoto MOD 強化版本.
+
+= Tomoto MOD 強化版本 =
+
+
+當今最活躍應該是 VICTEK 的 TOMATO RAF 系列.
+[http://victek.is-a-geek.com/tomato.html Tomato Firmware Mod's by Victek]
+
+
+Roadkill- Tomato Mod with OpenVPN , SD/MMC Support 系列
+[http://www.linksysinfo.org/forums/showthread.php?t=53233 Tomato Mod with OpenVPN]
+
+
+hardc0re 的 SPEEDMOD 系列
+[http://touristinparadise.blogspot.com/2008/04/linksys-wrt54gl-routers-improving.html Linksys WRT54GL Routers: Improving Performance]
+
+
