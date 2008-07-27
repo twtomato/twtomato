@@ -38,7 +38,7 @@ function cmpHist(a, b)
 function checkRstats()
 {
 	if (nvram.rstats_enable != '1') {
-		W('<div class="note-disabled">頻寬監控已關閉.</b><br><br><a href="admin-bwm.asp">開啟 >Enable &raquo;<raquo;</a></div>');
+		W('<div class="note-disabled">頻寬監控已關閉.</b><br><br><a href="admin-bwm.asp">開啟 &raquo;<raquo;</a></div>');
 		E('rstats').style.display = 'none';
 	}
 	else if (rstats_busy) {
