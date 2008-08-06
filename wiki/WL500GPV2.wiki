@@ -68,7 +68,7 @@ http://lh4.google.com/ddwrt.taiwan/R8ZmBk-DomI/AAAAAAAAACw/U0tTKgpfDE4/s400/buff
 
 http://lh4.ggpht.com/ddwrt.taiwan/SF5Ao4ZupQI/AAAAAAAAAHA/vDw80RTJEL4/s800/reset.jpg
 
-11. telnet 進去機器 輸入
+11. telnet 進去機器 輸入   (※2008/08/06 註 TOMATO_1.21_ND 以後的版本不須修改 ）
 {{{
 nvram set vlan1ports="4 5"
 nvram commit
