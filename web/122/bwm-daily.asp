@@ -75,7 +75,7 @@ function redraw()
 	if (daily_history.length > 0) {
 		ymd = getYMD(daily_history[0][0]);
 		d = new Date((new Date(ymd[0], ymd[1], ymd[2], 12, 0, 0, 0)).getTime() - ((30 - 1) * 86400000));
-		E('last-dates').innerHTML = '(' + ymdText(ymd[0], ymd[1], ymd[2]) + ' to ' + ymdText(d.getFullYear(), d.getMonth(), d.getDate()) + ')';
+		E('last-dates').innerHTML = '(' + ymdText(ymd[0], ymd[1], ymd[2]) + ' 至 ' + ymdText(d.getFullYear(), d.getMonth(), d.getDate()) + ')';
 
 		lastt = ((d.getFullYear() - 1900) << 16) | (d.getMonth() << 8) | d.getDate();
 	}
@@ -146,10 +146,10 @@ function init()
 
 
 <table class='tomato-grid' style='width:150px'>
-<tr class='header'><td colspan=2 style='text-align:center'>Last 30 Days<br><span style='font-weight:normal' id='last-dates'></span></td></tr>
-<tr class='even'><td>Down</td><td id='last-dn'>-</td></tr>
-<tr class='odd'><td>Up</td><td id='last-up'>-</td></tr>
-<tr class='footer'><td>Total</td><td id='last-total'>-</td></tr>
+<tr class='header'><td colspan=2 style='text-align:center'>倒數 30 天<br><span style='font-weight:normal' id='last-dates'></span></td></tr>
+<tr class='even'><td>下載</td><td id='last-dn'>-</td></tr>
+<tr class='odd'><td>上傳</td><td id='last-up'>-</td></tr>
+<tr class='footer'><td>總和</td><td id='last-total'>-</td></tr>
 </table>
 
 <br>
