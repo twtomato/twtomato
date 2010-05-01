@@ -20,3 +20,9 @@
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
 ################################################
+
+#
+#	tomato.js
+#		function navi()
+#
+s/\['System',/\['系統指令',/g

@@ -25,13 +25,13 @@
 #	status-overview.asp
 #
 s/title: 'Wireless Network Mode',/title: '無線網路模式',/g
-s/title: 'Channel Width',/title: '頻寬',/g
+s/title: 'Channel Width',/title: '頻道寬度',/g
 s/title: 'Rate',/title: 'Rate',/g
 
 #
 #	status-devices.asp
 #
-s/\['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Quality', 'TX/RX Rate&nbsp;', 'Lease &nbsp; &nbsp; ']/\['介面', 'MAC 位址', 'IP 位址', '名稱', 'RSSI \&nbsp; \&nbsp; ', '品質', 'TX/RX Rate\&nbsp;', '剩餘租約 \&nbsp; \&nbsp; ']/g
+s/\['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Quality', 'TX\/RX Rate&nbsp;', 'Lease &nbsp; &nbsp; ']/['介面', 'MAC 位址', 'IP 位址', '名稱', 'RSSI \&nbsp; \&nbsp; ', '品質', 'Tx\/Rx Rate\&nbsp;', '剩餘租約 \&nbsp; \&nbsp; ']/g
 
 #
 #	status-log.asp
@@ -68,171 +68,5 @@ s/\['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Qu
 #
 #	tools-shell.asp
 #
-
-#
-#	tools-survey.asp
-#
-
-#
-#	tools-wol.asp
-#
-
-#
-#	basic-network.asp
-#
-
-#
-#	basic-ident.asp
-#
-
-#
-#	basic-time.asp
-#
-
-#
-#	basic-ddns.asp
-#
-
-#
-#	basic-static.asp
-#
-
-#
-#	basic-wfilter.asp
-#
-
-#
-#	advanced-ctnf.asp
-#
-
-#
-#	advanced-dhcpdns.asp
-#
-
-#
-#	advanced-firewall.asp
-#
-
-#
-#	advanced-mac.asp
-#
-
-#
-#	advanced-misc.asp
-#
-
-#
-#	advanced-routing.asp
-#
-
-#
-#	advanced-wireless.asp
-#
-
-#
-#	forward-basic.asp
-#
-
-#
-#	forward-dmz.asp
-#
-
-#
-#	forward-triggered.asp
-#
-
-#
-#	forward-upnp.asp
-#
-
-#
-#	qos-settings.asp
-#
-
-#
-#	qos-classify.asp
-#
-
-#
-#	qos-graphs.asp
-#
-
-#
-#	qos-detailed.asp
-#
-
-#
-#	restrict.asp
-#
-
-#
-#	nas-usb.asp
-#
-
-#
-#	nas-ftp.asp
-#
-
-#
-#	nas-samba.asp
-#
-
-#
-#	vpn-server.asp
-#
-
-#
-#	vpn-client.asp
-#
-
-#
-#	admin-access.asp
-#
-
-#
-#	admin-bwm.asp
-#
-
-#
-#	admin-buttons.asp
-#
-
-#
-#	admin-cifs.asp
-#
-
-#
-#	admin-config.asp
-#
-
-#
-#	admin-debug.asp
-#
-
-#
-#	admin-jffs2.asp
-#
-
-#
-#	admin-log.asp
-#
-
-#
-#	admin-sched.asp
-#
-
-#
-#	admin-scripts.asp
-#
-
-#
-#	admin-upgrade.asp
-#
-
-#
-#	about.asp
-#
-
-#
-#	about.asp
-#
+s/>Execute System Commands</>執行系統指令</g
+s/value='Execute'/value='執行'/g
