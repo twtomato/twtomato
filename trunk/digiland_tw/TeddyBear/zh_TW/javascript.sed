@@ -23,6 +23,13 @@
 
 #
 #	tomato.js
-#		function navi()
 #
 s/\['System',/\['系統指令',/g
+s/\['USB and NAS',/\['USB與NAS設定',/g
+s/\['USB Support',/\['USB 設定',/g
+s/,\['FTP Server',/,\['FTP 伺服器',/g
+s/,\['File Sharing',/,\['Samba 伺服器',/g
+s/\['VPN Tunneling',/\['VPN 通道',/g
+s/\['Server',/\['伺服器',/g
+s/\['Client',/\['客戶端',/g
+s/\['JFFS',/\['JFFS',/g
