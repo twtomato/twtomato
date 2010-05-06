@@ -6,17 +6,24 @@
 #		For use with Tomato Firmware only.
 #		No part of this file may be used without permission.	
 #--------------------------------------------------------
-#		Tomato GUI ¤¤¤å¤Æ(zh_TW.UTF-8)
-#		ª©¥»: 1.27
-#		ª©Åv: GNU General Public License v2
+#		Tomato GUI ä¸­æ–‡åŒ–(zh_TW.UTF-8)
+#		ç‰ˆæœ¬: 1.27
+#		ç‰ˆæ¬Š: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
 ########################################
 
+#
+#	bwm-graph.svg
+#
 :a $!N;s/text {\(\n\)	font: 11px monospace;/text {\1	font-family: "Trebuchet MS", "Lucida Sans", Arial, monospace;font-size: 0.9em;/
-s/var week = \['Sun','Mon','Tue','Wed','Thu','Fri','Sat'\];/var week = \['¬P´Á¤é','¬P´Á¤@','¬P´Á¤G','¬P´Á¤T','¬P´Á¥|','¬P´Á¤­','¬P´Á¤»'\];/g
+s/\['Sun','Mon','Tue','Wed','Thu','Fri','Sat']/['æ˜ŸæœŸæ—¥','æ˜ŸæœŸä¸€','æ˜ŸæœŸäºŒ','æ˜ŸæœŸä¸‰','æ˜ŸæœŸå››','æ˜ŸæœŸäº”','æ˜ŸæœŸå…­']/g
+s/' am'/' ä¸Šåˆ'/g
+s/' pm'/' ä¸‹åˆ'/g
+
+#
+#	qos-graph.svg
+#
 :a $!N;s/#info {\(\n\)	font: 11px sans-serif;/#info {\1	font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;font-size: 0.9em;/
 :a $!N;s/#tip-text {\(\n\)	font: 11px sans-serif;/#tip-text {\1	font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;font-size: 0.9em;/
-s/var abc = \['Unclassified', 'Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A', 'Class B', 'Class C', 'Class D', 'Class E'\];/var abc = \['¤£¤Àµ¥', '³Ì°ªµ¥', '°ªµ¥', '¤¤µ¥', '§Cµ¥', '³Ì§Cµ¥', '¢Ïµ¥', '¢Ğµ¥', '¢Ñµ¥', '¢Òµ¥', '¢Óµ¥'\];/g
-s/z += ' am';/z += ' ¤W¤È';/g
-s/z += ' pm';/z += ' ¤U¤È';/g
+s/\['Unclassified', 'Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A', 'Class B', 'Class C', 'Class D', 'Class E']/['æœªåˆ†ç­‰', 'æœ€é«˜ç­‰ç´š', 'é«˜ç­‰ç´š', 'ä¸­ç­‰ç´š', 'ä½ç­‰ç´š', 'æœ€ä½ç­‰ç´š', 'ï¼¡ç­‰ç´š', 'ï¼¢ç­‰ç´š', 'ï¼£ç­‰ç´š', 'ï¼¤ç­‰ç´š', 'ï¼¥ç­‰ç´š']/g
