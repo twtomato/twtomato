@@ -198,14 +198,102 @@ s/title: 'Qdisc Scheduler'/title: 'Qdisc Scheduler'/g
 #
 #	nas-usb.asp
 #
+s/>USB Support</>USB 設定(USB Support)</g
+s/title: 'Core USB Support'/title: 'USB 核心'/g
+s/title: 'USB 2.0 Support'/title: 'USB 2.0'/g
+s/title: 'USB 1.1 Support'/title: 'USB 1.1'/g
+s/title: 'USB Printer Support'/title: 'USB 印表機'/g
+s/title: 'Bidirectional copying'/title: '雙向列印'/g
+s/title: 'USB Storage Support'/title: 'USB 儲存設備'/g
+s/title: 'File Systems Support'/title: '檔案系統'/g
+s/title: 'Automount'/title: '自動掛載'/g
+s/' <small>Automatically mount all partitions to sub-directories in <i>\/mnt<\/i>./' <small>自動掛載所有分割區於 <i>\/mnt<\/i> 的子目錄下./g
+s/title: 'Run after mounting'/title: '自動掛載後執行'/g
+s/title: 'Run before unmounting'/title: '卸載移除前執行'/g
+s/title: 'Hotplug script<br><small>(called when any USB device is attached or removed)<\/small>'/title: '熱插拔指令<br><small>(當 USB 設備插入或拔除時)<\/small>'/g
+s/text: '<small>Some of the changes will take effect only after a restart.<\/small>'/text: '<small>某些設定值, 只在重新開機後才有效.<\/small>'/g
+s/>Attached Devices</>插入的週邊設備(Attached Devices)</g
+s/\['Type', 'Host', 'Vendor', 'Description', 'Mounted?']/['型式', '埠(Host)', '晶片商(Vendor)', '註解', '已掛載?']/g
+s/'The device is busy. Please make sure no applications are using it, and try again.'/'設備忙碌中. 請確認無應用程式使用此設備後, 再試一次.'/g
+s/'Failed to mount. Verify the device is plugged in, and try again.'/'掛載失敗. 請確認設備已插入後, 再試一次.'/g
+s/" title="Mount all Partitions of Storage Device" id="L' + i + '">\[ Mount ]/" title="掛載儲存設備的所有分割區" id="L' + i + '">[ 掛載 ]/g
+s/" title="Safely Remove Storage Device" id="L' + i + '">\[ Unmount ]/" title="安全的卸載移除儲存設備" id="L' + i + '">[ 卸載 ]/g
+s/' is active ' : ' is mounted '/' 啟用 ' : ' 已掛載 '/g
+s/'on ' : '') : ' is not mounted '/'於 ' : '') : ' 未掛載 '/g
 
 #
 #	nas-ftp.asp
 #
+s/>FTP Server Configuration</>vsftpd 伺服器設定(FTP Server Configuration)</g
+s/title: 'Enable FTP Server'/title: '啟用 FTP 伺服器'/g
+s/options: \[\['0', 'No'],\['1', 'Yes, WAN and LAN'],\['2', 'Yes, LAN only']]/options: [['0', '停用'],['1', '啟用, WAN 與 LAN'],['2', '啟用, 僅 LAN']]/g
+s/title: 'FTP Port'/title: 'FTP 埠'/g
+s/title: 'Allowed Remote<br>Address(es)'/title: '允許連線的遠端位址'/g
+s/title: 'Anonymous Users Access'/title: '匿名存取'/g
+s/options: \[\['0', 'Disabled'],\['1', 'Read\/Write'],\['2', 'Read Only'],\['3', 'Write Only']]/options: [['0', '禁止'],['1', '讀\/寫'],['2', '唯讀'],['3', '唯寫']]/g
+s/title: 'Allow Super User to Login\*'/title: '允許管理員登入*'/g
+s/' <small>Allows users to connect with admin account./' <small>允許 admin 帳戶登入./g
+s/title: 'Log FTP requests and responses'/title: '紀錄 FTP 請求與回應'/g
+s/<small>\* Avoid using this option when FTP server is enabled for WAN. IT PROVIDES FULL ACCESS TO THE ROUTER FILE SYSTEM!/<small>* 請避免將 FTP 伺服器曝露於網際網路(WAN). 這將提供外界完整存取路由器檔案系統的能力!/g
+s/>Directories</>目錄(Directories)</g
+s/title: 'Public Root Directory\*'/title: '公用根目錄*'/g
+s/' <small>(for authenticated users access)/' <small>(認證用戶公共存取)/g
+s/title: 'Private Root Directory\*'/title: '私有根目錄*'/g
+s/' <small>(for authenticated users access in private mode)/' <small>(認證用戶私人專用存取)/g
+s/title: 'Anonymous Root Directory\*'/title: '匿名根目錄*'/g
+s/' <small>(for anonymous connections)/' <small>(匿名登入者存取)/g
+s/title: 'Directory Listings'/title: '顯示目錄清單'/g
+s/options: \[\['0', 'Enabled'],\['1', 'Disabled'],\['2', 'Disabled for Anonymous']]/options: [['0', '啟用'],['1', '取消'],['2', '匿名者, 取消']]/g
+s/' <small>(always enabled for Super User)/' <small>(管理者始終顯示目錄清單)/g
+s/<small>\* When no directory is specified, \/mnt is used as a root directory./<small>* 若未指定目錄, \/mnt 是根目錄./g
+s/>Limits</>限制(Limits)</g
+s/title: 'Maximum Users Allowed to Log in'/title: '最大登入者數'/g
+s/' <small>(0 - unlimited)/' <small>(0 - 不限制)/g
+s/title: 'Maximum Connections from the same IP'/title: '相同 IP 最大連線數'/g
+s/title: 'Maximum Bandwidth for Anonymous Users'/title: '匿名登入最大頻寬'/g
+s/title: 'Maximum Bandwidth for Authenticated Users'/title: '認證用戶最大頻寬'/g
+s/title: 'Idle Timeout'/title: '閒置逾時'/g
+s/<small>every/<small>次, 每/g
+s/<small>seconds/<small>秒內/g
+s/>Custom Configuration</>自訂設定(Custom Configuration)</g
+s/Custom Configuration'/自訂設定值'/g
+s/>User Accounts</>使用者帳戶(User Accounts)</g
+s/['User Name', 'Password', 'Access']/['使用者名稱', '密碼', '存取能力']/g
+s/\[\['Read\/Write', 'Read\/Write'],\['Read Only', 'Read Only'],\['View Only', 'View Only'],\['Private', 'Private']]/[['Read\/Write', '讀\/寫'],['Read Only', '唯讀'],['View Only', '僅供查閱'],['Private', '私人專用']]/g
+s/'Invalid user name. Only characters "A-Z 0-9 - _" are allowed.'/'無效的使用者名稱. 只接受 "A-Z 0-9 - _" 字元.'/g
+s/'Duplicate user name.'/'重複的使用者名稱.'/g
+s/'Empty user name is not allowed.'/'使用者名稱不可空白.'/g
 
 #
 #	nas-samba.asp
 #
+s/>Samba File Sharing</>Samba 伺服器設定(Samba File Sharing)</g
+s/title: 'Enable File Sharing'/title: '啟用檔案分享'/g
+s/options: \[\['0', 'No'],\['1', 'Yes, no Authentication'],\['2', 'Yes, Authentication required']]/options: [['0', '停用'],['1', '啟用, 無認證'],['2', '啟用, 需認證']]/g
+s/title: 'User Name'/title: '使用者名稱'/g
+s/title: 'Workgroup Name'/title: '工作群組名稱'/g
+s/title: 'Client Codepage'/title: '電腦端語言代碼(Codepage)'/g
+s/options: \[\['', 'Unspecified'],\['437', '437 (United States, Canada)'],\['850', '850 (Western Europe)'],\['852', '852 (Central \/ Eastern Europe)'],\['866', '866 (Cyrillic \/ Russian)']/options: [['', '未指定'],['437', '437 (United States, Canada)'],['850', '850 (Western Europe)'],['852', '852 (Central \/ Eastern Europe)'],['866', '866 (Cyrillic \/ Russian)']/g
+s/['932', '932 (Japanese)'],['936', '936 (Simplified Chinese)'],['949', '949 (Korean)'],['950', '950 (Traditional Chinese \/ Big5)']/['932', '932 (Japanese)'],['936', '936 (Simplified Chinese)'],['949', '949 (Korean)'],['950', '950 (正體中文 \/ Big5)']/g
+s/' <small> (start cmd.exe and type chcp to see the current code page)/' <small> (於附屬應用程式之命令提示字元, 輸入 chcp 查閱目前的語言代碼)/g
+s/title: 'Auto-share all USB Partitions'/title: '自動分享全部 USB 磁碟分割區'/g
+s/options: \[\['0', 'Disabled'],\['1', 'Read Only'],\['2', 'Read \/ Write'],\['3', 'Hidden Read \/ Write']]/options: [['0', '禁止'],['1', '唯讀'],['2', '讀 \/ 寫'],['3', '隱藏式 讀 \/ 寫']]/g
+s/title: 'Options'/title: '選項'/g
+s/>Network Shares List</>網路分享清單(Network Shares List)</g
+s/\['Share Name', 'Directory', 'Description', 'Access Level', 'Hidden']/['分享名稱', '目錄', '註解', '存取權限', '隱藏']/g
+s/<small>When no shares are specified, <i>\/mnt<\/i> directory is shared in Read Only mode./<small>若未設定網路分享清單, <i>\/mnt<\/i> 是唯讀分享./g
+s/'Invalid '/'無效的 '/g
+s/\['Read Only', 'Read \/ Write']\[data[3]], \['No', 'Yes']/['唯讀', '讀 \/ 寫'][data[3]], ['否', '是']/g
+s/'Invalid share name. Only characters "$ A-Z 0-9 - _" and spaces are allowed.'/'無效的分享名稱. 只接受 "$ A-Z 0-9 - _" 與空格字元.'/g
+s/'Duplicate share name.'/'重複的分享名稱.'/g
+s/'Empty share name is not allowed.'/'分享名稱不可空白.'/g
+s/quiet, 'Directory'/quiet, '目錄'/g
+s/quiet, 'Description'/quiet, '註解'/g
+s/'Directory must not be empty.'/'目錄不可空白.'/g
+s/\[\[0, 'Read Only'],\[1, 'Read \/ Write']]/[[0, '唯讀'],[1, '讀 \/ 寫']]/g
+s/\[\[0, 'No'],\[1, 'Yes']]/[[0, '否'],[1, '是']]/g
+s/'User Name must not be empty.'/'使用者名稱不可空白.'/g
+s/'User Name root is not allowed.'/'不允許使用者名稱為 root.'/g
 
 #
 #	vpn-server.asp

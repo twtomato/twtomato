@@ -445,7 +445,7 @@ s/Advanced: Routing/進階設定：路由表/g
 s/>Current Routing Table</>路由表(Current Routing Table)</g
 s/\['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface']/['目的地', '閘道', '子網路遮罩', '路徑量', '介面']/g
 s/>Static Routing Table</>靜態路由表(Static Routing Table)</g
-s/\['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface', 'Description']/['目的地', '閘道', '子網路遮罩', '路徑量', '介面', '描述']/g
+s/\['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface', 'Description']/['目的地', '閘道', '子網路遮罩', '路徑量', '介面', '註解']/g
 s/title: 'Mode'/title: '模式'/g
 s/options: \[\['gateway','Gateway'],\['router','Router']]/options: [['gateway','閘道(Gateway)'],['router','路由(Router)']]/g
 s/title: 'RIPv1 \&amp; v2'/title: 'RIPv1 \&amp; v2'/g
@@ -671,7 +671,7 @@ s/title: 'HTTP Port'/title: 'HTTP 通訊埠'/g
 s/title: 'HTTPS Port'/title: 'HTTPS 通訊埠'/g
 s/title: 'SSL Certificate'/title: 'SSL 憑證'/g
 s/title: 'Common Name (CN)'/title: '一般名稱 (CN)'/g
-s/>(optional; space separated)</>(可空白; 以空隔space區分)</g
+s/>(optional; space separated)</>(可空白; 以空格字元區分)</g
 s/title: 'Regenerate'/title: '重新產生'/g
 s/title: 'Save In NVRAM'/title: '儲存至 NVRAM'/g
 s/title: 'Remote Access'/title: '遠端登入'/g
@@ -699,8 +699,8 @@ s/("Unsaved changes will be lost. Continue anyway?")/("尚未儲存的設定值�
 s/'Warning: Web Admin is about to be disabled. If you decide to re-enable Web Admin at a later time, it must be done manually via Telnet, SSH or by performing a hardware reset. Are you sure you want to do this?'/'請注意: 若關閉網頁管理介面(WebUI), 則只能使用 Telnet, SSH 登入或作硬體 Reset 機器. 您確定要這樣做嗎?'/g
 s/'The local http\/https must also be enabled when using remote access.'/'遠端管理必須開啟 HTTP\/HTTPS.'/g
 s/'Invalid SSH key.'/'無效的 SSH 金鑰'/g
-s/'Both passwords must match.'/'輸入的密碼不同'/g
-s/'Password must not be empty.'/'請輸入密碼'/g
+s/'Both passwords must match.'/'二次輸入的密碼需相同.'/g
+s/'Password must not be empty.'/'密碼不可空白.'/g
 
 #
 #	admin-bwm.asp
@@ -864,7 +864,7 @@ s/>Custom 3</>自訂 3</g
 #	admin-scripts.asp
 #
 s/Admin: Scripts/路由器管理：系統指令/g
-s/\[\['as-init', 'Init'],\['as-shut', 'Shutdown'],\['as-fire','Firewall'],\['as-wanup', 'WAN Up']]/[['as-init', '開機後(Init)'],['as-shut', '關機前(Shutdown)'],['as-fire','防火牆(Firewall)'],['as-wanup', 'WAN 連線後(WAN Up)']]/g
+s/\[\['as-init', 'Init'],\['as-shut', 'Shutdown'],\['as-fire','Firewall'],\['as-wanup', 'WAN Up']]/[['as-init', '初始化(Init)'],['as-shut', '關機前(Shutdown)'],['as-fire','防火牆(Firewall)'],['as-wanup', 'WAN 連線後(WAN Up)']]/g
 s/' script is too long. Maximum allowed is ' + x + ' bytes.'/' 指令太多. 請勿超過 ' + x + ' 位元組.'/g
 s/'> Word Wrap'/'> 自動換行'/g
 
