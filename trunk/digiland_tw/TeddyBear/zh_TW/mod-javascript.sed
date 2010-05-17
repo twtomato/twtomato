@@ -29,6 +29,7 @@ s/\['USB and NAS',/['USB 與 NAS',/g
 s/\['USB Support',/['USB 支援',/g
 s/,\['FTP Server',/,['FTP 伺服器',/g
 s/,\['File Sharing',/,['檔案分享',/g
+s/,\['Media Server',/,['媒體伺服器',/g
 s/\['VPN Tunneling',/['VPN 通道',/g
 s/\['Server',/['伺服器',/g
 s/\['Client',/['客戶端',/g

@@ -31,7 +31,7 @@ s/\['Ping',/['Ping',/g
 s/\['Trace',/['路由追蹤',/g
 s/\['Wireless Survey',/['搜尋無線基地台',/g
 s/\['WOL',/['網路喚醒',/g
-s/\['Basic',/['一般設定',/g
+s/\['Basic',/['基本設定',/g
 s/\['Network',/['網路',/g
 s/\['Identification',/['基本資料',/g
 s/\['Time',/['時間',/g
@@ -47,16 +47,16 @@ s/\['Miscellaneous',/['其他設定',/g
 s/\['Routing',/['路由表',/g
 s/\['Wireless',/['無線網路參數',/g
 s/\['Port Forwarding',/['通訊埠轉送',/g
-s/\['Basic',/['一般設定',/g
+s/\['Basic',/['基本設定',/g
 s/\['DMZ',/['虛擬非軍事區',/g
 s/\['Triggered',/['觸發式轉送',/g
 s/\['UPnP \/ NAT-PMP',/['UPnP \/ NAT-PMP',/g
 s/\['QoS',/['頻寬管理',/g
-s/\['Basic Settings',/['一般設定',/g
-s/\['Classification',/['分等機制',/g
+s/\['Basic Settings',/['基本設定',/g
+s/\['Classification',/['分級管制',/g
 s/\['View Graphs',/['圖形分析',/g
 s/\['View Details',/['連線列表',/g
-s/\['Access Restriction',/['網路瀏覽限制',/g
+s/\['Access Restriction',/['連線管制',/g
 s/\['Administration',/['路由器管理',/g
 s/\['Admin Access',/['連線登入與密碼',/g
 s/\['Bandwidth Monitoring',/['頻寬監控',/g
@@ -80,11 +80,12 @@ s/'Invalid MAC or IP address'/'無效的 MAC 或 IP 位址'/g
 s/'Invalid IP address range'/'無效的 IP 範圍'/g
 s/'Invalid IP address'/'無效的 IP 位址'/g
 s/'IP address outside of LAN'/'IP 位址超出 LAN'/g
-s/'Invalid netmask'/'無效的子網路遮罩 不正確'/g
+s/'Invalid netmask'/'無效的子網路遮罩'/g
 s/'Invalid netmask - '/'無效的子網路遮罩 - '/g
 s/'Invalid port range: '/'無效的通訊埠範圍: '/g
 s/'Invalid port'/'無效的通訊埠'/g
-s/'Expecting a list of ports or port range.'/'必須表中列的 通訊埠 或 通訊埠範圍.'/g
+s/'Expecting a list of ports or port range.'/'必需是列表中的通訊埠或通訊埠範圍.'/g
+s/'Only 10 ports\/range sets are allowed.'/'只允許 10 組通訊埠\/範圍.'/g
 s/'Invalid MAC address'/'無效的 MAC 位址'/g
 s/'Invalid length. Please enter at least ' + min + ' character'/'不正確的長度. 請至少輸入  ' + min + ' 個字元'/g
 s/'Invalid length. Please reduce the length to ' + max + ' characters or less.'/'不正確的長度. 請縮短長度少於 ' + max + ' 個字元'/g
@@ -97,7 +98,7 @@ s/title = 'Click to edit'/title = '點選編輯'/g
 s/'1 minute'/'1 分鐘'/g
 s/' minutes'/' 分鐘'/g
 s/' seconds'/' 秒'/g
-s/'Auto Refresh'/自動更新'/g
+s/'Auto Refresh'/'自動更新'/g
 s/value="Delete"/value="刪除"/g
 s/value="OK"/value="確認"/g
 s/value="Cancel"/value="取消"/g
