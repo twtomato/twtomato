@@ -15,7 +15,7 @@
 #		http://tomatovpn.keithmoyer.com/
 #-------------------------------------------------------------------
 #		Tomato Teddy Bear Mod GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.27.8745
+#		版本: 1.27.8747
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
@@ -25,7 +25,8 @@
 #	status-overview.asp
 #
 s/title: 'Wireless Network Mode'/title: '無線網路模式'/g
-s/title: 'Channel Width'/title: '頻道寬度'/g
+s/title: 'Channel Width'/title: '頻寬'/g
+s/title: 'Interference Level'/title: '干擾準位'/g
 s/title: 'Rate'/title: '速率'/g
 
 #
@@ -86,11 +87,15 @@ s/value='Execute'/value='執行'/g
 s/\[\['mixed','Auto'],\['b-only','B Only'],\['g-only','G Only']]/[['mixed','自動'],['b-only','僅 802.11b'],['g-only','僅 802.11g']]/g
 s/\['bg-mixed','B\/G Mixed']/['bg-mixed','B\/G 混合']/g
 s/\['n-only','N Only']/['n-only','僅 802.11n']/g
+s/'WPA with TKIP encryption is not supported in N mode.'/'802.11n 不支援 WPA 加密 TKIP 編碼.'/g
+s/'N-only is not supported in wireless client modes.'/'802.11n 不支援無線用戶端(wireless client)模式.'/g
+s/'Fixed wireless channel required in WDS mode.'/'WDS 模式需要固定頻道.'/g
 s/title: 'Use DHCP'/title: '使用 DHCP'/g
 
 #
 #	basic-ident.asp
 #
+s/'Invalid hostname. Only characters "A-Z 0-9" with "-" in the middle are allowed.'/'無效的主機名稱. 只允許 "A~Z 0~9" 與 "-" 字元.'/g
 
 #
 #	basic-time.asp
@@ -112,7 +117,7 @@ s/'UTC+08:00 China, Hong Kong, Western Australia, Singapore, Taiwan'/'UTC+08:00 
 #
 #	advanced-ctnf.asp
 #
-s/title: 'Hash Table Size'/title: 'Hash Table Size'/g
+s/title: 'Hash Table Size'/title: '雜湊表(Hash Table)大小'/g
 s/>Other Timeouts</>其他逾時(Other Timeouts)</g
 
 #
@@ -138,7 +143,7 @@ s/' <small>Bytes (range: 1 - 9720; default: 2000)/' <small>位元組 (範圍: 1 
 #
 #	advanced-routing.asp
 #
-s/title: 'DHCP Routes'/title: 'DHCP Routes'/g
+s/title: 'DHCP Routes'/title: 'DHCP 路由'/g
 
 #
 #	advanced-wireless.asp
@@ -149,7 +154,7 @@ s/title: 'Country \/ Region'/title: '國別 \/ 地區'/g
 s/title: 'Bluetooth Coexistence'/title: '與藍芽共存'/g
 s/options: \[\['0', 'Disable \*'],\['1', 'Enable'],\['2', 'Preemption']]/options: [['0', '關 *'],['1', '開'],['2', '先佔優先']]/g
 s/title: '802.11n Preamble'/title: '802.11n 前導同步訊號'/g
-s/(range: 1 - 251, actual max depends on Country selected; default: 42)/(範圍: 1 - 251, 實際最大值依國別之選擇; 預設: 42)/g
+s/(range: 1 - 251, actual max depends on Country selected; default: 42)/(範圍: 1 - 251, 實際最大值依選擇的國別之管制規定; 預設: 42)/g
 s/options: \[\['auto','Auto \*'],\['off','Disable'],\['on','Enable']]/options: [['auto','自動 *'],['off','關'],['on','開']]/g
 s/title: 'APSD Mode'/title: 'APSD 模式'/g
 s/options: \[\['off','Disable'],\['on','Enable \*']]/options: [['off','關'],['on','開 *']]/g
@@ -176,7 +181,7 @@ s/title: 'Cleaning Threshold'/title: '清除界於'/g
 s/' <small>redirections/' <small>轉向次數/g
 s/title: 'Secure Mode'/title: '安全模式'/g
 s/' <small>(when enabled, UPnP clients are allowed to add mappings only to their IP)/' <small>(當啟用安全模式, UPnP 電腦端 IP 允許加入對映表中)/g
-s/title: 'Show In My Network Places'/title: '顯示在 [網路上的芳鄰] 中'/g
+s/title: 'Show In My Network Places'/title: '顯示於 [網路上的芳鄰]'/g
 
 #
 #	qos-settings.asp
@@ -200,8 +205,20 @@ s/title: 'Qdisc Scheduler'/title: 'Qdisc Scheduler'/g
 #
 
 #
+#	restrict-edit.asp
+#
+s/'Please specify what items should be blocked.'/'請指定封鎖項目.'/g
+
+#
 #	nas-usb.asp
 #
+s/NAS: USB Support/NAS：USB 支援/g
+s/'Please wait...'/'請稍後...'/g
+s/'The device is busy. Please make sure no applications are using it, and try again.'/'設備忙碌中. 請確認無應用程式使用此設備後, 再試一次.'/g
+s/'Failed to mount. Verify the device is plugged in, and try again.'/'掛載失敗. 請確認設備已插入後, 再試一次.'/g
+s/" title="Mount all Partitions of Storage Device" id="L' + i + '">\[ Mount ]/" title="掛載儲存設備的所有分割區" id="L' + i + '">[ 掛載 ]/g
+s/" title="Safely Remove Storage Device" id="L' + i + '">\[ Unmount ]/" title="安全的卸載移除儲存設備" id="L' + i + '">[ 卸載 ]/g
+s/\['Type', 'Host', 'Description', 'Mounted?']/['類型', 'Host', '敘述', '已掛載?']/g
 s/>USB Support</>USB 設定(USB Support)</g
 s/title: 'Core USB Support'/title: 'USB 核心'/g
 s/title: 'USB 2.0 Support'/title: 'USB 2.0'/g
@@ -214,21 +231,19 @@ s/title: 'Automount'/title: '自動掛載'/g
 s/' <small>Automatically mount all partitions to sub-directories in <i>\/mnt<\/i>./' <small>自動掛載所有分割區於 <i>\/mnt<\/i> 的子目錄下./g
 s/title: 'Run after mounting'/title: '自動掛載後執行'/g
 s/title: 'Run before unmounting'/title: '卸載移除前執行'/g
-s/title: 'Hotplug script<br><small>(called when any USB device is attached or removed)<\/small>'/title: '熱插拔(Hotplug)指令<br><small>(當 USB 設備插入或拔除時)<\/small>'/g
-s/text: '<small>Some of the changes will take effect only after a restart.<\/small>'/text: '<small>某些設定值, 需重新開機後才有效.<\/small>'/g
+s/title: 'Hotplug script<br><small>(called when any USB device is attached or removed)/title: '熱插拔(Hotplug)指令<br><small>(當 USB 設備插入或拔除時執行)/g
+s/text: '<small>Some of the changes will take effect only after a restart./text: '<small>某些設定值, 需重新開機後才有效./g
 s/>Attached Devices</>週邊設備列表(Attached Devices)</g
-s/\['Type', 'Host', 'Vendor', 'Description', 'Mounted?']/['類型', 'Host', '晶片商(Vendor)', '敘述', '已掛載?']/g
-s/'The device is busy. Please make sure no applications are using it, and try again.'/'設備忙碌中. 請確認無應用程式使用此設備後, 再試一次.'/g
-s/'Failed to mount. Verify the device is plugged in, and try again.'/'掛載失敗. 請確認設備已插入後, 再試一次.'/g
-s/" title="Mount all Partitions of Storage Device" id="L' + i + '">\[ Mount ]/" title="掛載儲存設備的所有分割區" id="L' + i + '">[ 掛載 ]/g
-s/" title="Safely Remove Storage Device" id="L' + i + '">\[ Unmount ]/" title="安全的卸載移除儲存設備" id="L' + i + '">[ 卸載 ]/g
-s/'Please wait...'/'請稍後...'/g
-s/' is active ' : ' is mounted '/' 啟用 ' : ' 已掛載 '/g
-s/'on ' : '') : ' is not mounted '/'於 ' : '') : ' 未掛載 '/g
 
 #
 #	nas-ftp.asp
 #
+s/NAS: FTP Server/NAS：FTP 伺服器/g
+s/'Invalid user name. Only characters "A-Z 0-9 - _" are allowed.'/'無效的使用者名稱. 只接受 "A-Z 0-9 - _" 字元.'/g
+s/'Duplicate user name.'/'重複的使用者名稱.'/g
+s/'Empty user name is not allowed.'/'使用者名稱不可空白.'/g
+s/\[\['Read\/Write', 'Read\/Write'],\['Read Only', 'Read Only'],\['View Only', 'View Only'],\['Private', 'Private']]/[['Read\/Write', '讀\/寫'],['Read Only', '唯讀(Read Only)'],['View Only', '僅供查閱(View Only)'],['Private', '個人專用(Private)']]/g
+s/\['User Name', 'Password', 'Access']/['使用者名稱', '密碼', '存取能力']/g
 s/>FTP Server Configuration</>vsftpd 伺服器設定(FTP Server Configuration)</g
 s/title: 'Enable FTP Server'/title: 'FTP 伺服器'/g
 s/options: \[\['0', 'No'],\['1', 'Yes, WAN and LAN'],\['2', 'Yes, LAN only']]/options: [['0', '停用'],['1', '啟用, WAN 與 LAN'],['2', '啟用, 僅 LAN']]/g
@@ -236,21 +251,22 @@ s/title: 'FTP Port'/title: 'FTP 通訊埠'/g
 s/title: 'Allowed Remote<br>Address(es)'/title: '允許連線的遠端 IP 位址'/g
 s/title: 'Anonymous Users Access'/title: '匿名存取'/g
 s/options: \[\['0', 'Disabled'],\['1', 'Read\/Write'],\['2', 'Read Only'],\['3', 'Write Only']]/options: [['0', '禁止'],['1', '讀\/寫'],['2', '唯讀'],['3', '唯寫']]/g
-s/title: 'Allow Super User to Login\*'/title: '允許管理員登入*'/g
-s/' <small>Allows users to connect with admin account./' <small>允許 admin 帳戶登入./g
+s/title: 'Allow Admin Login\*'/title: '允許管理員登入*'/g
+s/' <small>Allows users to connect with admin account./' <small>允許 admin 帳戶連結./g
 s/title: 'Log FTP requests and responses'/title: '紀錄 FTP 請求與回應'/g
-s/<small>\* Avoid using this option when FTP server is enabled for WAN. IT PROVIDES FULL ACCESS TO THE ROUTER FILE SYSTEM!/<small>* 請避免將 FTP 伺服器曝露於網際網路(WAN). 這將提供外界完整存取路由器檔案系統的能力!/g
+s/Avoid using this option when FTP server is enabled for WAN. IT PROVIDES FULL ACCESS TO THE ROUTER FILE SYSTEM!/請避免將 FTP 伺服器曝露於網際網路(WAN). 這將提供外界完整存取路由器檔案系統的能力!/g
 s/>Directories</>目錄(Directories)</g
 s/title: 'Public Root Directory\*'/title: '公用根目錄*'/g
 s/' <small>(for authenticated users access)/' <small>(認證用戶公共存取)/g
-s/title: 'Private Root Directory\*'/title: '私有根目錄*'/g
-s/' <small>(for authenticated users access in private mode)/' <small>(認證用戶私人專用存取)/g
+s/title: 'Private Root Directory\*\*'/title: '私有根目錄**'/g
+s/' <small>(for authenticated users access in private mode)/' <small>(認證用戶個人專用存取)/g
 s/title: 'Anonymous Root Directory\*'/title: '匿名根目錄*'/g
 s/' <small>(for anonymous connections)/' <small>(匿名登入者存取)/g
 s/title: 'Directory Listings'/title: '顯示目錄清單'/g
 s/options: \[\['0', 'Enabled'],\['1', 'Disabled'],\['2', 'Disabled for Anonymous']]/options: [['0', '啟用'],['1', '禁止'],['2', '匿名者, 禁止']]/g
-s/' <small>(always enabled for Super User)/' <small>(管理員始終顯示目錄清單)/g
-s/<small>\* When no directory is specified, \/mnt is used as a root directory./<small>* 若未指定目錄, \/mnt 為根目錄./g
+s/' <small>(always enabled for Admin)/' <small>(管理員始終顯示目錄清單)/g
+s/When no directory is specified, \/mnt is used as a root directory./若未指定目錄, \/mnt 為根目錄./g
+s/In private mode, the root directory is the directory under the "Private Root Directory" with the name matching the name of the user./在個人專用(private)模式下, 個人根目錄位於"私有根目錄"中, 與使用者名稱相同的子目錄./g
 s/>Limits</>連線限制(Limits)</g
 s/title: 'Maximum Users Allowed to Log in'/title: '最大允許登入用戶數'/g
 s/(0 - unlimited)/(0 - 不限制)/g
@@ -264,33 +280,13 @@ s/<small>seconds/<small>秒內/g
 s/>Custom Configuration</>自訂設定(Custom Configuration)</g
 s/Custom Configuration'/自訂設定值'/g
 s/>User Accounts</>使用者帳戶(User Accounts)</g
-s/\['User Name', 'Password', 'Access']/['使用者名稱', '密碼', '存取能力']/g
-s/\[\['Read\/Write', 'Read\/Write'],\['Read Only', 'Read Only'],\['View Only', 'View Only'],\['Private', 'Private']]/[['Read\/Write', '讀\/寫'],['Read Only', '唯讀'],['View Only', '僅供查閱'],['Private', '私人專用']]/g
-s/'Invalid user name. Only characters "A-Z 0-9 - _" are allowed.'/'無效的使用者名稱. 只接受 "A-Z 0-9 - _" 字元.'/g
-s/'Duplicate user name.'/'重複的使用者名稱.'/g
-s/'Empty user name is not allowed.'/'使用者名稱不可空白.'/g
 
 #
 #	nas-samba.asp
 #
-s/>Samba File Sharing</>Samba 伺服器設定(Samba File Sharing)</g
-s/title: 'Enable File Sharing'/title: '檔案分享'/g
-s/options: \[\['0', 'No'],\['1', 'Yes, no Authentication'],\['2', 'Yes, Authentication required']]/options: [['0', '停用'],['1', '啟用, 不需認證'],['2', '啟用, 需要認證']]/g
-s/title: 'User Name'/title: '使用者名稱'/g
-s/title: 'Workgroup Name'/title: '工作群組名稱'/g
-s/title: 'Client Codepage'/title: '電腦端語言代碼(Codepage)'/g
-s/options: \[\['', 'Unspecified']/options: [['', '未指定']/g
-s/\['950', '950 (Traditional Chinese \/ Big5)']/['950', '950 (正體中文 \/ Big5)']/g
-s/' <small> (start cmd.exe and type chcp to see the current code page)/' <small> (在附屬應用程式之命令提示字元, 輸入 chcp 查閱目前使用的語言代碼)/g
-s/title: 'Auto-share all USB Partitions'/title: '自動分享全部磁碟分割區'/g
-s/options: \[\['0', 'Disabled'],\['1', 'Read Only'],\['2', 'Read \/ Write'],\['3', 'Hidden Read \/ Write']]/options: [['0', '禁止'],['1', '唯讀'],['2', '讀 \/ 寫'],['3', '隱藏式 讀 \/ 寫']]/g
-s/title: 'Options'/title: '選項'/g
-s/>Network Shares List</>網路分享清單(Network Shares List)</g
-s/\['Share Name', 'Directory', 'Description', 'Access Level', 'Hidden']/['分享名稱', '目錄', '敘述', '存取權限', '隱藏']/g
-s/<small>When no shares are specified, <i>\/mnt<\/i> directory is shared in Read Only mode./<small>若未設定網路分享清單, <i>\/mnt<\/i> 是唯讀分享./g
+s/NAS: File Sharing/NAS：檔案分享/g
 s/'Invalid '/'無效的 '/g
-s/\['Read Only', 'Read \/ Write']\[data[3]], \['No', 'Yes']/['唯讀', '讀 \/ 寫'][data[3]], ['否', '是']/g
-s/'Invalid share name. Only characters "$ A-Z 0-9 - _" and spaces are allowed.'/'無效的分享名稱. 只接受 "$ A-Z 0-9 - _" 與空格字元.'/g
+s/'Invalid share name. Only characters "$ A-Z 0-9 - _" and spaces are allowed.'/'無效的分享名稱. 只允許 "$ A-Z 0-9 - _" 與空格字元.'/g
 s/'Duplicate share name.'/'重複的分享名稱.'/g
 s/'Empty share name is not allowed.'/'分享名稱不可空白.'/g
 s/quiet, 'Directory'/quiet, '目錄'/g
@@ -298,22 +294,42 @@ s/quiet, 'Description'/quiet, '註解'/g
 s/'Directory must not be empty.'/'目錄不可空白.'/g
 s/\[\[0, 'Read Only'],\[1, 'Read \/ Write']]/[[0, '唯讀'],[1, '讀 \/ 寫']]/g
 s/\[\[0, 'No'],\[1, 'Yes']]/[[0, '否'],[1, '是']]/g
+s/\['Share Name', 'Directory', 'Description', 'Access Level', 'Hidden']/['分享名稱', '目錄', '敘述', '存取權限', '隱藏']/g
 s/'User Name must not be empty.'/'使用者名稱不可空白.'/g
 s/'User Name root is not allowed.'/'不允許使用者名稱為 root.'/g
+s/>Samba File Sharing</>Samba 伺服器設定(Samba File Sharing)</g
+s/title: 'Enable File Sharing'/title: '檔案分享'/g
+s/options: \[\['0', 'No'],\['1', 'Yes, no Authentication'],\['2', 'Yes, Authentication required']]/options: [['0', '停用'],['1', '啟用, 不需認證'],['2', '啟用, 需要認證']]/g
+s/title: 'User Name'/title: '使用者名稱'/g
+s/title: 'Workgroup Name'/title: '工作群組名稱'/g
+s/title: 'Client Codepage'/title: '用戶端語言代碼(Codepage)'/g
+s/options: \[\['', 'Unspecified']/options: [['', '未指定']/g
+s/\['950', '950 (Traditional Chinese \/ Big5)']/['950', '950 (正體中文 \/ Big5)']/g
+s/' <small> (start cmd.exe and type chcp to see the current code page)/' <small> (在附屬應用程式之命令提示字元, 輸入 chcp 查閱目前使用的語言代碼)/g
+s/title: 'Auto-share all USB Partitions'/title: '自動分享全部磁碟分割區'/g
+s/options: \[\['0', 'Disabled'],\['1', 'Read Only'],\['2', 'Read \/ Write'],\['3', 'Hidden Read \/ Write']]/options: [['0', '禁止'],['1', '唯讀'],['2', '讀 \/ 寫'],['3', '隱藏式 讀 \/ 寫']]/g
+s/title: 'Options'/title: '選項'/g
+s/>Network Shares List</>網路分享清單(Network Shares List)</g
+s/<small>When no shares are specified, <i>\/mnt<\/i> directory is shared in Read Only mode./<small>若未設定網路分享清單, <i>\/mnt<\/i> 是唯讀分享./g
 
 #
 #	nas-media.asp
 #
+s/NAS: Media Server/NAS：媒體伺服器/g
+s/'Please start at the \/ root directory.'/'請從 \/ 根目錄開始.'/g
+s/\[\['', 'All Media Files'], \['A', 'Audio only'], \['V', 'Video only'], \['P', 'Images only']]/[['', '全部媒體檔案'], ['A', '音訊檔(Audio)'], ['V', '視訊檔(Video)'], ['P', '影像檔(Images)']]/g
+s/\['Directory', 'Content Filter']/['目錄', '內容篩選']/g
+s/'JFFS is not enabled.'/'JFFS 尚未啟用.'/g
 s/>Media \/ DLNA Server</>媒體伺服器(Media \/ DLNA Server)</g
-s/title: 'Database Location'/title: '媒體櫃位置'/g
-s/title: 'Rescan on the next run'/title: '下次執行重新掃描'/g
+s/title: 'Database Location'/title: '媒體資料庫位置'/g
+s/\['\/jffs\/dlna','JFFS']/['\/jffs\/dlna','JFFS(\/jffs\/dlna)']/g
+s/title: 'Scan Media at Startup\*'/title: '開機時搜尋媒體*'/g
+s/title: 'Rescan on the next run\*'/title: '下次執行時重新搜尋*'/g
+s/<small>\* Media scan may take considerable time to complete./<small>* 搜尋媒體可能需要很長時間才能完成./g
 s/title: 'TiVo Support'/title: '支援 TiVo'/g
 s/title: 'Strictly adhere to DLNA standards'/title: '嚴格遵循 DLNA 標準'/g
+s/'Res' : 'S') + 'tart Now/'立即重新啟動' : '立即啟動')/g
 s/>Media Directories</>媒體目錄(Media Directories)</g
-s/\['Directory', 'Content Filter']/['目錄', '內容篩選']/g
-s/'Please start at the \/ root directory.'/'請從根目錄 \/ root 開始.'/g
-s/\[\['', 'All Media Files'], \['A', 'Audio only'], \['V', 'Video only'], \['P', 'Images only']]/[['', '全部媒體'], ['A', '音訊檔(Audio)'], ['V', '視訊檔(Video)'], ['P', '影像檔(Images)']]/g
-s/'JFFS is not enabled.'/'JFFS 尚未啟用.'/g
 
 #
 #	vpn-server.asp
@@ -326,14 +342,14 @@ s/'JFFS is not enabled.'/'JFFS 尚未啟用.'/g
 #
 #	admin-access.asp
 #
-s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen','Blue &amp; Green (Lighter)'],\['bluegreen2','Blue &amp; Green (Darker)'],\['brown','Brown'],\['cyan','Cyan'],\['olive','Olive'],\['pumpkin','Pumpkin']/options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍 \&amp; 綠色 (淺色)'],['bluegreen2','藍 \&amp; 綠色 (深色)'],['brown','棕色'],['cyan','青綠色'],['olive','和平色'],['pumpkin','南瓜色']/g
-s/\['usbred','USB Red'],\['usbblue','USB Blue']/['usbred','USB 紅'],['usbblue','USB 藍']/g
-s/\['ext\/custom','Custom (ext\/custom.css)']/['ext\/custom','客製化 (ext\/custom.css)']/g
-s/title: 'Open Menus'/title: '開啟選單'/g
 s/\['Status', 'status'], \['Bandwidth', 'bwm'], \['Tools', 'tools'], \['Basic', 'basic']/['系統狀態', 'status'], ['頻寬監控', 'bwm'], ['診斷工具', 'tools'], ['一般設定', 'basic']/g
 s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos']/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['頻寬管理', 'qos']/g
 s/\['USB and NAS', 'nas']/['USB 與 NAS', 'nas']/g
 s/\['Administration', 'admin']/['路由器管理', 'admin']/g
+s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen','Blue &amp; Green (Lighter)'],\['bluegreen2','Blue &amp; Green (Darker)'],\['brown','Brown'],\['cyan','Cyan'],\['olive','Olive'],\['pumpkin','Pumpkin']/options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍綠色(淺)'],['bluegreen2','藍綠色(深)'],['brown','棕色'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色']/g
+s/\['usbred','USB Red'],\['usbblue','USB Blue']/['usbred','USB 紅'],['usbblue','USB 藍']/g
+s/\['ext\/custom','Custom (ext\/custom.css)']/['ext\/custom','自訂樣式表 (ext\/custom.css)']/g
+s/title: 'Open Menus'/title: '開啟選單頁面'/g
 s/title: 'Remote Forwarding'/title: '遠端通訊埠轉送至內部通訊埠'/g
 
 #
@@ -351,7 +367,7 @@ s/\[4,'Run Custom Script']/[4,'執行自訂指令(Script)']/g
 #	admin-cifs.asp
 #
 s/title: 'Netbios Name'/title: 'Netbios 名稱'/g
-s/title: 'Security'/title: 'Security'/g
+s/title: 'Security',/title: '認證',/g
 s/options: \[\['','Default (NTLM)']/options: [['','預設 (NTLM)']/g
 s/\['none','None']/['none','無']/g
 
@@ -362,7 +378,7 @@ s/\['none','None']/['none','無']/g
 #
 #	admin-debug.asp
 #
-s/title: 'Count cache memory and buffers as free memory'/title: '快取記憶體(cache)合併計算於可用記憶體(free)'/g
+s/title: 'Count cache memory and buffers as free memory'/title: '快取記憶體(cache)與緩衝(buffer)合併計算於可用記憶體(free)'/g
 
 #
 #	admin-jffs2.asp

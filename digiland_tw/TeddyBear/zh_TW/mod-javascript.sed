@@ -15,7 +15,7 @@
 #		http://tomatovpn.keithmoyer.com/
 #-------------------------------------------------------------------
 #		Tomato Teddy Bear Mod GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.27.8745
+#		版本: 1.27.8747
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
