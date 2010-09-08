@@ -7,7 +7,7 @@
 #		No part of this file may be used without permission.	
 #--------------------------------------------------------
 #		Tomato GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.27
+#		版本: 1.28
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
@@ -17,14 +17,14 @@
 #	status-overview.asp
 #
 s/Status: Overview/系統狀態：系統狀態/g
-s/'Enabled' : '<b>Disabled</'啟用' : '<b>關閉</g
+s/'Enabled' : '<b>Disabled<\/b>'/'啟用' : '<b>關閉<\/b>'/g
 s/>System</>系統資訊(System)</g
 s/title: 'Name'/title: '名稱'/g
 s/title: 'Model'/title: '機型'/g
 s/title: 'Time', rid/title: '現在時間', rid/g
 s/title: 'Uptime'/title: '開機時間'/g
 s/title: 'CPU Load <small>(1 \/ 5 \/ 15 mins)/title: 'CPU 負載 <small>(1\/5\/15分鐘)/g
-s/title: 'Total \/ Free Memory'/title: '總和\/可用 記憶體'/g
+s/title: 'Total \/ Free Memory'/title: '記憶體 總計\/可用'/g
 s/>WAN</>廣域網路(WAN)</g
 s/title: 'MAC Address'/title: 'MAC 位址'/g
 s/title: 'Connection Type'/title: 'WAN 連線類型'/g
@@ -36,7 +36,7 @@ s/title: 'DNS'/title: 'DNS 伺服器'/g
 s/title: 'MTU'/title: '最大傳輸單位(MTU)'/g
 s/title: 'Status'/title: '連線狀態'/g
 s/title: 'Connection Uptime'/title: '連線時間'/g
-s/title: 'Remaining Lease Time'/title: '剩餘租用時間'/g
+s/title: 'Remaining Lease Time'/title: '剩餘租期'/g
 s/value='Renew'/value='重新取得'/g
 s/value='Release'/value='釋放'/g
 s/value='Connect'/value='連線'/g
@@ -49,10 +49,11 @@ s/>Wireless</>無線網路(WLAN)</g
 s/title: 'Wireless Mode'/title: '無線工作模式'/g
 s/title: 'B\/G Mode'/title: '無線網路模式'/g
 s/title: 'Radio'/title: '無線電波'/g
+s/'<b>Disabled<\/b>' : 'Enabled'/'<b>關閉<\/b>' : '啟用'/g
 s/title: 'SSID'/title: '無線名稱(SSID)'/g
 s/title: 'Security'/title: '加密方式'/g
 s/title: 'Channel'/title: '頻道'/g
-s/title: 'RSSI'/title: 'RSSI'/g
+s/title: 'RSSI'/title: '訊號強度(RSSI)'/g
 s/title: 'Noise'/title: '雜訊'/g
 s/title: 'Signal Quality'/title: '訊號品質'/g
 s/value='Enable'/value='開啟'/g
@@ -67,7 +68,7 @@ s/title="Delete Lease"/title="刪除租約"/g
 s/title="OUI Search"/title="搜尋 OUI 碼"/g
 s/title="Static Lease..."/title="依 MAC 綁定 IP..."/g
 s/title="Wireless Filter..."/title="無線存取控制..."/g
-s/\['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Quality', 'Lease &nbsp; &nbsp; ']/['連線介面', 'MAC 位址', 'IP 位址', '主機名稱', 'RSSI \&nbsp; \&nbsp; ', '品質', '剩餘租約 \&nbsp; \&nbsp; ']/g
+s/\['Interface', 'MAC Address', 'IP Address', 'Name', 'RSSI &nbsp; &nbsp; ', 'Quality', 'Lease &nbsp; &nbsp; ']/['連線介面', 'MAC 位址', 'IP 位址', '主機名稱', '訊號強度 \&nbsp; \&nbsp; ', '訊號品質', '剩餘租約 \&nbsp; \&nbsp; ']/g
 s/>Device List</>連線設備列表(Device List)</g
 s/>Noise Floor:</>背景雜訊:</g
 s/value="Measure"/value="測量"/g
@@ -77,8 +78,8 @@ s/value="Measure"/value="測量"/g
 #
 s/Status: Logs/系統狀態：系統日誌/g
 s/>Logs</>系統日誌(Logs)</g
-s/>View Last 25 Lines</>查看最後  25 行</g
-s/>View Last 50 Lines</>查看最後  50 行</g
+s/>View Last 25 Lines</>查看最後 25 行</g
+s/>View Last 50 Lines</>查看最後 50 行</g
 s/>View Last 100 Lines</>查看最後 100 行</g
 s/>View All</>全部顯示</g
 s/>Download Log File</>下載日誌記錄檔</g
@@ -91,11 +92,11 @@ s/>Enable &raquo;</>啟用 \&raquo;</g
 #	bwm-realtime.asp
 #
 s/Bandwidth: Real-Time/頻寬監控：即時流量/g
-s/>(10 minute window, 2 second interval)</>[繪圖視窗 (每格二分鐘), 每 2 秒鐘取樣]</g
-s/Avg:&nbsp;/平均(曲線):\&nbsp;/g
-s/Max:&nbsp;/最大值統計:\&nbsp;/g
-s/>Uniform</>取最高值</g
-s/>Per IF</>依介面顯示</g
+s/>(10 minute window, 2 second interval)</>(每格二分鐘, 每二秒鐘取樣)</g
+s/Avg:&nbsp;/平均值(曲線):\&nbsp;/g
+s/Max:&nbsp;/最大值(統計):\&nbsp;/g
+s/>Uniform</>制式化</g
+s/>Per IF</>依介面</g
 s/Display:&nbsp;/繪圖:\&nbsp;/g
 s/>Solid</>填滿</g
 s/>Line</>實線</g
@@ -107,14 +108,14 @@ s/>Avg</>平均值</g
 s/>Peak</>最大值</g
 s/>Total</>合計</g
 s/>TX</>傳送</g
-s/>Warning: 10 second timeout, restarting.../>警告: 逾時 10 秒鐘, 重新繪圖中.../g
+s/>Warning: 10 second timeout, restarting.../>警告: 逾時十秒鐘, 重新繪圖中.../g
 
 #
 #	bwm-24.asp
 #
 s/Bandwidth: Last 24 Hours/頻寬監控：24小時內流量/g
 s/this.running ? 'Stop' : 'Start'/this.running ? '停止' : '開始'/g
-s/>(2 minute interval)</>[繪圖視窗 (每格一小時), 每 2 分鐘取樣]</g
+s/>(2 minute interval)</>(每格一小時, 每二分鐘取樣)</g
 s/Hours:/單位(小時):/g
 s/Bandwidth monitoring disabled./頻寬監控已關閉./g
 s/The rstats program is not responding or is busy. Try reloading after a few seconds./rstats 程式無回應或忙碌中. 請稍候再重新載入./g
@@ -172,7 +173,7 @@ s/>mm.yyyy</>月.年</g
 #	tools-ping.asp
 #
 s/Tools: Ping/診斷工具：Ping/g
-s/\['Seq', 'Address', 'RX Bytes', 'TTL', 'RTT (ms)', '+\/- (ms)']/['順序', '主機名稱 (IP 位址)', '接收位元組', '生存期限TTL', '回應時間RTT(ms)', '＋\/－(ms)']/g
+s/\['Seq', 'Address', 'RX Bytes', 'TTL', 'RTT (ms)', '+\/- (ms)']/['順序', '主機名稱(IP 位址)', '接收位元組', '生存期限TTL', '回應時間RTT(ms)', '＋\/－(ms)']/g
 s/stats = '   Packets: ' + RegExp.$1 + ' transmitted, ' + RegExp.$2 + ' received, ' + RegExp.$3 + ' lost<br>'/stats = '封包遺失率: ' + RegExp.$1 + ' 發送, ' + RegExp.$2 + ' 接收, ' + RegExp.$3 + ' 遺失率<br>'/g
 s/stats = 'Round-Trip: ' + RegExp.$1 + ' min, ' + RegExp.$2 + ' avg, ' + RegExp.$3 + ' max (ms)<br>'/stats = '平均變化量: ' + RegExp.$1 + ' 最小值, ' + RegExp.$2 + ' 平均值, ' + RegExp.$3 + ' 最大值 (ms)<br>'/g
 s/'Invalid address'/'無效的位址'/g
@@ -180,13 +181,13 @@ s/title: 'Address'/title: '位址'/g
 s/title: 'Ping Count'/title: 'Ping 次數'/g
 s/title: 'Packet Size'/title: '封包大小'/g
 s/>(bytes)</>(位元組)</g
-s/>Please wait.../>請稍後.../g
+s/>Please wait... </>請稍後... </g
 
 #
 #	tools-trace.asp
 #
 s/Tools: Trace/診斷工具：Trace/g
-s/\['Hop', 'Address', 'Min (ms)', 'Max (ms)', 'Avg (ms)', '+\/- (ms)']/['躍點', '主機名稱 (IP 位址)', '最小值 (ms)', '最大值 (ms)', '平均值 (ms)', '＋\/－ (ms)']/g
+s/\['Hop', 'Address', 'Min (ms)', 'Max (ms)', 'Avg (ms)', '+\/- (ms)']/['躍點', '主機名稱(IP 位址)', '最小值 (ms)', '最大值 (ms)', '平均值 (ms)', '＋\/－ (ms)']/g
 s/'ERROR: '/'錯誤: '/g
 s/>Traceroute</>路由追蹤(Traceroute)</g
 s/value="Trace"/value="追蹤"/g
@@ -197,18 +198,18 @@ s/>(seconds per hop)</>(每躍點之等候秒數)</g
 #
 #	tools-survey.asp
 #
-s/Tools: Wireless Survey/診斷工具：無線網路搜查/g
+s/Tools: Wireless Survey/診斷工具：無線網路搜尋/g
 s/\['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']/['週日','週一','週二','週三','週四','週五','週六']/g
 s/' added, '/' 個新增, '/g
 s/' removed, '/' 個移除, '/g
 s/' total.'/' 個基地台可用.'/g
 s/>Last updated: '/>更新於: '/g
-s/\['Last Seen', 'SSID', 'BSSID', 'RSSI &nbsp; &nbsp; ', 'Noise &nbsp; &nbsp; ', 'Quality', 'Ch', 'Capabilities', 'Rates']/['發現時間', '無線名稱(SSID)', '無線 MAC 位址', 'RSSI \&nbsp; \&nbsp; ', '雜訊 \&nbsp; \&nbsp; ', '品質', '頻道', '感應特性', '速率']/g
+s/\['Last Seen', 'SSID', 'BSSID', 'RSSI &nbsp; &nbsp; ', 'Noise &nbsp; &nbsp; ', 'Quality', 'Ch', 'Capabilities', 'Rates']/['發現時間', '無線名稱(SSID)', '無線 MAC 位址', '訊號強度 \&nbsp; \&nbsp; ', '雜訊 \&nbsp; \&nbsp; ', '訊號品質', '頻道', '感應特性', '速率']/g
 s/>Wireless Site Survey</>無線基地台列表(Wireless Site Survey)</g
 s/'Auto Expire'/'自動停止'/g
 s/'Auto Refresh'/'自動更新'/g
 s/value="Refresh"/value="重新整理"/g
-s/>Warning: Wireless connections to this router may be disrupted while using this tool.</>注意: 若使用此工具, 則連接到此路由器之無線用戶端, 可能會被中斷.</g
+s/>Warning: Wireless connections to this router may be disrupted while using this tool.</>警告: 若使用此診斷工具, 則連接到此路由器之無線用戶端, 可能會被中斷.</g
 
 #
 #	tools-wol.asp
@@ -238,10 +239,10 @@ s/title: 'Type'/title: '連線類型'/g
 s/options: \[\['dhcp','DHCP'],\['pppoe','PPPoE'],\['static','Static'],\['pptp','PPTP'],\['l2tp','L2TP'],\['disabled','Disabled']]/options: [['dhcp','DHCP 取得 IP'],['pppoe','PPPoE 撥接'],['static','固定 IP'],['pptp','PPTP'],['l2tp','L2TP'],['disabled','停用']]/g
 s/title: 'Username'/title: '使用者名稱'/g
 s/title: 'Password'/title: '密碼'/g
-s/title: 'Service Name'/title: '連線名稱'/g
+s/title: 'Service Name'/title: '服務名稱'/g
 s/title: 'L2TP Server'/title: 'L2TP 伺服器'/g
 s/title: 'Connect Mode'/title: '連線模式'/g
-s/options: \[\['1', 'Connect On Demand'],\['0', 'Keep Alive']]/options: [['1', '閒置斷線'],['0', '保持連線']]/g
+s/options: \[\['1', 'Connect On Demand'],\['0', 'Keep Alive']]/options: [['1', '閒置斷線'],['0', '持續連線']]/g
 s/title: 'Max Idle Time'/title: '最大閒置時間'/g
 s/>(minutes)</>(分)</g
 s/title: 'Check Interval'/title: '重新撥接間隔'/g
@@ -253,7 +254,7 @@ s/title: 'Static DNS'/title: 'DNS 伺服器'/g
 s/title: 'DHCP Server'/title: 'DHCP 伺服器'/g
 s/title: 'IP Address Range'/title: '租放 IP 位址範圍'/g
 s/title: 'Lease Time'/title: '租約時間'/g
-s/title: 'WINS'/title: 'M$ WINS'/g
+s/title: 'WINS'/title: 'M$ WINS(for NetBIOS)'/g
 s/title: 'Enable Wireless'/title: '啟用無線功能'/g
 s/options: \[\['ap', 'Access Point'],\['apwds', 'Access Point + WDS'],\['sta', 'Wireless Client'],\['wet', 'Wireless Ethernet Bridge'],\['wds', 'WDS']]/options: [['ap', '無線基地台(Access Point)'],['apwds', '無線基地台(Access Point) + WDS'],['sta', '無線用戶端(Wireless Client)'],['wet', '無線網路橋接(Wireless Ethernet Bridge)'],['wds', 'WDS']]/g
 s/options:\[\['mixed','Mixed'],\['b-only','B Only'],\['g-only','G Only']]/options:[['mixed','混合'],['b-only','僅 802.11b'],['g-only','僅 802.11g']]/g
@@ -298,7 +299,7 @@ s/'South America'/'南美洲'/g
 s/'US'/'美利堅合眾國'/g
 s/'At least one NTP server is required'/'至少需要設定一台 NTP 時間伺服器. 臺灣 NTP 可設定為 clock.stdtime.gov.tw 或 tock.stdtime.gov.tw'/g
 s/>Time</>系統時間(Time)</g
-s/title: 'Router Time'/title: '現在時間'/g
+s/title: 'Router Time'/title: '路由器時間'/g
 s/title: 'Time Zone'/title: '時區'/g
 s/'UTC+08:00 China, Hong Kong, Western Australia, Singapore, Taiwan, Russia'/'UTC+08:00 臺灣, 中國, 香港, 澳洲西部, 新加坡, 俄羅斯'/g
 s/title: 'Auto Daylight Savings Time'/title: '日光節約(夏令)時間'/g
@@ -307,7 +308,7 @@ s/title: 'Auto Update Time'/title: '自動同步校時'/g
 s/options: \[\[-1,'Never'],\[0,'Only at startup'],\[1,'Every hour'],\[2,'Every 2 hours'],\[4,'Every 4 hours'],\[6,'Every 6 hours'],\[8,'Every 8 hours'],\[12,'Every 12 hours'],\[24,'Every 24 hours']]/options: [[-1,'取消'],[0,'僅於開機後'],[1,'每 1 小時'],[2,'每 2 小時'],[4,'每 4 小時'],[6,'每 6 小時'],[8,'每 8 小時'],[12,'每 12 小時'],[24,'每 24 小時']]/g
 s/title: 'Trigger Connect On Demand'/title: '重新連線觸發校時'/g
 s/title: 'NTP Time Server'/title: 'NTP 時間伺服器'/g
-s/^The following NTP servers have been automatically blocked by request from the server:$/下列的 NTP 時間伺服器, 已被伺服器端自動封鎖:/g
+s/^The following NTP servers have been automatically blocked by request from the server:$/下列 NTP 時間伺服器, 已被伺服器請求(request)自動封鎖:/g
 s/value='Clear'/value='清除'/g
 
 #
@@ -318,6 +319,7 @@ s/\['', 'None', '', '']/['', '無', '', '']/g
 s/'Domain </'網域 </g
 s/>(optional)</>(可空白)</g
 s/'Domain'/'網域'/g
+s/'Username \/ Hostname'/'使用者名稱 \/ 主機名稱'/g
 s/'Email Address'/'電子郵件地址'/g
 s/'Hostname \/ Group'/'主機名稱 \/ 群組'/g
 s/'Network </'網路 </g
@@ -400,7 +402,7 @@ s/title: 'Inbound Layer 7'/title: '下載啟用應用層(Layer 7)過濾'/g
 #
 s/Advanced: DHCP \/ DNS/進階設定：DHCP \/ DNS/g
 s/>DHCP \/ DNS Server (LAN)</>DHCP \/ DNS 伺服器 (LAN)</g
-s/title: 'Use internal DNS'/title: '使用內建 DNS(Dnsmasq)'/g
+s/title: 'Use internal DNS'/title: '使用內建 DNS(DNSMasq)'/g
 s/title: 'Use received DNS with user-entered DNS'/title: '使用自訂 DNS'/g
 s/title: 'Intercept DNS port/title: '偵聽 DNS 埠/g
 s/title: 'Use user-entered gateway if WAN is disabled'/title: '若 WAN 停用, 使用自訂閘道(LAN Default Gateway)'/g
@@ -408,9 +410,9 @@ s/title: 'Maximum active DHCP leases'/title: 'DHCP 租戶最大值'/g
 s/title: 'Static lease time'/title: '固定租約時間'/g
 s/options: \[\[0,'Same as normal lease time'],\[-1,'"Infinite"'],\[1,'Custom']]/options: [[0,'基本設定-網路: 租約時間設定值'],[-1,'無限租約時間'],[1,'自訂']]/g
 s/>Custom configuration'/>自訂設定(dnsmasq.custom)'/g
-s/Note: The file \/etc\/dnsmasq.custom is also added to the end of Dnsmasq's configuration file if it exists./備註: 若 Dnsmasq 的設定檔存在, 則 \/etc\/dnsmasq.custom 附加至設定檔末端./g
+s/Note: The file \/etc\/dnsmasq.custom is also added to the end of Dnsmasq's configuration file if it exists./備註: 若 DNSMasq 的設定檔存在, 則 \/etc\/dnsmasq.custom 附加至設定檔末端./g
 s/>DHCP Client (WAN)</>DHCP 用戶端 (WAN)</g
-s/title: 'Reduce packet size'/title: '壓縮封包'/g
+s/title: 'Reduce packet size'/title: '減少封包大小'/g
 
 #
 #	advanced-firewall.asp
@@ -445,7 +447,7 @@ s/' seconds'/' 秒'/g
 s/title: 'Boot Wait Time \*'/title: 'Boot Wait 時間 *'/g
 s/title: 'WAN Port Speed \*'/title: 'WAN 連線速度 *'/g
 s/options: \[\[0,'10Mb Full'],\[1,'10Mb Half'],\[2,'100Mb Full'],\[3,'100Mb Half'],\[4,'Auto']]/options: [[0,'10Mb 全雙工'],[1,'10Mb 半雙工'],[2,'100Mb 全雙工'],[3,'100Mb 半雙工'],[4,'自動偵測']]/g
-s/<small>\* Not all models support these options.</<small>* 並非所有機型皆支援此功能.</g
+s/<small>\* Not all models support these options.</<small>* 並非所有機型皆支援這些選項.</g
 
 #
 #	advanced-routing.asp
@@ -457,7 +459,7 @@ s/>Current Routing Table</>目前的路由表(Current Routing Table)</g
 s/>Static Routing Table</>靜態路由表(Static Routing Table)</g
 s/title: 'Mode'/title: '模式'/g
 s/options: \[\['gateway','Gateway'],\['router','Router']]/options: [['gateway','閘道(Gateway)'],['router','路由(Router)']]/g
-s/title: 'RIPv1 &amp; v2'/title: 'RIPv1 與 v2'/g
+s/title: 'RIPv1 &amp; v2'/title: 'RIP v1 與 v2'/g
 s/options: \[\[0,'Disabled'],\[1,'LAN'],\[2,'WAN'],\[3,'Both']]/options: [[0,'取消'],[1,'LAN'],[2,'WAN'],[3,'二者']]/g
 s/title: 'Spanning-Tree Protocol'/title: '擴張樹協定(STP)'/g
 
@@ -472,8 +474,8 @@ s/title: 'AP Isolation'/title: '禁止無線用戶端相互連線'/g
 s/options: \[\['0','Disable \*'],\['1','Enable']]/options: [['0','關 *'],['1','開']]/g
 s/title: 'Authentication Type'/title: '認證方式'/g
 s/options: \[\['0','Auto \*'],\['1','Shared Key']]/options: [['0','自動 *'],['1','共用金鑰']]/g
-s/title: 'Basic Rate'/title: '基本傳輸速率'/g
-s/options: \[\['default','Default \*'],\['12','1-2 Mbps'],\['all','All']]/options: [['default','預設 *'],['12','1-2 Mbps'],['all','All']]/g
+s/title: 'Basic Rate'/title: '基本速率'/g
+s/options: \[\['default','Default \*'],\['12','1-2 Mbps'],\['all','All']]/options: [['default','預設 *'],['12','1-2 Mbps'],['all','全部']]/g
 s/title: 'Beacon Interval'/title: '示標訊號(Beacon)間隔'/g
 s/' <small>(range: 1 - 65535; default: 100)/' <small>(範圍: 1 - 65535; 預設值: 100)/g
 s/title: 'CTS Protection Mode'/title: 'CTS 保護模式'/g
@@ -507,7 +509,7 @@ s/title: 'Transmit Power'/title: '發射功率'/g
 s/>mW (before amplification)</>mW (功率放大前)</g
 s/>(range: 1 - 251; default: 10)</>(範圍: 1 - 251; 預設值: 10)</g
 s/>(range: 1 - 251; default: 42)</>(範圍: 1 - 251; 預設值: 42)</g
-s/title: 'Transmission Rate'/title: '傳播速率'/g
+s/title: 'Transmission Rate'/title: '傳送速率'/g
 s/options: \[\['0','Auto \*'],\['1000000','1 Mbps'],\['2000000','2 Mbps'],\['5500000','5.5 Mbps'],\['6000000','6 Mbps'],\['9000000','9 Mbps'],\['11000000','11 Mbps'],\['12000000','12 Mbps'],\['18000000','18 Mbps'],\['24000000','24 Mbps'],\['36000000','36 Mbps'],\['48000000','48 Mbps'],\['54000000','54 Mbps']]/options: [['0','自動 *'],['1000000','1 Mbps'],['2000000','2 Mbps'],['5500000','5.5 Mbps'],['6000000','6 Mbps'],['9000000','9 Mbps'],['11000000','11 Mbps'],['12000000','12 Mbps'],['18000000','18 Mbps'],['24000000','24 Mbps'],['36000000','36 Mbps'],['48000000','48 Mbps'],['54000000','54 Mbps']]/g
 s/title: 'WMM'/title: '無線多媒體(WMM)'/g
 s/options: \[\['off','Disable \*'],\['on','Enable']]/options: [['off','關 *'],['on','開']]/g
@@ -637,7 +639,7 @@ s/\['MAC \/ IP Address']/['MAC \/ IP 位址']/g
 s/'Please enter a specific port or select an application match'/'請輸入正確的通訊埠或選擇符合的應用程式'/g
 s/\['Rules']/['規則']/g
 s/confirm('Delete this rule?'/confirm('刪除這條規則?'/g
-s/'No MAC or IP address was specified'/'無 MAC 或 IP 位址已被指定'/g
+s/'No MAC or IP address was specified'/'無 MAC 或 IP 位址被指定'/g
 s/alert('This rule is too big. Please reduce by ' + (data.length - 2048) + ' characters.')/alert('規則內容太多. 請減少 ' + (data.length - 2048) + ' 字元.')/g
 s/>Access Restriction</>連線管制時程設定(Access Restriction)</g
 s/title: 'Enabled'/title: '啟用'/g
@@ -670,11 +672,13 @@ s/value='Delete...'/value='刪除...'/g
 #
 s/Admin: Access/路由器管理：連線登入與密碼/g
 s/("Unsaved changes will be lost. Continue anyway?")/("尚未儲存的設定值將會遺失. 是否繼續執行?")/g
+s/\[\['Status', 'status'], \['Bandwidth', 'bwm'], \['Tools', 'tools'], \['Basic', 'basic']/[['系統狀態', 'status'], ['頻寬監控', 'bwm'], ['診斷工具', 'tools'], ['基本設定', 'basic']/g
+s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos'], \['Administration', 'admin']]/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['頻寬管理', 'qos'], ['路由器管理', 'admin']]/g
 s/'The local http\/https must also be enabled when using remote access.'/'遠端管理必須開啟 HTTP\/HTTPS.'/g
 s/'Invalid SSH key.'/'無效的 SSH 金鑰'/g
 s/'Both passwords must match.'/'二次輸入的密碼需相同.'/g
 s/'Password must not be empty.'/'密碼不可空白.'/g
-s/'Warning: Web Admin is about to be disabled. If you decide to re-enable Web Admin at a later time, it must be done manually via Telnet, SSH or by performing a hardware reset. Are you sure you want to do this?'/'注意: 若關閉網頁管理介面(WebUI), 則只能使用 Telnet, SSH 登入或作硬體 Reset 機器. 您確定要這麼作嗎?'/g
+s/'Warning: Web Admin is about to be disabled. If you decide to re-enable Web Admin at a later time, it must be done manually via Telnet, SSH or by performing a hardware reset. Are you sure you want to do this?'/'警告: 若關閉網頁管理介面(WebUI), 則只能使用 Telnet, SSH 登入或作硬體 Reset 機器. 您確定要這麼作嗎?'/g
 s/>Web Admin</>路由器管理設定(Web Admin)</g
 s/title: 'Local Access'/title: '本地端登入(Local)'/g
 s/options: \[\[0,'Disabled'],\[1,'HTTP'],\[2,'HTTPS'],\[3,'HTTP &amp; HTTPS']]/options: [[0,'關閉'],[1,'HTTP'],[2,'HTTPS'],[3,'HTTP 與 HTTPS']]/g
@@ -690,7 +694,8 @@ s/options: \[\[0,'Disabled'],\[1,'HTTP'],\[2,'HTTPS']]/options: [[0,'關閉'],[1
 s/title: 'Port'/title: '通訊埠'/g
 s/title: 'Allow Wireless Access'/title: '允許無線網路(WLAN)登入'/g
 s/title: 'Color Scheme'/title: '外觀樣式'/g
-s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen','Blue &amp; Green (Lighter)'],\['bluegreen2','Blue &amp; Green (Darker)'],\['brown','Brown'],\['cyan','Cyan'],\['olive','Olive'],\['pumpkin','Pumpkin'],\['ext\/custom','Custom (ext\/custom.css)']]/['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍綠色(淺)'],['bluegreen2','藍綠色(深)'],['brown','棕色'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色'],['ext\/custom','自訂樣式表 (ext\/custom.css)']]/g
+s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen','Blue &amp; Green (Lighter)'],\['bluegreen2','Blue &amp; Green (Darker)'],\['brown','Brown'],\['cyan','Cyan'],\['olive','Olive'],\['pumpkin','Pumpkin'],\['ext\/custom','Custom (ext\/custom.css)']]/options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍綠色(淺)'],['bluegreen2','藍綠色(深)'],['brown','棕色'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色'],['ext\/custom','自訂樣式表 (ext\/custom.css)']]/g
+s/title: 'Open Menus'/title: '固定展開的選單'/g
 s/>SSH Daemon</>SSH 常駐程式(SSH Daemon)</g
 s/title: 'Enable at Startup'/title: '開機自動啟動'/g
 s/title: 'Remote Port'/title: '遠端登入之通訊埠'/g
@@ -744,7 +749,7 @@ s/value='Restore'/value='還原'/g
 #
 #	admin-buttons.asp
 #
-s/Admin: Buttons/路由器管理：特殊按鈕 \/ LED/g
+s/Admin: Buttons/路由器管理：特殊按鈕 \/ 燈號/g
 s/>SES\/AOSS Button</>SES\/AOSS 按鈕開關(Button)</g
 s/title: "When Pushed For..."/title: "按住(秒數)後執行..."/g
 s/\[\[0,'Do Nothing'],\[1,'Toggle Wireless'],\[2,'Reboot'],\[3,'Shutdown'],\[4,'Run Custom Script']]/[[0,'不做任何事'],[1,'開\/關 無線網路(WLAN)'],[2,'重新開機'],[3,'關機'],[4,'執行自訂指令(Script)']]/g
@@ -779,7 +784,7 @@ s/'(not mounted)'/'(未掛載)'/g
 s/Admin: Configuration/路由器管理：路由器設定值/g
 s/alert('Incorrect filename. Expecting a ".cfg" file.')/alert('檔案名稱錯誤. 應為 ".cfg" 檔案')/g
 s/confirm('Are you sure?'/confirm('您確定嗎?'/g
-s/('WARNING: Erasing the NVRAM on a ' + nvram.t_model_name + ' router may be harmful. It may not be able to re-setup the NVRAM correctly after a complete erase. Proceeed anyway?'))/('注意: 清除 NVRAM 的 ' + nvram.t_model_name + ' 路由器可能會損毀.完全清除之後 可能無法正確設定 NVRAM. 是否繼續執行?'))/g
+s/('WARNING: Erasing the NVRAM on a ' + nvram.t_model_name + ' router may be harmful. It may not be able to re-setup the NVRAM correctly after a complete erase. Proceeed anyway?'))/('警告: 清除 NVRAM 的 ' + nvram.t_model_name + ' 路由器可能會損毀.完全清除之後 可能無法正確設定 NVRAM. 是否繼續執行?'))/g
 s/>Backup Configuration</>備份路由器設定值(Backup Configuration)</g
 s/>Restore Configuration</>還原路由器設定值(Restore Configuration)</g
 s/Select the configuration file to restore:/選擇所要還原的設定檔:/g
@@ -810,7 +815,7 @@ s/>Download CFE</>下載 CFE</g
 s/>Download Iptables Dump</>下載 Iptables 傾印檔</g
 s/>Download Logs</>下載日誌記錄檔(Logs)</g
 s/>Download NVRAM Dump</>下載 NVRAM 傾印檔</g
-s/<b>Warning<\/b>: The NVRAM Dump text file may contain information like wireless/<b>注意<\/b>: NVRAM 傾印檔, 內含私人資料. 例如: 無線金鑰, 帳號\/密碼等. 請先檢視與編輯, 清除重要資訊後, 再交予他人.<br>/g
+s/<b>Warning<\/b>: The NVRAM Dump text file may contain information like wireless/<b>警告<\/b>: NVRAM 傾印檔, 內含私人資料. 例如: 無線金鑰, 帳號\/密碼等. 請先檢視與編輯, 清除重要資訊後, 再交予他人.<br>/g
 s/^encryption keys and usernames\/passwords for the router, ISP and DDNS. Please$//g
 s/^review &amp; edit this file before sharing it with$//g
 s/^anyone.<br>//g
@@ -839,7 +844,7 @@ s/options: \[\[0,'Disabled'],\[30,'Every 30 Minutes'],\[60,'Every 1 Hour'],\[120
 s/title: 'Events Logged'/title: '事件紀錄'/g
 s/<small>(some of the changes will take effect after a restart)/<small>(某些事件紀錄需重新開機才有效)/g
 s/title: 'Access Restriction'/title: '連線管制(Access Restriction)'/g
-s/title: 'Cron'/title: '定期指令(Cron)'/g
+s/title: 'Cron'/title: '周期指令(Cron)'/g
 s/title: 'DHCP Client'/title: 'DHCP 租戶連線'/g
 s/title: 'NTP'/title: '網路校時(NTP)連線'/g
 s/title: 'PPPoE'/title: 'PPPoE 連線'/g
@@ -892,23 +897,23 @@ s/An upgrade may overwrite the JFFS2 partition currently in use. Before upgradin
 s/please backup the contents of the JFFS2 partition, disable it, then reboot the router.//g
 s/>Disable &raquo;</>關閉 \&raquo;</g
 s/Please wait while the firmware is uploaded \&amp; flashed./韌體上傳更新中, 請稍候...直到軔體升級完成./g
-s/>Warning:<\/b> Do not interrupt this browser or the router!</>注意:<\/b> 切勿中斷瀏覽器或關閉電源!</g
+s/>Warning:<\/b> Do not interrupt this browser or the router!</>警告:<\/b> 切勿中斷瀏覽器或關閉電源!</g
 
 #
 #	about.asp
 #
-s/About/關於 Tomato/g
+s/About</關於 Tomato</g
 s/>Tomato</>蕃茄(Tomato)</g
 s/>Version </>正體中文版 </g
-s/Tomato Firmware v</蕃茄韌體(Tomato Firmware) 版本: v</g
-s/Built on </編譯建立於 </g
+s/^Tomato Firmware v</蕃茄韌體(Tomato Firmware) 版本: v</g
+s/^Built on </編譯於 </g
 
 #
 #	reboot.asp
 #
 s/Rebooting.../重新開機.../g
 s/value = 'Continue'/value = '繼續'/g
-s/Please wait while the router reboots.../重新開機中, 請老爺稍候.../g
+s/Please wait while the router reboots.../重新開機中, 請稍候.../g
 
 #
 #	reboot-default.asp
@@ -950,7 +955,7 @@ s/value='Back'/value='返回'/g
 #	mnoise.asp
 #
 s/Measuring Noise.../測量背景雜訊.../g
-s/Measuring radio noise floor.../測量背景雜訊準位.../g
+s/Measuring radio noise floor.../測量無線電噪音地平(Noise Floor).../g
 s/Wireless access has been temporarily disabled for /無線訊號暫時斷訊 /g
 s/15 seconds/15 秒/g
 
@@ -959,7 +964,7 @@ s/15 seconds/15 秒/g
 #
 s/Changes Saved.../設定值已儲存.../g
 s/value="Continue"/value="繼續"/g
-s/Please Wait.../請稍後.../g
+s/>Please Wait...</>請稍後...</g
 
 #
 #	saved-moved.asp

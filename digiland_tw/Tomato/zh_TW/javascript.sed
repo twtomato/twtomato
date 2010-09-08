@@ -7,7 +7,7 @@
 #		No part of this file may be used without permission.	
 #--------------------------------------------------------
 #		Tomato GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.27
+#		版本: 1.28
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
@@ -97,7 +97,7 @@ s/\['Access Restriction',/['連線管制',/g
 s/\['Administration',/['路由器管理',/g
 s/\['Admin Access',/['連線登入與密碼',/g
 s/\['Bandwidth Monitoring',/['頻寬監控',/g
-s/\['Buttons \/ LED',/['特殊按鈕 \/ LED',/g
+s/\['Buttons \/ LED',/['特殊按鈕 \/ 燈號',/g
 s/\['CIFS Client',/['連接網路芳鄰',/g
 s/\['Configuration',/['路由器設定值',/g
 s/\['Debugging',/['除錯',/g

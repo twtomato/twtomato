@@ -7,7 +7,7 @@
 #		No part of this file may be used without permission.	
 #--------------------------------------------------------
 #		Tomato GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.27
+#		版本: 1.28
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
