@@ -358,24 +358,6 @@ s/>Media Directories</>媒體目錄(Media Directories)</g
 #
 #	vpn-server.asp
 #
-#s/>VPN Server Configuration</>OpenVPN 伺服器設定(VPN Server Configuration)</g
-#s/title: 'Start with WAN'/title: 'WAN 連接後啟動'/g
-#s/title: 'Interface Type'/title: '介面型式'/g
-#s/title: 'Protocol'/title: '通訊協定'/g
-#s/title: 'Firewall'/title: '防火牆'/g
-#s/title: 'Authorization Mode'/title: '授權模式'/g
-#	s/<small>(must configure manually...)/<small>(must configure manually...)/g
-#s/title: 'Extra HMAC authorization (tls-auth)'/title: '額外 HMAC 授權 (tls-auth)'/g
-#	s/\[ \[-1, 'Disabled'], \[2, 'Bi-directional'], \[0, 'Incoming (0)'], \[1, 'Outgoing (1)'] ]/[ [-1, 'Disabled'], [2, 'Bi-directional'], [0, 'Incoming (0)'], [1, 'Outgoing (1)'] ]/g
-#s/title: 'title: 'VPN subnet\/netmask'/title: 'VPN 網段\/網段遮罩'/g
-#s/title: 'title: 'Client address pool'/title: 'Client address pool'/g
-#s/title: 'Local\/remote endpoint addresses'/title: 'Local\/remote endpoint addresses'/g
-#s/title: 'Poll Interval'/title: 'Poll Interval'/g
-#s/title: 'Push LAN to clients'/title: 'Push LAN to clients'/g
-#s/title: 'Direct clients to<br>redirect Internet traffic'/title: 'Direct clients to<br>redirect Internet traffic'/g
-#s/title: 'Respond to DNS'/title: 'Respond to DNS'/g
-#s/title: 'Advertise DNS to clients'/title: 'Advertise DNS to clients'/g
-#s/title: 'Encryption cipher'/title: 'Encryption cipher'/g
 
 #
 #	vpn-client.asp
