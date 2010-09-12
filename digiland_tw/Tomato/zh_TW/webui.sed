@@ -199,7 +199,7 @@ s/>(seconds per hop)</>(每躍點之等候秒數)</g
 #	tools-survey.asp
 #
 s/Tools: Wireless Survey/診斷工具：無線網路搜尋/g
-s/\['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']/['週日','週一','週二','週三','週四','週五','週六']/g
+s/dayOfWeek = \['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']/dayOfWeek = ['週日', '週一', '週二', '週三', '週四', '週五', '週六']/g
 s/' added, '/' 個新增, '/g
 s/' removed, '/' 個移除, '/g
 s/' total.'/' 個基地台可用.'/g
