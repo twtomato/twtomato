@@ -15,7 +15,7 @@
 #		http://tomatovpn.keithmoyer.com/
 #-------------------------------------------------------------------
 #		Tomato Teddy Bear Mod GUI 中文化(zh_TW.UTF-8)
-#		版本: 1.28.8750
+#		版本: 1.28.8753
 #		版權: GNU General Public License v2
 #		http://code.google.com/p/twtomato/
 #		http://digiland.tw/
@@ -50,51 +50,11 @@ s/<small>available entries/<small>有效紀錄/g
 s/>Web Monitor Configuration</>監視設定</g
 
 #
-#	status-log.asp
-#
-
-#
-#	bwm-realtime.asp
-#
-
-#
-#	bwm-24.asp
-#
-
-#
-#	bwm-daily.asp
-#
-
-#
-#	bwm-weekly.asp
-#
-
-#
-#	bwm-monthly.asp
-#
-
-#
-#	tools-ping.asp
-#
-
-#
-#	tools-trace.asp
-#
-
-#
 #	tools-shell.asp
 #
 s/Tools: System Commands/診斷工具：系統指令/g
 s/>Execute System Commands</>執行系統指令(Execute System Commands)</g
 s/value='Execute'/value='執行'/g
-
-#
-#	tools-survey.asp
-#
-
-#
-#	tools-wol.asp
-#
 
 #
 #	basic-network.asp
@@ -120,18 +80,6 @@ s/'Invalid hostname. Only characters "A-Z 0-9" with "-" in the middle are allowe
 s/'UTC+08:00 China, Hong Kong, Western Australia, Singapore, Taiwan'/'UTC+08:00 臺灣, 中國, 香港, 澳洲西部, 新加坡'/g
 
 #
-#	basic-ddns.asp
-#
-
-#
-#	basic-static.asp
-#
-
-#
-#	basic-wfilter.asp
-#
-
-#
 #	advanced-ctnf.asp
 #
 s/title: 'Hash Table Size'/title: '雜湊表(Hash Table)大小'/g
@@ -143,10 +91,6 @@ s/>Other Timeouts</>其他逾時(Other Timeouts)</g
 s/title: 'Prevent DNS-rebind attacks'/title: '防止 DNS-rebind 攻擊'/g
 s/title: 'Vendor Class ID'/title: 'Vendor Class ID'/g
 s/title: 'IP Address to request'/title: 'IP Address to request'/g
-
-#
-#	advanced-firewall.asp
-#
 
 #
 #	advanced-mac.asp
@@ -184,18 +128,6 @@ s/title: 'APSD Mode'/title: 'APSD 模式'/g
 s/options: \[\['off','Disable'],\['on','Enable \*']]/options: [['off','關'],['on','開 *']]/g
 
 #
-#	forward-basic.asp
-#
-
-#
-#	forward-dmz.asp
-#
-
-#
-#	forward-triggered.asp
-#
-
-#
 #	forward-upnp.asp
 #
 s/title: 'Inactive Rules Cleaning'/title: '清除無作用規則'/g
@@ -210,23 +142,7 @@ s/title: 'Show In My Network Places'/title: '顯示於 [網路上的芳鄰]'/g
 #
 #	qos-settings.asp
 #
-s/title: 'Qdisc Scheduler'/title: 'Qdisc Scheduler'/g
-
-#
-#	qos-classify.asp
-#
-
-#
-#	qos-graphs.asp
-#
-
-#
-#	qos-detailed.asp
-#
-
-#
-#	restrict.asp
-#
+s/title: 'Qdisc Scheduler'/title: '佇列戒律(Qdisc) Scheduler'/g
 
 #
 #	restrict-edit.asp
@@ -356,14 +272,6 @@ s/'Res' : 'S') + 'tart Now/'立即重新啟動' : '立即啟動')/g
 s/>Media Directories</>媒體目錄(Media Directories)</g
 
 #
-#	vpn-server.asp
-#
-
-#
-#	vpn-client.asp
-#
-
-#
 #	admin-access.asp
 #
 s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos']/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['頻寬管理', 'qos']/g
@@ -373,10 +281,6 @@ s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen'
 s/\['usbred','USB Red'],\['usbblue','USB Blue']/['usbred','USB 紅'],['usbblue','USB 藍']/g
 s/\['ext\/custom','Custom (ext\/custom.css)']/['ext\/custom','自訂樣式表 (ext\/custom.css)']/g
 s/title: 'Remote Forwarding'/title: '遠端通訊埠轉送至內部通訊埠'/g
-
-#
-#	admin-bwm.asp
-#
 
 #
 #	admin-buttons.asp
@@ -392,10 +296,6 @@ s/title: 'Netbios Name'/title: 'Netbios 名稱'/g
 s/title: 'Security',/title: '認證',/g
 s/options: \[\['','Default (NTLM)']/options: [['','預設 (NTLM)']/g
 s/\['none','None']/['none','無']/g
-
-#
-#	admin-config.asp
-#
 
 #
 #	admin-debug.asp
@@ -420,14 +320,6 @@ s/title: 'Domains'/title: '造訪網站'/g
 s/title: 'Searches'/title: '網頁搜尋'/g
 
 #
-#	admin-sched.asp
-#
-
-#
-#	admin-scripts.asp
-#
-
-#
 #	admin-upgrade.asp
 #
 s/After flashing, erase all data in NVRAM memory/刷機後, 清除 NVRAM 全部資料/g
@@ -438,45 +330,5 @@ s/please backup the contents of the JFFS partition, disable it, then reboot the 
 #
 #	about.asp
 #
-
-#
-#	about.asp
-#
 s/^蕃茄韌體(Tomato Firmware) 版本: v/泰迪熊(Teddy Bear)衍生版本: v/g
 s/^Based on/>基於/g
-
-#
-#	reboot.asp
-#
-
-#
-#	reboot-default.asp
-#
-
-#
-#	shutdown.asp
-#
-
-#
-#	logout.asp
-#
-
-#
-#	clearcookies.asp
-#
-
-#
-#	error.asp
-#
-
-#
-#	mnoise.asp
-#
-
-#
-#	saved.asp
-#
-
-#
-#	saved-moved.asp
-#
