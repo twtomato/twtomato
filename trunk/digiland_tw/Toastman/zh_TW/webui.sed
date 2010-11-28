@@ -42,7 +42,7 @@ s/\['Service','Game\/VOIP','Media','Remote','WWW', 'Mail', 'Messenger','Download
 #	new-qoslimit.asp
 #
 s/New: QoS Limit/頻寬限速：QoS 限速/g
-s/\['TC Tag', 'IP Address', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', 'Priority', 'TCP Limit', 'UDP Limit']/['TC Tag', 'IP 位址', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', '優先權', 'TCP Limit', 'UDP Limit']/g
+s/\['TC Tag', 'IP Address', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', 'Priority', 'TCP Limit', 'UDP Limit']/['TC 標籤', 'IP 位址', '下載保證頻寬', '下載最大頻寬', '上傳保證頻寬', '上傳最大頻寬', '優先權', 'TCP 限制', 'UDP 限制']/g
 s/>QoS Limit</>QoS 限速(QoS Limit)</g
 s/title: 'Enable QoS Limit'/title: '啟用 QoS 限速'/g
 s/title: 'Download Bandwidth'/title: '下載頻寬'/g

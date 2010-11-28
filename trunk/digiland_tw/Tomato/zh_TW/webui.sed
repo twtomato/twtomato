@@ -254,7 +254,6 @@ s/title: 'Static DNS'/title: 'DNS 伺服器'/g
 s/title: 'DHCP Server'/title: 'DHCP 伺服器'/g
 s/title: 'IP Address Range'/title: '租放 IP 位址範圍'/g
 s/title: 'Lease Time'/title: '租約時間'/g
-s/title: 'WINS'/title: 'M$ WINS(for NetBIOS)'/g
 s/title: 'Enable Wireless'/title: '啟用無線功能'/g
 s/options: \[\['ap', 'Access Point'],\['apwds', 'Access Point + WDS'],\['sta', 'Wireless Client'],\['wet', 'Wireless Ethernet Bridge'],\['wds', 'WDS']]/options: [['ap', '無線基地台(Access Point)'],['apwds', '無線基地台(Access Point) + WDS'],['sta', '無線用戶端(Wireless Client)'],['wet', '無線網路橋接(Wireless Ethernet Bridge)'],['wds', 'WDS']]/g
 s/options:\[\['mixed','Mixed'],\['b-only','B Only'],\['g-only','G Only']]/options:[['mixed','混合'],['b-only','僅 802.11b'],['g-only','僅 802.11g']]/g
@@ -290,7 +289,7 @@ s/title: 'Domain Name'/title: '網域名稱'/g
 s/Basic: Time/基本設定：時間設定/g
 s/'Custom...'/'自訂...'/g
 s/'Default'/'預設'/g
-s/'Africa'/'非洲'/g
+s/\['africa', 'Africa'],/['tw', '臺灣'],['africa', '非洲'],/g
 s/'Asia'/'亞洲'/g
 s/'Europe'/'歐洲'/g
 s/'Oceania'/'大洋洲'/g
