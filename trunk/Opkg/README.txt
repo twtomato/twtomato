@@ -9,10 +9,5 @@ Opkg 套件庫使用說明
 安裝(Telnet):
 	# ipkg-opt install http://twtomato.googlecode.com/files/opkg_0.1.8_mipsel.ipk
 
-開機設定(WebUI):
-	http://192.168.1.1/admin-scripts.asp
-	Init:
-		ln -s /opt/opkg/etc/opkg /etc/opkg
-
 問題反應:
 	http://digiland.tw/viewtopic.php?id=1678
