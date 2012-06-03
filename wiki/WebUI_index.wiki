@@ -1,4 +1,5 @@
 #summary Tomato WebUI 索引
+#labels Deprecated
 
 = Tomato WebUI =
   * Status
