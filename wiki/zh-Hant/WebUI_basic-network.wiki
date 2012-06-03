@@ -1,0 +1,13 @@
+#summary basic-network.asp
+#sidebar WebUI_index
+
+= WAN / Internet =
+== 網際網路連線類型 ==
+  # 若WAN停用, 可選擇將WAN端橋接, 當作內網(LAN)使用.
+=== PPPoE ===
+  # 依照服務商(ISP)提供的帳號密碼設定.
+  # 固定IP與浮動IP的設定方式不同, 請洽服務商.
+  # 固定IP才能架設郵件伺服器.
+=== 3G Modem ===
+
+

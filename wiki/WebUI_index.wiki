@@ -1,0 +1,92 @@
+#summary Tomato WebUI 索引
+
+= Tomato WebUI =
+  * Status
+    * [WebUI_status_overview Overview]
+    * [WebUI_status_devices Device List]
+    * [WebUI_status_webmon Web Usage]
+    * [WebUI_status_log Logs]
+  * Bandwidth
+    * [WebUI_bwm_realtime Real-Time]
+    * [WebUI_bwm_24 Last 24 Hours]
+    * [WebUI_bwm_daily Daily]
+    * [WebUI_bwm_weekly Weekly]
+    * [WebUI_bwm_monthly Monthly]
+  * IP Traffic
+    * [WebUI_ipt_realtime Real-Time]
+    * [WebUI_ipt_24 Last 24 Hours]
+    * [WebUI_ipt_graphs View Graphs]
+    * [WebUI_ipt_details Transfer Rates]
+    * [WebUI_ipt_daily Daily]
+    * [WebUI_ipt_monthly Monthly]
+  * Tools
+    * [WebUI_tools_ping Ping]
+    * [WebUI_tools_trace Trace]
+    * [WebUI_tools_shell System]
+    * [WebUI_tools_survey Wireless Survey]
+    * [WebUI_tools_wol WOL]
+  * Basic
+    * [WebUI_basic_network Network]
+    * [WebUI_basic_ipv6 IPv6]
+    * [WebUI_basic_ident Identification]
+    * [WebUI_basic_time Time]
+    * [WebUI_basic_ddns DDNS]
+    * [WebUI_basic_static Static DHCP/ARP/IPT]
+    * [WebUI_basic_wfilter Wireless Filter]
+  * Advanced
+    * [WebUI_advanced_ctnf Conntrack/Netfilter]
+    * [WebUI_advanced_dhcpdns DHCP/DNS]
+    * [WebUI_advanced_firewall Firewall]
+    * [WebUI_advanced_mac MAC Address]
+    * [WebUI_advanced_misc Miscellaneous]
+    * [WebUI_advanced_vlan VLAN]
+    * [WebUI_advanced_access LAN Access]
+    * [WebUI_advanced_wlanvifs Virtual Wireless]
+    * [WebUI_advanced_wireless Wireless]
+  * Port Forwarding
+    * [WebUI_forward_basic Basic]
+    * [WebUI_forward_basic_ipv6 Basic IPv6]
+    * [WebUI_forward_dmz DMZ]
+    * [WebUI_forward_triggered Triggered]
+    * [WebUI_forward_upnp UPnP/NAT-PMP]
+  * [WebUI_restrict Access Restriction]
+  * QoS
+    * [WebUI_qos_settings Basic Settings]
+    * [WebUI_qos_classify Classification]
+    * [WebUI_qos_graphs View Graphs]
+    * [WebUI_qos_detailed View Details]
+    * [WebUI_qos_ctrate Transfer Rates]
+  * [WebUI_bwlimit Bandwidth Limiter]
+  * [WebUI_splashd Captive Portal]
+  * USB and NAS
+    * [WebUI_nas_usb USB Support]
+    * [WebUI_nas_ftp FTP Server]
+    * [WebUI_nas_samba File Sharing]
+    * [WebUI_nas_media Media Server]
+    * [WebUI_nas_ups UPS Monitor]
+    * [WebUI_nas_bittorrent BitTorrent Client]
+  * VPN Tunneling
+    * [WebUI_vpn_server OpenVPN Server]
+    * [WebUI_vpn_client OpenVPN Client]
+    * [WebUI_vpn_pptp_server PPTP Server]
+    * [WebUI_vpn_pptp_online PPTP Online]
+  * Administration
+    * [WebUI_admin_access Admin Access]
+    * [WebUI_admin_bwm Bandwidth Monitoring]
+    * [WebUI_admin_iptraffic IP Traffic Monitoring]
+    * [WebUI_admin_buttons Buttons/LED]
+    * [WebUI_admin_cifs CIFS Client]
+    * [WebUI_admin_sdhc SDHC/MMC]
+    * [WebUI_admin_config Configuration]
+    * [WebUI_admin_debug Debugging]
+    * [WebUI_admin_jffs2 JFFS]
+    * [WebUI_admin_nfs NFS Server]
+    * [WebUI_admin_snmp SNMP]
+    * [WebUI_admin_log Logging]
+    * [WebUI_admin_sched Scheduler]
+    * [WebUI_admin_scripts Scripts]
+    * [WebUI_admin_upgrade Upgrade]
+  * About
+  * Reboot
+  * Shutdown
+  * Logout
