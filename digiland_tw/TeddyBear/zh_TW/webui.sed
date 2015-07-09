@@ -47,7 +47,7 @@ s/>Recent Web Searches</>網頁搜尋(Recent Web Searches)</g
 s/Show up to/顯示/g
 s/>All</>全部</g
 s/<small>available entries/<small>有效紀錄/g
-s/>Web Monitor Configuration</>監視設定</g
+s/>Web Monitor Configuration</>上網監控設定</g
 
 #
 #	tools-shell.asp
@@ -116,7 +116,7 @@ s/\/\/	<% wlcountries(); %>/wl_countries = \[ \['DZ', 'ALGERIA'],\['AS', 'AMERIC
 s/title: 'Regulatory Mode'/title: '管制規定'/g
 s/options: \[\['off', 'Off \*'],\['d', '802.11d'],\['h', '802.11h']]/options: [['off', '關 *'],['d', '802.11d'],['h', '802.11h']]/g
 s/title: 'Country \/ Region'/title: '國別 \/ 地區'/g
-s/title: 'Bluetooth Coexistence'/title: '與藍芽共存'/g
+s/title: 'Bluetooth Coexistence'/title: '與藍牙共存'/g
 s/options: \[\['0', 'Disable \*'],\['1', 'Enable'],\['2', 'Preemption']]/options: [['0', '關 *'],['1', '開'],['2', '先佔優先']]/g
 s/title: '802.11n Preamble'/title: '802.11n 前導同步訊號'/g
 s/options: \[\['auto','Auto'],\['mm','Mixed Mode \*'],\['gf','Green Field'],\['gfbcm','GF-BRCM']]/options: [['auto','自動'],['mm','混合模式 *'],['gf','Green Field'],['gfbcm','GF-BRCM']]/g
@@ -132,7 +132,7 @@ s/options: \[\['off','Disable'],\['on','Enable \*']]/options: [['off','關'],['o
 #
 s/title: 'Inactive Rules Cleaning'/title: '清除無作用規則'/g
 s/title: 'Cleaning Interval'/title: '清除間隔'/g
-s/' <small>seconds/' <small>秒/g
+s/' <small>seconds<\/small>/' <small>秒<\/small>/g
 s/title: 'Cleaning Threshold'/title: '清除界於'/g
 s/' <small>redirections/' <small>轉向次數/g
 s/title: 'Secure Mode'/title: '安全模式'/g
@@ -214,9 +214,8 @@ s/title: 'Maximum Connections from the same IP'/title: '相同 IP 最大連線�
 s/title: 'Maximum Bandwidth for Anonymous Users'/title: '匿名登入最大頻寬'/g
 s/title: 'Maximum Bandwidth for Authenticated Users'/title: '認證用戶最大頻寬'/g
 s/title: 'Idle Timeout'/title: '閒置逾時'/g
-s/(0 - no timeout)/(0 - 無逾時)/g
+s/<small>seconds (0 - no timeout)</<small>秒 (0 - 無逾時)</g
 s/<small>every/<small>次, 每/g
-s/<small>seconds/<small>秒內/g
 s/>Custom Configuration</>自訂設定(Custom Configuration)</g
 s/Custom Configuration'/自訂設定值'/g
 s/>User Accounts</>使用者帳戶(User Accounts)</g
@@ -237,8 +236,8 @@ s/\[\[0, 'No'],\[1, 'Yes']]/[[0, '否'],[1, '是']]/g
 s/\['Share Name', 'Directory', 'Description', 'Access Level', 'Hidden']/['分享名稱', '目錄', '敘述', '存取權限', '隱藏']/g
 s/'User Name must not be empty.'/'使用者名稱不可空白.'/g
 s/'User Name root is not allowed.'/'不允許使用者名稱為 root.'/g
-s/>Samba File Sharing</>Samba 伺服器設定(Samba File Sharing)</g
-s/title: 'Enable File Sharing'/title: '檔案分享'/g
+s/>Samba File Sharing</>網芳檔案分享設定(Samba File Sharing)</g
+s/title: 'Enable File Sharing'/title: '啟用檔案分享'/g
 s/options: \[\['0', 'No'],\['1', 'Yes, no Authentication'],\['2', 'Yes, Authentication required']]/options: [['0', '停用'],['1', '啟用, 不需認證'],['2', '啟用, 需要認證']]/g
 s/title: 'User Name'/title: '使用者名稱'/g
 s/title: 'Workgroup Name'/title: '工作群組名稱'/g
@@ -268,13 +267,13 @@ s/title: 'Rescan on the next run\*'/title: '下次執行時重新搜尋*'/g
 s/<small>\* Media scan may take considerable time to complete./<small>* 搜尋媒體可能需要很長時間才能完成./g
 s/title: 'TiVo Support'/title: '支援 TiVo'/g
 s/title: 'Strictly adhere to DLNA standards'/title: '嚴格遵循 DLNA 標準'/g
-s/'Res' : 'S') + 'tart Now/'立即重新啟動' : '立即啟動')/g
+s/'Res' : 'S') + 'tart Now/'立即重新' : '立即') + '啟動/g
 s/>Media Directories</>媒體目錄(Media Directories)</g
 
 #
 #	admin-access.asp
 #
-s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos']/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['頻寬管理', 'qos']/g
+s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos']/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['QoS管理', 'qos']/g
 s/\['USB and NAS', 'nas']/['USB 與 NAS', 'nas']/g
 s/\['Administration', 'admin']/['路由器管理', 'admin']/g
 s/options: \[\['red','Tomato'],\['black','Black'],\['blue','Blue'],\['bluegreen','Blue &amp; Green (Lighter)'],\['bluegreen2','Blue &amp; Green (Darker)'],\['brown','Brown'],\['cyan','Cyan'],\['olive','Olive'],\['pumpkin','Pumpkin']/options: [['red','蕃茄紅'],['black','黑色'],['blue','藍色'],['bluegreen','藍綠色(淺)'],['bluegreen2','藍綠色(深)'],['brown','棕色'],['cyan','青綠色'],['olive','橄欖色'],['pumpkin','南瓜色']/g
@@ -311,7 +310,7 @@ s/confirm("Format the JFFS partition?")/confirm("格式化 JFFS 區塊嗎?")/g
 #
 #	admin-log.asp
 #
-s/>Web Monitor</>監視設定(Web Monitor)</g
+s/>Web Monitor</>上網監控(Web Monitor)</g
 s/title: 'Monitor Web Usage'/title: '監視瀏覽紀錄'/g
 s/title: 'Monitor'/title: '監視'/g
 s/title: 'IP Address(es)'/title: 'IP 位址'/g
