@@ -21,10 +21,13 @@ s/'Enabled' : '<b>Disabled<\/b>'/'啟用' : '<b>關閉<\/b>'/g
 s/>System</>系統資訊(System)</g
 s/title: 'Name'/title: '名稱'/g
 s/title: 'Model'/title: '機型'/g
+s/title: 'Chipset'/title: 'CPU 型號'/g
+s/title: 'CPU Freq'/title: 'CPU 時脈'/g
 s/title: 'Time', rid/title: '現在時間', rid/g
 s/title: 'Uptime'/title: '開機時間'/g
 s/title: 'CPU Load <small>(1 \/ 5 \/ 15 mins)/title: 'CPU 負載 <small>(1\/5\/15分鐘)/g
 s/title: 'Total \/ Free Memory'/title: '記憶體 總計\/可用'/g
+s/title: 'Flash RAM Size'/title: '快閃記憶體容量'/g
 s/>WAN</>廣域網路(WAN)</g
 s/title: 'MAC Address'/title: 'MAC 位址'/g
 s/title: 'Connection Type'/title: 'WAN 連線類型'/g
@@ -34,6 +37,7 @@ s/title: 'Subnet Mask'/title: '子網路遮罩'/g
 s/title: 'Gateway'/title: '閘道器'/g
 s/title: 'DNS'/title: 'DNS 伺服器'/g
 s/title: 'MTU'/title: '最大傳輸單位(MTU)'/g
+s/title: 'MRU'/title: '最大接收單位(MRU)'/g
 s/title: 'Status'/title: '連線狀態'/g
 s/title: 'Connection Uptime'/title: '連線時間'/g
 s/title: 'Remaining Lease Time'/title: '剩餘租期'/g
@@ -45,7 +49,7 @@ s/>LAN</>區域網路(LAN)</g
 s/title: 'Router MAC Address'/title: '路由器 MAC 位址'/g
 s/title: 'Router IP Address'/title: '路由器 IP 位址'/g
 s/title: 'DHCP'/title: 'DHCP 伺服器'/g
-s/>Wireless</>無線網路(WLAN)</g
+# s/>Wireless</>無線網路(Wirless)</g
 s/title: 'Wireless Mode'/title: '無線工作模式'/g
 s/title: 'B\/G Mode'/title: '無線網路模式'/g
 s/title: 'Radio'/title: '無線電波'/g
@@ -56,8 +60,7 @@ s/title: 'Channel'/title: '頻道'/g
 s/title: 'RSSI'/title: '訊號強度(RSSI)'/g
 s/title: 'Noise'/title: '雜訊'/g
 s/title: 'Signal Quality'/title: '訊號品質'/g
-s/value='Enable'/value='開啟'/g
-s/value='Disable'/value='關閉'/g
+
 
 #
 #	status-devices.asp
@@ -288,7 +291,7 @@ s/title: 'Domain Name'/title: '網域名稱'/g
 #
 s/Basic: Time/基本設定：時間設定/g
 s/'Custom...'/'自訂...'/g
-s/'Default'/'預設'/g
+s/\['', 'Default']/\['', '預設']/g
 s/\['africa', 'Africa'],/['tw', '臺灣'],['africa', '非洲'],/g
 s/'Asia'/'亞洲'/g
 s/'Europe'/'歐洲'/g
@@ -322,7 +325,6 @@ s/'Username \/ Hostname'/'使用者名稱 \/ 主機名稱'/g
 s/'Email Address'/'電子郵件地址'/g
 s/'Hostname \/ Group'/'主機名稱 \/ 群組'/g
 s/'Network </'網路 </g
-s/'Password']/'密碼']/g
 s/'Automatically retrying in ' + min + ' minutes)<\/small>'/+ min + ' 分鐘後, 自動重試.<\/small>'/g
 s/'Username';/'使用者名稱';/g
 s/'Password';/'密碼';/g
@@ -408,7 +410,7 @@ s/title: 'Use user-entered gateway if WAN is disabled'/title: '若 WAN 停用, �
 s/title: 'Maximum active DHCP leases'/title: 'DHCP 租戶最大值'/g
 s/title: 'Static lease time'/title: '固定租約時間'/g
 s/options: \[\[0,'Same as normal lease time'],\[-1,'"Infinite"'],\[1,'Custom']]/options: [[0,'基本設定-網路: 租約時間設定值'],[-1,'無限租約時間'],[1,'自訂']]/g
-s/>Custom configuration'/>自訂設定(dnsmasq.custom)'/g
+s/>Custom configuration'/>自訂設定'/g
 s/Note: The file \/etc\/dnsmasq.custom is also added to the end of Dnsmasq's configuration file if it exists./備註: 若 DNSMasq 的設定檔存在, 則 \/etc\/dnsmasq.custom 附加至設定檔末端./g
 s/>DHCP Client (WAN)</>DHCP 用戶端 (WAN)</g
 s/title: 'Reduce packet size'/title: '減少封包大小'/g
@@ -419,7 +421,7 @@ s/title: 'Reduce packet size'/title: '減少封包大小'/g
 s/Advanced: Firewall/進階設定：防火牆/g
 s/>Firewall</>防火牆(Firewall)</g
 s/title: 'Respond to ICMP ping'/title: '回應 ICMP ping'/g
-s/title: 'Allow multicast'/title: '允許 multicast'/g
+s/title: 'Allow multicast'/title: '允許多點傳播(multicast)'/g
 s/title: 'NAT loopback'/title: 'NAT loopback'/g
 s/options: \[\[0,'All'],\[1,'Forwarded Only'],\[2,'Disabled']]/options: [[0,'全部'],[1,'只有被轉送的封包(Forwarded Only)'],[2,'關閉']]/g
 s/title: 'Enable SYN cookies'/title: '啟用 SYN cookies'/g
@@ -430,19 +432,18 @@ s/title: 'Enable SYN cookies'/title: '啟用 SYN cookies'/g
 s/Advanced: MAC Address/進階設定：MAC 位址/g
 s/'Addresses must be unique'/'MAC 位址不能重覆'/g
 s/("Warning: Changing the MAC address may require that you reboot all devices, computers or modem connected to this router. Continue anyway?")/("警告: 若改變 MAC 位址, 則可能需要將連線到這台路由器的全部設備, 電腦或數據機重新開機. 是否繼續執行?")/g
-s/>MAC Address</>實體位址(MAC Address)</g
-s/title: 'WAN Port'/title: '路由器 WAN MAC'/g
+s/title: 'WAN Port'/title: '路由器 WAN MAC 位址'/g
 s/value="Default"/value="預設值"/g
-s/value="Clone PC"/value="複製 電腦(網路卡) NIC MAC"/g
-s/title: 'Wireless Interface'/title: '路由器(無線) WLAN MAC'/g
-s/>Router's MAC Address:</>路由器 LAN MAC:</g
-s/>Computer's MAC Address:</>電腦(網路卡) NIC MAC:</g
+s/value="Clone PC"/value="複製 電腦(網卡) MAC 位址"/g
+s/title: 'Wireless Interface'/title: '路由器(無線) WLAN MAC 位址'/g
+s/>Router's MAC Address:</>路由器 LAN MAC 位址:</g
+s/>Computer's MAC Address:</>電腦(網卡) MAC 位址:</g
 
 #
 #	advanced-misc.asp
 #
 s/Advanced: Miscellaneous/進階設定：其他設定/g
-s/' seconds'/' 秒'/g
+s/i, i + ' seconds'/i, i + ' 秒'/g
 s/title: 'Boot Wait Time \*'/title: 'Boot Wait 時間 *'/g
 s/title: 'WAN Port Speed \*'/title: 'WAN 連線速度 *'/g
 s/options: \[\[0,'10Mb Full'],\[1,'10Mb Half'],\[2,'100Mb Full'],\[3,'100Mb Half'],\[4,'Auto']]/options: [[0,'10Mb 全雙工'],[1,'10Mb 半雙工'],[2,'100Mb 全雙工'],[3,'100Mb 半雙工'],[4,'自動偵測']]/g
@@ -452,7 +453,7 @@ s/<small>\* Not all models support these options.</<small>* 並非所有機型�
 #	advanced-routing.asp
 #
 s/Advanced: Routing/進階設定：路由表/g
-s/\['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface']/['目的地', '閘道', '子網路遮罩', '路徑量', '介面']/g
+s/\['Destination', 'Gateway \/ Next Hop', 'Subnet Mask', 'Metric', 'Interface']/['目的地', '閘道\/下一躍點', '子網路遮罩', '路徑量', '介面']/g
 s/\['Destination', 'Gateway', 'Subnet Mask', 'Metric', 'Interface', 'Description']/['目的地', '閘道', '子網路遮罩', '路徑量', '介面', '註解']/g
 s/>Current Routing Table</>目前的路由表(Current Routing Table)</g
 s/>Static Routing Table</>靜態路由表(Static Routing Table)</g
@@ -521,10 +522,10 @@ s/<small>The default settings are indicated with the asterisk <b style='font-siz
 #
 s/Forwarding: Basic/通訊埠轉送：基本設定/g
 s/options: \[\[1, 'TCP'],\[2, 'UDP'],\[3,'Both']]/options: [[1, 'TCP'],[2, 'UDP'],[3,'二者']]/g
-s/\['On', 'Proto', 'Src Address', 'Ext Ports', 'Int Port', 'Int Address', 'Description']/['啟用', '通訊協定', 'WAN 來源位址', 'WAN 通訊埠範圍', 'LAN 通訊埠', 'LAN 目的位址', '註解']/g
+s/\['On', 'Proto', 'Src Address', 'Ext Ports', 'Int Port', 'Int Address', 'Description']/['啟用', '通訊協定', '來源位址', 'WAN 通訊埠範圍', 'LAN 通訊埠', '目的位址', '註解']/g
 s/>Port Forwarding</>通訊埠轉送設定(Port Forwarding)</g
-s/>Src Address</>WAN 來源位址</g
-s/> - Forward only if from this address. Ex: "/> - 限定轉送的"WAN 來源位址"範圍, "空白"表示不限定來源. 例如: "/g
+s/>Src Address</>來源位址</g
+s/> - Forward only if from this address. Ex: "/> - 限定轉送的"來源位址"範圍, "空白"表示不限定來源. 例如: "/g
 s/<b>Ext Ports</<b>WAN 通訊埠範圍</g
 s/> - The ports to be forwarded, as seen from the WAN. Ex: "/> - 轉送的"WAN 通訊埠範圍". 例如: "/g
 s/>Int Port</>LAN 通訊埠</g
@@ -537,8 +538,8 @@ s/> - The destination address inside the LAN./> - 內部區域網路電腦的 IP
 #
 #	forward-dmz.asp
 #
-s/Forwarding: DMZ/通訊埠轉送：虛擬非軍事區/g
-s/>DMZ</>虛擬非軍事區(DMZ)</g
+s/Forwarding: DMZ/通訊埠轉送：DMZ/g
+s/>DMZ</>DMZ 設定</g
 s/title: 'Enable DMZ'/title: '啟用 DMZ'/g
 s/title: 'Destination Address'/title: '目的位址(LAN)'/g
 s/title: 'Source Address<br>Restriction'/title: '來源位址(WAN)<br>限定'/g
@@ -571,9 +572,9 @@ s/title: 'Enable NAT-PMP'/title: '啟用 NAT-PMP'/g
 #
 #	qos-settings.asp
 #
-s/QoS: Basic Settings/頻寬管理：基本設定/g
+s/QoS: Basic Settings/QoS 管理：基本設定/g
 s/\['Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A', 'Class B', 'Class C', 'Class D', 'Class E']/['最高等級', '高等級', '中等級', '低等級', '最低等級', 'A 等級', 'B 等級', 'C 等級', 'D 等級', 'E 等級']/g
-s/>Basic Settings</>QoS 基本設定(Basic Settings)</g
+s/>Basic Settings</>基本設定(Basic Settings)</g
 s/title: 'Enable QoS'/title: '啟用頻寬管理QoS'/g
 s/title: 'Prioritize small packets with these control flags'/title: '標記封包優先'/g
 s/title: 'Prioritize ICMP'/title: 'ICMP 優先'/g
@@ -588,7 +589,7 @@ s/title: 'Enable TCP Vegas'/title: '啟用 TCP Vegas'/g
 #
 #	qos-classify.asp
 #
-s/QoS: Classification</頻寬管理：分級管制</g
+s/QoS: Classification</QoS 管理：分級管制</g
 s/\['Highest', 'High', 'Medium', 'Low', 'Lowest', 'A','B','C','D','E']/['最高', '高', '中', '低', '最低', 'A','B','C','D','E']/g
 s/'IPP2P (disabled)'/'IPP2P (關閉 P2P 過濾)'/g
 s/'Layer 7 (disabled)'/'Layer 7 (關閉應用層過濾)'/g
@@ -599,20 +600,20 @@ s/options: \[\['a','Any Port'],\['d','Dst Port'],\['s','Src Port'],\['x','Src or
 s/>KB Transferred</>KB 傳送值(Transferred)</g
 s/\['Match Rule', 'Class', 'Description']/['符合規則(Match Rule)', '等級', '註解']/g
 s/>Outbound Direction</>對外上傳分級管制(Outbound Direction)</g
-s/>QoS disabled.</>頻寬管理QoS 已停用.</g
+s/>QoS disabled.</>QoS 管理已停用.</g
 
 #
 #	qos-graphs.asp
 #
-s/QoS: View Graphs/頻寬管理：圖形分析/g
+s/QoS: View Graphs/QoS 管理：圖形分析/g
 s/\['Unclassified', 'Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A', 'Class B', 'Class C', 'Class D', 'Class E']/['未分級', '最高等級', '高等級', '中等級', '低等級', '最低等級', 'A 等級', 'B 等級', 'C 等級', 'D 等級', 'E 等級']/g
-s/>Connections Distribution</>連線分佈圖(Connections Distribution)</g
-s/>Bandwidth Distribution (Outbound)</>上傳頻寬分佈圖(Bandwidth Distribution (Outbound))</g
+s/>Connections Distribution/>連線分佈圖/g
+s/>Bandwidth Distribution/>頻寬分佈圖/g
 
 #
 #	qos-detailed.asp
 #
-s/QoS: View Details/頻寬管理：連線詳細內容/g
+s/QoS: View Details/QoS 管理：連線詳細內容/g
 s/\['Unclassified', 'Highest', 'High', 'Medium', 'Low', 'Lowest', 'Class A','Class B','Class C','Class D','Class E']/['未分級', '最高等級', '高等級', '中等級', '低等級', '最低等級', 'A 等級','B 等級','C 等級','D 等級','E 等級']/g
 s/\['Proto', 'Source', 'S Port', 'Destination', 'D Port', 'Class']/['通訊協定', '來源 IP', '來源埠', '目的 IP', '目的埠', '等級']/g
 s/'View Details: '/'詳細內容: '/g
@@ -672,7 +673,7 @@ s/value='Delete...'/value='刪除...'/g
 s/Admin: Access/路由器管理：連線登入與密碼/g
 s/("Unsaved changes will be lost. Continue anyway?")/("尚未儲存的設定值將會遺失. 是否繼續執行?")/g
 s/\[\['Status', 'status'], \['Bandwidth', 'bwm'], \['Tools', 'tools'], \['Basic', 'basic']/[['系統狀態', 'status'], ['頻寬監控', 'bwm'], ['診斷工具', 'tools'], ['基本設定', 'basic']/g
-s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos'], \['Administration', 'admin']]/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['頻寬管理', 'qos'], ['路由器管理', 'admin']]/g
+s/\['Advanced', 'advanced'], \['Port Forwarding', 'forward'], \['QoS', 'qos'], \['Administration', 'admin']]/['進階設定', 'advanced'], ['通訊埠轉送', 'forward'], ['QoS管理', 'qos'], ['路由器管理', 'admin']]/g
 s/'The local http\/https must also be enabled when using remote access.'/'遠端管理必須開啟 HTTP\/HTTPS.'/g
 s/'Invalid SSH key.'/'無效的 SSH 金鑰'/g
 s/'Both passwords must match.'/'二次輸入的密碼需相同.'/g
@@ -738,7 +739,7 @@ s/<small>(note: enable if this is a new file)/<small>(備註: 若這是新檔案
 s/title: 'Create Backups'/title: '建立備份'/g
 s/title: 'First Day Of The Month'/title: '每月紀錄的第一天日期'/g
 s/title: 'Excluded Interfaces'/title: '排除的網路介面名稱'/g
-s/<small>(comma separated list)/<small>(逗點區隔介面名稱)/g
+s/<small>(comma separated list)/<small>(逗點區隔)/g
 s/>Backup</>備份頻寬監控紀錄(Backup)</g
 s/value='Backup'/value='備份'/g
 s/>Link</>連結(儲存檔案)</g
@@ -749,7 +750,7 @@ s/value='Restore'/value='還原'/g
 #	admin-buttons.asp
 #
 s/Admin: Buttons/路由器管理：特殊按鈕 \/ 燈號/g
-s/>SES\/AOSS Button</>SES\/AOSS 按鈕開關(Button)</g
+s/>SES\/WPS\/AOSS Button</>SES\/WPS\/AOSS 按鈕開關(Button)</g
 s/title: "When Pushed For..."/title: "按住(秒數)後執行..."/g
 s/\[\[0,'Do Nothing'],\[1,'Toggle Wireless'],\[2,'Reboot'],\[3,'Shutdown'],\[4,'Run Custom Script']]/[[0,'不做任何事'],[1,'開\/關 無線網路(WLAN)'],[2,'重新開機'],[3,'關機'],[4,'執行自訂指令(Script)']]/g
 s/title: '0-2 Seconds'/title: '0-2 秒'/g
@@ -905,7 +906,7 @@ s/About</關於 Tomato</g
 s/>Tomato</>蕃茄(Tomato)</g
 s/>Version </>正體中文版 </g
 s/^Tomato Firmware v</蕃茄韌體(Tomato Firmware) 版本: v</g
-s/^Built on </編譯於 </g
+s/^Built on </中文化韌體：<a href='http:\/\/code.google.com\/p\/twtomato\/' target='_new'>twtomato<\/a>,<a href='http:\/\/digiland.tw\/' target='_new'>數位天堂<\/a><br><br>編譯於 </g
 
 #
 #	reboot.asp
@@ -954,7 +955,7 @@ s/value='Back'/value='返回'/g
 #	mnoise.asp
 #
 s/Measuring Noise.../測量背景雜訊.../g
-s/Measuring radio noise floor.../測量無線電噪音地平(Noise Floor).../g
+s/Measuring radio noise floor.../測量無線背景雜訊(Noise Floor).../g
 s/Wireless access has been temporarily disabled for /無線訊號暫時斷訊 /g
 s/15 seconds/15 秒/g
 
@@ -972,3 +973,5 @@ s/Restarting.../重新開機中.../g
 s/The router's new IP address is </路由器 LAN IP 位址變更為 </g
 s/You may need to release then renew your computer's DHCP lease before continuing./您的電腦需重新由 DHCP 取得 IP 後, 再繼續操作./g
 s/Please wait while the router restarts.../重新開機中, 請稍後.../g
+
+
