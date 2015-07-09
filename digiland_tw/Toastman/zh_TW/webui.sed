@@ -41,7 +41,7 @@ s/\['Service','Game\/VOIP','Media','Remote','WWW', 'Mail', 'Messenger','Download
 #
 #	new-qoslimit.asp
 #
-s/New: QoS Limit/頻寬限速：QoS 限速/g
+s/New: QoS Limit/新功能：QoS 限速/g
 s/\['TC Tag', 'IP Address', 'DLRate', 'DLCeil', 'ULRate', 'ULCeil', 'Priority', 'TCP Limit', 'UDP Limit']/['TC 標籤', 'IP 位址', '下載保證頻寬', '下載最大頻寬', '上傳保證頻寬', '上傳最大頻寬', '優先權', 'TCP 限制', 'UDP 限制']/g
 s/>QoS Limit</>QoS 限速(QoS Limit)</g
 s/title: 'Enable QoS Limit'/title: '啟用 QoS 限速'/g
@@ -51,7 +51,7 @@ s/title: 'Upload Bandwidth'/title: '上傳頻寬'/g
 #
 #	new-arpbind.asp
 #
-s/New: ARP Binding/頻寬限速：ARP 綁定/g
+s/New: ARP Binding/新功能：ARP 綁定/g
 s/\['MAC Address', 'IP Address']/['MAC 位址', 'IP 位址']/g
 s/>ARP Binding</>ARP 綁定(ARP Binding)</g
 s/title: 'Enable ARP Binding'/title: '啟用 ARP 綁定'/g
