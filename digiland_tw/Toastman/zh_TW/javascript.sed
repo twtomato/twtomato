@@ -27,3 +27,4 @@
 s/\['IP\/MAC BW Limiter',/['IP\/MAC 頻寬限速',/g
 s/\['IP\/MAC BW Limit',/['QoS 限速',/g
 s/\['ARP Binding',/['ARP 綁定',/g
+s/\['PPTP Client',/['PPTP 客戶端',/g
