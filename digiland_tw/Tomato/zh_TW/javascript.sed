@@ -72,7 +72,7 @@ s/\['Basic',/['基本設定',/g
 s/\['Network',/['網路',/g
 s/\['Identification',/['基本資料',/g
 s/\['Time',/['時間',/g
-s/\['DDNS',/['動態 DNS',/g
+s/\['DDNS',/['DDNS',/g
 s/\['Static DHCP',/['靜態 DHCP',/g
 s/\['Wireless Filter',/['無線存取控制',/g
 s/\['Advanced',/['進階設定',/g
@@ -85,10 +85,10 @@ s/\['Routing',/['路由表',/g
 s/\['Wireless',/['無線網路參數',/g
 s/\['Port Forwarding',/['通訊埠轉送',/g
 s/\['Basic',/['基本設定',/g
-s/\['DMZ',/['虛擬非軍事區',/g
+s/\['DMZ',/['DMZ 設定',/g
 s/\['Triggered',/['觸發式轉送',/g
 s/\['UPnP \/ NAT-PMP',/['UPnP \/ NAT-PMP',/g
-s/\['QoS',/['頻寬管理',/g
+s/\['QoS',/['QoS管理',/g
 s/\['Basic Settings',/['基本設定',/g
 s/\['Classification',/['分級管制',/g
 s/\['View Graphs',/['圖形分析',/g
